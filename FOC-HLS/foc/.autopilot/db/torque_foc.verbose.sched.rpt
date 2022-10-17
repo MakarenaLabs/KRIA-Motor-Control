@@ -1,0 +1,540 @@
+
+
+================================================================
+== Vitis HLS Report for 'torque_foc'
+================================================================
+* Date:           Mon Oct 17 13:30:25 2022
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)
+* Project:        foc-rewrite
+* Solution:       foc (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu7ev-ffvc1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.300 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      200|      200|  2.000 us|  2.000 us|  200|  200|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 23
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 21 
+21 --> 22 
+22 --> 23 
+23 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 5.19>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%empty = read i101 @_ssdm_op_Read.axis.volatile.i80P0A.i10P0A.i10P0A.i1P0A, i80 %A_V_data_V, i10 %A_V_keep_V, i10 %A_V_strb_V, i1 %A_V_last_V"   --->   Operation 24 'read' 'empty' <Predicate = true> <Delay = 0.00> <CoreInst = "axis">   --->   Core 123 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%tmp_data_V_2 = extractvalue i101 %empty"   --->   Operation 25 'extractvalue' 'tmp_data_V_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%Ia = trunc i80 %tmp_data_V_2" [foc-rewrite/apc/src/FOC/foc.cpp:261]   --->   Operation 26 'trunc' 'Ia' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%Ib = partselect i16 @_ssdm_op_PartSelect.i16.i80.i32.i32, i80 %tmp_data_V_2, i32 16, i32 31" [foc-rewrite/apc/src/FOC/foc.cpp:262]   --->   Operation 27 'partselect' 'Ib' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%RPM = partselect i16 @_ssdm_op_PartSelect.i16.i80.i32.i32, i80 %tmp_data_V_2, i32 48, i32 63" [foc-rewrite/apc/src/FOC/foc.cpp:264]   --->   Operation 28 'partselect' 'RPM' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%Angle = partselect i16 @_ssdm_op_PartSelect.i16.i80.i32.i32, i80 %tmp_data_V_2, i32 64, i32 79" [foc-rewrite/apc/src/FOC/foc.cpp:265]   --->   Operation 29 'partselect' 'Angle' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%sext_ln290 = sext i16 %RPM" [foc-rewrite/apc/src/FOC/foc.cpp:290]   --->   Operation 30 'sext' 'sext_ln290' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [4/4] (5.19ns)   --->   "%vel_corr = sitofp i32 %sext_ln290" [foc-rewrite/apc/src/FOC/foc.cpp:290]   --->   Operation 31 'sitofp' 'vel_corr' <Predicate = true> <Delay = 5.19> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 3> <II = 1> <Delay = 5.19> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%sext_ln290_1 = sext i16 %Ia" [foc-rewrite/apc/src/FOC/foc.cpp:290]   --->   Operation 32 'sext' 'sext_ln290_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [4/4] (5.19ns)   --->   "%Ia_corr = sitofp i32 %sext_ln290_1" [foc-rewrite/apc/src/FOC/foc.cpp:290]   --->   Operation 33 'sitofp' 'Ia_corr' <Predicate = true> <Delay = 5.19> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 3> <II = 1> <Delay = 5.19> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%sext_ln290_2 = sext i16 %Ib" [foc-rewrite/apc/src/FOC/foc.cpp:290]   --->   Operation 34 'sext' 'sext_ln290_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [4/4] (5.19ns)   --->   "%Ib_corr = sitofp i32 %sext_ln290_2" [foc-rewrite/apc/src/FOC/foc.cpp:290]   --->   Operation 35 'sitofp' 'Ib_corr' <Predicate = true> <Delay = 5.19> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 3> <II = 1> <Delay = 5.19> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+
+State 2 <SV = 1> <Delay = 5.19>
+ST_2 : Operation 36 [1/1] (0.00ns)   --->   "%sext_ln281 = sext i16 %Angle" [foc-rewrite/apc/src/FOC/foc.cpp:281]   --->   Operation 36 'sext' 'sext_ln281' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 37 [4/4] (5.19ns)   --->   "%conv = sitofp i32 %sext_ln281" [foc-rewrite/apc/src/FOC/foc.cpp:281]   --->   Operation 37 'sitofp' 'conv' <Predicate = true> <Delay = 5.19> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 3> <II = 1> <Delay = 5.19> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+ST_2 : Operation 38 [3/4] (5.19ns)   --->   "%vel_corr = sitofp i32 %sext_ln290" [foc-rewrite/apc/src/FOC/foc.cpp:290]   --->   Operation 38 'sitofp' 'vel_corr' <Predicate = true> <Delay = 5.19> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 3> <II = 1> <Delay = 5.19> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+ST_2 : Operation 39 [3/4] (5.19ns)   --->   "%Ia_corr = sitofp i32 %sext_ln290_1" [foc-rewrite/apc/src/FOC/foc.cpp:290]   --->   Operation 39 'sitofp' 'Ia_corr' <Predicate = true> <Delay = 5.19> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 3> <II = 1> <Delay = 5.19> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+ST_2 : Operation 40 [3/4] (5.19ns)   --->   "%Ib_corr = sitofp i32 %sext_ln290_2" [foc-rewrite/apc/src/FOC/foc.cpp:290]   --->   Operation 40 'sitofp' 'Ib_corr' <Predicate = true> <Delay = 5.19> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 3> <II = 1> <Delay = 5.19> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 5.19>
+ST_3 : Operation 41 [3/4] (5.19ns)   --->   "%conv = sitofp i32 %sext_ln281" [foc-rewrite/apc/src/FOC/foc.cpp:281]   --->   Operation 41 'sitofp' 'conv' <Predicate = true> <Delay = 5.19> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 3> <II = 1> <Delay = 5.19> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+ST_3 : Operation 42 [2/4] (5.19ns)   --->   "%vel_corr = sitofp i32 %sext_ln290" [foc-rewrite/apc/src/FOC/foc.cpp:290]   --->   Operation 42 'sitofp' 'vel_corr' <Predicate = true> <Delay = 5.19> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 3> <II = 1> <Delay = 5.19> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+ST_3 : Operation 43 [2/4] (5.19ns)   --->   "%Ia_corr = sitofp i32 %sext_ln290_1" [foc-rewrite/apc/src/FOC/foc.cpp:290]   --->   Operation 43 'sitofp' 'Ia_corr' <Predicate = true> <Delay = 5.19> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 3> <II = 1> <Delay = 5.19> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+ST_3 : Operation 44 [2/4] (5.19ns)   --->   "%Ib_corr = sitofp i32 %sext_ln290_2" [foc-rewrite/apc/src/FOC/foc.cpp:290]   --->   Operation 44 'sitofp' 'Ib_corr' <Predicate = true> <Delay = 5.19> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 3> <II = 1> <Delay = 5.19> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 5.19>
+ST_4 : Operation 45 [2/4] (5.19ns)   --->   "%conv = sitofp i32 %sext_ln281" [foc-rewrite/apc/src/FOC/foc.cpp:281]   --->   Operation 45 'sitofp' 'conv' <Predicate = true> <Delay = 5.19> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 3> <II = 1> <Delay = 5.19> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+ST_4 : Operation 46 [1/4] (5.19ns)   --->   "%vel_corr = sitofp i32 %sext_ln290" [foc-rewrite/apc/src/FOC/foc.cpp:290]   --->   Operation 46 'sitofp' 'vel_corr' <Predicate = true> <Delay = 5.19> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 3> <II = 1> <Delay = 5.19> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+ST_4 : Operation 47 [1/4] (5.19ns)   --->   "%Ia_corr = sitofp i32 %sext_ln290_1" [foc-rewrite/apc/src/FOC/foc.cpp:290]   --->   Operation 47 'sitofp' 'Ia_corr' <Predicate = true> <Delay = 5.19> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 3> <II = 1> <Delay = 5.19> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+ST_4 : Operation 48 [1/4] (5.19ns)   --->   "%Ib_corr = sitofp i32 %sext_ln290_2" [foc-rewrite/apc/src/FOC/foc.cpp:290]   --->   Operation 48 'sitofp' 'Ib_corr' <Predicate = true> <Delay = 5.19> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 3> <II = 1> <Delay = 5.19> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 7.01>
+ST_5 : Operation 49 [1/4] (5.19ns)   --->   "%conv = sitofp i32 %sext_ln281" [foc-rewrite/apc/src/FOC/foc.cpp:281]   --->   Operation 49 'sitofp' 'conv' <Predicate = true> <Delay = 5.19> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 3> <II = 1> <Delay = 5.19> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+ST_5 : Operation 50 [1/1] (0.00ns)   --->   "%control_addr = getelementptr i32 %control, i64 0, i64 1" [foc-rewrite/apc/src/FOC/foc.cpp:281]   --->   Operation 50 'getelementptr' 'control_addr' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 51 [2/2] (0.67ns)   --->   "%control_load = load i3 %control_addr" [foc-rewrite/apc/src/FOC/foc.cpp:281]   --->   Operation 51 'load' 'control_load' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM_1P">   --->   Core 88 'RAM_1P' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 6> <RAM>
+ST_5 : Operation 52 [2/2] (7.01ns)   --->   "%call_ret1 = call i96 @low_pass_filter<float>, i32 %vel_corr, i32 %Ia_corr, i32 %Ib_corr, i32 %velocity_accum, i32 %buffer_velocity, i32 %Y1a_prev, i32 %Y1b_prev, i32 %Y2a_prev, i32 %Y2b_prev" [foc-rewrite/apc/src/FOC/foc.cpp:291]   --->   Operation 52 'call' 'call_ret1' <Predicate = true> <Delay = 7.01> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 7.11>
+ST_6 : Operation 53 [1/2] (0.67ns)   --->   "%control_load = load i3 %control_addr" [foc-rewrite/apc/src/FOC/foc.cpp:281]   --->   Operation 53 'load' 'control_load' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM_1P">   --->   Core 88 'RAM_1P' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 6> <RAM>
+ST_6 : Operation 54 [1/1] (0.00ns)   --->   "%bitcast_ln281 = bitcast i32 %control_load" [foc-rewrite/apc/src/FOC/foc.cpp:281]   --->   Operation 54 'bitcast' 'bitcast_ln281' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 55 [4/4] (6.43ns)   --->   "%dc = fsub i32 %conv, i32 %bitcast_ln281" [foc-rewrite/apc/src/FOC/foc.cpp:281]   --->   Operation 55 'fsub' 'dc' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 56 [1/2] (7.01ns)   --->   "%call_ret1 = call i96 @low_pass_filter<float>, i32 %vel_corr, i32 %Ia_corr, i32 %Ib_corr, i32 %velocity_accum, i32 %buffer_velocity, i32 %Y1a_prev, i32 %Y1b_prev, i32 %Y2a_prev, i32 %Y2b_prev" [foc-rewrite/apc/src/FOC/foc.cpp:291]   --->   Operation 56 'call' 'call_ret1' <Predicate = true> <Delay = 7.01> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 57 [1/1] (0.00ns)   --->   "%vel_corr_2 = extractvalue i96 %call_ret1" [foc-rewrite/apc/src/FOC/foc.cpp:291]   --->   Operation 57 'extractvalue' 'vel_corr_2' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 58 [1/1] (0.00ns)   --->   "%Ia_corr_1 = extractvalue i96 %call_ret1" [foc-rewrite/apc/src/FOC/foc.cpp:291]   --->   Operation 58 'extractvalue' 'Ia_corr_1' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 59 [1/1] (0.00ns)   --->   "%Ib_corr_1 = extractvalue i96 %call_ret1" [foc-rewrite/apc/src/FOC/foc.cpp:291]   --->   Operation 59 'extractvalue' 'Ib_corr_1' <Predicate = true> <Delay = 0.00>
+
+State 7 <SV = 6> <Delay = 6.43>
+ST_7 : Operation 60 [3/4] (6.43ns)   --->   "%dc = fsub i32 %conv, i32 %bitcast_ln281" [foc-rewrite/apc/src/FOC/foc.cpp:281]   --->   Operation 60 'fsub' 'dc' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 61 [1/1] (0.00ns)   --->   "%data_V_3 = bitcast i32 %vel_corr_2" [foc-rewrite/apc/src/FOC/foc.cpp:292]   --->   Operation 61 'bitcast' 'data_V_3' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 62 [1/1] (0.00ns)   --->   "%logger_addr_1 = getelementptr i32 %logger, i64 0, i64 0" [foc-rewrite/apc/src/FOC/foc.cpp:292]   --->   Operation 62 'getelementptr' 'logger_addr_1' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 63 [1/1] (0.67ns)   --->   "%store_ln292 = store i32 %data_V_3, i5 %logger_addr_1" [foc-rewrite/apc/src/FOC/foc.cpp:292]   --->   Operation 63 'store' 'store_ln292' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM_1P">   --->   Core 88 'RAM_1P' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 17> <RAM>
+ST_7 : Operation 64 [1/1] (0.00ns)   --->   "%p_Result_3 = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %data_V_3, i32 31"   --->   Operation 64 'bitselect' 'p_Result_3' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 65 [1/1] (0.00ns)   --->   "%tmp_28 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %data_V_3, i32 23, i32 30"   --->   Operation 65 'partselect' 'tmp_28' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 66 [1/1] (0.00ns)   --->   "%tmp_29 = trunc i32 %data_V_3"   --->   Operation 66 'trunc' 'tmp_29' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 67 [1/1] (0.00ns)   --->   "%mantissa_3 = bitconcatenate i25 @_ssdm_op_BitConcatenate.i25.i1.i23.i1, i1 1, i23 %tmp_29, i1 0"   --->   Operation 67 'bitconcatenate' 'mantissa_3' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 68 [1/1] (0.00ns)   --->   "%zext_ln15_3 = zext i25 %mantissa_3" [/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:15]   --->   Operation 68 'zext' 'zext_ln15_3' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 69 [1/1] (0.00ns)   --->   "%zext_ln344_3 = zext i8 %tmp_28" [/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:344]   --->   Operation 69 'zext' 'zext_ln344_3' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 70 [1/1] (0.76ns)   --->   "%add_ln344_3 = add i9 %zext_ln344_3, i9 385" [/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:344]   --->   Operation 70 'add' 'add_ln344_3' <Predicate = true> <Delay = 0.76> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 71 [1/1] (0.00ns)   --->   "%isNeg_3 = bitselect i1 @_ssdm_op_BitSelect.i1.i9.i32, i9 %add_ln344_3, i32 8"   --->   Operation 71 'bitselect' 'isNeg_3' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 72 [1/1] (0.76ns)   --->   "%sub_ln1364_3 = sub i8 127, i8 %tmp_28"   --->   Operation 72 'sub' 'sub_ln1364_3' <Predicate = true> <Delay = 0.76> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 73 [1/1] (0.00ns)   --->   "%sext_ln1364_3 = sext i8 %sub_ln1364_3"   --->   Operation 73 'sext' 'sext_ln1364_3' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 74 [1/1] (0.39ns)   --->   "%ush_3 = select i1 %isNeg_3, i9 %sext_ln1364_3, i9 %add_ln344_3"   --->   Operation 74 'select' 'ush_3' <Predicate = true> <Delay = 0.39> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_7 : Operation 75 [1/1] (0.00ns)   --->   "%sext_ln1340_3 = sext i9 %ush_3"   --->   Operation 75 'sext' 'sext_ln1340_3' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 76 [1/1] (0.00ns)   --->   "%zext_ln1340_3 = zext i32 %sext_ln1340_3"   --->   Operation 76 'zext' 'zext_ln1340_3' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 77 [1/1] (0.00ns) (grouped into LUT with out node val_3)   --->   "%r_V_6 = lshr i63 %zext_ln15_3, i63 %zext_ln1340_3"   --->   Operation 77 'lshr' 'r_V_6' <Predicate = true> <Delay = 0.00> <CoreInst = "Shifter">   --->   Core 75 'Shifter' <Latency = 0> <II = 1> <Delay = 1.38> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 78 [1/1] (0.00ns) (grouped into LUT with out node val_3)   --->   "%r_V_7 = shl i63 %zext_ln15_3, i63 %zext_ln1340_3"   --->   Operation 78 'shl' 'r_V_7' <Predicate = true> <Delay = 0.00> <CoreInst = "Shifter">   --->   Core 75 'Shifter' <Latency = 0> <II = 1> <Delay = 1.38> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 79 [1/1] (0.00ns) (grouped into LUT with out node val_3)   --->   "%tmp_21 = bitselect i1 @_ssdm_op_BitSelect.i1.i63.i32, i63 %r_V_6, i32 24"   --->   Operation 79 'bitselect' 'tmp_21' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 80 [1/1] (0.00ns) (grouped into LUT with out node val_3)   --->   "%zext_ln671_3 = zext i1 %tmp_21"   --->   Operation 80 'zext' 'zext_ln671_3' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 81 [1/1] (0.00ns) (grouped into LUT with out node val_3)   --->   "%tmp_10 = partselect i16 @_ssdm_op_PartSelect.i16.i63.i32.i32, i63 %r_V_7, i32 24, i32 39"   --->   Operation 81 'partselect' 'tmp_10' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 82 [1/1] (1.38ns) (out node of the LUT)   --->   "%val_3 = select i1 %isNeg_3, i16 %zext_ln671_3, i16 %tmp_10"   --->   Operation 82 'select' 'val_3' <Predicate = true> <Delay = 1.38> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_7 : Operation 83 [1/1] (0.85ns)   --->   "%result_V_12 = sub i16 0, i16 %val_3"   --->   Operation 83 'sub' 'result_V_12' <Predicate = true> <Delay = 0.85> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 84 [1/1] (0.35ns)   --->   "%result_V_14 = select i1 %p_Result_3, i16 %result_V_12, i16 %val_3" [/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:59]   --->   Operation 84 'select' 'result_V_14' <Predicate = true> <Delay = 0.35> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 6.43>
+ST_8 : Operation 85 [2/4] (6.43ns)   --->   "%dc = fsub i32 %conv, i32 %bitcast_ln281" [foc-rewrite/apc/src/FOC/foc.cpp:281]   --->   Operation 85 'fsub' 'dc' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 86 [1/1] (0.00ns)   --->   "%bitcast_ln293 = bitcast i32 %Ia_corr_1" [foc-rewrite/apc/src/FOC/foc.cpp:293]   --->   Operation 86 'bitcast' 'bitcast_ln293' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 87 [1/1] (0.00ns)   --->   "%logger_addr_2 = getelementptr i32 %logger, i64 0, i64 1" [foc-rewrite/apc/src/FOC/foc.cpp:293]   --->   Operation 87 'getelementptr' 'logger_addr_2' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 88 [1/1] (0.67ns)   --->   "%store_ln293 = store i32 %bitcast_ln293, i5 %logger_addr_2" [foc-rewrite/apc/src/FOC/foc.cpp:293]   --->   Operation 88 'store' 'store_ln293' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM_1P">   --->   Core 88 'RAM_1P' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 17> <RAM>
+
+State 9 <SV = 8> <Delay = 7.01>
+ST_9 : Operation 89 [1/4] (6.43ns)   --->   "%dc = fsub i32 %conv, i32 %bitcast_ln281" [foc-rewrite/apc/src/FOC/foc.cpp:281]   --->   Operation 89 'fsub' 'dc' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 90 [1/1] (0.00ns)   --->   "%bitcast_ln294 = bitcast i32 %Ib_corr_1" [foc-rewrite/apc/src/FOC/foc.cpp:294]   --->   Operation 90 'bitcast' 'bitcast_ln294' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 91 [1/1] (0.00ns)   --->   "%logger_addr_3 = getelementptr i32 %logger, i64 0, i64 2" [foc-rewrite/apc/src/FOC/foc.cpp:294]   --->   Operation 91 'getelementptr' 'logger_addr_3' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 92 [1/1] (0.67ns)   --->   "%store_ln294 = store i32 %bitcast_ln294, i5 %logger_addr_3" [foc-rewrite/apc/src/FOC/foc.cpp:294]   --->   Operation 92 'store' 'store_ln294' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM_1P">   --->   Core 88 'RAM_1P' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 17> <RAM>
+ST_9 : Operation 93 [2/2] (7.01ns)   --->   "%call_ret2 = call i64 @clarke_direct<float>, i32 %Ia_corr_1, i32 %Ib_corr_1" [foc-rewrite/apc/src/FOC/foc.cpp:299]   --->   Operation 93 'call' 'call_ret2' <Predicate = true> <Delay = 7.01> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 10 <SV = 9> <Delay = 6.42>
+ST_10 : Operation 94 [1/1] (0.00ns)   --->   "%data_V = bitcast i32 %dc" [/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:315]   --->   Operation 94 'bitcast' 'data_V' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 95 [1/1] (0.00ns)   --->   "%p_Result_s = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %data_V, i32 31"   --->   Operation 95 'bitselect' 'p_Result_s' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 96 [1/1] (0.00ns)   --->   "%tmp_22 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %data_V, i32 23, i32 30"   --->   Operation 96 'partselect' 'tmp_22' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 97 [1/1] (0.00ns)   --->   "%tmp_23 = trunc i32 %data_V"   --->   Operation 97 'trunc' 'tmp_23' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 98 [1/1] (0.00ns)   --->   "%mantissa = bitconcatenate i25 @_ssdm_op_BitConcatenate.i25.i1.i23.i1, i1 1, i23 %tmp_23, i1 0"   --->   Operation 98 'bitconcatenate' 'mantissa' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 99 [1/1] (0.00ns)   --->   "%zext_ln15 = zext i25 %mantissa" [/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:15]   --->   Operation 99 'zext' 'zext_ln15' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 100 [1/1] (0.00ns)   --->   "%zext_ln344 = zext i8 %tmp_22" [/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:344]   --->   Operation 100 'zext' 'zext_ln344' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 101 [1/1] (0.76ns)   --->   "%add_ln344 = add i9 %zext_ln344, i9 385" [/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:344]   --->   Operation 101 'add' 'add_ln344' <Predicate = true> <Delay = 0.76> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 102 [1/1] (0.00ns)   --->   "%isNeg = bitselect i1 @_ssdm_op_BitSelect.i1.i9.i32, i9 %add_ln344, i32 8"   --->   Operation 102 'bitselect' 'isNeg' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 103 [1/1] (0.76ns)   --->   "%sub_ln1364 = sub i8 127, i8 %tmp_22"   --->   Operation 103 'sub' 'sub_ln1364' <Predicate = true> <Delay = 0.76> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 104 [1/1] (0.00ns)   --->   "%sext_ln1364 = sext i8 %sub_ln1364"   --->   Operation 104 'sext' 'sext_ln1364' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 105 [1/1] (0.39ns)   --->   "%ush = select i1 %isNeg, i9 %sext_ln1364, i9 %add_ln344"   --->   Operation 105 'select' 'ush' <Predicate = true> <Delay = 0.39> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_10 : Operation 106 [1/1] (0.00ns)   --->   "%sext_ln1340 = sext i9 %ush"   --->   Operation 106 'sext' 'sext_ln1340' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 107 [1/1] (0.00ns)   --->   "%zext_ln1340 = zext i32 %sext_ln1340"   --->   Operation 107 'zext' 'zext_ln1340' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 108 [1/1] (0.00ns) (grouped into LUT with out node val)   --->   "%r_V = lshr i63 %zext_ln15, i63 %zext_ln1340"   --->   Operation 108 'lshr' 'r_V' <Predicate = true> <Delay = 0.00> <CoreInst = "Shifter">   --->   Core 75 'Shifter' <Latency = 0> <II = 1> <Delay = 1.38> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 109 [1/1] (0.00ns) (grouped into LUT with out node val)   --->   "%r_V_1 = shl i63 %zext_ln15, i63 %zext_ln1340"   --->   Operation 109 'shl' 'r_V_1' <Predicate = true> <Delay = 0.00> <CoreInst = "Shifter">   --->   Core 75 'Shifter' <Latency = 0> <II = 1> <Delay = 1.38> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 110 [1/1] (0.00ns) (grouped into LUT with out node val)   --->   "%tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i63.i32, i63 %r_V, i32 24"   --->   Operation 110 'bitselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 111 [1/1] (0.00ns) (grouped into LUT with out node val)   --->   "%zext_ln671 = zext i1 %tmp"   --->   Operation 111 'zext' 'zext_ln671' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 112 [1/1] (0.00ns) (grouped into LUT with out node val)   --->   "%tmp_2 = partselect i16 @_ssdm_op_PartSelect.i16.i63.i32.i32, i63 %r_V_1, i32 24, i32 39"   --->   Operation 112 'partselect' 'tmp_2' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 113 [1/1] (1.38ns) (out node of the LUT)   --->   "%val = select i1 %isNeg, i16 %zext_ln671, i16 %tmp_2"   --->   Operation 113 'select' 'val' <Predicate = true> <Delay = 1.38> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_10 : Operation 114 [1/1] (0.85ns)   --->   "%result_V_2 = sub i16 0, i16 %val"   --->   Operation 114 'sub' 'result_V_2' <Predicate = true> <Delay = 0.85> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 115 [1/1] (0.35ns)   --->   "%result_V = select i1 %p_Result_s, i16 %result_V_2, i16 %val" [/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:59]   --->   Operation 115 'select' 'result_V' <Predicate = true> <Delay = 0.35> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_10 : Operation 116 [1/1] (0.00ns)   --->   "%tmp_3 = bitselect i1 @_ssdm_op_BitSelect.i1.i16.i32, i16 %result_V, i32 15" [foc-rewrite/apc/src/FOC/foc.cpp:283]   --->   Operation 116 'bitselect' 'tmp_3' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 117 [1/1] (0.85ns)   --->   "%add_ln283 = add i16 %result_V, i16 1000" [foc-rewrite/apc/src/FOC/foc.cpp:283]   --->   Operation 117 'add' 'add_ln283' <Predicate = true> <Delay = 0.85> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 118 [1/1] (0.35ns)   --->   "%Theta_2 = select i1 %tmp_3, i16 %add_ln283, i16 %result_V" [foc-rewrite/apc/src/FOC/foc.cpp:283]   --->   Operation 118 'select' 'Theta_2' <Predicate = true> <Delay = 0.35> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_10 : Operation 119 [1/1] (1.10ns)   --->   "%icmp_ln284 = icmp_sgt  i16 %Theta_2, i16 999" [foc-rewrite/apc/src/FOC/foc.cpp:284]   --->   Operation 119 'icmp' 'icmp_ln284' <Predicate = true> <Delay = 1.10> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.10> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 120 [1/1] (0.85ns)   --->   "%add_ln284 = add i16 %Theta_2, i16 64536" [foc-rewrite/apc/src/FOC/foc.cpp:284]   --->   Operation 120 'add' 'add_ln284' <Predicate = true> <Delay = 0.85> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 121 [1/1] (0.35ns)   --->   "%Theta = select i1 %icmp_ln284, i16 %add_ln284, i16 %Theta_2" [foc-rewrite/apc/src/FOC/foc.cpp:284]   --->   Operation 121 'select' 'Theta' <Predicate = true> <Delay = 0.35> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_10 : Operation 122 [1/1] (0.00ns)   --->   "%trunc_ln255 = trunc i16 %Theta" [foc-rewrite/apc/src/FOC/foc.cpp:255]   --->   Operation 122 'trunc' 'trunc_ln255' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 123 [1/2] (5.64ns)   --->   "%call_ret2 = call i64 @clarke_direct<float>, i32 %Ia_corr_1, i32 %Ib_corr_1" [foc-rewrite/apc/src/FOC/foc.cpp:299]   --->   Operation 123 'call' 'call_ret2' <Predicate = true> <Delay = 5.64> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_10 : Operation 124 [1/1] (0.00ns)   --->   "%Ialpha = extractvalue i64 %call_ret2" [foc-rewrite/apc/src/FOC/foc.cpp:299]   --->   Operation 124 'extractvalue' 'Ialpha' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 125 [1/1] (0.00ns)   --->   "%Ibeta = extractvalue i64 %call_ret2" [foc-rewrite/apc/src/FOC/foc.cpp:299]   --->   Operation 125 'extractvalue' 'Ibeta' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 126 [1/1] (0.00ns)   --->   "%data_V_2 = bitcast i32 %Ialpha" [foc-rewrite/apc/src/FOC/foc.cpp:300]   --->   Operation 126 'bitcast' 'data_V_2' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 127 [1/1] (0.00ns)   --->   "%logger_addr_4 = getelementptr i32 %logger, i64 0, i64 3" [foc-rewrite/apc/src/FOC/foc.cpp:300]   --->   Operation 127 'getelementptr' 'logger_addr_4' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 128 [1/1] (0.67ns)   --->   "%store_ln300 = store i32 %data_V_2, i5 %logger_addr_4" [foc-rewrite/apc/src/FOC/foc.cpp:300]   --->   Operation 128 'store' 'store_ln300' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM_1P">   --->   Core 88 'RAM_1P' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 17> <RAM>
+ST_10 : Operation 129 [1/1] (0.00ns)   --->   "%p_Result_2 = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %data_V_2, i32 31"   --->   Operation 129 'bitselect' 'p_Result_2' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 130 [1/1] (0.00ns)   --->   "%tmp_26 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %data_V_2, i32 23, i32 30"   --->   Operation 130 'partselect' 'tmp_26' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 131 [1/1] (0.00ns)   --->   "%tmp_27 = trunc i32 %data_V_2"   --->   Operation 131 'trunc' 'tmp_27' <Predicate = true> <Delay = 0.00>
+
+State 11 <SV = 10> <Delay = 7.01>
+ST_11 : Operation 132 [1/1] (0.00ns)   --->   "%data_V_1 = bitcast i32 %Ibeta" [foc-rewrite/apc/src/FOC/foc.cpp:301]   --->   Operation 132 'bitcast' 'data_V_1' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 133 [1/1] (0.00ns)   --->   "%logger_addr_5 = getelementptr i32 %logger, i64 0, i64 4" [foc-rewrite/apc/src/FOC/foc.cpp:301]   --->   Operation 133 'getelementptr' 'logger_addr_5' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 134 [1/1] (0.67ns)   --->   "%store_ln301 = store i32 %data_V_1, i5 %logger_addr_5" [foc-rewrite/apc/src/FOC/foc.cpp:301]   --->   Operation 134 'store' 'store_ln301' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM_1P">   --->   Core 88 'RAM_1P' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 17> <RAM>
+ST_11 : Operation 135 [2/2] (7.01ns)   --->   "%call_ret3 = call i64 @park_direct<float>, i32 %Ialpha, i32 %Ibeta, i10 %trunc_ln255, i32 %sine_d, i32 %cosine_d" [foc-rewrite/apc/src/FOC/foc.cpp:306]   --->   Operation 135 'call' 'call_ret3' <Predicate = true> <Delay = 7.01> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_11 : Operation 136 [1/1] (0.00ns)   --->   "%control_addr_1 = getelementptr i32 %control, i64 0, i64 0" [foc-rewrite/apc/src/FOC/foc.cpp:329]   --->   Operation 136 'getelementptr' 'control_addr_1' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 137 [2/2] (0.67ns)   --->   "%control_load_1 = load i3 %control_addr_1" [foc-rewrite/apc/src/FOC/foc.cpp:329]   --->   Operation 137 'load' 'control_load_1' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM_1P">   --->   Core 88 'RAM_1P' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 6> <RAM>
+ST_11 : Operation 138 [1/1] (0.00ns)   --->   "%p_Result_1 = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %data_V_1, i32 31"   --->   Operation 138 'bitselect' 'p_Result_1' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 139 [1/1] (0.00ns)   --->   "%tmp_24 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %data_V_1, i32 23, i32 30"   --->   Operation 139 'partselect' 'tmp_24' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 140 [1/1] (0.00ns)   --->   "%tmp_25 = trunc i32 %data_V_1"   --->   Operation 140 'trunc' 'tmp_25' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 141 [1/1] (0.00ns)   --->   "%mantissa_1 = bitconcatenate i25 @_ssdm_op_BitConcatenate.i25.i1.i23.i1, i1 1, i23 %tmp_25, i1 0"   --->   Operation 141 'bitconcatenate' 'mantissa_1' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 142 [1/1] (0.00ns)   --->   "%zext_ln15_1 = zext i25 %mantissa_1" [/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:15]   --->   Operation 142 'zext' 'zext_ln15_1' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 143 [1/1] (0.00ns)   --->   "%zext_ln344_1 = zext i8 %tmp_24" [/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:344]   --->   Operation 143 'zext' 'zext_ln344_1' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 144 [1/1] (0.76ns)   --->   "%add_ln344_1 = add i9 %zext_ln344_1, i9 385" [/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:344]   --->   Operation 144 'add' 'add_ln344_1' <Predicate = true> <Delay = 0.76> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 145 [1/1] (0.00ns)   --->   "%isNeg_1 = bitselect i1 @_ssdm_op_BitSelect.i1.i9.i32, i9 %add_ln344_1, i32 8"   --->   Operation 145 'bitselect' 'isNeg_1' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 146 [1/1] (0.76ns)   --->   "%sub_ln1364_1 = sub i8 127, i8 %tmp_24"   --->   Operation 146 'sub' 'sub_ln1364_1' <Predicate = true> <Delay = 0.76> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 147 [1/1] (0.00ns)   --->   "%sext_ln1364_1 = sext i8 %sub_ln1364_1"   --->   Operation 147 'sext' 'sext_ln1364_1' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 148 [1/1] (0.39ns)   --->   "%ush_1 = select i1 %isNeg_1, i9 %sext_ln1364_1, i9 %add_ln344_1"   --->   Operation 148 'select' 'ush_1' <Predicate = true> <Delay = 0.39> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_11 : Operation 149 [1/1] (0.00ns)   --->   "%sext_ln1340_1 = sext i9 %ush_1"   --->   Operation 149 'sext' 'sext_ln1340_1' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 150 [1/1] (0.00ns)   --->   "%zext_ln1340_1 = zext i32 %sext_ln1340_1"   --->   Operation 150 'zext' 'zext_ln1340_1' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 151 [1/1] (0.00ns) (grouped into LUT with out node val_1)   --->   "%r_V_2 = lshr i63 %zext_ln15_1, i63 %zext_ln1340_1"   --->   Operation 151 'lshr' 'r_V_2' <Predicate = true> <Delay = 0.00> <CoreInst = "Shifter">   --->   Core 75 'Shifter' <Latency = 0> <II = 1> <Delay = 1.38> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 152 [1/1] (0.00ns) (grouped into LUT with out node val_1)   --->   "%r_V_3 = shl i63 %zext_ln15_1, i63 %zext_ln1340_1"   --->   Operation 152 'shl' 'r_V_3' <Predicate = true> <Delay = 0.00> <CoreInst = "Shifter">   --->   Core 75 'Shifter' <Latency = 0> <II = 1> <Delay = 1.38> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 153 [1/1] (0.00ns) (grouped into LUT with out node val_1)   --->   "%tmp_9 = bitselect i1 @_ssdm_op_BitSelect.i1.i63.i32, i63 %r_V_2, i32 24"   --->   Operation 153 'bitselect' 'tmp_9' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 154 [1/1] (0.00ns) (grouped into LUT with out node val_1)   --->   "%zext_ln671_1 = zext i1 %tmp_9"   --->   Operation 154 'zext' 'zext_ln671_1' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 155 [1/1] (0.00ns) (grouped into LUT with out node val_1)   --->   "%tmp_7 = partselect i16 @_ssdm_op_PartSelect.i16.i63.i32.i32, i63 %r_V_3, i32 24, i32 39"   --->   Operation 155 'partselect' 'tmp_7' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 156 [1/1] (1.38ns) (out node of the LUT)   --->   "%val_1 = select i1 %isNeg_1, i16 %zext_ln671_1, i16 %tmp_7"   --->   Operation 156 'select' 'val_1' <Predicate = true> <Delay = 1.38> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_11 : Operation 157 [1/1] (0.85ns)   --->   "%result_V_5 = sub i16 0, i16 %val_1"   --->   Operation 157 'sub' 'result_V_5' <Predicate = true> <Delay = 0.85> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 158 [1/1] (0.35ns)   --->   "%result_V_13 = select i1 %p_Result_1, i16 %result_V_5, i16 %val_1" [/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:59]   --->   Operation 158 'select' 'result_V_13' <Predicate = true> <Delay = 0.35> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_11 : Operation 159 [1/1] (0.00ns)   --->   "%mantissa_2 = bitconcatenate i25 @_ssdm_op_BitConcatenate.i25.i1.i23.i1, i1 1, i23 %tmp_27, i1 0"   --->   Operation 159 'bitconcatenate' 'mantissa_2' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 160 [1/1] (0.00ns)   --->   "%zext_ln15_2 = zext i25 %mantissa_2" [/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:15]   --->   Operation 160 'zext' 'zext_ln15_2' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 161 [1/1] (0.00ns)   --->   "%zext_ln344_2 = zext i8 %tmp_26" [/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:344]   --->   Operation 161 'zext' 'zext_ln344_2' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 162 [1/1] (0.76ns)   --->   "%add_ln344_2 = add i9 %zext_ln344_2, i9 385" [/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:344]   --->   Operation 162 'add' 'add_ln344_2' <Predicate = true> <Delay = 0.76> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 163 [1/1] (0.00ns)   --->   "%isNeg_2 = bitselect i1 @_ssdm_op_BitSelect.i1.i9.i32, i9 %add_ln344_2, i32 8"   --->   Operation 163 'bitselect' 'isNeg_2' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 164 [1/1] (0.76ns)   --->   "%sub_ln1364_2 = sub i8 127, i8 %tmp_26"   --->   Operation 164 'sub' 'sub_ln1364_2' <Predicate = true> <Delay = 0.76> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 165 [1/1] (0.00ns)   --->   "%sext_ln1364_2 = sext i8 %sub_ln1364_2"   --->   Operation 165 'sext' 'sext_ln1364_2' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 166 [1/1] (0.39ns)   --->   "%ush_2 = select i1 %isNeg_2, i9 %sext_ln1364_2, i9 %add_ln344_2"   --->   Operation 166 'select' 'ush_2' <Predicate = true> <Delay = 0.39> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_11 : Operation 167 [1/1] (0.00ns)   --->   "%sext_ln1340_2 = sext i9 %ush_2"   --->   Operation 167 'sext' 'sext_ln1340_2' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 168 [1/1] (0.00ns)   --->   "%zext_ln1340_2 = zext i32 %sext_ln1340_2"   --->   Operation 168 'zext' 'zext_ln1340_2' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 169 [1/1] (0.00ns) (grouped into LUT with out node val_2)   --->   "%r_V_4 = lshr i63 %zext_ln15_2, i63 %zext_ln1340_2"   --->   Operation 169 'lshr' 'r_V_4' <Predicate = true> <Delay = 0.00> <CoreInst = "Shifter">   --->   Core 75 'Shifter' <Latency = 0> <II = 1> <Delay = 1.38> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 170 [1/1] (0.00ns) (grouped into LUT with out node val_2)   --->   "%r_V_5 = shl i63 %zext_ln15_2, i63 %zext_ln1340_2"   --->   Operation 170 'shl' 'r_V_5' <Predicate = true> <Delay = 0.00> <CoreInst = "Shifter">   --->   Core 75 'Shifter' <Latency = 0> <II = 1> <Delay = 1.38> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 171 [1/1] (0.00ns) (grouped into LUT with out node val_2)   --->   "%tmp_15 = bitselect i1 @_ssdm_op_BitSelect.i1.i63.i32, i63 %r_V_4, i32 24"   --->   Operation 171 'bitselect' 'tmp_15' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 172 [1/1] (0.00ns) (grouped into LUT with out node val_2)   --->   "%zext_ln671_2 = zext i1 %tmp_15"   --->   Operation 172 'zext' 'zext_ln671_2' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 173 [1/1] (0.00ns) (grouped into LUT with out node val_2)   --->   "%tmp_6 = partselect i16 @_ssdm_op_PartSelect.i16.i63.i32.i32, i63 %r_V_5, i32 24, i32 39"   --->   Operation 173 'partselect' 'tmp_6' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 174 [1/1] (1.38ns) (out node of the LUT)   --->   "%val_2 = select i1 %isNeg_2, i16 %zext_ln671_2, i16 %tmp_6"   --->   Operation 174 'select' 'val_2' <Predicate = true> <Delay = 1.38> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_11 : Operation 175 [1/1] (0.85ns)   --->   "%result_V_10 = sub i16 0, i16 %val_2"   --->   Operation 175 'sub' 'result_V_10' <Predicate = (p_Result_2)> <Delay = 0.85> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 176 [1/1] (0.35ns)   --->   "%select_ln59 = select i1 %p_Result_2, i16 %result_V_10, i16 %val_2" [/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:59]   --->   Operation 176 'select' 'select_ln59' <Predicate = true> <Delay = 0.35> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+
+State 12 <SV = 11> <Delay = 6.32>
+ST_12 : Operation 177 [1/2] (5.64ns)   --->   "%call_ret3 = call i64 @park_direct<float>, i32 %Ialpha, i32 %Ibeta, i10 %trunc_ln255, i32 %sine_d, i32 %cosine_d" [foc-rewrite/apc/src/FOC/foc.cpp:306]   --->   Operation 177 'call' 'call_ret3' <Predicate = true> <Delay = 5.64> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_12 : Operation 178 [1/1] (0.00ns)   --->   "%Id = extractvalue i64 %call_ret3" [foc-rewrite/apc/src/FOC/foc.cpp:306]   --->   Operation 178 'extractvalue' 'Id' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 179 [1/1] (0.00ns)   --->   "%Iq = extractvalue i64 %call_ret3" [foc-rewrite/apc/src/FOC/foc.cpp:306]   --->   Operation 179 'extractvalue' 'Iq' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 180 [1/1] (0.00ns)   --->   "%bitcast_ln307 = bitcast i32 %Id" [foc-rewrite/apc/src/FOC/foc.cpp:307]   --->   Operation 180 'bitcast' 'bitcast_ln307' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 181 [1/1] (0.00ns)   --->   "%logger_addr_6 = getelementptr i32 %logger, i64 0, i64 5" [foc-rewrite/apc/src/FOC/foc.cpp:307]   --->   Operation 181 'getelementptr' 'logger_addr_6' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 182 [1/1] (0.67ns)   --->   "%store_ln307 = store i32 %bitcast_ln307, i5 %logger_addr_6" [foc-rewrite/apc/src/FOC/foc.cpp:307]   --->   Operation 182 'store' 'store_ln307' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM_1P">   --->   Core 88 'RAM_1P' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 17> <RAM>
+ST_12 : Operation 183 [1/2] (0.67ns)   --->   "%control_load_1 = load i3 %control_addr_1" [foc-rewrite/apc/src/FOC/foc.cpp:329]   --->   Operation 183 'load' 'control_load_1' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM_1P">   --->   Core 88 'RAM_1P' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 6> <RAM>
+ST_12 : Operation 184 [1/1] (0.35ns)   --->   "%xor_ln329 = xor i32 %control_load_1, i32 2147483648" [foc-rewrite/apc/src/FOC/foc.cpp:329]   --->   Operation 184 'xor' 'xor_ln329' <Predicate = true> <Delay = 0.35> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+
+State 13 <SV = 12> <Delay = 7.30>
+ST_13 : Operation 185 [1/1] (0.00ns)   --->   "%sext_ln287 = sext i16 %Theta" [foc-rewrite/apc/src/FOC/foc.cpp:287]   --->   Operation 185 'sext' 'sext_ln287' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 186 [4/4] (5.19ns)   --->   "%conv1 = sitofp i32 %sext_ln287" [foc-rewrite/apc/src/FOC/foc.cpp:287]   --->   Operation 186 'sitofp' 'conv1' <Predicate = true> <Delay = 5.19> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 3> <II = 1> <Delay = 5.19> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+ST_13 : Operation 187 [1/1] (0.00ns)   --->   "%bitcast_ln308 = bitcast i32 %Iq" [foc-rewrite/apc/src/FOC/foc.cpp:308]   --->   Operation 187 'bitcast' 'bitcast_ln308' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 188 [1/1] (0.00ns)   --->   "%logger_addr_7 = getelementptr i32 %logger, i64 0, i64 6" [foc-rewrite/apc/src/FOC/foc.cpp:308]   --->   Operation 188 'getelementptr' 'logger_addr_7' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 189 [1/1] (0.67ns)   --->   "%store_ln308 = store i32 %bitcast_ln308, i5 %logger_addr_7" [foc-rewrite/apc/src/FOC/foc.cpp:308]   --->   Operation 189 'store' 'store_ln308' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM_1P">   --->   Core 88 'RAM_1P' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 17> <RAM>
+ST_13 : Operation 190 [1/1] (0.00ns)   --->   "%bitcast_ln329 = bitcast i32 %xor_ln329" [foc-rewrite/apc/src/FOC/foc.cpp:329]   --->   Operation 190 'bitcast' 'bitcast_ln329' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 191 [1/1] (0.00ns)   --->   "%ierr_torque_load = load i32 %ierr_torque_s" [foc-rewrite/apc/src/FOC/foc.cpp:329]   --->   Operation 191 'load' 'ierr_torque_load' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 192 [2/2] (7.30ns)   --->   "%Vq = call i32 @PI_control<float>, i32 %bitcast_ln329, i32 %Iq, i32 -10, i32 -3, i32 %ierr_torque_load" [foc-rewrite/apc/src/FOC/foc.cpp:329]   --->   Operation 192 'call' 'Vq' <Predicate = true> <Delay = 7.30> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_13 : Operation 193 [1/1] (0.00ns)   --->   "%ierr_flux_load = load i32 %ierr_flux_s" [foc-rewrite/apc/src/FOC/foc.cpp:333]   --->   Operation 193 'load' 'ierr_flux_load' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 194 [2/2] (7.30ns)   --->   "%Vd = call i32 @PI_control<float>, i32 0, i32 %Id, i32 -32, i32 0, i32 %ierr_flux_load" [foc-rewrite/apc/src/FOC/foc.cpp:333]   --->   Operation 194 'call' 'Vd' <Predicate = true> <Delay = 7.30> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 14 <SV = 13> <Delay = 6.32>
+ST_14 : Operation 195 [3/4] (5.19ns)   --->   "%conv1 = sitofp i32 %sext_ln287" [foc-rewrite/apc/src/FOC/foc.cpp:287]   --->   Operation 195 'sitofp' 'conv1' <Predicate = true> <Delay = 5.19> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 3> <II = 1> <Delay = 5.19> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+ST_14 : Operation 196 [1/2] (5.64ns)   --->   "%Vq = call i32 @PI_control<float>, i32 %bitcast_ln329, i32 %Iq, i32 -10, i32 -3, i32 %ierr_torque_load" [foc-rewrite/apc/src/FOC/foc.cpp:329]   --->   Operation 196 'call' 'Vq' <Predicate = true> <Delay = 5.64> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_14 : Operation 197 [1/2] (5.64ns)   --->   "%Vd = call i32 @PI_control<float>, i32 0, i32 %Id, i32 -32, i32 0, i32 %ierr_flux_load" [foc-rewrite/apc/src/FOC/foc.cpp:333]   --->   Operation 197 'call' 'Vd' <Predicate = true> <Delay = 5.64> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_14 : Operation 198 [1/1] (0.00ns)   --->   "%bitcast_ln335 = bitcast i32 %Vd" [foc-rewrite/apc/src/FOC/foc.cpp:335]   --->   Operation 198 'bitcast' 'bitcast_ln335' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 199 [1/1] (0.00ns)   --->   "%logger_addr_8 = getelementptr i32 %logger, i64 0, i64 7" [foc-rewrite/apc/src/FOC/foc.cpp:335]   --->   Operation 199 'getelementptr' 'logger_addr_8' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 200 [1/1] (0.67ns)   --->   "%store_ln335 = store i32 %bitcast_ln335, i5 %logger_addr_8" [foc-rewrite/apc/src/FOC/foc.cpp:335]   --->   Operation 200 'store' 'store_ln335' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM_1P">   --->   Core 88 'RAM_1P' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 17> <RAM>
+
+State 15 <SV = 14> <Delay = 7.01>
+ST_15 : Operation 201 [2/4] (5.19ns)   --->   "%conv1 = sitofp i32 %sext_ln287" [foc-rewrite/apc/src/FOC/foc.cpp:287]   --->   Operation 201 'sitofp' 'conv1' <Predicate = true> <Delay = 5.19> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 3> <II = 1> <Delay = 5.19> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+ST_15 : Operation 202 [1/1] (0.00ns)   --->   "%bitcast_ln336 = bitcast i32 %Vq" [foc-rewrite/apc/src/FOC/foc.cpp:336]   --->   Operation 202 'bitcast' 'bitcast_ln336' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 203 [1/1] (0.00ns)   --->   "%logger_addr_9 = getelementptr i32 %logger, i64 0, i64 8" [foc-rewrite/apc/src/FOC/foc.cpp:336]   --->   Operation 203 'getelementptr' 'logger_addr_9' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 204 [1/1] (0.67ns)   --->   "%store_ln336 = store i32 %bitcast_ln336, i5 %logger_addr_9" [foc-rewrite/apc/src/FOC/foc.cpp:336]   --->   Operation 204 'store' 'store_ln336' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM_1P">   --->   Core 88 'RAM_1P' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 17> <RAM>
+ST_15 : Operation 205 [2/2] (7.01ns)   --->   "%call_ret4 = call i64 @decoupling<float>, i32 %Id, i32 %Iq, i32 %Vd, i32 %Vq, i32 %vel_corr" [foc-rewrite/apc/src/FOC/foc.cpp:341]   --->   Operation 205 'call' 'call_ret4' <Predicate = true> <Delay = 7.01> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 16 <SV = 15> <Delay = 6.43>
+ST_16 : Operation 206 [1/4] (5.19ns)   --->   "%conv1 = sitofp i32 %sext_ln287" [foc-rewrite/apc/src/FOC/foc.cpp:287]   --->   Operation 206 'sitofp' 'conv1' <Predicate = true> <Delay = 5.19> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 3> <II = 1> <Delay = 5.19> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+ST_16 : Operation 207 [1/1] (0.00ns)   --->   "%bitcast_ln287 = bitcast i32 %conv1" [foc-rewrite/apc/src/FOC/foc.cpp:287]   --->   Operation 207 'bitcast' 'bitcast_ln287' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 208 [1/1] (0.00ns)   --->   "%logger_addr = getelementptr i32 %logger, i64 0, i64 14" [foc-rewrite/apc/src/FOC/foc.cpp:287]   --->   Operation 208 'getelementptr' 'logger_addr' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 209 [1/1] (0.67ns)   --->   "%store_ln287 = store i32 %bitcast_ln287, i5 %logger_addr" [foc-rewrite/apc/src/FOC/foc.cpp:287]   --->   Operation 209 'store' 'store_ln287' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM_1P">   --->   Core 88 'RAM_1P' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 17> <RAM>
+ST_16 : Operation 210 [1/2] (6.43ns)   --->   "%call_ret4 = call i64 @decoupling<float>, i32 %Id, i32 %Iq, i32 %Vd, i32 %Vq, i32 %vel_corr" [foc-rewrite/apc/src/FOC/foc.cpp:341]   --->   Operation 210 'call' 'call_ret4' <Predicate = true> <Delay = 6.43> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_16 : Operation 211 [1/1] (0.00ns)   --->   "%Vd_decoupled = extractvalue i64 %call_ret4" [foc-rewrite/apc/src/FOC/foc.cpp:341]   --->   Operation 211 'extractvalue' 'Vd_decoupled' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 212 [1/1] (0.00ns)   --->   "%Vq_decoupled = extractvalue i64 %call_ret4" [foc-rewrite/apc/src/FOC/foc.cpp:341]   --->   Operation 212 'extractvalue' 'Vq_decoupled' <Predicate = true> <Delay = 0.00>
+
+State 17 <SV = 16> <Delay = 7.01>
+ST_17 : Operation 213 [1/1] (0.00ns)   --->   "%bitcast_ln342 = bitcast i32 %Vd_decoupled" [foc-rewrite/apc/src/FOC/foc.cpp:342]   --->   Operation 213 'bitcast' 'bitcast_ln342' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 214 [1/1] (0.00ns)   --->   "%logger_addr_10 = getelementptr i32 %logger, i64 0, i64 15" [foc-rewrite/apc/src/FOC/foc.cpp:342]   --->   Operation 214 'getelementptr' 'logger_addr_10' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 215 [1/1] (0.67ns)   --->   "%store_ln342 = store i32 %bitcast_ln342, i5 %logger_addr_10" [foc-rewrite/apc/src/FOC/foc.cpp:342]   --->   Operation 215 'store' 'store_ln342' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM_1P">   --->   Core 88 'RAM_1P' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 17> <RAM>
+ST_17 : Operation 216 [2/2] (7.01ns)   --->   "%call_ret = call i64 @park_inverse<float>, i32 %Vd_decoupled, i32 %Vq_decoupled, i10 %trunc_ln255, i32 %sine_i, i32 %cosine_i" [foc-rewrite/apc/src/FOC/foc.cpp:348]   --->   Operation 216 'call' 'call_ret' <Predicate = true> <Delay = 7.01> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 18 <SV = 17> <Delay = 5.64>
+ST_18 : Operation 217 [1/1] (0.00ns)   --->   "%bitcast_ln343 = bitcast i32 %Vq_decoupled" [foc-rewrite/apc/src/FOC/foc.cpp:343]   --->   Operation 217 'bitcast' 'bitcast_ln343' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 218 [1/1] (0.00ns)   --->   "%logger_addr_11 = getelementptr i32 %logger, i64 0, i64 16" [foc-rewrite/apc/src/FOC/foc.cpp:343]   --->   Operation 218 'getelementptr' 'logger_addr_11' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 219 [1/1] (0.67ns)   --->   "%store_ln343 = store i32 %bitcast_ln343, i5 %logger_addr_11" [foc-rewrite/apc/src/FOC/foc.cpp:343]   --->   Operation 219 'store' 'store_ln343' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM_1P">   --->   Core 88 'RAM_1P' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 17> <RAM>
+ST_18 : Operation 220 [1/2] (5.64ns)   --->   "%call_ret = call i64 @park_inverse<float>, i32 %Vd_decoupled, i32 %Vq_decoupled, i10 %trunc_ln255, i32 %sine_i, i32 %cosine_i" [foc-rewrite/apc/src/FOC/foc.cpp:348]   --->   Operation 220 'call' 'call_ret' <Predicate = true> <Delay = 5.64> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_18 : Operation 221 [1/1] (0.00ns)   --->   "%Valpha = extractvalue i64 %call_ret" [foc-rewrite/apc/src/FOC/foc.cpp:348]   --->   Operation 221 'extractvalue' 'Valpha' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 222 [1/1] (0.00ns)   --->   "%Vbeta = extractvalue i64 %call_ret" [foc-rewrite/apc/src/FOC/foc.cpp:348]   --->   Operation 222 'extractvalue' 'Vbeta' <Predicate = true> <Delay = 0.00>
+
+State 19 <SV = 18> <Delay = 7.01>
+ST_19 : Operation 223 [1/1] (0.00ns)   --->   "%bitcast_ln349 = bitcast i32 %Valpha" [foc-rewrite/apc/src/FOC/foc.cpp:349]   --->   Operation 223 'bitcast' 'bitcast_ln349' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 224 [1/1] (0.00ns)   --->   "%logger_addr_12 = getelementptr i32 %logger, i64 0, i64 9" [foc-rewrite/apc/src/FOC/foc.cpp:349]   --->   Operation 224 'getelementptr' 'logger_addr_12' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 225 [1/1] (0.67ns)   --->   "%store_ln349 = store i32 %bitcast_ln349, i5 %logger_addr_12" [foc-rewrite/apc/src/FOC/foc.cpp:349]   --->   Operation 225 'store' 'store_ln349' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM_1P">   --->   Core 88 'RAM_1P' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 17> <RAM>
+ST_19 : Operation 226 [2/2] (7.01ns)   --->   "%call_ret5 = call i96 @clarke_inverse<float>, i32 %Valpha, i32 %Vbeta" [foc-rewrite/apc/src/FOC/foc.cpp:355]   --->   Operation 226 'call' 'call_ret5' <Predicate = true> <Delay = 7.01> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 20 <SV = 19> <Delay = 5.64>
+ST_20 : Operation 227 [1/1] (0.00ns)   --->   "%bitcast_ln350 = bitcast i32 %Vbeta" [foc-rewrite/apc/src/FOC/foc.cpp:350]   --->   Operation 227 'bitcast' 'bitcast_ln350' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 228 [1/1] (0.00ns)   --->   "%logger_addr_13 = getelementptr i32 %logger, i64 0, i64 10" [foc-rewrite/apc/src/FOC/foc.cpp:350]   --->   Operation 228 'getelementptr' 'logger_addr_13' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 229 [1/1] (0.67ns)   --->   "%store_ln350 = store i32 %bitcast_ln350, i5 %logger_addr_13" [foc-rewrite/apc/src/FOC/foc.cpp:350]   --->   Operation 229 'store' 'store_ln350' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM_1P">   --->   Core 88 'RAM_1P' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 17> <RAM>
+ST_20 : Operation 230 [1/2] (5.64ns)   --->   "%call_ret5 = call i96 @clarke_inverse<float>, i32 %Valpha, i32 %Vbeta" [foc-rewrite/apc/src/FOC/foc.cpp:355]   --->   Operation 230 'call' 'call_ret5' <Predicate = true> <Delay = 5.64> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_20 : Operation 231 [1/1] (0.00ns)   --->   "%Va = extractvalue i96 %call_ret5" [foc-rewrite/apc/src/FOC/foc.cpp:355]   --->   Operation 231 'extractvalue' 'Va' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 232 [1/1] (0.00ns)   --->   "%Vb = extractvalue i96 %call_ret5" [foc-rewrite/apc/src/FOC/foc.cpp:355]   --->   Operation 232 'extractvalue' 'Vb' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 233 [1/1] (0.00ns)   --->   "%Vc = extractvalue i96 %call_ret5" [foc-rewrite/apc/src/FOC/foc.cpp:355]   --->   Operation 233 'extractvalue' 'Vc' <Predicate = true> <Delay = 0.00>
+
+State 21 <SV = 20> <Delay = 2.78>
+ST_21 : Operation 234 [1/1] (0.00ns)   --->   "%bitcast_ln356 = bitcast i32 %Va" [foc-rewrite/apc/src/FOC/foc.cpp:356]   --->   Operation 234 'bitcast' 'bitcast_ln356' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 235 [1/1] (0.00ns)   --->   "%logger_addr_14 = getelementptr i32 %logger, i64 0, i64 11" [foc-rewrite/apc/src/FOC/foc.cpp:356]   --->   Operation 235 'getelementptr' 'logger_addr_14' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 236 [1/1] (0.67ns)   --->   "%store_ln356 = store i32 %bitcast_ln356, i5 %logger_addr_14" [foc-rewrite/apc/src/FOC/foc.cpp:356]   --->   Operation 236 'store' 'store_ln356' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM_1P">   --->   Core 88 'RAM_1P' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 17> <RAM>
+ST_21 : Operation 237 [2/2] (2.78ns)   --->   "%call_ret6 = call i48 @SVPWM<float>, i32 %Va, i32 %Vb, i32 %Vc" [foc-rewrite/apc/src/FOC/foc.cpp:363]   --->   Operation 237 'call' 'call_ret6' <Predicate = true> <Delay = 2.78> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 22 <SV = 21> <Delay = 3.76>
+ST_22 : Operation 238 [1/1] (0.00ns)   --->   "%bitcast_ln357 = bitcast i32 %Vb" [foc-rewrite/apc/src/FOC/foc.cpp:357]   --->   Operation 238 'bitcast' 'bitcast_ln357' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 239 [1/1] (0.00ns)   --->   "%logger_addr_15 = getelementptr i32 %logger, i64 0, i64 12" [foc-rewrite/apc/src/FOC/foc.cpp:357]   --->   Operation 239 'getelementptr' 'logger_addr_15' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 240 [1/1] (0.67ns)   --->   "%store_ln357 = store i32 %bitcast_ln357, i5 %logger_addr_15" [foc-rewrite/apc/src/FOC/foc.cpp:357]   --->   Operation 240 'store' 'store_ln357' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM_1P">   --->   Core 88 'RAM_1P' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 17> <RAM>
+ST_22 : Operation 241 [1/2] (3.76ns)   --->   "%call_ret6 = call i48 @SVPWM<float>, i32 %Va, i32 %Vb, i32 %Vc" [foc-rewrite/apc/src/FOC/foc.cpp:363]   --->   Operation 241 'call' 'call_ret6' <Predicate = true> <Delay = 3.76> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_22 : Operation 242 [1/1] (0.00ns)   --->   "%pwm_a = extractvalue i48 %call_ret6" [foc-rewrite/apc/src/FOC/foc.cpp:363]   --->   Operation 242 'extractvalue' 'pwm_a' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 243 [1/1] (0.00ns)   --->   "%pwm_b = extractvalue i48 %call_ret6" [foc-rewrite/apc/src/FOC/foc.cpp:363]   --->   Operation 243 'extractvalue' 'pwm_b' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 244 [1/1] (0.00ns)   --->   "%pwm_c = extractvalue i48 %call_ret6" [foc-rewrite/apc/src/FOC/foc.cpp:363]   --->   Operation 244 'extractvalue' 'pwm_c' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 245 [1/1] (0.00ns)   --->   "%pwmStreamObj_data_V = bitconcatenate i48 @_ssdm_op_BitConcatenate.i48.i16.i16.i16, i16 %pwm_c, i16 %pwm_b, i16 %pwm_a" [foc-rewrite/apc/src/FOC/foc.cpp:370]   --->   Operation 245 'bitconcatenate' 'pwmStreamObj_data_V' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 246 [1/1] (0.00ns)   --->   "%zext_ln370 = zext i48 %pwmStreamObj_data_V" [foc-rewrite/apc/src/FOC/foc.cpp:370]   --->   Operation 246 'zext' 'zext_ln370' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 247 [1/1] (0.00ns)   --->   "%logger_data_data_V = bitconcatenate i48 @_ssdm_op_BitConcatenate.i48.i16.i16.i16, i16 %result_V_13, i16 %select_ln59, i16 %result_V_14" [foc-rewrite/apc/src/FOC/foc.cpp:371]   --->   Operation 247 'bitconcatenate' 'logger_data_data_V' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 248 [1/1] (0.00ns)   --->   "%zext_ln371 = zext i48 %logger_data_data_V" [foc-rewrite/apc/src/FOC/foc.cpp:371]   --->   Operation 248 'zext' 'zext_ln371' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 249 [1/1] (0.00ns)   --->   "%write_ln304 = write void @_ssdm_op_Write.axis.volatile.i64P0A.i8P0A.i8P0A.i1P0A, i64 %B_V_data_V, i8 %B_V_keep_V, i8 %B_V_strb_V, i1 %B_V_last_V, i64 %zext_ln370, i8 0, i8 0, i1 0"   --->   Operation 249 'write' 'write_ln304' <Predicate = true> <Delay = 0.00> <CoreInst = "axis">   --->   Core 123 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_22 : Operation 250 [1/1] (0.00ns)   --->   "%write_ln304 = write void @_ssdm_op_Write.axis.volatile.i64P0A.i8P0A.i8P0A.i1P0A, i64 %C_V_data_V, i8 %C_V_keep_V, i8 %C_V_strb_V, i1 %C_V_last_V, i64 %zext_ln371, i8 0, i8 0, i1 0"   --->   Operation 250 'write' 'write_ln304' <Predicate = true> <Delay = 0.00> <CoreInst = "axis">   --->   Core 123 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+
+State 23 <SV = 22> <Delay = 0.67>
+ST_23 : Operation 251 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %logger, i64 666, i64 207, i64 1"   --->   Operation 251 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 252 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %control, i64 666, i64 207, i64 1"   --->   Operation 252 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 253 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %logger, void @empty_3, i32 0, i32 0, void @empty_6, i32 1, i32 0, void @empty_6, void @empty_6, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_6"   --->   Operation 253 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 254 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %control, void @empty_3, i32 0, i32 0, void @empty_6, i32 1, i32 0, void @empty_6, void @empty_6, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_6"   --->   Operation 254 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 255 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %C_V_last_V, void @empty_7, i32 0, i32 0, void @empty_8, i32 0, i32 0, void @empty_6, void @empty_6, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_6"   --->   Operation 255 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 256 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %C_V_strb_V, void @empty_7, i32 0, i32 0, void @empty_8, i32 0, i32 0, void @empty_6, void @empty_6, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_6"   --->   Operation 256 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 257 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %C_V_keep_V, void @empty_7, i32 0, i32 0, void @empty_8, i32 0, i32 0, void @empty_6, void @empty_6, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_6"   --->   Operation 257 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 258 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %C_V_data_V, void @empty_7, i32 0, i32 0, void @empty_8, i32 0, i32 0, void @empty_6, void @empty_6, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_6"   --->   Operation 258 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 259 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %B_V_last_V, void @empty_7, i32 0, i32 0, void @empty_8, i32 0, i32 0, void @empty_6, void @empty_6, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_6"   --->   Operation 259 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 260 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %B_V_strb_V, void @empty_7, i32 0, i32 0, void @empty_8, i32 0, i32 0, void @empty_6, void @empty_6, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_6"   --->   Operation 260 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 261 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %B_V_keep_V, void @empty_7, i32 0, i32 0, void @empty_8, i32 0, i32 0, void @empty_6, void @empty_6, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_6"   --->   Operation 261 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 262 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %B_V_data_V, void @empty_7, i32 0, i32 0, void @empty_8, i32 0, i32 0, void @empty_6, void @empty_6, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_6"   --->   Operation 262 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 263 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %A_V_last_V, void @empty_7, i32 0, i32 0, void @empty_8, i32 0, i32 0, void @empty_6, void @empty_6, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_6"   --->   Operation 263 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 264 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i10 %A_V_strb_V, void @empty_7, i32 0, i32 0, void @empty_8, i32 0, i32 0, void @empty_6, void @empty_6, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_6"   --->   Operation 264 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 265 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i10 %A_V_keep_V, void @empty_7, i32 0, i32 0, void @empty_8, i32 0, i32 0, void @empty_6, void @empty_6, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_6"   --->   Operation 265 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 266 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i80 %A_V_data_V, void @empty_7, i32 0, i32 0, void @empty_8, i32 0, i32 0, void @empty_6, void @empty_6, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_6"   --->   Operation 266 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 267 [1/1] (0.00ns)   --->   "%bitcast_ln358 = bitcast i32 %Vc" [foc-rewrite/apc/src/FOC/foc.cpp:358]   --->   Operation 267 'bitcast' 'bitcast_ln358' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 268 [1/1] (0.00ns)   --->   "%logger_addr_16 = getelementptr i32 %logger, i64 0, i64 13" [foc-rewrite/apc/src/FOC/foc.cpp:358]   --->   Operation 268 'getelementptr' 'logger_addr_16' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 269 [1/1] (0.67ns)   --->   "%store_ln358 = store i32 %bitcast_ln358, i5 %logger_addr_16" [foc-rewrite/apc/src/FOC/foc.cpp:358]   --->   Operation 269 'store' 'store_ln358' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM_1P">   --->   Core 88 'RAM_1P' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 17> <RAM>
+ST_23 : Operation 270 [1/1] (0.00ns)   --->   "%ret_ln375 = ret" [foc-rewrite/apc/src/FOC/foc.cpp:375]   --->   Operation 270 'ret' 'ret_ln375' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 5.2ns
+The critical path consists of the following:
+	axis read operation ('empty') on port 'A_V_data_V' [43]  (0 ns)
+	'sitofp' operation ('vel_corr', foc-rewrite/apc/src/FOC/foc.cpp:290) [90]  (5.2 ns)
+
+ <State 2>: 5.2ns
+The critical path consists of the following:
+	'sitofp' operation ('conv', foc-rewrite/apc/src/FOC/foc.cpp:281) [50]  (5.2 ns)
+
+ <State 3>: 5.2ns
+The critical path consists of the following:
+	'sitofp' operation ('conv', foc-rewrite/apc/src/FOC/foc.cpp:281) [50]  (5.2 ns)
+
+ <State 4>: 5.2ns
+The critical path consists of the following:
+	'sitofp' operation ('conv', foc-rewrite/apc/src/FOC/foc.cpp:281) [50]  (5.2 ns)
+
+ <State 5>: 7.02ns
+The critical path consists of the following:
+	'call' operation ('call_ret1', foc-rewrite/apc/src/FOC/foc.cpp:291) to 'low_pass_filter<float>' [95]  (7.02 ns)
+
+ <State 6>: 7.11ns
+The critical path consists of the following:
+	'load' operation ('control_load', foc-rewrite/apc/src/FOC/foc.cpp:281) on array 'control' [52]  (0.677 ns)
+	'fsub' operation ('x', foc-rewrite/apc/src/FOC/foc.cpp:281) [54]  (6.44 ns)
+
+ <State 7>: 6.44ns
+The critical path consists of the following:
+	'fsub' operation ('x', foc-rewrite/apc/src/FOC/foc.cpp:281) [54]  (6.44 ns)
+
+ <State 8>: 6.44ns
+The critical path consists of the following:
+	'fsub' operation ('x', foc-rewrite/apc/src/FOC/foc.cpp:281) [54]  (6.44 ns)
+
+ <State 9>: 7.02ns
+The critical path consists of the following:
+	'call' operation ('call_ret2', foc-rewrite/apc/src/FOC/foc.cpp:299) to 'clarke_direct<float>' [108]  (7.02 ns)
+
+ <State 10>: 6.43ns
+The critical path consists of the following:
+	'add' operation ('sh', /wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:344) [62]  (0.765 ns)
+	'select' operation ('ush') [66]  (0.398 ns)
+	'lshr' operation ('r.V') [69]  (0 ns)
+	'select' operation ('val') [74]  (1.39 ns)
+	'sub' operation ('result.V') [75]  (0.853 ns)
+	'select' operation ('result.V', /wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:59) [76]  (0.357 ns)
+	'add' operation ('add_ln283', foc-rewrite/apc/src/FOC/foc.cpp:283) [78]  (0.853 ns)
+	'select' operation ('Theta', foc-rewrite/apc/src/FOC/foc.cpp:283) [79]  (0.357 ns)
+	'icmp' operation ('icmp_ln284', foc-rewrite/apc/src/FOC/foc.cpp:284) [80]  (1.1 ns)
+	'select' operation ('Theta', foc-rewrite/apc/src/FOC/foc.cpp:284) [82]  (0.357 ns)
+
+ <State 11>: 7.02ns
+The critical path consists of the following:
+	'call' operation ('call_ret3', foc-rewrite/apc/src/FOC/foc.cpp:306) to 'park_direct<float>' [117]  (7.02 ns)
+
+ <State 12>: 6.32ns
+The critical path consists of the following:
+	'call' operation ('call_ret3', foc-rewrite/apc/src/FOC/foc.cpp:306) to 'park_direct<float>' [117]  (5.65 ns)
+	'store' operation ('store_ln307', foc-rewrite/apc/src/FOC/foc.cpp:307) of variable 'bitcast_ln307', foc-rewrite/apc/src/FOC/foc.cpp:307 on array 'logger' [122]  (0.677 ns)
+
+ <State 13>: 7.3ns
+The critical path consists of the following:
+	'call' operation ('Vq', foc-rewrite/apc/src/FOC/foc.cpp:329) to 'PI_control<float>' [131]  (7.3 ns)
+
+ <State 14>: 6.32ns
+The critical path consists of the following:
+	'call' operation ('Vd', foc-rewrite/apc/src/FOC/foc.cpp:333) to 'PI_control<float>' [133]  (5.65 ns)
+	'store' operation ('store_ln335', foc-rewrite/apc/src/FOC/foc.cpp:335) of variable 'bitcast_ln335', foc-rewrite/apc/src/FOC/foc.cpp:335 on array 'logger' [136]  (0.677 ns)
+
+ <State 15>: 7.02ns
+The critical path consists of the following:
+	'call' operation ('call_ret4', foc-rewrite/apc/src/FOC/foc.cpp:341) to 'decoupling<float>' [140]  (7.02 ns)
+
+ <State 16>: 6.44ns
+The critical path consists of the following:
+	'call' operation ('call_ret4', foc-rewrite/apc/src/FOC/foc.cpp:341) to 'decoupling<float>' [140]  (6.44 ns)
+
+ <State 17>: 7.02ns
+The critical path consists of the following:
+	'call' operation ('call_ret', foc-rewrite/apc/src/FOC/foc.cpp:348) to 'park_inverse<float>' [149]  (7.02 ns)
+
+ <State 18>: 5.65ns
+The critical path consists of the following:
+	'call' operation ('call_ret', foc-rewrite/apc/src/FOC/foc.cpp:348) to 'park_inverse<float>' [149]  (5.65 ns)
+
+ <State 19>: 7.02ns
+The critical path consists of the following:
+	'call' operation ('call_ret5', foc-rewrite/apc/src/FOC/foc.cpp:355) to 'clarke_inverse<float>' [158]  (7.02 ns)
+
+ <State 20>: 5.65ns
+The critical path consists of the following:
+	'call' operation ('call_ret5', foc-rewrite/apc/src/FOC/foc.cpp:355) to 'clarke_inverse<float>' [158]  (5.65 ns)
+
+ <State 21>: 2.78ns
+The critical path consists of the following:
+	'call' operation ('call_ret6', foc-rewrite/apc/src/FOC/foc.cpp:363) to 'SVPWM<float>' [171]  (2.78 ns)
+
+ <State 22>: 3.76ns
+The critical path consists of the following:
+	'call' operation ('call_ret6', foc-rewrite/apc/src/FOC/foc.cpp:363) to 'SVPWM<float>' [171]  (3.76 ns)
+
+ <State 23>: 0.677ns
+The critical path consists of the following:
+	'store' operation ('store_ln358', foc-rewrite/apc/src/FOC/foc.cpp:358) of variable 'bitcast_ln358', foc-rewrite/apc/src/FOC/foc.cpp:358 on array 'logger' [170]  (0.677 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

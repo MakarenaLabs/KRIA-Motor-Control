@@ -1,0 +1,244 @@
+
+
+================================================================
+== Vitis HLS Report for 'decoupling_float_s'
+================================================================
+* Date:           Mon Oct 17 13:30:24 2022
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)
+* Project:        foc-rewrite
+* Solution:       foc (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu7ev-ffvc1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.016 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       13|       13|  0.130 us|  0.130 us|   13|   13|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 14
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 7.01>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%Id_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %Id" [foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp:4]   --->   Operation 15 'read' 'Id_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [3/3] (7.01ns)   --->   "%mul2 = fmul i32 %Id_read, i32 0.000845" [foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp:21]   --->   Operation 16 'fmul' 'mul2' <Predicate = true> <Delay = 7.01> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 7.01> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 2 <SV = 1> <Delay = 7.01>
+ST_2 : Operation 17 [2/3] (7.01ns)   --->   "%mul2 = fmul i32 %Id_read, i32 0.000845" [foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp:21]   --->   Operation 17 'fmul' 'mul2' <Predicate = true> <Delay = 7.01> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 7.01> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 7.01>
+ST_3 : Operation 18 [1/3] (7.01ns)   --->   "%mul2 = fmul i32 %Id_read, i32 0.000845" [foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp:21]   --->   Operation 18 'fmul' 'mul2' <Predicate = true> <Delay = 7.01> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 7.01> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 6.43>
+ST_4 : Operation 19 [4/4] (6.43ns)   --->   "%add3 = fadd i32 %mul2, i32 0.00801449" [foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp:21]   --->   Operation 19 'fadd' 'add3' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 7.01>
+ST_5 : Operation 20 [1/1] (0.00ns)   --->   "%Iq_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %Iq" [foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp:4]   --->   Operation 20 'read' 'Iq_read' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 21 [3/3] (7.01ns)   --->   "%mul = fmul i32 %Iq_read, i32 0.000845" [foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp:20]   --->   Operation 21 'fmul' 'mul' <Predicate = true> <Delay = 7.01> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 7.01> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 22 [3/4] (6.43ns)   --->   "%add3 = fadd i32 %mul2, i32 0.00801449" [foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp:21]   --->   Operation 22 'fadd' 'add3' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 7.01>
+ST_6 : Operation 23 [2/3] (7.01ns)   --->   "%mul = fmul i32 %Iq_read, i32 0.000845" [foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp:20]   --->   Operation 23 'fmul' 'mul' <Predicate = true> <Delay = 7.01> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 7.01> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 24 [2/4] (6.43ns)   --->   "%add3 = fadd i32 %mul2, i32 0.00801449" [foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp:21]   --->   Operation 24 'fadd' 'add3' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 7.01>
+ST_7 : Operation 25 [1/3] (7.01ns)   --->   "%mul = fmul i32 %Iq_read, i32 0.000845" [foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp:20]   --->   Operation 25 'fmul' 'mul' <Predicate = true> <Delay = 7.01> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 7.01> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 26 [1/4] (6.43ns)   --->   "%add3 = fadd i32 %mul2, i32 0.00801449" [foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp:21]   --->   Operation 26 'fadd' 'add3' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 7.01>
+ST_8 : Operation 27 [1/1] (0.00ns)   --->   "%RPM_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %RPM" [foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp:4]   --->   Operation 27 'read' 'RPM_read' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 28 [3/3] (7.01ns)   --->   "%mul1 = fmul i32 %mul, i32 %RPM_read" [foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp:20]   --->   Operation 28 'fmul' 'mul1' <Predicate = true> <Delay = 7.01> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 7.01> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 29 [3/3] (7.01ns)   --->   "%mul4 = fmul i32 %add3, i32 %RPM_read" [foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp:21]   --->   Operation 29 'fmul' 'mul4' <Predicate = true> <Delay = 7.01> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 7.01> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 7.01>
+ST_9 : Operation 30 [2/3] (7.01ns)   --->   "%mul1 = fmul i32 %mul, i32 %RPM_read" [foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp:20]   --->   Operation 30 'fmul' 'mul1' <Predicate = true> <Delay = 7.01> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 7.01> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 31 [2/3] (7.01ns)   --->   "%mul4 = fmul i32 %add3, i32 %RPM_read" [foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp:21]   --->   Operation 31 'fmul' 'mul4' <Predicate = true> <Delay = 7.01> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 7.01> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 7.01>
+ST_10 : Operation 32 [1/3] (7.01ns)   --->   "%mul1 = fmul i32 %mul, i32 %RPM_read" [foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp:20]   --->   Operation 32 'fmul' 'mul1' <Predicate = true> <Delay = 7.01> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 7.01> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 33 [1/3] (7.01ns)   --->   "%mul4 = fmul i32 %add3, i32 %RPM_read" [foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp:21]   --->   Operation 33 'fmul' 'mul4' <Predicate = true> <Delay = 7.01> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 7.01> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 11 <SV = 10> <Delay = 6.43>
+ST_11 : Operation 34 [1/1] (0.00ns)   --->   "%Vq_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %Vq" [foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp:4]   --->   Operation 34 'read' 'Vq_read' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 35 [1/1] (0.00ns)   --->   "%Vd_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %Vd" [foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp:4]   --->   Operation 35 'read' 'Vd_read' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 36 [4/4] (6.43ns)   --->   "%Flux_decoup = fadd i32 %mul1, i32 %Vd_read" [foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp:20]   --->   Operation 36 'fadd' 'Flux_decoup' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 37 [4/4] (6.43ns)   --->   "%Torque_decoup = fsub i32 %Vq_read, i32 %mul4" [foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp:21]   --->   Operation 37 'fsub' 'Torque_decoup' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 12 <SV = 11> <Delay = 6.43>
+ST_12 : Operation 38 [3/4] (6.43ns)   --->   "%Flux_decoup = fadd i32 %mul1, i32 %Vd_read" [foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp:20]   --->   Operation 38 'fadd' 'Flux_decoup' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 39 [3/4] (6.43ns)   --->   "%Torque_decoup = fsub i32 %Vq_read, i32 %mul4" [foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp:21]   --->   Operation 39 'fsub' 'Torque_decoup' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 13 <SV = 12> <Delay = 6.43>
+ST_13 : Operation 40 [2/4] (6.43ns)   --->   "%Flux_decoup = fadd i32 %mul1, i32 %Vd_read" [foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp:20]   --->   Operation 40 'fadd' 'Flux_decoup' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 41 [2/4] (6.43ns)   --->   "%Torque_decoup = fsub i32 %Vq_read, i32 %mul4" [foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp:21]   --->   Operation 41 'fsub' 'Torque_decoup' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 14 <SV = 13> <Delay = 6.43>
+ST_14 : Operation 42 [1/4] (6.43ns)   --->   "%Flux_decoup = fadd i32 %mul1, i32 %Vd_read" [foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp:20]   --->   Operation 42 'fadd' 'Flux_decoup' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 43 [1/4] (6.43ns)   --->   "%Torque_decoup = fsub i32 %Vq_read, i32 %mul4" [foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp:21]   --->   Operation 43 'fsub' 'Torque_decoup' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 44 [1/1] (0.00ns)   --->   "%mrv = insertvalue i64 <undef>, i32 %Flux_decoup" [foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp:26]   --->   Operation 44 'insertvalue' 'mrv' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 45 [1/1] (0.00ns)   --->   "%mrv_1 = insertvalue i64 %mrv, i32 %Torque_decoup" [foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp:26]   --->   Operation 45 'insertvalue' 'mrv_1' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 46 [1/1] (0.00ns)   --->   "%ret_ln26 = ret i64 %mrv_1" [foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp:26]   --->   Operation 46 'ret' 'ret_ln26' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 7.02ns
+The critical path consists of the following:
+	wire read operation ('Id', foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp:4) on port 'Id' (foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp:4) [10]  (0 ns)
+	'fmul' operation ('mul2', foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp:21) [14]  (7.02 ns)
+
+ <State 2>: 7.02ns
+The critical path consists of the following:
+	'fmul' operation ('mul2', foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp:21) [14]  (7.02 ns)
+
+ <State 3>: 7.02ns
+The critical path consists of the following:
+	'fmul' operation ('mul2', foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp:21) [14]  (7.02 ns)
+
+ <State 4>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('add3', foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp:21) [15]  (6.44 ns)
+
+ <State 5>: 7.02ns
+The critical path consists of the following:
+	wire read operation ('Iq', foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp:4) on port 'Iq' (foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp:4) [9]  (0 ns)
+	'fmul' operation ('mul', foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp:20) [11]  (7.02 ns)
+
+ <State 6>: 7.02ns
+The critical path consists of the following:
+	'fmul' operation ('mul', foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp:20) [11]  (7.02 ns)
+
+ <State 7>: 7.02ns
+The critical path consists of the following:
+	'fmul' operation ('mul', foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp:20) [11]  (7.02 ns)
+
+ <State 8>: 7.02ns
+The critical path consists of the following:
+	wire read operation ('RPM', foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp:4) on port 'RPM' (foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp:4) [6]  (0 ns)
+	'fmul' operation ('mul1', foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp:20) [12]  (7.02 ns)
+
+ <State 9>: 7.02ns
+The critical path consists of the following:
+	'fmul' operation ('mul1', foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp:20) [12]  (7.02 ns)
+
+ <State 10>: 7.02ns
+The critical path consists of the following:
+	'fmul' operation ('mul1', foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp:20) [12]  (7.02 ns)
+
+ <State 11>: 6.44ns
+The critical path consists of the following:
+	wire read operation ('Vd', foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp:4) on port 'Vd' (foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp:4) [8]  (0 ns)
+	'fadd' operation ('Flux_decoup', foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp:20) [13]  (6.44 ns)
+
+ <State 12>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('Flux_decoup', foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp:20) [13]  (6.44 ns)
+
+ <State 13>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('Flux_decoup', foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp:20) [13]  (6.44 ns)
+
+ <State 14>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('Flux_decoup', foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp:20) [13]  (6.44 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

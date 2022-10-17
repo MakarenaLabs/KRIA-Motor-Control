@@ -1,0 +1,316 @@
+
+
+================================================================
+== Vitis HLS Report for 'park_direct_float_s'
+================================================================
+* Date:           Mon Oct 17 13:30:23 2022
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)
+* Project:        foc-rewrite
+* Solution:       foc (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu7ev-ffvc1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.016 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       14|       14|  0.140 us|  0.140 us|   14|   14|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 15
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.23>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%angle_read = read i10 @_ssdm_op_Read.ap_auto.i10, i10 %angle"   --->   Operation 16 'read' 'angle_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%zext_ln19 = zext i10 %angle_read" [foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:19]   --->   Operation 17 'zext' 'zext_ln19' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%sine_d_addr = getelementptr i32 %sine_d, i64 0, i64 %zext_ln19" [foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:19]   --->   Operation 18 'getelementptr' 'sine_d_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [2/2] (1.23ns)   --->   "%sin_angle = load i10 %sine_d_addr" [foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:19]   --->   Operation 19 'load' 'sin_angle' <Predicate = true> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 1000> <ROM>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%cosine_d_addr = getelementptr i32 %cosine_d, i64 0, i64 %zext_ln19" [foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:20]   --->   Operation 20 'getelementptr' 'cosine_d_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [2/2] (1.23ns)   --->   "%cos_angle = load i10 %cosine_d_addr" [foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:20]   --->   Operation 21 'load' 'cos_angle' <Predicate = true> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 1000> <ROM>
+
+State 2 <SV = 1> <Delay = 1.23>
+ST_2 : Operation 22 [1/2] (1.23ns)   --->   "%sin_angle = load i10 %sine_d_addr" [foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:19]   --->   Operation 22 'load' 'sin_angle' <Predicate = true> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 1000> <ROM>
+ST_2 : Operation 23 [1/2] (1.23ns)   --->   "%cos_angle = load i10 %cosine_d_addr" [foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:20]   --->   Operation 23 'load' 'cos_angle' <Predicate = true> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 1000> <ROM>
+
+State 3 <SV = 2> <Delay = 7.01>
+ST_3 : Operation 24 [1/1] (0.00ns)   --->   "%Ibeta_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %Ibeta"   --->   Operation 24 'read' 'Ibeta_read' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 25 [1/1] (0.00ns)   --->   "%Ialpha_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %Ialpha"   --->   Operation 25 'read' 'Ialpha_read' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 26 [3/3] (7.01ns)   --->   "%Ialpha_cos = fmul i32 %cos_angle, i32 %Ialpha_read" [foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:22]   --->   Operation 26 'fmul' 'Ialpha_cos' <Predicate = true> <Delay = 7.01> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 7.01> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 27 [3/3] (7.01ns)   --->   "%Ialpha_sin = fmul i32 %sin_angle, i32 %Ialpha_read" [foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:23]   --->   Operation 27 'fmul' 'Ialpha_sin' <Predicate = true> <Delay = 7.01> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 7.01> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 28 [3/3] (7.01ns)   --->   "%Ibeta_cos = fmul i32 %cos_angle, i32 %Ibeta_read" [foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:24]   --->   Operation 28 'fmul' 'Ibeta_cos' <Predicate = true> <Delay = 7.01> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 7.01> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 29 [3/3] (7.01ns)   --->   "%Ibeta_sin = fmul i32 %sin_angle, i32 %Ibeta_read" [foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:25]   --->   Operation 29 'fmul' 'Ibeta_sin' <Predicate = true> <Delay = 7.01> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 7.01> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 7.01>
+ST_4 : Operation 30 [2/3] (7.01ns)   --->   "%Ialpha_cos = fmul i32 %cos_angle, i32 %Ialpha_read" [foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:22]   --->   Operation 30 'fmul' 'Ialpha_cos' <Predicate = true> <Delay = 7.01> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 7.01> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 31 [2/3] (7.01ns)   --->   "%Ialpha_sin = fmul i32 %sin_angle, i32 %Ialpha_read" [foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:23]   --->   Operation 31 'fmul' 'Ialpha_sin' <Predicate = true> <Delay = 7.01> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 7.01> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 32 [2/3] (7.01ns)   --->   "%Ibeta_cos = fmul i32 %cos_angle, i32 %Ibeta_read" [foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:24]   --->   Operation 32 'fmul' 'Ibeta_cos' <Predicate = true> <Delay = 7.01> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 7.01> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 33 [2/3] (7.01ns)   --->   "%Ibeta_sin = fmul i32 %sin_angle, i32 %Ibeta_read" [foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:25]   --->   Operation 33 'fmul' 'Ibeta_sin' <Predicate = true> <Delay = 7.01> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 7.01> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 7.01>
+ST_5 : Operation 34 [1/3] (7.01ns)   --->   "%Ialpha_cos = fmul i32 %cos_angle, i32 %Ialpha_read" [foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:22]   --->   Operation 34 'fmul' 'Ialpha_cos' <Predicate = true> <Delay = 7.01> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 7.01> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 35 [1/3] (7.01ns)   --->   "%Ialpha_sin = fmul i32 %sin_angle, i32 %Ialpha_read" [foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:23]   --->   Operation 35 'fmul' 'Ialpha_sin' <Predicate = true> <Delay = 7.01> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 7.01> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 36 [1/3] (7.01ns)   --->   "%Ibeta_cos = fmul i32 %cos_angle, i32 %Ibeta_read" [foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:24]   --->   Operation 36 'fmul' 'Ibeta_cos' <Predicate = true> <Delay = 7.01> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 7.01> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 37 [1/3] (7.01ns)   --->   "%Ibeta_sin = fmul i32 %sin_angle, i32 %Ibeta_read" [foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:25]   --->   Operation 37 'fmul' 'Ibeta_sin' <Predicate = true> <Delay = 7.01> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 7.01> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 6.43>
+ST_6 : Operation 38 [4/4] (6.43ns)   --->   "%dc = fadd i32 %Ialpha_cos, i32 %Ibeta_sin" [foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:27]   --->   Operation 38 'fadd' 'dc' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 39 [4/4] (6.43ns)   --->   "%dc_5 = fsub i32 %Ibeta_cos, i32 %Ialpha_sin" [foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:28]   --->   Operation 39 'fsub' 'dc_5' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 6.43>
+ST_7 : Operation 40 [3/4] (6.43ns)   --->   "%dc = fadd i32 %Ialpha_cos, i32 %Ibeta_sin" [foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:27]   --->   Operation 40 'fadd' 'dc' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 41 [3/4] (6.43ns)   --->   "%dc_5 = fsub i32 %Ibeta_cos, i32 %Ialpha_sin" [foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:28]   --->   Operation 41 'fsub' 'dc_5' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 6.43>
+ST_8 : Operation 42 [2/4] (6.43ns)   --->   "%dc = fadd i32 %Ialpha_cos, i32 %Ibeta_sin" [foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:27]   --->   Operation 42 'fadd' 'dc' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 43 [2/4] (6.43ns)   --->   "%dc_5 = fsub i32 %Ibeta_cos, i32 %Ialpha_sin" [foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:28]   --->   Operation 43 'fsub' 'dc_5' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 6.43>
+ST_9 : Operation 44 [1/4] (6.43ns)   --->   "%dc = fadd i32 %Ialpha_cos, i32 %Ibeta_sin" [foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:27]   --->   Operation 44 'fadd' 'dc' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 45 [1/4] (6.43ns)   --->   "%dc_5 = fsub i32 %Ibeta_cos, i32 %Ialpha_sin" [foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:28]   --->   Operation 45 'fsub' 'dc_5' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 2.78>
+ST_10 : Operation 46 [2/2] (2.78ns)   --->   "%tmp_10 = fcmp_ogt  i32 %dc, i32 0" [foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp:12]   --->   Operation 46 'fcmp' 'tmp_10' <Predicate = true> <Delay = 2.78> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 47 [2/2] (2.78ns)   --->   "%tmp_s = fcmp_olt  i32 %dc, i32 0" [foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp:12]   --->   Operation 47 'fcmp' 'tmp_s' <Predicate = true> <Delay = 2.78> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 48 [2/2] (2.78ns)   --->   "%tmp_13 = fcmp_ogt  i32 %dc_5, i32 0" [foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp:12]   --->   Operation 48 'fcmp' 'tmp_13' <Predicate = true> <Delay = 2.78> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 49 [2/2] (2.78ns)   --->   "%tmp_14 = fcmp_olt  i32 %dc_5, i32 0" [foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp:12]   --->   Operation 49 'fcmp' 'tmp_14' <Predicate = true> <Delay = 2.78> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+
+State 11 <SV = 10> <Delay = 2.78>
+ST_11 : Operation 50 [1/1] (0.00ns)   --->   "%data_V = bitcast i32 %dc" [/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:315]   --->   Operation 50 'bitcast' 'data_V' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 51 [1/1] (0.00ns)   --->   "%p_Result_s = trunc i32 %data_V"   --->   Operation 51 'trunc' 'p_Result_s' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 52 [1/1] (0.00ns)   --->   "%zext_ln368 = zext i31 %p_Result_s"   --->   Operation 52 'zext' 'zext_ln368' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 53 [1/1] (0.00ns)   --->   "%bitcast_ln354 = bitcast i32 %zext_ln368" [/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:354]   --->   Operation 53 'bitcast' 'bitcast_ln354' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 54 [1/1] (0.00ns)   --->   "%tmp = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %data_V, i32 23, i32 30" [foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:30]   --->   Operation 54 'partselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 55 [1/1] (0.00ns)   --->   "%trunc_ln30 = trunc i32 %data_V" [foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:30]   --->   Operation 55 'trunc' 'trunc_ln30' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 56 [1/1] (0.84ns)   --->   "%icmp_ln30 = icmp_ne  i8 %tmp, i8 255" [foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:30]   --->   Operation 56 'icmp' 'icmp_ln30' <Predicate = true> <Delay = 0.84> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.05> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 57 [1/1] (1.05ns)   --->   "%icmp_ln30_2 = icmp_eq  i23 %trunc_ln30, i23 0" [foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:30]   --->   Operation 57 'icmp' 'icmp_ln30_2' <Predicate = true> <Delay = 1.05> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.05> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 58 [1/1] (0.28ns)   --->   "%or_ln30 = or i1 %icmp_ln30_2, i1 %icmp_ln30" [foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:30]   --->   Operation 58 'or' 'or_ln30' <Predicate = true> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 59 [2/2] (2.78ns)   --->   "%tmp_9 = fcmp_ogt  i32 %bitcast_ln354, i32 32767" [foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:30]   --->   Operation 59 'fcmp' 'tmp_9' <Predicate = true> <Delay = 2.78> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 60 [1/2] (2.78ns)   --->   "%tmp_10 = fcmp_ogt  i32 %dc, i32 0" [foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp:12]   --->   Operation 60 'fcmp' 'tmp_10' <Predicate = true> <Delay = 2.78> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 61 [1/2] (2.78ns)   --->   "%tmp_s = fcmp_olt  i32 %dc, i32 0" [foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp:12]   --->   Operation 61 'fcmp' 'tmp_s' <Predicate = true> <Delay = 2.78> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 62 [1/1] (0.00ns)   --->   "%data_V_5 = bitcast i32 %dc_5" [/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:315]   --->   Operation 62 'bitcast' 'data_V_5' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 63 [1/1] (0.00ns)   --->   "%p_Result_5 = trunc i32 %data_V_5"   --->   Operation 63 'trunc' 'p_Result_5' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 64 [1/1] (0.00ns)   --->   "%zext_ln368_2 = zext i31 %p_Result_5"   --->   Operation 64 'zext' 'zext_ln368_2' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 65 [1/1] (0.00ns)   --->   "%bitcast_ln354_2 = bitcast i32 %zext_ln368_2" [/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:354]   --->   Operation 65 'bitcast' 'bitcast_ln354_2' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 66 [1/1] (0.00ns)   --->   "%tmp_11 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %data_V_5, i32 23, i32 30" [foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:34]   --->   Operation 66 'partselect' 'tmp_11' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 67 [1/1] (0.00ns)   --->   "%trunc_ln34 = trunc i32 %data_V_5" [foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:34]   --->   Operation 67 'trunc' 'trunc_ln34' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 68 [1/1] (0.84ns)   --->   "%icmp_ln34 = icmp_ne  i8 %tmp_11, i8 255" [foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:34]   --->   Operation 68 'icmp' 'icmp_ln34' <Predicate = true> <Delay = 0.84> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.05> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 69 [1/1] (1.05ns)   --->   "%icmp_ln34_2 = icmp_eq  i23 %trunc_ln34, i23 0" [foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:34]   --->   Operation 69 'icmp' 'icmp_ln34_2' <Predicate = true> <Delay = 1.05> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.05> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 70 [1/1] (0.28ns)   --->   "%or_ln34 = or i1 %icmp_ln34_2, i1 %icmp_ln34" [foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:34]   --->   Operation 70 'or' 'or_ln34' <Predicate = true> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 71 [2/2] (2.78ns)   --->   "%tmp_12 = fcmp_ogt  i32 %bitcast_ln354_2, i32 32767" [foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:34]   --->   Operation 71 'fcmp' 'tmp_12' <Predicate = true> <Delay = 2.78> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 72 [1/2] (2.78ns)   --->   "%tmp_13 = fcmp_ogt  i32 %dc_5, i32 0" [foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp:12]   --->   Operation 72 'fcmp' 'tmp_13' <Predicate = true> <Delay = 2.78> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 73 [1/2] (2.78ns)   --->   "%tmp_14 = fcmp_olt  i32 %dc_5, i32 0" [foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp:12]   --->   Operation 73 'fcmp' 'tmp_14' <Predicate = true> <Delay = 2.78> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+
+State 12 <SV = 11> <Delay = 6.60>
+ST_12 : Operation 74 [1/2] (2.78ns)   --->   "%tmp_9 = fcmp_ogt  i32 %bitcast_ln354, i32 32767" [foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:30]   --->   Operation 74 'fcmp' 'tmp_9' <Predicate = true> <Delay = 2.78> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 75 [1/1] (0.00ns) (grouped into LUT with out node sub_ln12)   --->   "%and_ln12 = and i1 %or_ln30, i1 %tmp_10" [foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp:12]   --->   Operation 75 'and' 'and_ln12' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 76 [1/1] (0.00ns) (grouped into LUT with out node sub_ln12)   --->   "%zext_ln12 = zext i1 %and_ln12" [foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp:12]   --->   Operation 76 'zext' 'zext_ln12' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 77 [1/1] (0.00ns) (grouped into LUT with out node sub_ln12)   --->   "%and_ln12_4 = and i1 %or_ln30, i1 %tmp_s" [foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp:12]   --->   Operation 77 'and' 'and_ln12_4' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 78 [1/1] (0.00ns) (grouped into LUT with out node sub_ln12)   --->   "%zext_ln12_4 = zext i1 %and_ln12_4" [foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp:12]   --->   Operation 78 'zext' 'zext_ln12_4' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 79 [1/1] (0.54ns) (out node of the LUT)   --->   "%sub_ln12 = sub i2 %zext_ln12, i2 %zext_ln12_4" [foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp:12]   --->   Operation 79 'sub' 'sub_ln12' <Predicate = true> <Delay = 0.54> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 80 [1/1] (0.00ns)   --->   "%sext_ln31 = sext i2 %sub_ln12" [foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:31]   --->   Operation 80 'sext' 'sext_ln31' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 81 [1/1] (0.00ns)   --->   "%shl_ln = bitconcatenate i17 @_ssdm_op_BitConcatenate.i17.i2.i15, i2 %sub_ln12, i15 0" [foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:31]   --->   Operation 81 'bitconcatenate' 'shl_ln' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 82 [1/1] (0.86ns)   --->   "%sub_ln31 = sub i17 %shl_ln, i17 %sext_ln31" [foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:31]   --->   Operation 82 'sub' 'sub_ln31' <Predicate = true> <Delay = 0.86> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 83 [1/1] (0.00ns)   --->   "%sext_ln31_2 = sext i17 %sub_ln31" [foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:31]   --->   Operation 83 'sext' 'sext_ln31_2' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 84 [4/4] (5.19ns)   --->   "%conv = sitofp i32 %sext_ln31_2" [foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:31]   --->   Operation 84 'sitofp' 'conv' <Predicate = true> <Delay = 5.19> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 3> <II = 1> <Delay = 5.19> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+ST_12 : Operation 85 [1/2] (2.78ns)   --->   "%tmp_12 = fcmp_ogt  i32 %bitcast_ln354_2, i32 32767" [foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:34]   --->   Operation 85 'fcmp' 'tmp_12' <Predicate = true> <Delay = 2.78> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 86 [1/1] (0.00ns) (grouped into LUT with out node sub_ln12_2)   --->   "%and_ln12_5 = and i1 %or_ln34, i1 %tmp_13" [foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp:12]   --->   Operation 86 'and' 'and_ln12_5' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 87 [1/1] (0.00ns) (grouped into LUT with out node sub_ln12_2)   --->   "%zext_ln12_5 = zext i1 %and_ln12_5" [foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp:12]   --->   Operation 87 'zext' 'zext_ln12_5' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 88 [1/1] (0.00ns) (grouped into LUT with out node sub_ln12_2)   --->   "%and_ln12_6 = and i1 %or_ln34, i1 %tmp_14" [foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp:12]   --->   Operation 88 'and' 'and_ln12_6' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 89 [1/1] (0.00ns) (grouped into LUT with out node sub_ln12_2)   --->   "%zext_ln12_6 = zext i1 %and_ln12_6" [foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp:12]   --->   Operation 89 'zext' 'zext_ln12_6' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 90 [1/1] (0.54ns) (out node of the LUT)   --->   "%sub_ln12_2 = sub i2 %zext_ln12_5, i2 %zext_ln12_6" [foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp:12]   --->   Operation 90 'sub' 'sub_ln12_2' <Predicate = true> <Delay = 0.54> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 91 [1/1] (0.00ns)   --->   "%sext_ln35 = sext i2 %sub_ln12_2" [foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:35]   --->   Operation 91 'sext' 'sext_ln35' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 92 [1/1] (0.00ns)   --->   "%shl_ln2 = bitconcatenate i17 @_ssdm_op_BitConcatenate.i17.i2.i15, i2 %sub_ln12_2, i15 0" [foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:35]   --->   Operation 92 'bitconcatenate' 'shl_ln2' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 93 [1/1] (0.86ns)   --->   "%sub_ln35 = sub i17 %shl_ln2, i17 %sext_ln35" [foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:35]   --->   Operation 93 'sub' 'sub_ln35' <Predicate = true> <Delay = 0.86> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 94 [1/1] (0.00ns)   --->   "%sext_ln35_2 = sext i17 %sub_ln35" [foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:35]   --->   Operation 94 'sext' 'sext_ln35_2' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 95 [4/4] (5.19ns)   --->   "%conv6 = sitofp i32 %sext_ln35_2" [foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:35]   --->   Operation 95 'sitofp' 'conv6' <Predicate = true> <Delay = 5.19> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 3> <II = 1> <Delay = 5.19> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+
+State 13 <SV = 12> <Delay = 5.19>
+ST_13 : Operation 96 [3/4] (5.19ns)   --->   "%conv = sitofp i32 %sext_ln31_2" [foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:31]   --->   Operation 96 'sitofp' 'conv' <Predicate = true> <Delay = 5.19> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 3> <II = 1> <Delay = 5.19> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+ST_13 : Operation 97 [3/4] (5.19ns)   --->   "%conv6 = sitofp i32 %sext_ln35_2" [foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:35]   --->   Operation 97 'sitofp' 'conv6' <Predicate = true> <Delay = 5.19> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 3> <II = 1> <Delay = 5.19> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+
+State 14 <SV = 13> <Delay = 5.19>
+ST_14 : Operation 98 [2/4] (5.19ns)   --->   "%conv = sitofp i32 %sext_ln31_2" [foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:31]   --->   Operation 98 'sitofp' 'conv' <Predicate = true> <Delay = 5.19> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 3> <II = 1> <Delay = 5.19> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+ST_14 : Operation 99 [2/4] (5.19ns)   --->   "%conv6 = sitofp i32 %sext_ln35_2" [foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:35]   --->   Operation 99 'sitofp' 'conv6' <Predicate = true> <Delay = 5.19> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 3> <II = 1> <Delay = 5.19> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+
+State 15 <SV = 14> <Delay = 5.64>
+ST_15 : Operation 100 [1/1] (0.00ns) (grouped into LUT with out node select_ln30)   --->   "%and_ln30 = and i1 %or_ln30, i1 %tmp_9" [foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:30]   --->   Operation 100 'and' 'and_ln30' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 101 [1/4] (5.19ns)   --->   "%conv = sitofp i32 %sext_ln31_2" [foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:31]   --->   Operation 101 'sitofp' 'conv' <Predicate = true> <Delay = 5.19> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 3> <II = 1> <Delay = 5.19> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+ST_15 : Operation 102 [1/1] (0.44ns) (out node of the LUT)   --->   "%select_ln30 = select i1 %and_ln30, i32 %conv, i32 %dc" [foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:30]   --->   Operation 102 'select' 'select_ln30' <Predicate = true> <Delay = 0.44> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.44> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_15 : Operation 103 [1/1] (0.00ns) (grouped into LUT with out node select_ln34)   --->   "%and_ln34 = and i1 %or_ln34, i1 %tmp_12" [foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:34]   --->   Operation 103 'and' 'and_ln34' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 104 [1/4] (5.19ns)   --->   "%conv6 = sitofp i32 %sext_ln35_2" [foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:35]   --->   Operation 104 'sitofp' 'conv6' <Predicate = true> <Delay = 5.19> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 3> <II = 1> <Delay = 5.19> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+ST_15 : Operation 105 [1/1] (0.44ns) (out node of the LUT)   --->   "%select_ln34 = select i1 %and_ln34, i32 %conv6, i32 %dc_5" [foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:34]   --->   Operation 105 'select' 'select_ln34' <Predicate = true> <Delay = 0.44> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.44> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_15 : Operation 106 [1/1] (0.00ns)   --->   "%mrv = insertvalue i64 <undef>, i32 %select_ln30" [foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:38]   --->   Operation 106 'insertvalue' 'mrv' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 107 [1/1] (0.00ns)   --->   "%mrv_1 = insertvalue i64 %mrv, i32 %select_ln34" [foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:38]   --->   Operation 107 'insertvalue' 'mrv_1' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 108 [1/1] (0.00ns)   --->   "%ret_ln38 = ret i64 %mrv_1" [foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:38]   --->   Operation 108 'ret' 'ret_ln38' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 1.24ns
+The critical path consists of the following:
+	wire read operation ('angle') on port 'angle' [6]  (0 ns)
+	'getelementptr' operation ('sine_d_addr', foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:19) [10]  (0 ns)
+	'load' operation ('sin_angle', foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:19) on array 'sine_d' [11]  (1.24 ns)
+
+ <State 2>: 1.24ns
+The critical path consists of the following:
+	'load' operation ('sin_angle', foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:19) on array 'sine_d' [11]  (1.24 ns)
+
+ <State 3>: 7.02ns
+The critical path consists of the following:
+	wire read operation ('Ialpha') on port 'Ialpha' [8]  (0 ns)
+	'fmul' operation ('Ialpha_cos', foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:22) [14]  (7.02 ns)
+
+ <State 4>: 7.02ns
+The critical path consists of the following:
+	'fmul' operation ('Ialpha_cos', foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:22) [14]  (7.02 ns)
+
+ <State 5>: 7.02ns
+The critical path consists of the following:
+	'fmul' operation ('Ialpha_cos', foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:22) [14]  (7.02 ns)
+
+ <State 6>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('x', foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:27) [18]  (6.44 ns)
+
+ <State 7>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('x', foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:27) [18]  (6.44 ns)
+
+ <State 8>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('x', foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:27) [18]  (6.44 ns)
+
+ <State 9>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('x', foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:27) [18]  (6.44 ns)
+
+ <State 10>: 2.78ns
+The critical path consists of the following:
+	'fcmp' operation ('tmp_10', foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp:12) [31]  (2.78 ns)
+
+ <State 11>: 2.78ns
+The critical path consists of the following:
+	'fcmp' operation ('tmp_9', foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:30) [29]  (2.78 ns)
+
+ <State 12>: 6.61ns
+The critical path consists of the following:
+	'and' operation ('and_ln12', foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp:12) [32]  (0 ns)
+	'sub' operation ('sub_ln12', foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp:12) [37]  (0.548 ns)
+	'sub' operation ('sub_ln31', foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:31) [40]  (0.863 ns)
+	'sitofp' operation ('conv', foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:31) [42]  (5.2 ns)
+
+ <State 13>: 5.2ns
+The critical path consists of the following:
+	'sitofp' operation ('conv', foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:31) [42]  (5.2 ns)
+
+ <State 14>: 5.2ns
+The critical path consists of the following:
+	'sitofp' operation ('conv', foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:31) [42]  (5.2 ns)
+
+ <State 15>: 5.65ns
+The critical path consists of the following:
+	'sitofp' operation ('conv', foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:31) [42]  (5.2 ns)
+	'select' operation ('Id', foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:30) [43]  (0.449 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

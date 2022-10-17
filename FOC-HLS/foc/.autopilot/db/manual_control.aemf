@@ -1,0 +1,1674 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1666006233607">
+  <ports id="1" name="A_V_data_V" type="PortType" coreId="3621216858" bitwidth="80">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="2" name="A_V_keep_V" type="PortType" coreId="9" bitwidth="10">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="3" name="A_V_strb_V" type="PortType" coreId="54" bitwidth="10">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="4" name="A_V_last_V" type="PortType" coreId="54" bitwidth="1">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="5" name="B_V_data_V" type="PortType" coreId="1966088236" bitwidth="64" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="6" name="B_V_keep_V" type="PortType" coreId="4294967295" bitwidth="8" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="7" name="B_V_strb_V" type="PortType" coreId="1769496890" bitwidth="8" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="8" name="B_V_last_V" type="PortType" coreId="1145391171" bitwidth="1" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="9" name="control" type="PortType" coreName="RAM_1P" coreId="840975438" bitwidth="32" iftype="IfTypeRegister" arraysize="6">
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+  </ports>
+  <ports id="10" name="logger" type="PortType" coreName="RAM_1P" coreId="808464928" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="17">
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <edges id="147" source_obj="//@ports.0" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="148" source_obj="//@ports.1" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="149" source_obj="//@ports.2" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="150" source_obj="//@ports.3" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="151" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="152" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="155" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.3"/>
+  <edges id="161" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.4"/>
+  <edges id="167" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.5"/>
+  <edges id="172" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.0/@node_objs.6"/>
+  <edges id="173" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="174" source_obj="//@ports.8" sink_obj="//@blocks.0/@node_objs.8"/>
+  <edges id="179" source_obj="//@blocks.0/@node_objs.8" sink_obj="//@blocks.0/@node_objs.9"/>
+  <edges id="180" source_obj="//@blocks.0/@node_objs.9" sink_obj="//@blocks.0/@node_objs.10"/>
+  <edges id="181" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="182" source_obj="//@blocks.0/@node_objs.10" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="183" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@blocks.0/@node_objs.12"/>
+  <edges id="186" source_obj="//@blocks.0/@node_objs.12" sink_obj="//@blocks.0/@node_objs.13"/>
+  <edges id="190" source_obj="//@blocks.0/@node_objs.12" sink_obj="//@blocks.0/@node_objs.14"/>
+  <edges id="195" source_obj="//@blocks.0/@node_objs.12" sink_obj="//@blocks.0/@node_objs.15"/>
+  <edges id="200" source_obj="//@blocks.0/@node_objs.15" sink_obj="//@blocks.0/@node_objs.16"/>
+  <edges id="203" source_obj="//@blocks.0/@node_objs.16" sink_obj="//@blocks.0/@node_objs.17"/>
+  <edges id="204" source_obj="//@blocks.0/@node_objs.14" sink_obj="//@blocks.0/@node_objs.18"/>
+  <edges id="205" source_obj="//@blocks.0/@node_objs.18" sink_obj="//@blocks.0/@node_objs.19"/>
+  <edges id="210" source_obj="//@blocks.0/@node_objs.19" sink_obj="//@blocks.0/@node_objs.20"/>
+  <edges id="215" source_obj="//@blocks.0/@node_objs.14" sink_obj="//@blocks.0/@node_objs.21"/>
+  <edges id="216" source_obj="//@blocks.0/@node_objs.21" sink_obj="//@blocks.0/@node_objs.22"/>
+  <edges id="217" source_obj="//@blocks.0/@node_objs.20" sink_obj="//@blocks.0/@node_objs.23"/>
+  <edges id="218" source_obj="//@blocks.0/@node_objs.22" sink_obj="//@blocks.0/@node_objs.23"/>
+  <edges id="219" source_obj="//@blocks.0/@node_objs.19" sink_obj="//@blocks.0/@node_objs.23"/>
+  <edges id="220" source_obj="//@blocks.0/@node_objs.23" sink_obj="//@blocks.0/@node_objs.24"/>
+  <edges id="221" source_obj="//@blocks.0/@node_objs.24" sink_obj="//@blocks.0/@node_objs.25"/>
+  <edges id="222" source_obj="//@blocks.0/@node_objs.17" sink_obj="//@blocks.0/@node_objs.26"/>
+  <edges id="223" source_obj="//@blocks.0/@node_objs.25" sink_obj="//@blocks.0/@node_objs.26"/>
+  <edges id="224" source_obj="//@blocks.0/@node_objs.17" sink_obj="//@blocks.0/@node_objs.27"/>
+  <edges id="225" source_obj="//@blocks.0/@node_objs.25" sink_obj="//@blocks.0/@node_objs.27"/>
+  <edges id="228" source_obj="//@blocks.0/@node_objs.26" sink_obj="//@blocks.0/@node_objs.28"/>
+  <edges id="231" source_obj="//@blocks.0/@node_objs.28" sink_obj="//@blocks.0/@node_objs.29"/>
+  <edges id="234" source_obj="//@blocks.0/@node_objs.27" sink_obj="//@blocks.0/@node_objs.30"/>
+  <edges id="238" source_obj="//@blocks.0/@node_objs.20" sink_obj="//@blocks.0/@node_objs.31"/>
+  <edges id="239" source_obj="//@blocks.0/@node_objs.29" sink_obj="//@blocks.0/@node_objs.31"/>
+  <edges id="240" source_obj="//@blocks.0/@node_objs.30" sink_obj="//@blocks.0/@node_objs.31"/>
+  <edges id="243" source_obj="//@blocks.0/@node_objs.31" sink_obj="//@blocks.0/@node_objs.32"/>
+  <edges id="244" source_obj="//@blocks.0/@node_objs.13" sink_obj="//@blocks.0/@node_objs.33"/>
+  <edges id="245" source_obj="//@blocks.0/@node_objs.32" sink_obj="//@blocks.0/@node_objs.33"/>
+  <edges id="246" source_obj="//@blocks.0/@node_objs.31" sink_obj="//@blocks.0/@node_objs.33"/>
+  <edges id="249" source_obj="//@blocks.0/@node_objs.33" sink_obj="//@blocks.0/@node_objs.34"/>
+  <edges id="252" source_obj="//@blocks.0/@node_objs.33" sink_obj="//@blocks.0/@node_objs.35"/>
+  <edges id="255" source_obj="//@blocks.0/@node_objs.34" sink_obj="//@blocks.0/@node_objs.36"/>
+  <edges id="256" source_obj="//@blocks.0/@node_objs.35" sink_obj="//@blocks.0/@node_objs.36"/>
+  <edges id="257" source_obj="//@blocks.0/@node_objs.33" sink_obj="//@blocks.0/@node_objs.36"/>
+  <edges id="258" source_obj="//@blocks.0/@node_objs.36" sink_obj="//@blocks.0/@node_objs.37"/>
+  <edges id="261" source_obj="//@blocks.0/@node_objs.36" sink_obj="//@blocks.0/@node_objs.38"/>
+  <edges id="264" source_obj="//@blocks.0/@node_objs.37" sink_obj="//@blocks.0/@node_objs.39"/>
+  <edges id="265" source_obj="//@blocks.0/@node_objs.38" sink_obj="//@blocks.0/@node_objs.39"/>
+  <edges id="266" source_obj="//@blocks.0/@node_objs.36" sink_obj="//@blocks.0/@node_objs.39"/>
+  <edges id="267" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.40"/>
+  <edges id="268" source_obj="//@blocks.0/@node_objs.40" sink_obj="//@blocks.0/@node_objs.41"/>
+  <edges id="269" source_obj="//@blocks.0/@node_objs.41" sink_obj="//@blocks.0/@node_objs.42"/>
+  <edges id="270" source_obj="//@blocks.0/@node_objs.43" sink_obj="//@ports.9"/>
+  <edges id="273" source_obj="//@blocks.0/@node_objs.42" sink_obj="//@blocks.0/@node_objs.44"/>
+  <edges id="274" source_obj="//@blocks.0/@node_objs.43" sink_obj="//@blocks.0/@node_objs.44"/>
+  <edges id="275" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.0/@node_objs.45"/>
+  <edges id="276" source_obj="//@blocks.0/@node_objs.45" sink_obj="//@blocks.0/@node_objs.46"/>
+  <edges id="277" source_obj="//@blocks.0/@node_objs.46" sink_obj="//@blocks.0/@node_objs.47"/>
+  <edges id="278" source_obj="//@blocks.0/@node_objs.48" sink_obj="//@ports.9"/>
+  <edges id="282" source_obj="//@blocks.0/@node_objs.47" sink_obj="//@blocks.0/@node_objs.49"/>
+  <edges id="283" source_obj="//@blocks.0/@node_objs.48" sink_obj="//@blocks.0/@node_objs.49"/>
+  <edges id="284" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.0/@node_objs.50"/>
+  <edges id="285" source_obj="//@blocks.0/@node_objs.50" sink_obj="//@blocks.0/@node_objs.51"/>
+  <edges id="286" source_obj="//@blocks.0/@node_objs.51" sink_obj="//@blocks.0/@node_objs.52"/>
+  <edges id="287" source_obj="//@blocks.0/@node_objs.53" sink_obj="//@ports.9"/>
+  <edges id="290" source_obj="//@blocks.0/@node_objs.52" sink_obj="//@blocks.0/@node_objs.54"/>
+  <edges id="291" source_obj="//@blocks.0/@node_objs.53" sink_obj="//@blocks.0/@node_objs.54"/>
+  <edges id="292" source_obj="//@blocks.0/@node_objs.39" sink_obj="//@blocks.0/@node_objs.55"/>
+  <edges id="293" source_obj="//@blocks.0/@node_objs.55" sink_obj="//@blocks.0/@node_objs.56"/>
+  <edges id="294" source_obj="//@blocks.0/@node_objs.56" sink_obj="//@blocks.0/@node_objs.57"/>
+  <edges id="295" source_obj="//@blocks.0/@node_objs.58" sink_obj="//@ports.9"/>
+  <edges id="299" source_obj="//@blocks.0/@node_objs.57" sink_obj="//@blocks.0/@node_objs.59"/>
+  <edges id="300" source_obj="//@blocks.0/@node_objs.58" sink_obj="//@blocks.0/@node_objs.59"/>
+  <edges id="301" source_obj="//@ports.8" sink_obj="//@blocks.0/@node_objs.60"/>
+  <edges id="304" source_obj="//@blocks.0/@node_objs.60" sink_obj="//@blocks.0/@node_objs.61"/>
+  <edges id="305" source_obj="//@blocks.0/@node_objs.61" sink_obj="//@blocks.0/@node_objs.62"/>
+  <edges id="306" source_obj="//@ports.8" sink_obj="//@blocks.0/@node_objs.63"/>
+  <edges id="310" source_obj="//@blocks.0/@node_objs.63" sink_obj="//@blocks.0/@node_objs.64"/>
+  <edges id="311" source_obj="//@blocks.0/@node_objs.64" sink_obj="//@blocks.0/@node_objs.65"/>
+  <edges id="312" source_obj="//@ports.8" sink_obj="//@blocks.0/@node_objs.66"/>
+  <edges id="316" source_obj="//@blocks.0/@node_objs.66" sink_obj="//@blocks.0/@node_objs.67"/>
+  <edges id="318" source_obj="//@blocks.0/@node_objs.67" sink_obj="//@blocks.0/@node_objs.68"/>
+  <edges id="321" source_obj="//@blocks.0/@node_objs.67" sink_obj="//@blocks.0/@node_objs.69"/>
+  <edges id="324" source_obj="//@blocks.0/@node_objs.67" sink_obj="//@blocks.0/@node_objs.70"/>
+  <edges id="327" source_obj="//@blocks.0/@node_objs.70" sink_obj="//@blocks.0/@node_objs.71"/>
+  <edges id="329" source_obj="//@blocks.0/@node_objs.71" sink_obj="//@blocks.0/@node_objs.72"/>
+  <edges id="330" source_obj="//@blocks.0/@node_objs.69" sink_obj="//@blocks.0/@node_objs.73"/>
+  <edges id="331" source_obj="//@blocks.0/@node_objs.73" sink_obj="//@blocks.0/@node_objs.74"/>
+  <edges id="334" source_obj="//@blocks.0/@node_objs.74" sink_obj="//@blocks.0/@node_objs.75"/>
+  <edges id="337" source_obj="//@blocks.0/@node_objs.69" sink_obj="//@blocks.0/@node_objs.76"/>
+  <edges id="338" source_obj="//@blocks.0/@node_objs.76" sink_obj="//@blocks.0/@node_objs.77"/>
+  <edges id="339" source_obj="//@blocks.0/@node_objs.75" sink_obj="//@blocks.0/@node_objs.78"/>
+  <edges id="340" source_obj="//@blocks.0/@node_objs.77" sink_obj="//@blocks.0/@node_objs.78"/>
+  <edges id="341" source_obj="//@blocks.0/@node_objs.74" sink_obj="//@blocks.0/@node_objs.78"/>
+  <edges id="342" source_obj="//@blocks.0/@node_objs.78" sink_obj="//@blocks.0/@node_objs.79"/>
+  <edges id="343" source_obj="//@blocks.0/@node_objs.79" sink_obj="//@blocks.0/@node_objs.80"/>
+  <edges id="344" source_obj="//@blocks.0/@node_objs.72" sink_obj="//@blocks.0/@node_objs.81"/>
+  <edges id="345" source_obj="//@blocks.0/@node_objs.80" sink_obj="//@blocks.0/@node_objs.81"/>
+  <edges id="346" source_obj="//@blocks.0/@node_objs.72" sink_obj="//@blocks.0/@node_objs.82"/>
+  <edges id="347" source_obj="//@blocks.0/@node_objs.80" sink_obj="//@blocks.0/@node_objs.82"/>
+  <edges id="349" source_obj="//@blocks.0/@node_objs.81" sink_obj="//@blocks.0/@node_objs.83"/>
+  <edges id="351" source_obj="//@blocks.0/@node_objs.83" sink_obj="//@blocks.0/@node_objs.84"/>
+  <edges id="354" source_obj="//@blocks.0/@node_objs.82" sink_obj="//@blocks.0/@node_objs.85"/>
+  <edges id="358" source_obj="//@blocks.0/@node_objs.75" sink_obj="//@blocks.0/@node_objs.86"/>
+  <edges id="359" source_obj="//@blocks.0/@node_objs.84" sink_obj="//@blocks.0/@node_objs.86"/>
+  <edges id="360" source_obj="//@blocks.0/@node_objs.85" sink_obj="//@blocks.0/@node_objs.86"/>
+  <edges id="363" source_obj="//@blocks.0/@node_objs.86" sink_obj="//@blocks.0/@node_objs.87"/>
+  <edges id="364" source_obj="//@blocks.0/@node_objs.68" sink_obj="//@blocks.0/@node_objs.88"/>
+  <edges id="365" source_obj="//@blocks.0/@node_objs.87" sink_obj="//@blocks.0/@node_objs.88"/>
+  <edges id="366" source_obj="//@blocks.0/@node_objs.86" sink_obj="//@blocks.0/@node_objs.88"/>
+  <edges id="369" source_obj="//@blocks.0/@node_objs.62" sink_obj="//@blocks.0/@node_objs.89"/>
+  <edges id="370" source_obj="//@blocks.0/@node_objs.65" sink_obj="//@blocks.0/@node_objs.89"/>
+  <edges id="371" source_obj="//@blocks.0/@node_objs.88" sink_obj="//@blocks.0/@node_objs.89"/>
+  <edges id="372" source_obj="//@blocks.0/@node_objs.89" sink_obj="//@blocks.0/@node_objs.90"/>
+  <edges id="373" source_obj="//@blocks.0/@node_objs.89" sink_obj="//@blocks.0/@node_objs.91"/>
+  <edges id="374" source_obj="//@blocks.0/@node_objs.90" sink_obj="//@blocks.0/@node_objs.92"/>
+  <edges id="375" source_obj="//@blocks.0/@node_objs.93" sink_obj="//@ports.9"/>
+  <edges id="379" source_obj="//@blocks.0/@node_objs.92" sink_obj="//@blocks.0/@node_objs.94"/>
+  <edges id="380" source_obj="//@blocks.0/@node_objs.93" sink_obj="//@blocks.0/@node_objs.94"/>
+  <edges id="381" source_obj="//@blocks.0/@node_objs.91" sink_obj="//@blocks.0/@node_objs.95"/>
+  <edges id="382" source_obj="//@blocks.0/@node_objs.96" sink_obj="//@ports.9"/>
+  <edges id="386" source_obj="//@blocks.0/@node_objs.95" sink_obj="//@blocks.0/@node_objs.97"/>
+  <edges id="387" source_obj="//@blocks.0/@node_objs.96" sink_obj="//@blocks.0/@node_objs.97"/>
+  <edges id="390" source_obj="//@blocks.0/@node_objs.90" sink_obj="//@blocks.0/@node_objs.98"/>
+  <edges id="391" source_obj="//@blocks.0/@node_objs.91" sink_obj="//@blocks.0/@node_objs.98"/>
+  <edges id="392" source_obj="//@blocks.0/@node_objs.98" sink_obj="//@blocks.0/@node_objs.99"/>
+  <edges id="393" source_obj="//@blocks.0/@node_objs.98" sink_obj="//@blocks.0/@node_objs.100"/>
+  <edges id="394" source_obj="//@blocks.0/@node_objs.98" sink_obj="//@blocks.0/@node_objs.101"/>
+  <edges id="395" source_obj="//@blocks.0/@node_objs.99" sink_obj="//@blocks.0/@node_objs.102"/>
+  <edges id="396" source_obj="//@blocks.0/@node_objs.103" sink_obj="//@ports.9"/>
+  <edges id="400" source_obj="//@blocks.0/@node_objs.102" sink_obj="//@blocks.0/@node_objs.104"/>
+  <edges id="401" source_obj="//@blocks.0/@node_objs.103" sink_obj="//@blocks.0/@node_objs.104"/>
+  <edges id="402" source_obj="//@blocks.0/@node_objs.100" sink_obj="//@blocks.0/@node_objs.105"/>
+  <edges id="403" source_obj="//@blocks.0/@node_objs.106" sink_obj="//@ports.9"/>
+  <edges id="407" source_obj="//@blocks.0/@node_objs.105" sink_obj="//@blocks.0/@node_objs.107"/>
+  <edges id="408" source_obj="//@blocks.0/@node_objs.106" sink_obj="//@blocks.0/@node_objs.107"/>
+  <edges id="409" source_obj="//@blocks.0/@node_objs.101" sink_obj="//@blocks.0/@node_objs.108"/>
+  <edges id="410" source_obj="//@blocks.0/@node_objs.109" sink_obj="//@ports.9"/>
+  <edges id="414" source_obj="//@blocks.0/@node_objs.108" sink_obj="//@blocks.0/@node_objs.110"/>
+  <edges id="415" source_obj="//@blocks.0/@node_objs.109" sink_obj="//@blocks.0/@node_objs.110"/>
+  <edges id="418" source_obj="//@blocks.0/@node_objs.99" sink_obj="//@blocks.0/@node_objs.111"/>
+  <edges id="419" source_obj="//@blocks.0/@node_objs.100" sink_obj="//@blocks.0/@node_objs.111"/>
+  <edges id="420" source_obj="//@blocks.0/@node_objs.101" sink_obj="//@blocks.0/@node_objs.111"/>
+  <edges id="421" source_obj="//@blocks.0/@node_objs.111" sink_obj="//@blocks.0/@node_objs.112"/>
+  <edges id="422" source_obj="//@blocks.0/@node_objs.111" sink_obj="//@blocks.0/@node_objs.113"/>
+  <edges id="423" source_obj="//@blocks.0/@node_objs.111" sink_obj="//@blocks.0/@node_objs.114"/>
+  <edges id="426" source_obj="//@blocks.0/@node_objs.114" sink_obj="//@blocks.0/@node_objs.115"/>
+  <edges id="427" source_obj="//@blocks.0/@node_objs.113" sink_obj="//@blocks.0/@node_objs.115"/>
+  <edges id="428" source_obj="//@blocks.0/@node_objs.112" sink_obj="//@blocks.0/@node_objs.115"/>
+  <edges id="429" source_obj="//@blocks.0/@node_objs.115" sink_obj="//@blocks.0/@node_objs.116"/>
+  <edges id="432" source_obj="//@blocks.0/@node_objs.117" sink_obj="//@ports.4"/>
+  <edges id="433" source_obj="//@blocks.0/@node_objs.117" sink_obj="//@ports.5"/>
+  <edges id="434" source_obj="//@blocks.0/@node_objs.117" sink_obj="//@ports.6"/>
+  <edges id="435" source_obj="//@blocks.0/@node_objs.117" sink_obj="//@ports.7"/>
+  <edges id="436" source_obj="//@blocks.0/@node_objs.116" sink_obj="//@blocks.0/@node_objs.117"/>
+  <edges id="442" sink_obj="//@blocks.0/@node_objs.89"/>
+  <edges id="443" sink_obj="//@blocks.0/@node_objs.89"/>
+  <blocks id="144" name="manual_control" type="BlockType">
+    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="empty" lineNumber="293" fileName="/home/mklab/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h" fileDirectory=".." coreName="axis" implIndex="axi4stream" control="no" opType="adapter" coreId="123" contextFuncName="read" bitwidth="101" opcode="read" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/mklab/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h" linenumber="293" fileDirectory="/home/mklab/workspace/foc" functionName="read"/>
+      <dataInputObjs>A_V_data_V</dataInputObjs>
+      <dataInputObjs>A_V_keep_V</dataInputObjs>
+      <dataInputObjs>A_V_strb_V</dataInputObjs>
+      <dataInputObjs>A_V_last_V</dataInputObjs>
+      <dataOutputObjs>extractvalue</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="26" name="tmp_data_V_3" lineNumber="293" originalName="tmp.data.V" fileName="/home/mklab/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h" fileDirectory=".." coreId="0" contextFuncName="read" bitwidth="80" opcode="extractvalue" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/mklab/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h" linenumber="293" fileDirectory="/home/mklab/workspace/foc" functionName="read"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>trunc</dataOutputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="27" name="Ia" lineNumber="30" originalName="Ia" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="Ia_fu_340_p1" coreId="0" contextFuncName="manual_control" bitwidth="16" opcode="trunc" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="30" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataInputObjs>extractvalue</dataInputObjs>
+      <dataOutputObjs>sext</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="Ib" lineNumber="31" originalName="Ib" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="Ib_reg_811" coreId="0" contextFuncName="manual_control" bitwidth="16" opcode="partselect" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="31" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataInputObjs>extractvalue</dataInputObjs>
+      <dataOutputObjs>sext</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="29" name="RPM" lineNumber="33" originalName="RPM" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="RPM_reg_816" coreId="1852142702" contextFuncName="manual_control" bitwidth="16" opcode="partselect" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="33" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataInputObjs>extractvalue</dataInputObjs>
+      <dataOutputObjs>sext</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="30" name="Angle" lineNumber="34" originalName="Angle" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="Angle_fu_364_p4" coreId="539116877" contextFuncName="manual_control" bitwidth="16" opcode="partselect" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="34" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataInputObjs>extractvalue</dataInputObjs>
+      <dataOutputObjs>sext</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="31" name="sext_ln40" lineNumber="40" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="sext_ln40_fu_374_p1" coreId="1701273971" contextFuncName="manual_control" bitwidth="32" opcode="sext" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="40" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>sitofp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="32" name="conv" lineNumber="40" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="sitofp_32s_32_4_no_dsp_1_U131" coreName="Int2Float" implIndex="auto" control="no" opType="sitofp" coreId="62" contextFuncName="manual_control" bitwidth="32" opcode="sitofp" nodeLatency="3" m_display="0" m_delay="5.19" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="40" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataInputObjs>sext</dataInputObjs>
+      <dataOutputObjs>fsub</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="33" name="control_addr" lineNumber="40" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreId="1868980069" contextFuncName="manual_control" bitwidth="3" opcode="getelementptr" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="40" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataInputObjs>control</dataInputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="34" name="control_load" lineNumber="40" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreName="RAM_1P" implIndex="auto" control="no" opType="ram_1p" coreId="88" contextFuncName="manual_control" bitwidth="32" opcode="load" nodeLatency="1" m_display="0" m_delay="0.67" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="40" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataInputObjs>getelementptr</dataInputObjs>
+      <dataOutputObjs>bitcast</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="35" name="bitcast_ln40" lineNumber="40" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="grp_fu_326_p1" coreId="1634755954" contextFuncName="manual_control" bitwidth="32" opcode="bitcast" nodeLabel="4.0" m_display="0" m_topoIndex="24" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="40" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>fsub</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="36" name="dc" lineNumber="40" originalName="x" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="fsub_32ns_32ns_32_4_full_dsp_1_U130" coreName="FAddSub_fulldsp" implIndex="fulldsp" control="no" opType="fsub" coreId="18" contextFuncName="manual_control" bitwidth="32" opcode="fsub" nodeLabel="4.0" nodeLatency="3" m_display="0" m_delay="6.43" m_topoIndex="25" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="40" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataInputObjs>sitofp</dataInputObjs>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataOutputObjs>bitcast</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="37" name="data_V" lineNumber="315" originalName="data.V" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="data_V_fu_567_p1" coreId="666934240" contextFuncName="fp_struct" bitwidth="32" opcode="bitcast" nodeLabel="8.0" m_display="0" m_topoIndex="64" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" linenumber="315" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="fp_struct"/>
+      <dataInputObjs>fsub</dataInputObjs>
+      <dataOutputObjs>bitselect</dataOutputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <dataOutputObjs>trunc</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="38" name="p_Result_s" lineNumber="803" originalName="__Result__" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="p_Result_s_fu_570_p3" coreId="1850286653" contextFuncName="operator_assign" bitwidth="1" opcode="bitselect" nodeLabel="8.0" m_display="0" m_topoIndex="65" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_int_ref.h" linenumber="803" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="operator="/>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="39" name="tmp_37" lineNumber="628" originalName="tmp" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="tmp_37_fu_578_p4" coreId="96" contextFuncName="get" bitwidth="8" opcode="partselect" nodeLabel="8.0" m_display="0" m_topoIndex="66" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_int_ref.h" linenumber="628" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="get"/>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="40" name="tmp_38" lineNumber="628" originalName="tmp" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="tmp_38_fu_588_p1" coreId="1869570592" contextFuncName="get" bitwidth="23" opcode="trunc" nodeLabel="8.0" m_display="0" m_topoIndex="67" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_int_ref.h" linenumber="628" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="get"/>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataOutputObjs>bitconcatenate</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="41" name="mantissa" lineNumber="691" originalName="mantissa" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="mantissa_fu_592_p4" coreId="1684959075" contextFuncName="operator_assign_24_1_false_AP_TRN_AP_WRAP_0" bitwidth="25" opcode="bitconcatenate" nodeLabel="8.0" m_display="0" m_topoIndex="68" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" linenumber="691" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="operator=&amp;lt;24, 1, false, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="42" name="zext_ln15" lineNumber="15" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="zext_ln15_fu_602_p1" coreId="666937840" contextFuncName="generic_cast_IEEE754_short_AP_TRN_ZERO_float_s" bitwidth="63" opcode="zext" nodeLabel="8.0" m_display="0" m_topoIndex="69" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h" linenumber="15" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="generic_cast_IEEE754&amp;lt;short, AP_TRN_ZERO, float&amp;gt;"/>
+      <dataInputObjs>bitconcatenate</dataInputObjs>
+      <dataOutputObjs>lshr</dataOutputObjs>
+      <dataOutputObjs>shl</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="43" name="zext_ln344" lineNumber="344" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="zext_ln344_fu_606_p1" coreId="666944800" contextFuncName="expv" bitwidth="9" opcode="zext" nodeLabel="8.0" m_display="0" m_topoIndex="70" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" linenumber="344" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="expv"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="44" name="add_ln344" lineNumber="344" originalName="sh" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="add_ln344_fu_610_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="expv" bitwidth="9" opcode="add" nodeLabel="8.0" m_display="0" m_delay="0.76" m_topoIndex="71" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" linenumber="344" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="expv"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>bitselect</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="45" name="isNeg" lineNumber="1363" originalName="isNeg" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="isNeg_fu_616_p3" coreId="666946144" contextFuncName="operator_ls" bitwidth="1" opcode="bitselect" nodeLabel="8.0" m_display="0" m_topoIndex="72" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" linenumber="1363" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="operator&amp;lt;&amp;lt;"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="46" name="sub_ln1364" lineNumber="1364" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="sub_ln1364_fu_624_p2" coreName="Adder" implIndex="fabric" control="no" opType="sub" coreId="1" contextFuncName="operator_ls" bitwidth="8" opcode="sub" nodeLabel="8.0" m_display="0" m_delay="0.76" m_topoIndex="73" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" linenumber="1364" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="operator&amp;lt;&amp;lt;"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>sext</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="47" name="sext_ln1364" lineNumber="1364" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="sext_ln1364_fu_630_p1" coreId="639659892" contextFuncName="operator_ls" bitwidth="9" opcode="sext" nodeLabel="8.0" m_display="0" m_topoIndex="74" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" linenumber="1364" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="operator&amp;lt;&amp;lt;"/>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="48" name="ush" lineNumber="1364" originalName="ush" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="ush_fu_634_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="operator_ls" bitwidth="9" opcode="select" nodeLabel="8.0" m_display="0" m_delay="0.39" m_topoIndex="75" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" linenumber="1364" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="operator&amp;lt;&amp;lt;"/>
+      <dataInputObjs>bitselect</dataInputObjs>
+      <dataInputObjs>sext</dataInputObjs>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>sext</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="49" name="sext_ln1340" lineNumber="1340" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="sext_ln1340_fu_642_p1" coreId="574453865" contextFuncName="operator_rs" bitwidth="32" opcode="sext" nodeLabel="8.0" m_display="0" m_topoIndex="76" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" linenumber="1340" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="operator&amp;gt;&amp;gt;"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="50" name="zext_ln1340" lineNumber="1340" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="zext_ln1340_fu_646_p1" coreId="645165934" contextFuncName="operator_rs" bitwidth="63" opcode="zext" nodeLabel="8.0" m_display="0" m_topoIndex="77" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" linenumber="1340" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="operator&amp;gt;&amp;gt;"/>
+      <dataInputObjs>sext</dataInputObjs>
+      <dataOutputObjs>lshr</dataOutputObjs>
+      <dataOutputObjs>shl</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="51" name="r_V" lineNumber="1340" originalName="r.V" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="r_V_fu_650_p2" coreName="Shifter" implIndex="auto_pipe" control="no" opType="lshr" coreId="75" contextFuncName="operator_rs" bitwidth="63" opcode="lshr" nodeLabel="8.0" m_display="0" m_topoIndex="78" m_clusterGroupNumber="1">
+      <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" linenumber="1340" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="operator&amp;gt;&amp;gt;"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>bitselect</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="52" name="r_V_8" lineNumber="1306" originalName="r.V" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="r_V_8_fu_656_p2" coreName="Shifter" implIndex="auto_pipe" control="no" opType="shl" coreId="75" contextFuncName="operator_ls" bitwidth="63" opcode="shl" nodeLabel="8.0" m_display="0" m_topoIndex="79" m_clusterGroupNumber="1">
+      <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" linenumber="1306" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="operator&amp;lt;&amp;lt;"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="53" name="tmp" lineNumber="671" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="tmp_fu_662_p3" coreId="1030647657" contextFuncName="operator_assign_63_39_false_AP_TRN_AP_WRAP_0" bitwidth="1" opcode="bitselect" nodeLabel="8.0" m_display="0" m_topoIndex="80" m_clusterGroupNumber="1">
+      <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" linenumber="671" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="operator=&amp;lt;63, 39, false, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+      <dataInputObjs>lshr</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="54" name="zext_ln671" lineNumber="671" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="zext_ln671_fu_670_p1" coreId="1600742514" contextFuncName="operator_assign_63_39_false_AP_TRN_AP_WRAP_0" bitwidth="16" opcode="zext" nodeLabel="8.0" m_display="0" m_topoIndex="81" m_clusterGroupNumber="1">
+      <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" linenumber="671" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="operator=&amp;lt;63, 39, false, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+      <dataInputObjs>bitselect</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="55" name="tmp_16" lineNumber="671" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="tmp_16_fu_674_p4" coreId="1970435187" contextFuncName="operator_assign_63_39_false_AP_TRN_AP_WRAP_0" bitwidth="16" opcode="partselect" nodeLabel="8.0" m_display="0" m_topoIndex="82" m_clusterGroupNumber="1">
+      <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" linenumber="671" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="operator=&amp;lt;63, 39, false, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+      <dataInputObjs>shl</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="56" name="val" lineNumber="1365" originalName="val" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="val_fu_684_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="operator_ls" bitwidth="16" opcode="select" nodeLabel="8.0" m_display="0" m_delay="1.38" m_topoIndex="83" m_clusterGroupNumber="1">
+      <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" linenumber="1365" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="operator&amp;lt;&amp;lt;"/>
+      <dataInputObjs>bitselect</dataInputObjs>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="57" name="result_V_18" lineNumber="666" originalName="result.V" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="result_V_18_fu_692_p2" coreName="Adder" implIndex="fabric" control="no" opType="sub" coreId="1" contextFuncName="operator_assign_17_17_true_AP_TRN_AP_WRAP_0" bitwidth="16" opcode="sub" nodeLabel="8.0" m_display="0" m_delay="0.85" m_topoIndex="84" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" linenumber="666" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="operator=&amp;lt;17, 17, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="58" name="result_V" lineNumber="59" originalName="result.V" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="result_V_fu_698_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="generic_cast_IEEE754_short_AP_TRN_ZERO_float_s" bitwidth="16" opcode="select" nodeLabel="8.0" m_display="0" m_delay="0.35" m_topoIndex="85" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h" linenumber="59" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="generic_cast_IEEE754&amp;lt;short, AP_TRN_ZERO, float&amp;gt;"/>
+      <dataInputObjs>bitselect</dataInputObjs>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>bitselect</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="59" name="tmp_30" lineNumber="42" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="tmp_30_fu_706_p3" coreId="997485606" contextFuncName="manual_control" bitwidth="1" opcode="bitselect" nodeLabel="8.0" m_display="0" m_topoIndex="86" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="42" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="60" name="add_ln42" lineNumber="42" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="add_ln42_fu_714_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="manual_control" bitwidth="16" opcode="add" nodeLabel="8.0" m_display="0" m_delay="0.85" m_topoIndex="87" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="42" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="61" name="Theta_4" lineNumber="42" originalName="Theta" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="Theta_4_fu_720_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="manual_control" bitwidth="16" opcode="select" nodeLabel="8.0" m_display="0" m_delay="0.35" m_topoIndex="88" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="42" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataInputObjs>bitselect</dataInputObjs>
+      <dataInputObjs>add</dataInputObjs>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="62" name="icmp_ln43" lineNumber="43" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="icmp_ln43_fu_745_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="manual_control" bitwidth="1" opcode="icmp" nodeLabel="9.0" m_display="0" m_delay="1.1" m_topoIndex="95" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="43" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="63" name="add_ln43" lineNumber="43" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="add_ln43_fu_750_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="manual_control" bitwidth="16" opcode="add" nodeLabel="9.0" m_display="0" m_delay="0.85" m_topoIndex="96" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="43" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="64" name="Theta" lineNumber="43" originalName="Theta" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="Theta_fu_755_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="manual_control" bitwidth="16" opcode="select" nodeLabel="9.0" m_display="0" m_delay="0.35" m_topoIndex="97" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="43" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataInputObjs>add</dataInputObjs>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>sext</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="65" name="sext_ln48" lineNumber="48" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="grp_fu_333_p0" coreId="1852399472" contextFuncName="manual_control" bitwidth="32" opcode="sext" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="48" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataOutputObjs>sitofp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="66" name="conv7" lineNumber="48" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="sitofp_32s_32_4_no_dsp_1_U132" coreName="Int2Float" implIndex="auto" control="no" opType="sitofp" coreId="62" contextFuncName="manual_control" bitwidth="32" opcode="sitofp" nodeLatency="3" m_display="0" m_delay="5.19" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="48" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataInputObjs>sext</dataInputObjs>
+      <dataOutputObjs>bitcast</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="67" name="bitcast_ln48" lineNumber="48" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="bitcast_ln48_fu_388_p1" coreId="1885415027" contextFuncName="manual_control" bitwidth="32" opcode="bitcast" nodeLabel="3.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="48" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataInputObjs>sitofp</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="68" name="logger_addr" lineNumber="48" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreId="1730556982" contextFuncName="manual_control" bitwidth="5" opcode="getelementptr" nodeLabel="3.0" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="48" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataOutputObjs>logger</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="69" name="logger_addr_write_ln48" lineNumber="48" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreName="RAM_1P" implIndex="auto" control="no" opType="ram_1p" coreId="88" contextFuncName="manual_control" opcode="store" nodeLabel="3.0" m_display="0" m_delay="0.67" m_topoIndex="21" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="48" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataInputObjs>getelementptr</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="70" name="sext_ln49" lineNumber="49" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="sext_ln49_fu_384_p1" coreId="1634615586" contextFuncName="manual_control" bitwidth="32" opcode="sext" nodeLabel="1.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="49" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>sitofp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="71" name="conv8" lineNumber="49" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="sitofp_32s_32_4_no_dsp_1_U131" coreName="Int2Float" implIndex="auto" control="no" opType="sitofp" coreId="62" contextFuncName="manual_control" bitwidth="32" opcode="sitofp" nodeLabel="1.0" nodeLatency="3" m_display="0" m_delay="5.19" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="49" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataInputObjs>sext</dataInputObjs>
+      <dataOutputObjs>bitcast</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="72" name="bitcast_ln49" lineNumber="49" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="bitcast_ln49_fu_397_p1" coreId="1701998624" contextFuncName="manual_control" bitwidth="32" opcode="bitcast" nodeLabel="4.0" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="49" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataInputObjs>sitofp</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="73" name="logger_addr_17" lineNumber="49" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreId="997420912" contextFuncName="manual_control" bitwidth="5" opcode="getelementptr" nodeLabel="4.0" m_display="0" m_topoIndex="27" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="49" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataOutputObjs>logger</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="74" name="logger_addr_17_write_ln49" lineNumber="49" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreName="RAM_1P" implIndex="auto" control="no" opType="ram_1p" coreId="88" contextFuncName="manual_control" opcode="store" nodeLabel="4.0" m_display="0" m_delay="0.67" m_topoIndex="28" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="49" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataInputObjs>getelementptr</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="75" name="sext_ln50" lineNumber="50" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="sext_ln50_fu_538_p1" coreId="842479155" contextFuncName="manual_control" bitwidth="32" opcode="sext" nodeLabel="5.0" m_display="0" m_topoIndex="50" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="50" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>sitofp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="76" name="conv9" lineNumber="50" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="sitofp_32s_32_4_no_dsp_1_U131" coreName="Int2Float" implIndex="auto" control="no" opType="sitofp" coreId="62" contextFuncName="manual_control" bitwidth="32" opcode="sitofp" nodeLabel="5.0" nodeLatency="3" m_display="0" m_delay="5.19" m_topoIndex="51" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="50" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataInputObjs>sext</dataInputObjs>
+      <dataOutputObjs>bitcast</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="77" name="bitcast_ln50" lineNumber="50" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="bitcast_ln50_fu_728_p1" coreId="1685353275" contextFuncName="manual_control" bitwidth="32" opcode="bitcast" nodeLabel="8.0" m_display="0" m_topoIndex="89" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="50" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataInputObjs>sitofp</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="78" name="logger_addr_18" lineNumber="50" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreId="1597583711" contextFuncName="manual_control" bitwidth="5" opcode="getelementptr" nodeLabel="8.0" m_display="0" m_topoIndex="90" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="50" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataOutputObjs>logger</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="79" name="logger_addr_18_write_ln50" lineNumber="50" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreName="RAM_1P" implIndex="auto" control="no" opType="ram_1p" coreId="88" contextFuncName="manual_control" opcode="store" nodeLabel="8.0" m_display="0" m_delay="0.67" m_topoIndex="91" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="50" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataInputObjs>getelementptr</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="80" name="sext_ln51" lineNumber="51" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="sext_ln51_fu_762_p1" coreId="997420912" contextFuncName="manual_control" bitwidth="32" opcode="sext" nodeLabel="9.0" m_display="0" m_topoIndex="98" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="51" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>sitofp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="81" name="conv1" lineNumber="51" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="sitofp_32s_32_4_no_dsp_1_U131" coreName="Int2Float" implIndex="auto" control="no" opType="sitofp" coreId="62" contextFuncName="manual_control" bitwidth="32" opcode="sitofp" nodeLabel="9.0" nodeLatency="3" m_display="0" m_delay="5.19" m_topoIndex="99" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="51" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataInputObjs>sext</dataInputObjs>
+      <dataOutputObjs>bitcast</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="82" name="bitcast_ln51" lineNumber="51" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="bitcast_ln51_fu_806_p1" coreId="1818850658" contextFuncName="manual_control" bitwidth="32" opcode="bitcast" nodeLabel="12.0" m_display="0" m_topoIndex="116" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="51" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataInputObjs>sitofp</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="83" name="logger_addr_19" lineNumber="51" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreId="544108393" contextFuncName="manual_control" bitwidth="5" opcode="getelementptr" nodeLabel="12.0" m_display="0" m_topoIndex="117" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="51" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataOutputObjs>logger</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="84" name="logger_addr_19_write_ln51" lineNumber="51" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreName="RAM_1P" implIndex="auto" control="no" opType="ram_1p" coreId="88" contextFuncName="manual_control" opcode="store" nodeLabel="12.0" m_display="0" m_delay="0.67" m_topoIndex="118" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="51" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataInputObjs>getelementptr</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="85" name="control_addr_2" lineNumber="55" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreId="1699560457" contextFuncName="manual_control" bitwidth="3" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="55" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataInputObjs>control</dataInputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="86" name="control_load_2" lineNumber="55" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreName="RAM_1P" implIndex="auto" control="no" opType="ram_1p" coreId="88" contextFuncName="manual_control" bitwidth="32" opcode="load" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="0.67" m_topoIndex="16" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="55" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataInputObjs>getelementptr</dataInputObjs>
+      <dataOutputObjs>bitcast</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="87" name="Vd" lineNumber="55" originalName="Vd" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="Vd_fu_542_p1" coreId="1869833586" contextFuncName="manual_control" bitwidth="32" opcode="bitcast" nodeLabel="5.0" m_display="0" m_topoIndex="52" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="55" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="88" name="control_addr_3" lineNumber="56" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreId="1043276322" contextFuncName="manual_control" bitwidth="3" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="56" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataInputObjs>control</dataInputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="89" name="control_load_3" lineNumber="56" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreName="RAM_1P" implIndex="auto" control="no" opType="ram_1p" coreId="88" contextFuncName="manual_control" bitwidth="32" opcode="load" nodeLabel="2.0" nodeLatency="1" m_display="0" m_delay="0.67" m_topoIndex="18" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="56" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataInputObjs>getelementptr</dataInputObjs>
+      <dataOutputObjs>bitcast</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="90" name="Vq" lineNumber="56" originalName="Vq" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="Vq_fu_546_p1" coreId="997420912" contextFuncName="manual_control" bitwidth="32" opcode="bitcast" nodeLabel="5.0" m_display="0" m_topoIndex="53" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="56" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="91" name="control_addr_4" lineNumber="57" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreId="1730555960" contextFuncName="manual_control" bitwidth="3" opcode="getelementptr" nodeLabel="3.0" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="57" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataInputObjs>control</dataInputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="92" name="p_Val2_15" lineNumber="57" originalName="x" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreName="RAM_1P" implIndex="auto" control="no" opType="ram_1p" coreId="88" contextFuncName="manual_control" bitwidth="32" opcode="load" nodeLabel="3.0" nodeLatency="1" m_display="0" m_delay="0.67" m_topoIndex="23" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="57" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataInputObjs>getelementptr</dataInputObjs>
+      <dataOutputObjs>bitselect</dataOutputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <dataOutputObjs>trunc</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="93" name="p_Result_6" lineNumber="803" originalName="__Result__" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="p_Result_6_fu_402_p3" coreId="576532535" contextFuncName="operator_assign" bitwidth="1" opcode="bitselect" nodeLabel="4.0" m_display="0" m_topoIndex="29" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_int_ref.h" linenumber="803" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="operator="/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="94" name="tmp_39" lineNumber="628" originalName="tmp" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="tmp_39_fu_410_p4" coreId="778135408" contextFuncName="get" bitwidth="8" opcode="partselect" nodeLabel="4.0" m_display="0" m_topoIndex="30" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_int_ref.h" linenumber="628" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="get"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="95" name="tmp_40" lineNumber="628" originalName="tmp" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="tmp_40_fu_420_p1" coreId="1630499951" contextFuncName="get" bitwidth="23" opcode="trunc" nodeLabel="4.0" m_display="0" m_topoIndex="31" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_int_ref.h" linenumber="628" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="get"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>bitconcatenate</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="96" name="mantissa_4" lineNumber="691" originalName="mantissa" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="mantissa_4_fu_424_p4" coreId="543516513" contextFuncName="operator_assign_24_1_false_AP_TRN_AP_WRAP_0" bitwidth="25" opcode="bitconcatenate" nodeLabel="4.0" m_display="0" m_topoIndex="32" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" linenumber="691" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="operator=&amp;lt;24, 1, false, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="97" name="zext_ln15_4" lineNumber="15" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="zext_ln15_4_fu_434_p1" coreId="875639328" contextFuncName="generic_cast_IEEE754_short_AP_TRN_ZERO_float_s" bitwidth="63" opcode="zext" nodeLabel="4.0" m_display="0" m_topoIndex="33" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h" linenumber="15" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="generic_cast_IEEE754&amp;lt;short, AP_TRN_ZERO, float&amp;gt;"/>
+      <dataInputObjs>bitconcatenate</dataInputObjs>
+      <dataOutputObjs>lshr</dataOutputObjs>
+      <dataOutputObjs>shl</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="98" name="zext_ln344_4" lineNumber="344" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="zext_ln344_4_fu_438_p1" coreId="1836477548" contextFuncName="expv" bitwidth="9" opcode="zext" nodeLabel="4.0" m_display="0" m_topoIndex="34" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" linenumber="344" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="expv"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="99" name="add_ln344_4" lineNumber="344" originalName="sh" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="add_ln344_4_fu_442_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="expv" bitwidth="9" opcode="add" nodeLabel="4.0" m_display="0" m_delay="0.76" m_topoIndex="35" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" linenumber="344" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="expv"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>bitselect</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="100" name="isNeg_4" lineNumber="1363" originalName="isNeg" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="isNeg_4_fu_448_p3" coreId="997485606" contextFuncName="operator_ls" bitwidth="1" opcode="bitselect" nodeLabel="4.0" m_display="0" m_topoIndex="36" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" linenumber="1363" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="operator&amp;lt;&amp;lt;"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="101" name="sub_ln1364_1" lineNumber="1364" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="sub_ln1364_1_fu_456_p2" coreName="Adder" implIndex="fabric" control="no" opType="sub" coreId="1" contextFuncName="operator_ls" bitwidth="8" opcode="sub" nodeLabel="4.0" m_display="0" m_delay="0.76" m_topoIndex="37" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" linenumber="1364" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="operator&amp;lt;&amp;lt;"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>sext</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="102" name="sext_ln1364_4" lineNumber="1364" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="sext_ln1364_4_fu_462_p1" coreId="673201011" contextFuncName="operator_ls" bitwidth="9" opcode="sext" nodeLabel="4.0" m_display="0" m_topoIndex="38" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" linenumber="1364" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="operator&amp;lt;&amp;lt;"/>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="103" name="ush_4" lineNumber="1364" originalName="ush" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="ush_4_fu_466_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="operator_ls" bitwidth="9" opcode="select" nodeLabel="4.0" m_display="0" m_delay="0.39" m_topoIndex="39" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" linenumber="1364" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="operator&amp;lt;&amp;lt;"/>
+      <dataInputObjs>bitselect</dataInputObjs>
+      <dataInputObjs>sext</dataInputObjs>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>sext</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="104" name="sext_ln1340_4" lineNumber="1340" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="sext_ln1340_4_fu_474_p1" coreId="574452846" contextFuncName="operator_rs" bitwidth="32" opcode="sext" nodeLabel="4.0" m_display="0" m_topoIndex="40" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" linenumber="1340" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="operator&amp;gt;&amp;gt;"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="105" name="zext_ln1340_4" lineNumber="1340" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="zext_ln1340_4_fu_478_p1" coreId="1868771122" contextFuncName="operator_rs" bitwidth="63" opcode="zext" nodeLabel="4.0" m_display="0" m_topoIndex="41" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" linenumber="1340" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="operator&amp;gt;&amp;gt;"/>
+      <dataInputObjs>sext</dataInputObjs>
+      <dataOutputObjs>lshr</dataOutputObjs>
+      <dataOutputObjs>shl</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="106" name="r_V_9" lineNumber="1340" originalName="r.V" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="r_V_9_fu_482_p2" coreName="Shifter" implIndex="auto_pipe" control="no" opType="lshr" coreId="75" contextFuncName="operator_rs" bitwidth="63" opcode="lshr" nodeLabel="4.0" m_display="0" m_topoIndex="42" m_clusterGroupNumber="2">
+      <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" linenumber="1340" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="operator&amp;gt;&amp;gt;"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>bitselect</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="107" name="r_V_10" lineNumber="1306" originalName="r.V" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="r_V_10_fu_488_p2" coreName="Shifter" implIndex="auto_pipe" control="no" opType="shl" coreId="75" contextFuncName="operator_ls" bitwidth="63" opcode="shl" nodeLabel="4.0" m_display="0" m_topoIndex="43" m_clusterGroupNumber="2">
+      <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" linenumber="1306" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="operator&amp;lt;&amp;lt;"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="108" name="tmp_36" lineNumber="671" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="tmp_36_fu_494_p3" coreId="1814459502" contextFuncName="operator_assign_63_39_false_AP_TRN_AP_WRAP_0" bitwidth="1" opcode="bitselect" nodeLabel="4.0" m_display="0" m_topoIndex="44" m_clusterGroupNumber="2">
+      <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" linenumber="671" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="operator=&amp;lt;63, 39, false, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+      <dataInputObjs>lshr</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="109" name="zext_ln671_4" lineNumber="671" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="zext_ln671_4_fu_502_p1" coreId="825045040" contextFuncName="operator_assign_63_39_false_AP_TRN_AP_WRAP_0" bitwidth="10" opcode="zext" nodeLabel="4.0" m_display="0" m_topoIndex="45" m_clusterGroupNumber="2">
+      <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" linenumber="671" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="operator=&amp;lt;63, 39, false, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+      <dataInputObjs>bitselect</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="110" name="tmp_18" lineNumber="671" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="tmp_18_fu_506_p4" coreId="1633905012" contextFuncName="operator_assign_63_39_false_AP_TRN_AP_WRAP_0" bitwidth="10" opcode="partselect" nodeLabel="4.0" m_display="0" m_topoIndex="46" m_clusterGroupNumber="2">
+      <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" linenumber="671" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="operator=&amp;lt;63, 39, false, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+      <dataInputObjs>shl</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="111" name="val_4" lineNumber="1365" originalName="val" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="val_4_fu_516_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="operator_ls" bitwidth="10" opcode="select" nodeLabel="4.0" m_display="0" m_delay="1.38" m_topoIndex="47" m_clusterGroupNumber="2">
+      <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" linenumber="1365" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="operator&amp;lt;&amp;lt;"/>
+      <dataInputObjs>bitselect</dataInputObjs>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="112" name="result_V_21" lineNumber="666" originalName="result.V" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="result_V_21_fu_524_p2" coreName="Adder" implIndex="fabric" control="no" opType="sub" coreId="1" contextFuncName="operator_assign_17_17_true_AP_TRN_AP_WRAP_0" bitwidth="10" opcode="sub" nodeLabel="4.0" m_display="0" m_delay="0.78" m_topoIndex="48" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" linenumber="666" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="operator=&amp;lt;17, 17, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="113" name="result_V_22" lineNumber="59" originalName="result.V" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="result_V_22_fu_530_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="generic_cast_IEEE754_short_AP_TRN_ZERO_float_s" bitwidth="10" opcode="select" nodeLabel="4.0" m_display="0" m_delay="0.4" m_topoIndex="49" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h" linenumber="59" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="generic_cast_IEEE754&amp;lt;short, AP_TRN_ZERO, float&amp;gt;"/>
+      <dataInputObjs>bitselect</dataInputObjs>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="114" name="call_ret" lineNumber="62" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="grp_park_inverse_float_s_fu_302" coreId="1633820725" contextFuncName="manual_control" bitwidth="64" opcode="call" nodeLabel="5.0" nodeLatency="1" m_display="0" m_delay="7.01" m_topoIndex="54" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="62" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>extractvalue</dataOutputObjs>
+      <dataOutputObjs>extractvalue</dataOutputObjs>
+      <constName>park_inverse_float_s</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="115" name="Valpha" lineNumber="62" originalName="Valpha" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreId="1702064225" contextFuncName="manual_control" bitwidth="32" opcode="extractvalue" nodeLabel="6.0" m_display="0" m_topoIndex="55" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="62" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataInputObjs>call</dataInputObjs>
+      <dataOutputObjs>bitcast</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="116" name="Vbeta" lineNumber="62" originalName="Vbeta" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreId="574967113" contextFuncName="manual_control" bitwidth="32" opcode="extractvalue" nodeLabel="6.0" m_display="0" m_topoIndex="56" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="62" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataInputObjs>call</dataInputObjs>
+      <dataOutputObjs>bitcast</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="117" name="bitcast_ln63" lineNumber="63" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="bitcast_ln63_fu_558_p1" coreId="2003790907" contextFuncName="manual_control" bitwidth="32" opcode="bitcast" nodeLabel="6.0" m_display="0" m_topoIndex="57" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="63" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataInputObjs>extractvalue</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="118" name="logger_addr_20" lineNumber="63" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreId="1701273971" contextFuncName="manual_control" bitwidth="5" opcode="getelementptr" nodeLabel="6.0" m_display="0" m_topoIndex="58" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="63" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataOutputObjs>logger</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="119" name="logger_addr_20_write_ln63" lineNumber="63" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreName="RAM_1P" implIndex="auto" control="no" opType="ram_1p" coreId="88" contextFuncName="manual_control" opcode="store" nodeLabel="6.0" m_display="0" m_delay="0.67" m_topoIndex="59" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="63" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataInputObjs>getelementptr</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="120" name="bitcast_ln64" lineNumber="64" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="bitcast_ln64_fu_563_p1" coreId="1279810338" contextFuncName="manual_control" bitwidth="32" opcode="bitcast" nodeLabel="7.0" m_display="0" m_topoIndex="60" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="64" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataInputObjs>extractvalue</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="121" name="logger_addr_21" lineNumber="64" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreId="1684368999" contextFuncName="manual_control" bitwidth="5" opcode="getelementptr" nodeLabel="7.0" m_display="0" m_topoIndex="61" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="64" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataOutputObjs>logger</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="122" name="logger_addr_21_write_ln64" lineNumber="64" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreName="RAM_1P" implIndex="auto" control="no" opType="ram_1p" coreId="88" contextFuncName="manual_control" opcode="store" nodeLabel="7.0" m_display="0" m_delay="0.67" m_topoIndex="62" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="64" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataInputObjs>getelementptr</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="123" name="call_ret8" lineNumber="69" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="grp_clarke_inverse_float_s_fu_313" coreId="1226965108" contextFuncName="manual_control" bitwidth="96" opcode="call" nodeLabel="7.0" nodeLatency="1" m_display="0" m_delay="7.01" m_topoIndex="63" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="69" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataInputObjs>extractvalue</dataInputObjs>
+      <dataInputObjs>extractvalue</dataInputObjs>
+      <dataOutputObjs>extractvalue</dataOutputObjs>
+      <dataOutputObjs>extractvalue</dataOutputObjs>
+      <dataOutputObjs>extractvalue</dataOutputObjs>
+      <constName>clarke_inverse_float_s</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="124" name="Va" lineNumber="69" originalName="Va" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreId="1869375016" contextFuncName="manual_control" bitwidth="32" opcode="extractvalue" nodeLabel="8.0" m_display="0" m_topoIndex="92" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="69" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataInputObjs>call</dataInputObjs>
+      <dataOutputObjs>bitcast</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="125" name="Vb" lineNumber="69" originalName="Vb" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreId="1852793647" contextFuncName="manual_control" bitwidth="32" opcode="extractvalue" nodeLabel="8.0" m_display="0" m_topoIndex="93" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="69" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataInputObjs>call</dataInputObjs>
+      <dataOutputObjs>bitcast</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="126" name="Vc" lineNumber="69" originalName="Vc" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreId="1747858485" contextFuncName="manual_control" bitwidth="32" opcode="extractvalue" nodeLabel="8.0" m_display="0" m_topoIndex="94" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="69" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataInputObjs>call</dataInputObjs>
+      <dataOutputObjs>bitcast</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="127" name="bitcast_ln70" lineNumber="70" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="bitcast_ln70_fu_767_p1" coreId="539568244" contextFuncName="manual_control" bitwidth="32" opcode="bitcast" nodeLabel="9.0" m_display="0" m_topoIndex="100" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="70" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataInputObjs>extractvalue</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="128" name="logger_addr_22" lineNumber="70" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreId="536879616" contextFuncName="manual_control" bitwidth="5" opcode="getelementptr" nodeLabel="9.0" m_display="0" m_topoIndex="101" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="70" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataOutputObjs>logger</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="129" name="logger_addr_22_write_ln70" lineNumber="70" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreName="RAM_1P" implIndex="auto" control="no" opType="ram_1p" coreId="88" contextFuncName="manual_control" opcode="store" nodeLabel="9.0" m_display="0" m_delay="0.67" m_topoIndex="102" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="70" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataInputObjs>getelementptr</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="130" name="bitcast_ln71" lineNumber="71" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="bitcast_ln71_fu_771_p1" coreId="1713927010" contextFuncName="manual_control" bitwidth="32" opcode="bitcast" nodeLabel="10.0" m_display="0" m_topoIndex="104" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="71" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataInputObjs>extractvalue</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="131" name="logger_addr_23" lineNumber="71" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreId="1870014240" contextFuncName="manual_control" bitwidth="5" opcode="getelementptr" nodeLabel="10.0" m_display="0" m_topoIndex="105" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="71" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataOutputObjs>logger</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="132" name="logger_addr_23_write_ln71" lineNumber="71" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreName="RAM_1P" implIndex="auto" control="no" opType="ram_1p" coreId="88" contextFuncName="manual_control" opcode="store" nodeLabel="10.0" m_display="0" m_delay="0.67" m_topoIndex="106" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="71" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataInputObjs>getelementptr</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="133" name="bitcast_ln72" lineNumber="72" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="bitcast_ln72_fu_802_p1" coreId="1713913460" contextFuncName="manual_control" bitwidth="32" opcode="bitcast" nodeLabel="11.0" m_display="0" m_topoIndex="113" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="72" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataInputObjs>extractvalue</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="134" name="logger_addr_24" lineNumber="72" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreId="539437428" contextFuncName="manual_control" bitwidth="5" opcode="getelementptr" nodeLabel="11.0" m_display="0" m_topoIndex="114" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="72" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataOutputObjs>logger</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="135" name="logger_addr_24_write_ln72" lineNumber="72" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreName="RAM_1P" implIndex="auto" control="no" opType="ram_1p" coreId="88" contextFuncName="manual_control" opcode="store" nodeLabel="11.0" m_display="0" m_delay="0.67" m_topoIndex="115" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="72" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataInputObjs>bitcast</dataInputObjs>
+      <dataInputObjs>getelementptr</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="136" name="call_ret7" lineNumber="77" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="grp_SVPWM_float_s_fu_319" coreId="1713384490" contextFuncName="manual_control" bitwidth="48" opcode="call" nodeLabel="9.0" nodeLatency="1" m_display="0" m_delay="2.78" m_topoIndex="103" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="77" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataInputObjs>extractvalue</dataInputObjs>
+      <dataInputObjs>extractvalue</dataInputObjs>
+      <dataInputObjs>extractvalue</dataInputObjs>
+      <dataOutputObjs>extractvalue</dataOutputObjs>
+      <dataOutputObjs>extractvalue</dataOutputObjs>
+      <dataOutputObjs>extractvalue</dataOutputObjs>
+      <constName>SVPWM_float_s</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="137" name="pwm_a" lineNumber="77" originalName="pwm_a" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreId="542329928" contextFuncName="manual_control" bitwidth="16" opcode="extractvalue" nodeLabel="10.0" m_display="0" m_topoIndex="107" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="77" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataInputObjs>call</dataInputObjs>
+      <dataOutputObjs>bitconcatenate</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="138" name="pwm_b" lineNumber="77" originalName="pwm_b" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreId="1818765420" contextFuncName="manual_control" bitwidth="16" opcode="extractvalue" nodeLabel="10.0" m_display="0" m_topoIndex="108" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="77" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataInputObjs>call</dataInputObjs>
+      <dataOutputObjs>bitconcatenate</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="139" name="pwm_c" lineNumber="77" originalName="pwm_c" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreId="1668444975" contextFuncName="manual_control" bitwidth="16" opcode="extractvalue" nodeLabel="10.0" m_display="0" m_topoIndex="109" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="77" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataInputObjs>call</dataInputObjs>
+      <dataOutputObjs>bitconcatenate</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="140" name="pwmStreamObj_data_V" lineNumber="82" originalName="pwmStreamObj.data.V" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="pwmStreamObj_data_V_fu_787_p4" coreId="1702113134" contextFuncName="manual_control" bitwidth="48" opcode="bitconcatenate" nodeLabel="10.0" m_display="0" m_topoIndex="110" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="82" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataInputObjs>extractvalue</dataInputObjs>
+      <dataInputObjs>extractvalue</dataInputObjs>
+      <dataInputObjs>extractvalue</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="141" name="zext_ln82" lineNumber="82" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="B_TDATA" coreId="1919052140" contextFuncName="manual_control" bitwidth="64" opcode="zext" nodeLabel="10.0" m_display="0" m_topoIndex="111" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="82" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+      <dataInputObjs>bitconcatenate</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="142" name="B_V_data_V_write_ln304" lineNumber="304" fileName="/home/mklab/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h" fileDirectory=".." coreName="axis" implIndex="axi4stream" control="no" opType="adapter" coreId="123" contextFuncName="write" opcode="write" nodeLabel="10.0" m_display="0" m_topoIndex="112" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/mklab/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h" linenumber="304" fileDirectory="/home/mklab/workspace/foc" functionName="write"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>B_V_data_V</dataOutputObjs>
+      <dataOutputObjs>B_V_keep_V</dataOutputObjs>
+      <dataOutputObjs>B_V_strb_V</dataOutputObjs>
+      <dataOutputObjs>B_V_last_V</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="143" name="_ln85" lineNumber="85" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreId="859465774" contextFuncName="manual_control" opcode="ret" nodeLabel="12.0" m_display="0" m_topoIndex="119" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="85" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
+    </node_objs>
+    <fileValidLineNumbers fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h">
+      <validLinenumbers>315</validLinenumbers>
+      <validLinenumbers>344</validLinenumbers>
+    </fileValidLineNumbers>
+    <fileValidLineNumbers fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h">
+      <validLinenumbers>691</validLinenumbers>
+      <validLinenumbers>1363</validLinenumbers>
+      <validLinenumbers>1364</validLinenumbers>
+      <validLinenumbers>1340</validLinenumbers>
+      <validLinenumbers>1306</validLinenumbers>
+      <validLinenumbers>671</validLinenumbers>
+      <validLinenumbers>1365</validLinenumbers>
+      <validLinenumbers>666</validLinenumbers>
+    </fileValidLineNumbers>
+    <fileValidLineNumbers fileName="foc-rewrite/apc/src/FOC/foc.cpp">
+      <validLinenumbers>30</validLinenumbers>
+      <validLinenumbers>31</validLinenumbers>
+      <validLinenumbers>33</validLinenumbers>
+      <validLinenumbers>34</validLinenumbers>
+      <validLinenumbers>40</validLinenumbers>
+      <validLinenumbers>42</validLinenumbers>
+      <validLinenumbers>43</validLinenumbers>
+      <validLinenumbers>48</validLinenumbers>
+      <validLinenumbers>49</validLinenumbers>
+      <validLinenumbers>50</validLinenumbers>
+      <validLinenumbers>51</validLinenumbers>
+      <validLinenumbers>55</validLinenumbers>
+      <validLinenumbers>56</validLinenumbers>
+      <validLinenumbers>57</validLinenumbers>
+      <validLinenumbers>62</validLinenumbers>
+      <validLinenumbers>63</validLinenumbers>
+      <validLinenumbers>64</validLinenumbers>
+      <validLinenumbers>69</validLinenumbers>
+      <validLinenumbers>70</validLinenumbers>
+      <validLinenumbers>71</validLinenumbers>
+      <validLinenumbers>72</validLinenumbers>
+      <validLinenumbers>77</validLinenumbers>
+      <validLinenumbers>82</validLinenumbers>
+      <validLinenumbers>85</validLinenumbers>
+    </fileValidLineNumbers>
+    <fileValidLineNumbers fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h">
+      <validLinenumbers>15</validLinenumbers>
+      <validLinenumbers>59</validLinenumbers>
+    </fileValidLineNumbers>
+    <fileValidLineNumbers fileName="/home/mklab/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h">
+      <validLinenumbers>293</validLinenumbers>
+      <validLinenumbers>304</validLinenumbers>
+    </fileValidLineNumbers>
+    <fileValidLineNumbers fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_int_ref.h">
+      <validLinenumbers>803</validLinenumbers>
+      <validLinenumbers>628</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <ScheduleInfo time="5"/>
+  <ScheduleInfo time="6"/>
+  <ScheduleInfo time="7"/>
+  <ScheduleInfo time="8"/>
+  <ScheduleInfo time="9"/>
+  <ScheduleInfo time="10"/>
+  <ScheduleInfo time="11"/>
+  <ScheduleInfo time="12"/>
+  <regnodes realName="conv_reg_861">
+    <nodeIds>32</nodeIds>
+  </regnodes>
+  <regnodes realName="dc_reg_912">
+    <nodeIds>36</nodeIds>
+  </regnodes>
+  <regnodes realName="control_load_3_reg_866">
+    <nodeIds>89</nodeIds>
+  </regnodes>
+  <regnodes realName="control_addr_3_reg_856">
+    <nodeIds>88</nodeIds>
+  </regnodes>
+  <regnodes realName="Ib_reg_811">
+    <nodeIds>28</nodeIds>
+  </regnodes>
+  <regnodes realName="sext_ln40_reg_821">
+    <nodeIds>31</nodeIds>
+  </regnodes>
+  <regnodes realName="control_addr_4_reg_871">
+    <nodeIds>91</nodeIds>
+  </regnodes>
+  <regnodes realName="RPM_reg_816">
+    <nodeIds>29</nodeIds>
+  </regnodes>
+  <regnodes realName="Vc_reg_936">
+    <nodeIds>126</nodeIds>
+  </regnodes>
+  <regnodes realName="control_addr_reg_826">
+    <nodeIds>33</nodeIds>
+  </regnodes>
+  <regnodes realName="Vd_reg_891">
+    <nodeIds>87</nodeIds>
+  </regnodes>
+  <regnodes realName="sext_ln49_reg_841">
+    <nodeIds>70</nodeIds>
+  </regnodes>
+  <regnodes realName="Vb_reg_930">
+    <nodeIds>125</nodeIds>
+  </regnodes>
+  <regnodes realName="sext_ln50_reg_886">
+    <nodeIds>75</nodeIds>
+  </regnodes>
+  <regnodes realName="Vq_reg_896">
+    <nodeIds>90</nodeIds>
+  </regnodes>
+  <regnodes realName="control_addr_2_reg_846">
+    <nodeIds>85</nodeIds>
+  </regnodes>
+  <regnodes realName="sext_ln51_reg_942">
+    <nodeIds>80</nodeIds>
+  </regnodes>
+  <regnodes realName="Vbeta_reg_906">
+    <nodeIds>116</nodeIds>
+  </regnodes>
+  <regnodes realName="Valpha_reg_901">
+    <nodeIds>115</nodeIds>
+  </regnodes>
+  <regnodes realName="bitcast_ln40_reg_876">
+    <nodeIds>35</nodeIds>
+  </regnodes>
+  <regnodes realName="control_load_2_reg_851">
+    <nodeIds>86</nodeIds>
+  </regnodes>
+  <regnodes realName="result_V_22_reg_881">
+    <nodeIds>113</nodeIds>
+  </regnodes>
+  <regnodes realName="control_load_reg_836">
+    <nodeIds>34</nodeIds>
+  </regnodes>
+  <regnodes realName="Theta_4_reg_917">
+    <nodeIds>61</nodeIds>
+  </regnodes>
+  <regnodes realName="sext_ln48_reg_831">
+    <nodeIds>65</nodeIds>
+  </regnodes>
+  <regnodes realName="Va_reg_924">
+    <nodeIds>124</nodeIds>
+  </regnodes>
+  <expressionNodes realName="ush_4_fu_466">
+    <nodeIds>103</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_39_fu_410">
+    <nodeIds>94</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="mantissa_4_fu_424">
+    <nodeIds>96</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sub_ln1364_1_fu_456">
+    <nodeIds>101</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="control_addr_3_gep_fu_198">
+    <nodeIds>88</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln1340_fu_646">
+    <nodeIds>50</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="Theta_fu_755">
+    <nodeIds>64</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="logger_addr_20_gep_fu_239">
+    <nodeIds>118</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln1364_4_fu_462">
+    <nodeIds>102</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="Ia_fu_340">
+    <nodeIds>27</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="Vq_fu_546">
+    <nodeIds>90</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_37_fu_578">
+    <nodeIds>39</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="Ib_fu_344">
+    <nodeIds>28</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="Theta_4_fu_720">
+    <nodeIds>61</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="Vd_fu_542">
+    <nodeIds>87</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="Vc_fu_741">
+    <nodeIds>126</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln15_fu_602">
+    <nodeIds>42</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="mantissa_fu_592">
+    <nodeIds>41</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="result_V_18_fu_692">
+    <nodeIds>57</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln1364_fu_630">
+    <nodeIds>47</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_36_fu_494">
+    <nodeIds>108</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln671_fu_670">
+    <nodeIds>54</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="logger_addr_19_gep_fu_293">
+    <nodeIds>83</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln82_fu_797">
+    <nodeIds>141</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="Vbeta_fu_554">
+    <nodeIds>116</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="ush_fu_634">
+    <nodeIds>48</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="logger_addr_21_gep_fu_248">
+    <nodeIds>121</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_fu_662">
+    <nodeIds>53</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="control_addr_gep_fu_175">
+    <nodeIds>33</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln48_fu_388">
+    <nodeIds>67</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_38_fu_588">
+    <nodeIds>40</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="r_V_10_fu_488">
+    <nodeIds>107</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln70_fu_767">
+    <nodeIds>127</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="RPM_fu_354">
+    <nodeIds>29</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_Result_s_fu_570">
+    <nodeIds>38</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln72_fu_802">
+    <nodeIds>133</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="val_4_fu_516">
+    <nodeIds>111</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="Va_fu_733">
+    <nodeIds>124</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="result_V_21_fu_524">
+    <nodeIds>112</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln671_4_fu_502">
+    <nodeIds>109</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="isNeg_4_fu_448">
+    <nodeIds>100</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="logger_addr_23_gep_fu_275">
+    <nodeIds>131</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln50_fu_728">
+    <nodeIds>77</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="control_addr_4_gep_fu_221">
+    <nodeIds>91</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln50_fu_538">
+    <nodeIds>75</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_18_fu_506">
+    <nodeIds>110</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln344_4_fu_442">
+    <nodeIds>99</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="pwm_b_fu_779">
+    <nodeIds>138</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_30_fu_706">
+    <nodeIds>59</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln49_fu_384">
+    <nodeIds>70</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln344_fu_610">
+    <nodeIds>44</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln71_fu_771">
+    <nodeIds>130</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="pwm_a_fu_775">
+    <nodeIds>137</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="val_fu_684">
+    <nodeIds>56</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln63_fu_558">
+    <nodeIds>117</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln43_fu_745">
+    <nodeIds>62</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="logger_addr_18_gep_fu_257">
+    <nodeIds>78</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln49_fu_397">
+    <nodeIds>72</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="logger_addr_22_gep_fu_266">
+    <nodeIds>128</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln15_4_fu_434">
+    <nodeIds>97</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln43_fu_750">
+    <nodeIds>63</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln42_fu_714">
+    <nodeIds>60</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln40_fu_374">
+    <nodeIds>31</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="r_V_fu_650">
+    <nodeIds>51</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln40_fu_393">
+    <nodeIds>35</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln51_fu_762">
+    <nodeIds>80</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_16_fu_674">
+    <nodeIds>55</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_data_V_3_fu_336">
+    <nodeIds>26</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="control_addr_2_gep_fu_189">
+    <nodeIds>85</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="pwm_c_fu_783">
+    <nodeIds>139</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sub_ln1364_fu_624">
+    <nodeIds>46</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln1340_4_fu_478">
+    <nodeIds>105</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="result_V_22_fu_530">
+    <nodeIds>113</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="data_V_fu_567">
+    <nodeIds>37</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="Valpha_fu_550">
+    <nodeIds>115</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="logger_addr_gep_fu_207">
+    <nodeIds>68</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="logger_addr_24_gep_fu_284">
+    <nodeIds>134</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="isNeg_fu_616">
+    <nodeIds>45</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_Result_6_fu_402">
+    <nodeIds>93</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln48_fu_379">
+    <nodeIds>65</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="r_V_8_fu_656">
+    <nodeIds>52</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln1340_4_fu_474">
+    <nodeIds>104</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="Angle_fu_364">
+    <nodeIds>30</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="pwmStreamObj_data_V_fu_787">
+    <nodeIds>140</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="r_V_9_fu_482">
+    <nodeIds>106</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="Vb_fu_737">
+    <nodeIds>125</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln51_fu_806">
+    <nodeIds>82</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln1340_fu_642">
+    <nodeIds>49</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_40_fu_420">
+    <nodeIds>95</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="logger_addr_17_gep_fu_230">
+    <nodeIds>73</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="result_V_fu_698">
+    <nodeIds>58</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln64_fu_563">
+    <nodeIds>120</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln344_fu_606">
+    <nodeIds>43</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln344_4_fu_438">
+    <nodeIds>98</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_SVPWM_float_s_fu_319">
+    <nodeIds>136</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_clarke_inverse_float_s_fu_313">
+    <nodeIds>123</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_326">
+    <nodeIds>36</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_park_inverse_float_s_fu_302">
+    <nodeIds>114</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_333">
+    <nodeIds>66</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_330">
+    <nodeIds>32</nodeIds>
+    <nodeIds>71</nodeIds>
+    <nodeIds>76</nodeIds>
+    <nodeIds>81</nodeIds>
+  </moduleNodes>
+  <ioNodes realName="empty_read_fu_144">
+    <nodeIds>25</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln304_write_fu_156">
+    <nodeIds>142</nodeIds>
+  </ioNodes>
+  <memoryPorts dataString="control">
+    <nodeIds>34</nodeIds>
+    <nodeIds>86</nodeIds>
+    <nodeIds>89</nodeIds>
+    <nodeIds>92</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="cosine_i" portID="100">
+    <nodeIds>114</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="logger">
+    <nodeIds>69</nodeIds>
+    <nodeIds>74</nodeIds>
+    <nodeIds>119</nodeIds>
+    <nodeIds>122</nodeIds>
+    <nodeIds>79</nodeIds>
+    <nodeIds>129</nodeIds>
+    <nodeIds>132</nodeIds>
+    <nodeIds>135</nodeIds>
+    <nodeIds>84</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="sine_i" portID="100">
+    <nodeIds>114</nodeIds>
+  </memoryPorts>
+  <ioPorts name="A_V_data_V">
+    <contents name="read">
+      <nodeIds>25</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="A_V_keep_V">
+    <contents name="read">
+      <nodeIds>25</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="A_V_last_V">
+    <contents name="read">
+      <nodeIds>25</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="A_V_strb_V">
+    <contents name="read">
+      <nodeIds>25</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="B_V_data_V">
+    <contents name="write">
+      <nodeIds>142</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="B_V_keep_V">
+    <contents name="write">
+      <nodeIds>142</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="B_V_last_V">
+    <contents name="write">
+      <nodeIds>142</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="B_V_strb_V">
+    <contents name="write">
+      <nodeIds>142</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="control(p0)">
+    <contents name="load">
+      <nodeIds>34</nodeIds>
+      <nodeIds>86</nodeIds>
+      <nodeIds>89</nodeIds>
+      <nodeIds>92</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="logger(p0)">
+    <contents name="store">
+      <nodeIds>69</nodeIds>
+      <nodeIds>74</nodeIds>
+      <nodeIds>119</nodeIds>
+      <nodeIds>122</nodeIds>
+      <nodeIds>79</nodeIds>
+      <nodeIds>129</nodeIds>
+      <nodeIds>132</nodeIds>
+      <nodeIds>135</nodeIds>
+      <nodeIds>84</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="32" stage="4" latency="4"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="34" stage="2" latency="2"/>
+      <operations id="65" stage="1" latency="1"/>
+      <operations id="66" stage="4" latency="4"/>
+    </states>
+    <states id="2">
+      <operations id="32" stage="3" latency="4"/>
+      <operations id="34" stage="1" latency="2"/>
+      <operations id="66" stage="3" latency="4"/>
+      <operations id="70" stage="1" latency="1"/>
+      <operations id="71" stage="4" latency="4"/>
+      <operations id="85" stage="1" latency="1"/>
+      <operations id="86" stage="2" latency="2"/>
+    </states>
+    <states id="3">
+      <operations id="32" stage="2" latency="4"/>
+      <operations id="66" stage="2" latency="4"/>
+      <operations id="71" stage="3" latency="4"/>
+      <operations id="86" stage="1" latency="2"/>
+      <operations id="88" stage="1" latency="1"/>
+      <operations id="89" stage="2" latency="2"/>
+    </states>
+    <states id="4">
+      <operations id="32" stage="1" latency="4"/>
+      <operations id="66" stage="1" latency="4"/>
+      <operations id="67" stage="1" latency="1"/>
+      <operations id="68" stage="1" latency="1"/>
+      <operations id="69" stage="1" latency="1"/>
+      <operations id="71" stage="2" latency="4"/>
+      <operations id="89" stage="1" latency="2"/>
+      <operations id="91" stage="1" latency="1"/>
+      <operations id="92" stage="2" latency="2"/>
+    </states>
+    <states id="5">
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="36" stage="4" latency="4"/>
+      <operations id="71" stage="1" latency="4"/>
+      <operations id="72" stage="1" latency="1"/>
+      <operations id="73" stage="1" latency="1"/>
+      <operations id="74" stage="1" latency="1"/>
+      <operations id="92" stage="1" latency="2"/>
+      <operations id="93" stage="1" latency="1"/>
+      <operations id="94" stage="1" latency="1"/>
+      <operations id="95" stage="1" latency="1"/>
+      <operations id="96" stage="1" latency="1"/>
+      <operations id="97" stage="1" latency="1"/>
+      <operations id="98" stage="1" latency="1"/>
+      <operations id="99" stage="1" latency="1"/>
+      <operations id="100" stage="1" latency="1"/>
+      <operations id="101" stage="1" latency="1"/>
+      <operations id="102" stage="1" latency="1"/>
+      <operations id="103" stage="1" latency="1"/>
+      <operations id="104" stage="1" latency="1"/>
+      <operations id="105" stage="1" latency="1"/>
+      <operations id="106" stage="1" latency="1"/>
+      <operations id="107" stage="1" latency="1"/>
+      <operations id="108" stage="1" latency="1"/>
+      <operations id="109" stage="1" latency="1"/>
+      <operations id="110" stage="1" latency="1"/>
+      <operations id="111" stage="1" latency="1"/>
+      <operations id="112" stage="1" latency="1"/>
+      <operations id="113" stage="1" latency="1"/>
+    </states>
+    <states id="6">
+      <operations id="36" stage="3" latency="4"/>
+      <operations id="75" stage="1" latency="1"/>
+      <operations id="76" stage="4" latency="4"/>
+      <operations id="87" stage="1" latency="1"/>
+      <operations id="90" stage="1" latency="1"/>
+      <operations id="114" stage="2" latency="2"/>
+    </states>
+    <states id="7">
+      <operations id="36" stage="2" latency="4"/>
+      <operations id="76" stage="3" latency="4"/>
+      <operations id="114" stage="1" latency="2"/>
+      <operations id="115" stage="1" latency="1"/>
+      <operations id="116" stage="1" latency="1"/>
+      <operations id="117" stage="1" latency="1"/>
+      <operations id="118" stage="1" latency="1"/>
+      <operations id="119" stage="1" latency="1"/>
+    </states>
+    <states id="8">
+      <operations id="36" stage="1" latency="4"/>
+      <operations id="76" stage="2" latency="4"/>
+      <operations id="120" stage="1" latency="1"/>
+      <operations id="121" stage="1" latency="1"/>
+      <operations id="122" stage="1" latency="1"/>
+      <operations id="123" stage="2" latency="2"/>
+    </states>
+    <states id="9">
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="38" stage="1" latency="1"/>
+      <operations id="39" stage="1" latency="1"/>
+      <operations id="40" stage="1" latency="1"/>
+      <operations id="41" stage="1" latency="1"/>
+      <operations id="42" stage="1" latency="1"/>
+      <operations id="43" stage="1" latency="1"/>
+      <operations id="44" stage="1" latency="1"/>
+      <operations id="45" stage="1" latency="1"/>
+      <operations id="46" stage="1" latency="1"/>
+      <operations id="47" stage="1" latency="1"/>
+      <operations id="48" stage="1" latency="1"/>
+      <operations id="49" stage="1" latency="1"/>
+      <operations id="50" stage="1" latency="1"/>
+      <operations id="51" stage="1" latency="1"/>
+      <operations id="52" stage="1" latency="1"/>
+      <operations id="53" stage="1" latency="1"/>
+      <operations id="54" stage="1" latency="1"/>
+      <operations id="55" stage="1" latency="1"/>
+      <operations id="56" stage="1" latency="1"/>
+      <operations id="57" stage="1" latency="1"/>
+      <operations id="58" stage="1" latency="1"/>
+      <operations id="59" stage="1" latency="1"/>
+      <operations id="60" stage="1" latency="1"/>
+      <operations id="61" stage="1" latency="1"/>
+      <operations id="76" stage="1" latency="4"/>
+      <operations id="77" stage="1" latency="1"/>
+      <operations id="78" stage="1" latency="1"/>
+      <operations id="79" stage="1" latency="1"/>
+      <operations id="123" stage="1" latency="2"/>
+      <operations id="124" stage="1" latency="1"/>
+      <operations id="125" stage="1" latency="1"/>
+      <operations id="126" stage="1" latency="1"/>
+    </states>
+    <states id="10">
+      <operations id="62" stage="1" latency="1"/>
+      <operations id="63" stage="1" latency="1"/>
+      <operations id="64" stage="1" latency="1"/>
+      <operations id="80" stage="1" latency="1"/>
+      <operations id="81" stage="4" latency="4"/>
+      <operations id="127" stage="1" latency="1"/>
+      <operations id="128" stage="1" latency="1"/>
+      <operations id="129" stage="1" latency="1"/>
+      <operations id="136" stage="2" latency="2"/>
+    </states>
+    <states id="11">
+      <operations id="81" stage="3" latency="4"/>
+      <operations id="130" stage="1" latency="1"/>
+      <operations id="131" stage="1" latency="1"/>
+      <operations id="132" stage="1" latency="1"/>
+      <operations id="136" stage="1" latency="2"/>
+      <operations id="137" stage="1" latency="1"/>
+      <operations id="138" stage="1" latency="1"/>
+      <operations id="139" stage="1" latency="1"/>
+      <operations id="140" stage="1" latency="1"/>
+      <operations id="141" stage="1" latency="1"/>
+      <operations id="142" stage="1" latency="1"/>
+    </states>
+    <states id="12">
+      <operations id="81" stage="2" latency="4"/>
+      <operations id="133" stage="1" latency="1"/>
+      <operations id="134" stage="1" latency="1"/>
+      <operations id="135" stage="1" latency="1"/>
+    </states>
+    <states id="13">
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="81" stage="1" latency="4"/>
+      <operations id="82" stage="1" latency="1"/>
+      <operations id="83" stage="1" latency="1"/>
+      <operations id="84" stage="1" latency="1"/>
+      <operations id="143" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="6">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="6" outState="7">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="7" outState="8">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="8" outState="9">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="9" outState="10">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="10" outState="11">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="11" outState="12">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="12" outState="13">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="manual_control" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="51" mMaxLatency="51">
+      <basicBlocks>144</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

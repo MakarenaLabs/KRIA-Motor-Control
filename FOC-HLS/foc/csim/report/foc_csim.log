@@ -1,0 +1,63 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../apc/tb/main.cpp in debug mode
+   Compiling ../../../apc/src/park_transform/park_inverse.cpp in debug mode
+   Compiling ../../../apc/src/park_transform/park_direct.cpp in debug mode
+   Compiling ../../../apc/src/FOC/foc.cpp in debug mode
+   Compiling ../../../apc/src/filter/filter.cpp in debug mode
+   Compiling ../../../apc/src/clarke_transform/clarke_inverse.cpp in debug mode
+   Compiling ../../../apc/src/clarke_transform/clarke_direct.cpp in debug mode
+   Compiling ../../../apc/src/PI_control/PI_control.cpp in debug mode
+   Generating csim.exe
+result: -1125
+result: -375
+result: -375
+result: -375
+result: -375
+result: -375
+result: -375
+result: -375
+result: -375
+result: -375
+result: -375
+result: -375
+result: -375
+result: -375
+result: -375
+result: -375
+result: -375
+result: -375
+result: -375
+result: -375
+result: -375
+result: -375
+result: -375
+result: -375
+result: -375
+result: -375
+result: -375
+result: -375
+result: -375
+result: -375
+result: -375
+result: -375
+result: -375
+result: -375
+result: -375
+result: -375
+result: -375
+result: -375
+result: -375
+result: -375
+result: -375
+result: -375
+result: -375
+result: -375
+result: -375
+result: -375
+result: -375
+result: -375
+result: -375
+result: -375
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

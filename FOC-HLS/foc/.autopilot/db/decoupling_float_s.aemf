@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1666006231263">
+  <ports id="1" name="Id" type="PortType" originalName="Id" coreId="0" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="2" name="Iq" type="PortType" originalName="Iq" coreId="1818632236" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="3" name="Vd" type="PortType" originalName="Vd" coreId="0" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="4" name="Vq" type="PortType" originalName="Vq" coreId="4294967295" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="5" name="RPM" type="PortType" originalName="RPM" coreId="664176048" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="15" name="ap_return_0" direction="DirOut">
+    <dataInputObjs>ret</dataInputObjs>
+  </ports>
+  <ports id="16" name="ap_return_1" direction="DirOut">
+    <dataInputObjs>ret</dataInputObjs>
+  </ports>
+  <edges id="24" source_obj="//@ports.4" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="26" source_obj="//@ports.3" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="28" source_obj="//@ports.2" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="30" source_obj="//@ports.1" sink_obj="//@blocks.0/@node_objs.3"/>
+  <edges id="32" source_obj="//@ports.0" sink_obj="//@blocks.0/@node_objs.4"/>
+  <edges id="33" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.0/@node_objs.5"/>
+  <edges id="36" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.0/@node_objs.6"/>
+  <edges id="37" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.6"/>
+  <edges id="38" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="39" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="40" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.0/@node_objs.8"/>
+  <edges id="42" source_obj="//@blocks.0/@node_objs.8" sink_obj="//@blocks.0/@node_objs.9"/>
+  <edges id="45" source_obj="//@blocks.0/@node_objs.9" sink_obj="//@blocks.0/@node_objs.10"/>
+  <edges id="46" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.10"/>
+  <edges id="47" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="48" source_obj="//@blocks.0/@node_objs.10" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="51" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@blocks.0/@node_objs.12"/>
+  <edges id="52" source_obj="//@blocks.0/@node_objs.12" sink_obj="//@blocks.0/@node_objs.13"/>
+  <edges id="53" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@blocks.0/@node_objs.13"/>
+  <edges id="54" source_obj="//@blocks.0/@node_objs.13" sink_obj="//@blocks.0/@node_objs.14"/>
+  <edges source_obj="//@blocks.0/@node_objs.14" sink_obj="//@ports.5"/>
+  <edges source_obj="//@blocks.0/@node_objs.14" sink_obj="//@ports.6"/>
+  <blocks id="21" name="decoupling&lt;float>" type="BlockType">
+    <node_objs xsi:type="cdfg:CdfgNode" id="6" name="RPM_read" lineNumber="4" originalName="RPM" fileName="foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp" fileDirectory=".." coreId="664167776" contextFuncName="decoupling_float_s" bitwidth="32" opcode="read" nodeLabel="7.0" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp" linenumber="4" fileDirectory="/home/mklab/workspace/foc" functionName="decoupling&amp;lt;float&amp;gt;"/>
+      <dataInputObjs>RPM</dataInputObjs>
+      <dataOutputObjs>fmul</dataOutputObjs>
+      <dataOutputObjs>fmul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="Vq_read" lineNumber="4" originalName="Vq" fileName="foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp" fileDirectory=".." coreId="664169376" contextFuncName="decoupling_float_s" bitwidth="32" opcode="read" nodeLabel="10.0" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp" linenumber="4" fileDirectory="/home/mklab/workspace/foc" functionName="decoupling&amp;lt;float&amp;gt;"/>
+      <dataInputObjs>Vq</dataInputObjs>
+      <dataOutputObjs>fsub</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="Vd_read" lineNumber="4" originalName="Vd" fileName="foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp" fileDirectory=".." coreId="664181984" contextFuncName="decoupling_float_s" bitwidth="32" opcode="read" nodeLabel="10.0" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp" linenumber="4" fileDirectory="/home/mklab/workspace/foc" functionName="decoupling&amp;lt;float&amp;gt;"/>
+      <dataInputObjs>Vd</dataInputObjs>
+      <dataOutputObjs>fadd</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="Iq_read" lineNumber="4" originalName="Iq" fileName="foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp" fileDirectory=".." coreId="1030647657" contextFuncName="decoupling_float_s" bitwidth="32" opcode="read" nodeLabel="4.0" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp" linenumber="4" fileDirectory="/home/mklab/workspace/foc" functionName="decoupling&amp;lt;float&amp;gt;"/>
+      <dataInputObjs>Iq</dataInputObjs>
+      <dataOutputObjs>fmul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="Id_read" lineNumber="4" originalName="Id" fileName="foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp" fileDirectory=".." coreId="836523688" contextFuncName="decoupling_float_s" bitwidth="32" opcode="read" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp" linenumber="4" fileDirectory="/home/mklab/workspace/foc" functionName="decoupling&amp;lt;float&amp;gt;"/>
+      <dataInputObjs>Id</dataInputObjs>
+      <dataOutputObjs>fmul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="11" name="mul" lineNumber="20" fileName="foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp" fileDirectory=".." rtlName="fmul_32ns_32ns_32_3_max_dsp_1_U64" coreName="FMul_maxdsp" implIndex="maxdsp" control="no" opType="fmul" coreId="30" contextFuncName="decoupling_float_s" bitwidth="32" opcode="fmul" nodeLabel="4.0" nodeLatency="2" m_display="0" m_delay="7.01" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp" linenumber="20" fileDirectory="/home/mklab/workspace/foc" functionName="decoupling&amp;lt;float&amp;gt;"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>fmul</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="mul1" lineNumber="20" fileName="foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp" fileDirectory=".." rtlName="fmul_32ns_32ns_32_3_max_dsp_1_U64" coreName="FMul_maxdsp" implIndex="maxdsp" control="no" opType="fmul" coreId="30" contextFuncName="decoupling_float_s" bitwidth="32" opcode="fmul" nodeLabel="7.0" nodeLatency="2" m_display="0" m_delay="7.01" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp" linenumber="20" fileDirectory="/home/mklab/workspace/foc" functionName="decoupling&amp;lt;float&amp;gt;"/>
+      <dataInputObjs>fmul</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>fadd</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="Flux_decoup" lineNumber="20" originalName="Flux_decoup" fileName="foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp" fileDirectory=".." rtlName="fadd_32ns_32ns_32_4_full_dsp_1_U62" coreName="FAddSub_fulldsp" implIndex="fulldsp" control="no" opType="fadd" coreId="18" contextFuncName="decoupling_float_s" bitwidth="32" opcode="fadd" nodeLabel="10.0" nodeLatency="3" m_display="0" m_delay="6.43" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp" linenumber="20" fileDirectory="/home/mklab/workspace/foc" functionName="decoupling&amp;lt;float&amp;gt;"/>
+      <dataInputObjs>fmul</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>insertvalue</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="mul2" lineNumber="21" fileName="foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp" fileDirectory=".." rtlName="fmul_32ns_32ns_32_3_max_dsp_1_U64" coreName="FMul_maxdsp" implIndex="maxdsp" control="no" opType="fmul" coreId="30" contextFuncName="decoupling_float_s" bitwidth="32" opcode="fmul" nodeLatency="2" m_display="0" m_delay="7.01" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp" linenumber="21" fileDirectory="/home/mklab/workspace/foc" functionName="decoupling&amp;lt;float&amp;gt;"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>fadd</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="add3" lineNumber="21" fileName="foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp" fileDirectory=".." rtlName="fadd_32ns_32ns_32_4_full_dsp_1_U62" coreName="FAddSub_fulldsp" implIndex="fulldsp" control="no" opType="fadd" coreId="18" contextFuncName="decoupling_float_s" bitwidth="32" opcode="fadd" nodeLabel="3.0" nodeLatency="3" m_display="0" m_delay="6.43" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp" linenumber="21" fileDirectory="/home/mklab/workspace/foc" functionName="decoupling&amp;lt;float&amp;gt;"/>
+      <dataInputObjs>fmul</dataInputObjs>
+      <dataOutputObjs>fmul</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="mul4" lineNumber="21" fileName="foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp" fileDirectory=".." rtlName="fmul_32ns_32ns_32_3_max_dsp_1_U65" coreName="FMul_maxdsp" implIndex="maxdsp" control="no" opType="fmul" coreId="30" contextFuncName="decoupling_float_s" bitwidth="32" opcode="fmul" nodeLabel="7.0" nodeLatency="2" m_display="0" m_delay="7.01" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp" linenumber="21" fileDirectory="/home/mklab/workspace/foc" functionName="decoupling&amp;lt;float&amp;gt;"/>
+      <dataInputObjs>fadd</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>fsub</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="Torque_decoup" lineNumber="21" originalName="Torque_decoup" fileName="foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp" fileDirectory=".." rtlName="fsub_32ns_32ns_32_4_full_dsp_1_U63" coreName="FAddSub_fulldsp" implIndex="fulldsp" control="no" opType="fsub" coreId="18" contextFuncName="decoupling_float_s" bitwidth="32" opcode="fsub" nodeLabel="10.0" nodeLatency="3" m_display="0" m_delay="6.43" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp" linenumber="21" fileDirectory="/home/mklab/workspace/foc" functionName="decoupling&amp;lt;float&amp;gt;"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>fmul</dataInputObjs>
+      <dataOutputObjs>insertvalue</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="mrv" lineNumber="26" fileName="foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp" fileDirectory=".." coreId="0" contextFuncName="decoupling_float_s" bitwidth="64" opcode="insertvalue" nodeLabel="13.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp" linenumber="26" fileDirectory="/home/mklab/workspace/foc" functionName="decoupling&amp;lt;float&amp;gt;"/>
+      <dataInputObjs>fadd</dataInputObjs>
+      <dataOutputObjs>insertvalue</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="mrv_1" lineNumber="26" fileName="foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp" fileDirectory=".." coreId="0" contextFuncName="decoupling_float_s" bitwidth="64" opcode="insertvalue" nodeLabel="13.0" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp" linenumber="26" fileDirectory="/home/mklab/workspace/foc" functionName="decoupling&amp;lt;float&amp;gt;"/>
+      <dataInputObjs>insertvalue</dataInputObjs>
+      <dataInputObjs>fsub</dataInputObjs>
+      <dataOutputObjs>ret</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="_ln26" lineNumber="26" fileName="foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp" fileDirectory=".." coreId="0" contextFuncName="decoupling_float_s" opcode="ret" nodeLabel="13.0" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp" linenumber="26" fileDirectory="/home/mklab/workspace/foc" functionName="decoupling&amp;lt;float&amp;gt;"/>
+      <dataInputObjs>insertvalue</dataInputObjs>
+      <dataOutputObjs>ap_return_0</dataOutputObjs>
+      <dataOutputObjs>ap_return_1</dataOutputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp">
+      <validLinenumbers>4</validLinenumbers>
+      <validLinenumbers>20</validLinenumbers>
+      <validLinenumbers>21</validLinenumbers>
+      <validLinenumbers>26</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <ScheduleInfo time="5"/>
+  <ScheduleInfo time="6"/>
+  <ScheduleInfo time="7"/>
+  <ScheduleInfo time="8"/>
+  <ScheduleInfo time="9"/>
+  <ScheduleInfo time="10"/>
+  <ScheduleInfo time="11"/>
+  <ScheduleInfo time="12"/>
+  <ScheduleInfo time="13"/>
+  <regnodes realName="Id_read_reg_90">
+    <nodeIds>10</nodeIds>
+  </regnodes>
+  <regnodes realName="Vq_read_reg_116">
+    <nodeIds>7</nodeIds>
+  </regnodes>
+  <regnodes realName="reg_72">
+    <nodeIds>14</nodeIds>
+    <nodeIds>11</nodeIds>
+    <nodeIds>12</nodeIds>
+  </regnodes>
+  <regnodes realName="Iq_read_reg_95">
+    <nodeIds>9</nodeIds>
+  </regnodes>
+  <regnodes realName="mul4_reg_111">
+    <nodeIds>16</nodeIds>
+  </regnodes>
+  <regnodes realName="add3_reg_100">
+    <nodeIds>15</nodeIds>
+  </regnodes>
+  <regnodes realName="RPM_read_reg_105">
+    <nodeIds>6</nodeIds>
+  </regnodes>
+  <regnodes realName="Vd_read_reg_121">
+    <nodeIds>8</nodeIds>
+  </regnodes>
+  <expressionNodes realName="mrv_1_fu_84">
+    <nodeIds>19</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="mrv_fu_78">
+    <nodeIds>18</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_fu_48">
+    <nodeIds>15</nodeIds>
+    <nodeIds>13</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_59">
+    <nodeIds>14</nodeIds>
+    <nodeIds>11</nodeIds>
+    <nodeIds>12</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_54">
+    <nodeIds>17</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_67">
+    <nodeIds>16</nodeIds>
+  </moduleNodes>
+  <ioNodes realName="Iq_read_read_fu_24">
+    <nodeIds>9</nodeIds>
+  </ioNodes>
+  <ioNodes realName="Id_read_read_fu_18">
+    <nodeIds>10</nodeIds>
+  </ioNodes>
+  <ioNodes realName="RPM_read_read_fu_30">
+    <nodeIds>6</nodeIds>
+  </ioNodes>
+  <ioNodes realName="Vd_read_read_fu_42">
+    <nodeIds>8</nodeIds>
+  </ioNodes>
+  <ioNodes realName="Vq_read_read_fu_36">
+    <nodeIds>7</nodeIds>
+  </ioNodes>
+  <ioPorts name="Id">
+    <contents name="read">
+      <nodeIds>10</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="Iq">
+    <contents name="read">
+      <nodeIds>9</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="RPM">
+    <contents name="read">
+      <nodeIds>6</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="Vd">
+    <contents name="read">
+      <nodeIds>8</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="Vq">
+    <contents name="read">
+      <nodeIds>7</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="ap_return_0">
+    <contents name="ret">
+      <nodeIds>20</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="ap_return_1">
+    <contents name="ret">
+      <nodeIds>20</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="14" stage="3" latency="3"/>
+    </states>
+    <states id="2">
+      <operations id="14" stage="2" latency="3"/>
+    </states>
+    <states id="3">
+      <operations id="14" stage="1" latency="3"/>
+    </states>
+    <states id="4">
+      <operations id="15" stage="4" latency="4"/>
+    </states>
+    <states id="5">
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="11" stage="3" latency="3"/>
+      <operations id="15" stage="3" latency="4"/>
+    </states>
+    <states id="6">
+      <operations id="11" stage="2" latency="3"/>
+      <operations id="15" stage="2" latency="4"/>
+    </states>
+    <states id="7">
+      <operations id="11" stage="1" latency="3"/>
+      <operations id="15" stage="1" latency="4"/>
+    </states>
+    <states id="8">
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="12" stage="3" latency="3"/>
+      <operations id="16" stage="3" latency="3"/>
+    </states>
+    <states id="9">
+      <operations id="12" stage="2" latency="3"/>
+      <operations id="16" stage="2" latency="3"/>
+    </states>
+    <states id="10">
+      <operations id="12" stage="1" latency="3"/>
+      <operations id="16" stage="1" latency="3"/>
+    </states>
+    <states id="11">
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="13" stage="4" latency="4"/>
+      <operations id="17" stage="4" latency="4"/>
+    </states>
+    <states id="12">
+      <operations id="13" stage="3" latency="4"/>
+      <operations id="17" stage="3" latency="4"/>
+    </states>
+    <states id="13">
+      <operations id="13" stage="2" latency="4"/>
+      <operations id="17" stage="2" latency="4"/>
+    </states>
+    <states id="14">
+      <operations id="13" stage="1" latency="4"/>
+      <operations id="17" stage="1" latency="4"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="6">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="6" outState="7">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="7" outState="8">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="8" outState="9">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="9" outState="10">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="10" outState="11">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="11" outState="12">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="12" outState="13">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="13" outState="14">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="decoupling_float_s" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="13" mMaxLatency="13">
+      <basicBlocks>21</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

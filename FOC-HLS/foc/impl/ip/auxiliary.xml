@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="foc_frontend" xd:componentRef="foc_frontend" xd:initiationInterval="x" xd:clockPeriod="10" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:arg xd:name="A" xd:originalName="A" xd:direction="in" xd:interfaceRef="A" xd:busTypeRef="axis" xd:dataWidth="80"/>
+  <xd:arg xd:name="B" xd:originalName="B" xd:direction="out" xd:interfaceRef="B" xd:busTypeRef="axis" xd:dataWidth="64"/>
+  <xd:arg xd:name="C" xd:originalName="C" xd:direction="out" xd:interfaceRef="C" xd:busTypeRef="axis" xd:dataWidth="64"/>
+  <xd:arg xd:name="*(control)" xd:originalName="control" xd:direction="in" xd:interfaceRef="s_axi_control_r" xd:busTypeRef="axilite" xd:offset="0x40" xd:dataWidth="32"/>
+  <xd:arg xd:name="*(logger)" xd:originalName="logger" xd:direction="out" xd:interfaceRef="s_axi_control_r" xd:busTypeRef="axilite" xd:offset="0x80" xd:dataWidth="128"/>
+  <xd:latencyEstimates xd:best-case="4" xd:worst-case="269" xd:average-case="92"/>
+  <xd:resourceEstimates xd:LUT="35185" xd:FF="24501" xd:BRAM="0" xd:DSP="239"/>
+</xd:acceleratorMap>

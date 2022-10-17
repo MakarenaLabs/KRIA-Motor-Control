@@ -1,0 +1,472 @@
+
+
+================================================================
+== Synthesis Summary Report of 'foc_frontend'
+================================================================
++ General Information: 
+    * Date:           Mon Oct 17 13:30:37 2022
+    * Version:        2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)
+    * Project:        foc-rewrite
+    * Solution:       foc (Vivado IP Flow Target)
+    * Product family: zynquplus
+    * Target device:  xczu7ev-ffvc1156-2-e
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-----------------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+---------+-----------+------------+-------------+-----+
+    |                       Modules                       |  Issue |       | Latency |  Latency  | Iteration|         | Trip |          |         |           |            |             |     |
+    |                       & Loops                       |  Type  | Slack | (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|  BRAM   |    DSP    |     FF     |     LUT     | URAM|
+    +-----------------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+---------+-----------+------------+-------------+-----+
+    |+ foc_frontend                                       |  Timing|  -0.00|      269|  2.690e+03|         -|      270|     -|        no|  21 (3%)|  239 (13%)|  24501 (5%)|  35185 (15%)|    -|
+    | + calibration                                       |       -|   7.30|        1|     10.000|         -|        1|     -|        no|        -|          -|     2 (~0%)|     25 (~0%)|    -|
+    | + torque_foc                                        |  Timing|  -0.00|      200|  2.000e+03|         -|      200|     -|        no|   8 (1%)|   102 (5%)|  10041 (2%)|   13631 (5%)|    -|
+    |  + low_pass_filter_float_s                          |       -|   0.28|       77|    770.000|         -|       77|     -|        no|        -|    18 (1%)|  1573 (~0%)|   1615 (~0%)|    -|
+    |   + low_pass_filter_float_Pipeline_VITIS_LOOP_29_1  |       -|   4.83|       64|    640.000|         -|       64|     -|        no|        -|          -|    13 (~0%)|     76 (~0%)|    -|
+    |    o VITIS_LOOP_29_1                                |       -|   7.30|       62|    620.000|         2|        2|    31|       yes|        -|          -|           -|            -|    -|
+    |  + clarke_direct_float_s                            |       -|   0.28|       15|    150.000|         -|       15|     -|        no|        -|    5 (~0%)|   507 (~0%)|    746 (~0%)|    -|
+    |  + park_direct_float_s                              |       -|   0.28|       14|    140.000|         -|       14|     -|        no|  4 (~0%)|   16 (~0%)|  1309 (~0%)|   1321 (~0%)|    -|
+    |  + PI_control_float_s                               |       -|   0.28|       20|    200.000|         -|       20|     -|        no|        -|    8 (~0%)|   668 (~0%)|    786 (~0%)|    -|
+    |  + PI_control_float_s                               |       -|   0.28|       20|    200.000|         -|       20|     -|        no|        -|    8 (~0%)|   668 (~0%)|    786 (~0%)|    -|
+    |  + decoupling_float_s                               |       -|   0.28|       13|    130.000|         -|       13|     -|        no|        -|   10 (~0%)|   884 (~0%)|    829 (~0%)|    -|
+    |  + park_inverse_float_s                             |       -|   0.28|       14|    140.000|         -|       14|     -|        no|  4 (~0%)|   16 (~0%)|  1309 (~0%)|   1321 (~0%)|    -|
+    |  + clarke_inverse_float_s                           |       -|   0.28|       15|    150.000|         -|       15|     -|        no|        -|   10 (~0%)|   994 (~0%)|   1291 (~0%)|    -|
+    |  + SVPWM_float_s                                    |       -|   0.28|       10|    100.000|         -|       10|     -|        no|        -|    9 (~0%)|  1012 (~0%)|    2399 (1%)|    -|
+    | + manual_control                                    |       -|   0.28|       51|    510.000|         -|       51|     -|        no|  4 (~0%)|    37 (2%)|  4000 (~0%)|    6437 (2%)|    -|
+    |  + park_inverse_float_s                             |       -|   0.28|       14|    140.000|         -|       14|     -|        no|  4 (~0%)|   16 (~0%)|  1309 (~0%)|   1321 (~0%)|    -|
+    |  + clarke_inverse_float_s                           |       -|   0.28|       15|    150.000|         -|       15|     -|        no|        -|   10 (~0%)|   994 (~0%)|   1291 (~0%)|    -|
+    |  + SVPWM_float_s                                    |       -|   0.28|       10|    100.000|         -|       10|     -|        no|        -|    9 (~0%)|  1012 (~0%)|    2399 (1%)|    -|
+    | + foc                                               |  Timing|  -0.00|      265|  2.650e+03|         -|      265|     -|        no|   8 (1%)|   100 (5%)|  10058 (2%)|   13764 (5%)|    -|
+    |  + low_pass_filter_float_s                          |       -|   0.28|       77|    770.000|         -|       77|     -|        no|        -|    18 (1%)|  1573 (~0%)|   1615 (~0%)|    -|
+    |   + low_pass_filter_float_Pipeline_VITIS_LOOP_29_1  |       -|   4.83|       64|    640.000|         -|       64|     -|        no|        -|          -|    13 (~0%)|     76 (~0%)|    -|
+    |    o VITIS_LOOP_29_1                                |       -|   7.30|       62|    620.000|         2|        2|    31|       yes|        -|          -|           -|            -|    -|
+    |  + clarke_direct_float_s                            |       -|   0.28|       15|    150.000|         -|       15|     -|        no|        -|    5 (~0%)|   507 (~0%)|    746 (~0%)|    -|
+    |  + PI_control_float_s                               |       -|   0.28|       20|    200.000|         -|       20|     -|        no|        -|    8 (~0%)|   668 (~0%)|    786 (~0%)|    -|
+    |  + park_direct_float_s                              |       -|   0.28|       14|    140.000|         -|       14|     -|        no|  4 (~0%)|   16 (~0%)|  1309 (~0%)|   1321 (~0%)|    -|
+    |  + decoupling_float_s                               |       -|   0.28|       13|    130.000|         -|       13|     -|        no|        -|   10 (~0%)|   884 (~0%)|    829 (~0%)|    -|
+    |  + park_inverse_float_s                             |       -|   0.28|       14|    140.000|         -|       14|     -|        no|  4 (~0%)|   16 (~0%)|  1309 (~0%)|   1321 (~0%)|    -|
+    |  + clarke_inverse_float_s                           |       -|   0.28|       15|    150.000|         -|       15|     -|        no|        -|   10 (~0%)|   994 (~0%)|   1291 (~0%)|    -|
+    |  + SVPWM_float_s                                    |       -|   0.28|       10|    100.000|         -|       10|     -|        no|        -|    9 (~0%)|  1012 (~0%)|    2399 (1%)|    -|
+    +-----------------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+---------+-----------+------------+-------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* S_AXILITE Interfaces
++-----------------+------------+---------------+--------+----------+
+| Interface       | Data Width | Address Width | Offset | Register |
++-----------------+------------+---------------+--------+----------+
+| s_axi_control_r | 32         | 8             | 64     | 0        |
++-----------------+------------+---------------+--------+----------+
+
+* AXIS
++-----------+---------------+-------+-------+-------+--------+-------+--------+
+| Interface | Register Mode | TDATA | TKEEP | TLAST | TREADY | TSTRB | TVALID |
++-----------+---------------+-------+-------+-------+--------+-------+--------+
+| A         | both          | 80    | 10    | 1     | 1      | 10    | 1      |
+| B         | both          | 64    | 8     | 1     | 1      | 8     | 1      |
+| C         | both          | 64    | 8     | 1     | 1      | 8     | 1      |
++-----------+---------------+-------+-------+-------+--------+-------+--------+
+
+* TOP LEVEL CONTROL
++-----------+--------------+----------+
+| Interface | Type         | Ports    |
++-----------+--------------+----------+
+| ap_clk    | clock        | ap_clk   |
+| ap_rst_n  | reset        | ap_rst_n |
+| ap_ctrl   | ap_ctrl_none |          |
++-----------+--------------+----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+--------------------------------------------+
+| Argument | Direction | Datatype                                   |
++----------+-----------+--------------------------------------------+
+| A        | in        | stream<hls::axis<ap_int<80>, 0, 0, 0>, 0>& |
+| B        | out       | stream<hls::axis<ap_int<64>, 0, 0, 0>, 0>& |
+| C        | out       | stream<hls::axis<ap_int<64>, 0, 0, 0>, 0>& |
+| control  | in        | float*                                     |
+| logger   | out       | float*                                     |
++----------+-----------+--------------------------------------------+
+
+* SW-to-HW Mapping
++----------+-----------------+-----------+----------------------------------+
+| Argument | HW Interface    | HW Type   | HW Info                          |
++----------+-----------------+-----------+----------------------------------+
+| A        | A               | interface |                                  |
+| B        | B               | interface |                                  |
+| C        | C               | interface |                                  |
+| control  | s_axi_control_r | memory    | name=control offset=64 range=32  |
+| logger   | s_axi_control_r | memory    | name=logger offset=128 range=128 |
++----------+-----------------+-----------+----------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+  No burst in design
+
+================================================================
+== Bind Op Report
+================================================================
++-----------------------------------------------------+-----+--------+---------------+-------+---------+---------+
+| Name                                                | DSP | Pragma | Variable      | Op    | Impl    | Latency |
++-----------------------------------------------------+-----+--------+---------------+-------+---------+---------+
+| + foc_frontend                                      | 239 |        |               |       |         |         |
+|   add_ln344_fu_378_p2                               | -   |        | add_ln344     | add   | fabric  | 0       |
+|   sub_ln1364_fu_392_p2                              | -   |        | sub_ln1364    | sub   | fabric  | 0       |
+|   result_V_24_fu_460_p2                             | -   |        | result_V_24   | sub   | fabric  | 0       |
+|  + torque_foc                                       | 102 |        |               |       |         |         |
+|    fsub_32ns_32ns_32_4_full_dsp_1_U106              | 2   |        | dc            | fsub  | fulldsp | 3       |
+|    add_ln344_fu_799_p2                              | -   |        | add_ln344     | add   | fabric  | 0       |
+|    sub_ln1364_fu_813_p2                             | -   |        | sub_ln1364    | sub   | fabric  | 0       |
+|    result_V_2_fu_881_p2                             | -   |        | result_V_2    | sub   | fabric  | 0       |
+|    add_ln283_fu_903_p2                              | -   |        | add_ln283     | add   | fabric  | 0       |
+|    add_ln284_fu_923_p2                              | -   |        | add_ln284     | add   | fabric  | 0       |
+|    add_ln344_1_fu_1020_p2                           | -   |        | add_ln344_1   | add   | fabric  | 0       |
+|    sub_ln1364_1_fu_1034_p2                          | -   |        | sub_ln1364_1  | sub   | fabric  | 0       |
+|    result_V_5_fu_1102_p2                            | -   |        | result_V_5    | sub   | fabric  | 0       |
+|    add_ln344_2_fu_1132_p2                           | -   |        | add_ln344_2   | add   | fabric  | 0       |
+|    sub_ln1364_2_fu_1146_p2                          | -   |        | sub_ln1364_2  | sub   | fabric  | 0       |
+|    result_V_10_fu_1213_p2                           | -   |        | result_V_10   | sub   | fabric  | 0       |
+|    add_ln344_3_fu_652_p2                            | -   |        | add_ln344_3   | add   | fabric  | 0       |
+|    sub_ln1364_3_fu_666_p2                           | -   |        | sub_ln1364_3  | sub   | fabric  | 0       |
+|    result_V_12_fu_734_p2                            | -   |        | result_V_12   | sub   | fabric  | 0       |
+|   + low_pass_filter_float_s                         | 18  |        |               |       |         |         |
+|     faddfsub_32ns_32ns_32_4_full_dsp_1_U2           | 2   |        | sub           | fsub  | fulldsp | 3       |
+|     faddfsub_32ns_32ns_32_4_full_dsp_1_U2           | 2   |        | add           | fsub  | fulldsp | 3       |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U5                | 3   |        | vel_out       | fmul  | maxdsp  | 2       |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U5                | 3   |        | mul           | fmul  | maxdsp  | 2       |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U6                | 3   |        | mul4          | fmul  | maxdsp  | 2       |
+|     fadd_32ns_32ns_32_4_full_dsp_1_U3               | 2   |        | Y1a           | fadd  | fulldsp | 3       |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U7                | 3   |        | mul6          | fmul  | maxdsp  | 2       |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U8                | 3   |        | mul7          | fmul  | maxdsp  | 2       |
+|     fadd_32ns_32ns_32_4_full_dsp_1_U4               | 2   |        | Y1b           | fadd  | fulldsp | 3       |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U5                | 3   |        | mul9          | fmul  | maxdsp  | 2       |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U6                | 3   |        | mul1          | fmul  | maxdsp  | 2       |
+|     faddfsub_32ns_32ns_32_4_full_dsp_1_U2           | 2   |        | Y2a           | fsub  | fulldsp | 3       |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U7                | 3   |        | mul2          | fmul  | maxdsp  | 2       |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U8                | 3   |        | mul3          | fmul  | maxdsp  | 2       |
+|     fadd_32ns_32ns_32_4_full_dsp_1_U3               | 2   |        | Y2b           | fadd  | fulldsp | 3       |
+|    + low_pass_filter_float_Pipeline_VITIS_LOOP_29_1 | 0   |        |               |       |         |         |
+|      add_ln29_fu_66_p2                              | -   |        | add_ln29      | add   | fabric  | 0       |
+|   + clarke_direct_float_s                           | 5   |        |               |       |         |         |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U22               | 3   |        | mul           | fmul  | maxdsp  | 2       |
+|     fadd_32ns_32ns_32_4_full_dsp_1_U21              | 2   |        | Ib_temp       | fadd  | fulldsp | 3       |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U22               | 3   |        | dc            | fmul  | maxdsp  | 2       |
+|     sub_ln12_fu_202_p2                              | -   |        | sub_ln12      | sub   | fabric  | 0       |
+|     sub_ln21_fu_220_p2                              | -   |        | sub_ln21      | sub   | fabric  | 0       |
+|     sub_ln12_5_fu_247_p2                            | -   |        | sub_ln12_5    | sub   | fabric  | 0       |
+|     sub_ln25_fu_265_p2                              | -   |        | sub_ln25      | sub   | fabric  | 0       |
+|   + park_direct_float_s                             | 16  |        |               |       |         |         |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U35               | 3   |        | Ialpha_cos    | fmul  | maxdsp  | 2       |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U36               | 3   |        | Ialpha_sin    | fmul  | maxdsp  | 2       |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U37               | 3   |        | Ibeta_cos     | fmul  | maxdsp  | 2       |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U38               | 3   |        | Ibeta_sin     | fmul  | maxdsp  | 2       |
+|     fadd_32ns_32ns_32_4_full_dsp_1_U33              | 2   |        | dc            | fadd  | fulldsp | 3       |
+|     fsub_32ns_32ns_32_4_full_dsp_1_U34              | 2   |        | dc_5          | fsub  | fulldsp | 3       |
+|     sub_ln12_fu_254_p2                              | -   |        | sub_ln12      | sub   | fabric  | 0       |
+|     sub_ln31_fu_272_p2                              | -   |        | sub_ln31      | sub   | fabric  | 0       |
+|     sub_ln12_2_fu_299_p2                            | -   |        | sub_ln12_2    | sub   | fabric  | 0       |
+|     sub_ln35_fu_317_p2                              | -   |        | sub_ln35      | sub   | fabric  | 0       |
+|   + PI_control_float_s                              | 8   |        |               |       |         |         |
+|     faddfsub_32ns_32ns_32_4_full_dsp_1_U51          | 2   |        | err           | fsub  | fulldsp | 3       |
+|     faddfsub_32ns_32ns_32_4_full_dsp_1_U51          | 2   |        | ierr_assign   | fsub  | fulldsp | 3       |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U52               | 3   |        | mul           | fmul  | maxdsp  | 2       |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U53               | 3   |        | mul1          | fmul  | maxdsp  | 2       |
+|     faddfsub_32ns_32ns_32_4_full_dsp_1_U51          | 2   |        | control_law   | fsub  | fulldsp | 3       |
+|     sub_ln12_fu_164_p2                              | -   |        | sub_ln12      | sub   | fabric  | 0       |
+|     sub_ln37_fu_182_p2                              | -   |        | sub_ln37      | sub   | fabric  | 0       |
+|   + PI_control_float_s                              | 8   |        |               |       |         |         |
+|     faddfsub_32ns_32ns_32_4_full_dsp_1_U51          | 2   |        | err           | fsub  | fulldsp | 3       |
+|     faddfsub_32ns_32ns_32_4_full_dsp_1_U51          | 2   |        | ierr_assign   | fsub  | fulldsp | 3       |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U52               | 3   |        | mul           | fmul  | maxdsp  | 2       |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U53               | 3   |        | mul1          | fmul  | maxdsp  | 2       |
+|     faddfsub_32ns_32ns_32_4_full_dsp_1_U51          | 2   |        | control_law   | fsub  | fulldsp | 3       |
+|     sub_ln12_fu_164_p2                              | -   |        | sub_ln12      | sub   | fabric  | 0       |
+|     sub_ln37_fu_182_p2                              | -   |        | sub_ln37      | sub   | fabric  | 0       |
+|   + decoupling_float_s                              | 10  |        |               |       |         |         |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U64               | 3   |        | mul           | fmul  | maxdsp  | 2       |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U64               | 3   |        | mul1          | fmul  | maxdsp  | 2       |
+|     fadd_32ns_32ns_32_4_full_dsp_1_U62              | 2   |        | Flux_decoup   | fadd  | fulldsp | 3       |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U64               | 3   |        | mul2          | fmul  | maxdsp  | 2       |
+|     fadd_32ns_32ns_32_4_full_dsp_1_U62              | 2   |        | add3          | fadd  | fulldsp | 3       |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U65               | 3   |        | mul4          | fmul  | maxdsp  | 2       |
+|     fsub_32ns_32ns_32_4_full_dsp_1_U63              | 2   |        | Torque_decoup | fsub  | fulldsp | 3       |
+|   + park_inverse_float_s                            | 16  |        |               |       |         |         |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U73               | 3   |        | Vd_cos        | fmul  | maxdsp  | 2       |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U74               | 3   |        | Vd_sin        | fmul  | maxdsp  | 2       |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U75               | 3   |        | Vq_cos        | fmul  | maxdsp  | 2       |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U76               | 3   |        | Vq_sin        | fmul  | maxdsp  | 2       |
+|     fsub_32ns_32ns_32_4_full_dsp_1_U71              | 2   |        | dc            | fsub  | fulldsp | 3       |
+|     fadd_32ns_32ns_32_4_full_dsp_1_U72              | 2   |        | dc_4          | fadd  | fulldsp | 3       |
+|     sub_ln12_fu_254_p2                              | -   |        | sub_ln12      | sub   | fabric  | 0       |
+|     sub_ln31_fu_272_p2                              | -   |        | sub_ln31      | sub   | fabric  | 0       |
+|     sub_ln12_1_fu_299_p2                            | -   |        | sub_ln12_1    | sub   | fabric  | 0       |
+|     sub_ln35_fu_317_p2                              | -   |        | sub_ln35      | sub   | fabric  | 0       |
+|   + clarke_inverse_float_s                          | 10  |        |               |       |         |         |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U88               | 3   |        | Vbeta_temp    | fmul  | maxdsp  | 2       |
+|     fsub_32ns_32ns_32_4_full_dsp_1_U86              | 2   |        | sub           | fsub  | fulldsp | 3       |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U88               | 3   |        | dc            | fmul  | maxdsp  | 2       |
+|     fsub_32ns_32ns_32_4_full_dsp_1_U87              | 2   |        | sub3          | fsub  | fulldsp | 3       |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U89               | 3   |        | dc_11         | fmul  | maxdsp  | 2       |
+|     sub_ln12_fu_179_p2                              | -   |        | sub_ln12      | sub   | fabric  | 0       |
+|     sub_ln24_fu_197_p2                              | -   |        | sub_ln24      | sub   | fabric  | 0       |
+|     sub_ln12_3_fu_332_p2                            | -   |        | sub_ln12_3    | sub   | fabric  | 0       |
+|     sub_ln28_fu_350_p2                              | -   |        | sub_ln28      | sub   | fabric  | 0       |
+|     sub_ln12_4_fu_377_p2                            | -   |        | sub_ln12_4    | sub   | fabric  | 0       |
+|     sub_ln32_fu_395_p2                              | -   |        | sub_ln32      | sub   | fabric  | 0       |
+|   + SVPWM_float_s                                   | 9   |        |               |       |         |         |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U101              | 3   |        | offset        | fmul  | maxdsp  | 2       |
+|     fadd_32ns_32ns_32_4_full_dsp_1_U98              | 2   |        | dc            | fadd  | fulldsp | 3       |
+|     add_ln344_fu_312_p2                             | -   |        | add_ln344     | add   | fabric  | 0       |
+|     sub_ln1364_fu_326_p2                            | -   |        | sub_ln1364    | sub   | fabric  | 0       |
+|     result_V_41_fu_394_p2                           | -   |        | result_V_41   | sub   | fabric  | 0       |
+|     fadd_32ns_32ns_32_4_full_dsp_1_U99              | 2   |        | dc_12         | fadd  | fulldsp | 3       |
+|     add_ln344_8_fu_451_p2                           | -   |        | add_ln344_8   | add   | fabric  | 0       |
+|     sub_ln1364_7_fu_465_p2                          | -   |        | sub_ln1364_7  | sub   | fabric  | 0       |
+|     result_V_44_fu_533_p2                           | -   |        | result_V_44   | sub   | fabric  | 0       |
+|     fadd_32ns_32ns_32_4_full_dsp_1_U100             | 2   |        | dc_13         | fadd  | fulldsp | 3       |
+|     add_ln344_9_fu_590_p2                           | -   |        | add_ln344_9   | add   | fabric  | 0       |
+|     sub_ln1364_8_fu_604_p2                          | -   |        | sub_ln1364_8  | sub   | fabric  | 0       |
+|     result_V_47_fu_672_p2                           | -   |        | result_V_47   | sub   | fabric  | 0       |
+|  + manual_control                                   | 37  |        |               |       |         |         |
+|    fsub_32ns_32ns_32_4_full_dsp_1_U130              | 2   |        | dc            | fsub  | fulldsp | 3       |
+|    add_ln344_fu_610_p2                              | -   |        | add_ln344     | add   | fabric  | 0       |
+|    sub_ln1364_fu_624_p2                             | -   |        | sub_ln1364    | sub   | fabric  | 0       |
+|    result_V_18_fu_692_p2                            | -   |        | result_V_18   | sub   | fabric  | 0       |
+|    add_ln42_fu_714_p2                               | -   |        | add_ln42      | add   | fabric  | 0       |
+|    add_ln43_fu_750_p2                               | -   |        | add_ln43      | add   | fabric  | 0       |
+|    add_ln344_4_fu_442_p2                            | -   |        | add_ln344_4   | add   | fabric  | 0       |
+|    sub_ln1364_1_fu_456_p2                           | -   |        | sub_ln1364_1  | sub   | fabric  | 0       |
+|    result_V_21_fu_524_p2                            | -   |        | result_V_21   | sub   | fabric  | 0       |
+|   + park_inverse_float_s                            | 16  |        |               |       |         |         |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U73               | 3   |        | Vd_cos        | fmul  | maxdsp  | 2       |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U74               | 3   |        | Vd_sin        | fmul  | maxdsp  | 2       |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U75               | 3   |        | Vq_cos        | fmul  | maxdsp  | 2       |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U76               | 3   |        | Vq_sin        | fmul  | maxdsp  | 2       |
+|     fsub_32ns_32ns_32_4_full_dsp_1_U71              | 2   |        | dc            | fsub  | fulldsp | 3       |
+|     fadd_32ns_32ns_32_4_full_dsp_1_U72              | 2   |        | dc_4          | fadd  | fulldsp | 3       |
+|     sub_ln12_fu_254_p2                              | -   |        | sub_ln12      | sub   | fabric  | 0       |
+|     sub_ln31_fu_272_p2                              | -   |        | sub_ln31      | sub   | fabric  | 0       |
+|     sub_ln12_1_fu_299_p2                            | -   |        | sub_ln12_1    | sub   | fabric  | 0       |
+|     sub_ln35_fu_317_p2                              | -   |        | sub_ln35      | sub   | fabric  | 0       |
+|   + clarke_inverse_float_s                          | 10  |        |               |       |         |         |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U88               | 3   |        | Vbeta_temp    | fmul  | maxdsp  | 2       |
+|     fsub_32ns_32ns_32_4_full_dsp_1_U86              | 2   |        | sub           | fsub  | fulldsp | 3       |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U88               | 3   |        | dc            | fmul  | maxdsp  | 2       |
+|     fsub_32ns_32ns_32_4_full_dsp_1_U87              | 2   |        | sub3          | fsub  | fulldsp | 3       |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U89               | 3   |        | dc_11         | fmul  | maxdsp  | 2       |
+|     sub_ln12_fu_179_p2                              | -   |        | sub_ln12      | sub   | fabric  | 0       |
+|     sub_ln24_fu_197_p2                              | -   |        | sub_ln24      | sub   | fabric  | 0       |
+|     sub_ln12_3_fu_332_p2                            | -   |        | sub_ln12_3    | sub   | fabric  | 0       |
+|     sub_ln28_fu_350_p2                              | -   |        | sub_ln28      | sub   | fabric  | 0       |
+|     sub_ln12_4_fu_377_p2                            | -   |        | sub_ln12_4    | sub   | fabric  | 0       |
+|     sub_ln32_fu_395_p2                              | -   |        | sub_ln32      | sub   | fabric  | 0       |
+|   + SVPWM_float_s                                   | 9   |        |               |       |         |         |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U101              | 3   |        | offset        | fmul  | maxdsp  | 2       |
+|     fadd_32ns_32ns_32_4_full_dsp_1_U98              | 2   |        | dc            | fadd  | fulldsp | 3       |
+|     add_ln344_fu_312_p2                             | -   |        | add_ln344     | add   | fabric  | 0       |
+|     sub_ln1364_fu_326_p2                            | -   |        | sub_ln1364    | sub   | fabric  | 0       |
+|     result_V_41_fu_394_p2                           | -   |        | result_V_41   | sub   | fabric  | 0       |
+|     fadd_32ns_32ns_32_4_full_dsp_1_U99              | 2   |        | dc_12         | fadd  | fulldsp | 3       |
+|     add_ln344_8_fu_451_p2                           | -   |        | add_ln344_8   | add   | fabric  | 0       |
+|     sub_ln1364_7_fu_465_p2                          | -   |        | sub_ln1364_7  | sub   | fabric  | 0       |
+|     result_V_44_fu_533_p2                           | -   |        | result_V_44   | sub   | fabric  | 0       |
+|     fadd_32ns_32ns_32_4_full_dsp_1_U100             | 2   |        | dc_13         | fadd  | fulldsp | 3       |
+|     add_ln344_9_fu_590_p2                           | -   |        | add_ln344_9   | add   | fabric  | 0       |
+|     sub_ln1364_8_fu_604_p2                          | -   |        | sub_ln1364_8  | sub   | fabric  | 0       |
+|     result_V_47_fu_672_p2                           | -   |        | result_V_47   | sub   | fabric  | 0       |
+|  + foc                                              | 100 |        |               |       |         |         |
+|    faddfsub_32ns_32ns_32_4_full_dsp_1_U143          | 2   |        | dc            | fsub  | fulldsp | 3       |
+|    add_ln344_fu_757_p2                              | -   |        | add_ln344     | add   | fabric  | 0       |
+|    sub_ln1364_fu_771_p2                             | -   |        | sub_ln1364    | sub   | fabric  | 0       |
+|    result_V_28_fu_839_p2                            | -   |        | result_V_28   | sub   | fabric  | 0       |
+|    add_ln128_fu_861_p2                              | -   |        | add_ln128     | add   | fabric  | 0       |
+|    add_ln129_fu_881_p2                              | -   |        | add_ln129     | add   | fabric  | 0       |
+|    sub_ln12_fu_986_p2                               | -   |        | sub_ln12      | sub   | fabric  | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U144               | 3   |        | Vq            | fmul  | maxdsp  | 2       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U144               | 3   |        | mul_i         | fmul  | maxdsp  | 2       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U145               | 3   |        | mul1_i        | fmul  | maxdsp  | 2       |
+|    faddfsub_32ns_32ns_32_4_full_dsp_1_U143          | 2   |        | x_assign      | fsub  | fulldsp | 3       |
+|    fsqrt_32ns_32ns_32_8_no_dsp_1_U151               | -   |        | tmp           | fsqrt | fabric  | 7       |
+|    faddfsub_32ns_32ns_32_4_full_dsp_1_U143          | 2   |        | err_V         | fsub  | fulldsp | 3       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U144               | 3   |        | err_V_1       | fmul  | maxdsp  | 2       |
+|    faddfsub_32ns_32ns_32_4_full_dsp_1_U143          | 2   |        | x_assign_4    | fsub  | fulldsp | 3       |
+|    fsqrt_32ns_32ns_32_8_no_dsp_1_U151               | -   |        | tmp_s         | fsqrt | fabric  | 7       |
+|    add_ln344_5_fu_1263_p2                           | -   |        | add_ln344_5   | add   | fabric  | 0       |
+|    sub_ln1364_4_fu_1277_p2                          | -   |        | sub_ln1364_4  | sub   | fabric  | 0       |
+|    result_V_32_fu_1345_p2                           | -   |        | result_V_32   | sub   | fabric  | 0       |
+|    add_ln344_6_fu_1396_p2                           | -   |        | add_ln344_6   | add   | fabric  | 0       |
+|    sub_ln1364_5_fu_1410_p2                          | -   |        | sub_ln1364_5  | sub   | fabric  | 0       |
+|    result_V_35_fu_1478_p2                           | -   |        | result_V_35   | sub   | fabric  | 0       |
+|    add_ln344_7_fu_1521_p2                           | -   |        | add_ln344_7   | add   | fabric  | 0       |
+|    sub_ln1364_6_fu_1535_p2                          | -   |        | sub_ln1364_6  | sub   | fabric  | 0       |
+|    result_V_37_fu_1603_p2                           | -   |        | result_V_37   | sub   | fabric  | 0       |
+|   + low_pass_filter_float_s                         | 18  |        |               |       |         |         |
+|     faddfsub_32ns_32ns_32_4_full_dsp_1_U2           | 2   |        | sub           | fsub  | fulldsp | 3       |
+|     faddfsub_32ns_32ns_32_4_full_dsp_1_U2           | 2   |        | add           | fsub  | fulldsp | 3       |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U5                | 3   |        | vel_out       | fmul  | maxdsp  | 2       |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U5                | 3   |        | mul           | fmul  | maxdsp  | 2       |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U6                | 3   |        | mul4          | fmul  | maxdsp  | 2       |
+|     fadd_32ns_32ns_32_4_full_dsp_1_U3               | 2   |        | Y1a           | fadd  | fulldsp | 3       |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U7                | 3   |        | mul6          | fmul  | maxdsp  | 2       |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U8                | 3   |        | mul7          | fmul  | maxdsp  | 2       |
+|     fadd_32ns_32ns_32_4_full_dsp_1_U4               | 2   |        | Y1b           | fadd  | fulldsp | 3       |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U5                | 3   |        | mul9          | fmul  | maxdsp  | 2       |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U6                | 3   |        | mul1          | fmul  | maxdsp  | 2       |
+|     faddfsub_32ns_32ns_32_4_full_dsp_1_U2           | 2   |        | Y2a           | fsub  | fulldsp | 3       |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U7                | 3   |        | mul2          | fmul  | maxdsp  | 2       |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U8                | 3   |        | mul3          | fmul  | maxdsp  | 2       |
+|     fadd_32ns_32ns_32_4_full_dsp_1_U3               | 2   |        | Y2b           | fadd  | fulldsp | 3       |
+|    + low_pass_filter_float_Pipeline_VITIS_LOOP_29_1 | 0   |        |               |       |         |         |
+|      add_ln29_fu_66_p2                              | -   |        | add_ln29      | add   | fabric  | 0       |
+|   + clarke_direct_float_s                           | 5   |        |               |       |         |         |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U22               | 3   |        | mul           | fmul  | maxdsp  | 2       |
+|     fadd_32ns_32ns_32_4_full_dsp_1_U21              | 2   |        | Ib_temp       | fadd  | fulldsp | 3       |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U22               | 3   |        | dc            | fmul  | maxdsp  | 2       |
+|     sub_ln12_fu_202_p2                              | -   |        | sub_ln12      | sub   | fabric  | 0       |
+|     sub_ln21_fu_220_p2                              | -   |        | sub_ln21      | sub   | fabric  | 0       |
+|     sub_ln12_5_fu_247_p2                            | -   |        | sub_ln12_5    | sub   | fabric  | 0       |
+|     sub_ln25_fu_265_p2                              | -   |        | sub_ln25      | sub   | fabric  | 0       |
+|   + PI_control_float_s                              | 8   |        |               |       |         |         |
+|     faddfsub_32ns_32ns_32_4_full_dsp_1_U51          | 2   |        | err           | fsub  | fulldsp | 3       |
+|     faddfsub_32ns_32ns_32_4_full_dsp_1_U51          | 2   |        | ierr_assign   | fsub  | fulldsp | 3       |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U52               | 3   |        | mul           | fmul  | maxdsp  | 2       |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U53               | 3   |        | mul1          | fmul  | maxdsp  | 2       |
+|     faddfsub_32ns_32ns_32_4_full_dsp_1_U51          | 2   |        | control_law   | fsub  | fulldsp | 3       |
+|     sub_ln12_fu_164_p2                              | -   |        | sub_ln12      | sub   | fabric  | 0       |
+|     sub_ln37_fu_182_p2                              | -   |        | sub_ln37      | sub   | fabric  | 0       |
+|   + park_direct_float_s                             | 16  |        |               |       |         |         |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U35               | 3   |        | Ialpha_cos    | fmul  | maxdsp  | 2       |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U36               | 3   |        | Ialpha_sin    | fmul  | maxdsp  | 2       |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U37               | 3   |        | Ibeta_cos     | fmul  | maxdsp  | 2       |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U38               | 3   |        | Ibeta_sin     | fmul  | maxdsp  | 2       |
+|     fadd_32ns_32ns_32_4_full_dsp_1_U33              | 2   |        | dc            | fadd  | fulldsp | 3       |
+|     fsub_32ns_32ns_32_4_full_dsp_1_U34              | 2   |        | dc_5          | fsub  | fulldsp | 3       |
+|     sub_ln12_fu_254_p2                              | -   |        | sub_ln12      | sub   | fabric  | 0       |
+|     sub_ln31_fu_272_p2                              | -   |        | sub_ln31      | sub   | fabric  | 0       |
+|     sub_ln12_2_fu_299_p2                            | -   |        | sub_ln12_2    | sub   | fabric  | 0       |
+|     sub_ln35_fu_317_p2                              | -   |        | sub_ln35      | sub   | fabric  | 0       |
+|   + decoupling_float_s                              | 10  |        |               |       |         |         |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U64               | 3   |        | mul           | fmul  | maxdsp  | 2       |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U64               | 3   |        | mul1          | fmul  | maxdsp  | 2       |
+|     fadd_32ns_32ns_32_4_full_dsp_1_U62              | 2   |        | Flux_decoup   | fadd  | fulldsp | 3       |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U64               | 3   |        | mul2          | fmul  | maxdsp  | 2       |
+|     fadd_32ns_32ns_32_4_full_dsp_1_U62              | 2   |        | add3          | fadd  | fulldsp | 3       |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U65               | 3   |        | mul4          | fmul  | maxdsp  | 2       |
+|     fsub_32ns_32ns_32_4_full_dsp_1_U63              | 2   |        | Torque_decoup | fsub  | fulldsp | 3       |
+|   + park_inverse_float_s                            | 16  |        |               |       |         |         |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U73               | 3   |        | Vd_cos        | fmul  | maxdsp  | 2       |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U74               | 3   |        | Vd_sin        | fmul  | maxdsp  | 2       |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U75               | 3   |        | Vq_cos        | fmul  | maxdsp  | 2       |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U76               | 3   |        | Vq_sin        | fmul  | maxdsp  | 2       |
+|     fsub_32ns_32ns_32_4_full_dsp_1_U71              | 2   |        | dc            | fsub  | fulldsp | 3       |
+|     fadd_32ns_32ns_32_4_full_dsp_1_U72              | 2   |        | dc_4          | fadd  | fulldsp | 3       |
+|     sub_ln12_fu_254_p2                              | -   |        | sub_ln12      | sub   | fabric  | 0       |
+|     sub_ln31_fu_272_p2                              | -   |        | sub_ln31      | sub   | fabric  | 0       |
+|     sub_ln12_1_fu_299_p2                            | -   |        | sub_ln12_1    | sub   | fabric  | 0       |
+|     sub_ln35_fu_317_p2                              | -   |        | sub_ln35      | sub   | fabric  | 0       |
+|   + clarke_inverse_float_s                          | 10  |        |               |       |         |         |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U88               | 3   |        | Vbeta_temp    | fmul  | maxdsp  | 2       |
+|     fsub_32ns_32ns_32_4_full_dsp_1_U86              | 2   |        | sub           | fsub  | fulldsp | 3       |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U88               | 3   |        | dc            | fmul  | maxdsp  | 2       |
+|     fsub_32ns_32ns_32_4_full_dsp_1_U87              | 2   |        | sub3          | fsub  | fulldsp | 3       |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U89               | 3   |        | dc_11         | fmul  | maxdsp  | 2       |
+|     sub_ln12_fu_179_p2                              | -   |        | sub_ln12      | sub   | fabric  | 0       |
+|     sub_ln24_fu_197_p2                              | -   |        | sub_ln24      | sub   | fabric  | 0       |
+|     sub_ln12_3_fu_332_p2                            | -   |        | sub_ln12_3    | sub   | fabric  | 0       |
+|     sub_ln28_fu_350_p2                              | -   |        | sub_ln28      | sub   | fabric  | 0       |
+|     sub_ln12_4_fu_377_p2                            | -   |        | sub_ln12_4    | sub   | fabric  | 0       |
+|     sub_ln32_fu_395_p2                              | -   |        | sub_ln32      | sub   | fabric  | 0       |
+|   + SVPWM_float_s                                   | 9   |        |               |       |         |         |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U101              | 3   |        | offset        | fmul  | maxdsp  | 2       |
+|     fadd_32ns_32ns_32_4_full_dsp_1_U98              | 2   |        | dc            | fadd  | fulldsp | 3       |
+|     add_ln344_fu_312_p2                             | -   |        | add_ln344     | add   | fabric  | 0       |
+|     sub_ln1364_fu_326_p2                            | -   |        | sub_ln1364    | sub   | fabric  | 0       |
+|     result_V_41_fu_394_p2                           | -   |        | result_V_41   | sub   | fabric  | 0       |
+|     fadd_32ns_32ns_32_4_full_dsp_1_U99              | 2   |        | dc_12         | fadd  | fulldsp | 3       |
+|     add_ln344_8_fu_451_p2                           | -   |        | add_ln344_8   | add   | fabric  | 0       |
+|     sub_ln1364_7_fu_465_p2                          | -   |        | sub_ln1364_7  | sub   | fabric  | 0       |
+|     result_V_44_fu_533_p2                           | -   |        | result_V_44   | sub   | fabric  | 0       |
+|     fadd_32ns_32ns_32_4_full_dsp_1_U100             | 2   |        | dc_13         | fadd  | fulldsp | 3       |
+|     add_ln344_9_fu_590_p2                           | -   |        | add_ln344_9   | add   | fabric  | 0       |
+|     sub_ln1364_8_fu_604_p2                          | -   |        | sub_ln1364_8  | sub   | fabric  | 0       |
+|     result_V_47_fu_672_p2                           | -   |        | result_V_47   | sub   | fabric  | 0       |
++-----------------------------------------------------+-----+--------+---------------+-------+---------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
++--------------------------+------+------+--------+-----------------+---------+------+---------+
+| Name                     | BRAM | URAM | Pragma | Variable        | Storage | Impl | Latency |
++--------------------------+------+------+--------+-----------------+---------+------+---------+
+| + foc_frontend           | 21   | 0    |        |                 |         |      |         |
+|   buffer_velocity_U      | 1    | -    |        | buffer_velocity | ram_1p  | auto | 1       |
+|  + torque_foc            | 8    | 0    |        |                 |         |      |         |
+|   + park_direct_float_s  | 4    | 0    |        |                 |         |      |         |
+|     sine_d_U             | 2    | -    |        | sine_d          | rom_1p  | auto | 1       |
+|     cosine_d_U           | 2    | -    |        | cosine_d        | rom_1p  | auto | 1       |
+|   + park_inverse_float_s | 4    | 0    |        |                 |         |      |         |
+|     sine_i_U             | 2    | -    |        | sine_i          | rom_1p  | auto | 1       |
+|     cosine_i_U           | 2    | -    |        | cosine_i        | rom_1p  | auto | 1       |
+|  + manual_control        | 4    | 0    |        |                 |         |      |         |
+|   + park_inverse_float_s | 4    | 0    |        |                 |         |      |         |
+|     sine_i_U             | 2    | -    |        | sine_i          | rom_1p  | auto | 1       |
+|     cosine_i_U           | 2    | -    |        | cosine_i        | rom_1p  | auto | 1       |
+|  + foc                   | 8    | 0    |        |                 |         |      |         |
+|   + park_direct_float_s  | 4    | 0    |        |                 |         |      |         |
+|     sine_d_U             | 2    | -    |        | sine_d          | rom_1p  | auto | 1       |
+|     cosine_d_U           | 2    | -    |        | cosine_d        | rom_1p  | auto | 1       |
+|   + park_inverse_float_s | 4    | 0    |        |                 |         |      |         |
+|     sine_i_U             | 2    | -    |        | sine_i          | rom_1p  | auto | 1       |
+|     cosine_i_U           | 2    | -    |        | cosine_i        | rom_1p  | auto | 1       |
++--------------------------+------+------+--------+-----------------+---------+------+---------+
+
+
+================================================================
+== User Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------+---------------------------------------+---------------------------------------------------------------------------------------------+
+| Type      | Options                               | Location                                                                                    |
++-----------+---------------------------------------+---------------------------------------------------------------------------------------------+
+| inline    | off                                   | foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp:12 in clarke_inverse          |
+| inline    | off                                   | foc-rewrite/apc/src/FOC/../clarke_transform/clarke_direct.hpp:9 in clarke_direct            |
+| inline    | off                                   | foc-rewrite/apc/src/FOC/../decoupling/decoupling.hpp:14 in decoupling                       |
+| inline    | off                                   | foc-rewrite/apc/src/FOC/../filter/filter.hpp:16 in low_pass_filter                          |
+| pipeline  | II=3                                  | foc-rewrite/apc/src/FOC/../filter/filter.hpp:30 in low_pass_filter                          |
+| inline    | off                                   | foc-rewrite/apc/src/FOC/../park_transform/park_direct.hpp:11 in park_direct                 |
+| inline    | off                                   | foc-rewrite/apc/src/FOC/../park_transform/park_inverse.hpp:11 in park_inverse               |
+| inline    | off                                   | foc-rewrite/apc/src/FOC/../PI_control/PI_control.hpp:10 in pi_control                       |
+| inline    | off                                   | foc-rewrite/apc/src/FOC/../SVPWM/svpwm.h:8 in svpwm                                         |
+| inline    | off                                   | foc-rewrite/apc/src/FOC/foc.cpp:5 in calibration                                            |
+| inline    | off                                   | foc-rewrite/apc/src/FOC/foc.cpp:15 in manual_control                                        |
+| inline    | off                                   | foc-rewrite/apc/src/FOC/foc.cpp:90 in foc                                                   |
+| inline    | off                                   | foc-rewrite/apc/src/FOC/foc.cpp:246 in torque_foc                                           |
+| inline    | off                                   | foc-rewrite/apc/src/front/../FOC/../clarke_transform/clark_inverse.hpp:12 in clarke_inverse |
+| inline    | off                                   | foc-rewrite/apc/src/front/../FOC/../clarke_transform/clarke_direct.hpp:9 in clarke_direct   |
+| inline    | off                                   | foc-rewrite/apc/src/front/../FOC/../decoupling/decoupling.hpp:14 in decoupling              |
+| inline    | off                                   | foc-rewrite/apc/src/front/../FOC/../filter/filter.hpp:16 in low_pass_filter                 |
+| pipeline  | II=3                                  | foc-rewrite/apc/src/front/../FOC/../filter/filter.hpp:30 in low_pass_filter                 |
+| inline    | off                                   | foc-rewrite/apc/src/front/../FOC/../park_transform/park_direct.hpp:11 in park_direct        |
+| inline    | off                                   | foc-rewrite/apc/src/front/../FOC/../park_transform/park_inverse.hpp:11 in park_inverse      |
+| inline    | off                                   | foc-rewrite/apc/src/front/../FOC/../PI_control/PI_control.hpp:10 in pi_control              |
+| inline    | off                                   | foc-rewrite/apc/src/front/../FOC/../SVPWM/svpwm.h:8 in svpwm                                |
+| interface | mode=axis port=A                      | foc-rewrite/apc/src/front/frontend.cpp:5 in foc_frontend, A                                 |
+| interface | mode=axis port=B                      | foc-rewrite/apc/src/front/frontend.cpp:6 in foc_frontend, B                                 |
+| interface | mode=axis port=C                      | foc-rewrite/apc/src/front/frontend.cpp:7 in foc_frontend, C                                 |
+| interface | mode=s_axilite port=control offset=64 | foc-rewrite/apc/src/front/frontend.cpp:8 in foc_frontend, control                           |
+| interface | mode=s_axilite port=logger offset=128 | foc-rewrite/apc/src/front/frontend.cpp:9 in foc_frontend, logger                            |
+| interface | mode=ap_ctrl_none port=return         | foc-rewrite/apc/src/front/frontend.cpp:11 in foc_frontend, return                           |
++-----------+---------------------------------------+---------------------------------------------------------------------------------------------+
+
+
