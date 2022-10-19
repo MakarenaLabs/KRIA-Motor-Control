@@ -2708,7 +2708,7 @@
 
 <Node id="131" bw="32" op_0_bw="32" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="32">
 <![CDATA[
-:104 %Vq = call i32 @PI_control<float>, i32 %bitcast_ln329, i32 %Iq, i32 -10, i32 -3, i32 %ierr_torque_load
+:104 %Vq = call i32 @PI_control<float>, i32 %bitcast_ln329, i32 %Iq, i32 -20, i32 -5, i32 %ierr_torque_load
 
 ]]></Node>
 <StgValue><ssdm name="Vq"/></StgValue>
@@ -2738,7 +2738,7 @@
 
 <Node id="133" bw="32" op_0_bw="32" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="32">
 <![CDATA[
-:106 %Vd = call i32 @PI_control<float>, i32 0, i32 %Id, i32 -32, i32 0, i32 %ierr_flux_load
+:106 %Vd = call i32 @PI_control<float>, i32 0, i32 %Id, i32 -10, i32 -0.15, i32 %ierr_flux_load
 
 ]]></Node>
 <StgValue><ssdm name="Vd"/></StgValue>
@@ -2771,7 +2771,7 @@
 
 <Node id="131" bw="32" op_0_bw="32" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="32">
 <![CDATA[
-:104 %Vq = call i32 @PI_control<float>, i32 %bitcast_ln329, i32 %Iq, i32 -10, i32 -3, i32 %ierr_torque_load
+:104 %Vq = call i32 @PI_control<float>, i32 %bitcast_ln329, i32 %Iq, i32 -20, i32 -5, i32 %ierr_torque_load
 
 ]]></Node>
 <StgValue><ssdm name="Vq"/></StgValue>
@@ -2786,7 +2786,7 @@
 
 <Node id="133" bw="32" op_0_bw="32" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="32">
 <![CDATA[
-:106 %Vd = call i32 @PI_control<float>, i32 0, i32 %Id, i32 -32, i32 0, i32 %ierr_flux_load
+:106 %Vd = call i32 @PI_control<float>, i32 0, i32 %Id, i32 -10, i32 -0.15, i32 %ierr_flux_load
 
 ]]></Node>
 <StgValue><ssdm name="Vd"/></StgValue>

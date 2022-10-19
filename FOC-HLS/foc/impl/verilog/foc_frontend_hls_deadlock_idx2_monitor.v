@@ -1,6 +1,6 @@
 `timescale 1 ns / 1 ps
 
-module foc_frontend_hls_deadlock_idx2_monitor ( // for module foc_frontend_foc_frontend_inst.grp_torque_foc_fu_192
+module foc_frontend_hls_deadlock_idx2_monitor ( // for module foc_frontend_foc_frontend_inst.grp_torque_foc_fu_188
     input wire clock,
     input wire reset,
     input wire [9:0] axis_block_sigs,

@@ -1586,9 +1586,6 @@
     <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="foc-rewrite/apc/src/FOC/../PI_control/PI_control.hpp:8:0" msg_body="Inlining function 'int sgn&lt;float&gt;(float)' into 'void PI_control&lt;float&gt;(float, float, float, float, float, float*)'">
         <args Callee="int sgn&lt;float&gt;(float)" Caller="void PI_control&lt;float&gt;(float, float, float, float, float, float*)"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="foc-rewrite/apc/src/FOC/../FW/field_weakening.hpp:23:0" msg_body="Inlining function 'hls::sqrt(float)' into 'void field_weakening&lt;float&gt;(float, float, float*, float*)'">
-        <args Callee="hls::sqrt(float)" Caller="void field_weakening&lt;float&gt;(float, float, float*, float*)"/>
-    </msg>
     <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="foc-rewrite/apc/src/FOC/../park_transform/park_inverse.hpp:9:0" msg_body="Inlining function 'hls::abs(float)' into 'void park_inverse&lt;float&gt;(float, float, short, float*, float*)'">
         <args Callee="hls::abs(float)" Caller="void park_inverse&lt;float&gt;(float, float, short, float*, float*)"/>
     </msg>
@@ -1597,15 +1594,6 @@
     </msg>
     <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp:10:0" msg_body="Inlining function 'int sgn&lt;float&gt;(float)' into 'void clarke_inverse&lt;float&gt;(float, float, float*, float*, float*)'">
         <args Callee="int sgn&lt;float&gt;(float)" Caller="void clarke_inverse&lt;float&gt;(float, float, float*, float*, float*)"/>
-    </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="foc-rewrite/apc/src/FOC/foc.cpp:88:0" msg_body="Inlining function 'hls::abs(float)' into 'foc(hls::stream&lt;hls::axis&lt;ap_int&lt;80&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_int&lt;64&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_int&lt;64&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;, float*, float*)'">
-        <args Callee="hls::abs(float)" Caller="foc(hls::stream&lt;hls::axis&lt;ap_int&lt;80&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_int&lt;64&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_int&lt;64&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;, float*, float*)"/>
-    </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="foc-rewrite/apc/src/FOC/foc.cpp:88:0" msg_body="Inlining function 'int sgn&lt;float&gt;(float)' into 'foc(hls::stream&lt;hls::axis&lt;ap_int&lt;80&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_int&lt;64&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_int&lt;64&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;, float*, float*)'">
-        <args Callee="int sgn&lt;float&gt;(float)" Caller="foc(hls::stream&lt;hls::axis&lt;ap_int&lt;80&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_int&lt;64&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_int&lt;64&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;, float*, float*)"/>
-    </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="foc-rewrite/apc/src/FOC/foc.cpp:88:0" msg_body="Inlining function 'void field_weakening&lt;float&gt;(float, float, float*, float*)' into 'foc(hls::stream&lt;hls::axis&lt;ap_int&lt;80&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_int&lt;64&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_int&lt;64&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;, float*, float*)'">
-        <args Callee="void field_weakening&lt;float&gt;(float, float, float*, float*)" Caller="foc(hls::stream&lt;hls::axis&lt;ap_int&lt;80&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_int&lt;64&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_int&lt;64&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;, float*, float*)"/>
     </msg>
     <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="foc-rewrite/apc/src/FOC/foc.cpp:13:0" msg_body="Inlining function '__hls_fptosi_float_i16' into 'manual_control(hls::stream&lt;hls::axis&lt;ap_int&lt;80&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_int&lt;64&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;, float*, float*)'">
         <args Callee="__hls_fptosi_float_i16" Caller="manual_control(hls::stream&lt;hls::axis&lt;ap_int&lt;80&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_int&lt;64&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;, float*, float*)"/>

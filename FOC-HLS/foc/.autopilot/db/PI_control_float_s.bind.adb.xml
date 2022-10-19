@@ -529,10 +529,10 @@ _ifconv:9 %control_law = fadd i32 %mul, i32 %mul1
 
 <Node id="27" bw="1" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-_ifconv:21 %tmp_64 = fcmp_ogt  i32 %control_law, i32 0
+_ifconv:21 %tmp_51 = fcmp_ogt  i32 %control_law, i32 0
 
 ]]></Node>
-<StgValue><ssdm name="tmp_64"/></StgValue>
+<StgValue><ssdm name="tmp_51"/></StgValue>
 </operation>
 
 <operation id="46" st_id="16" stage="2" lat="2">
@@ -544,10 +544,10 @@ _ifconv:21 %tmp_64 = fcmp_ogt  i32 %control_law, i32 0
 
 <Node id="30" bw="1" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-_ifconv:24 %tmp_65 = fcmp_olt  i32 %control_law, i32 0
+_ifconv:24 %tmp_52 = fcmp_olt  i32 %control_law, i32 0
 
 ]]></Node>
-<StgValue><ssdm name="tmp_65"/></StgValue>
+<StgValue><ssdm name="tmp_52"/></StgValue>
 </operation>
 </state>
 
@@ -667,10 +667,10 @@ _ifconv:16 %icmp_ln36 = icmp_ne  i8 %tmp, i8 255
 
 <Node id="23" bw="1" op_0_bw="23" op_1_bw="23">
 <![CDATA[
-_ifconv:17 %icmp_ln36_2 = icmp_eq  i23 %trunc_ln36, i23 0
+_ifconv:17 %icmp_ln36_1 = icmp_eq  i23 %trunc_ln36, i23 0
 
 ]]></Node>
-<StgValue><ssdm name="icmp_ln36_2"/></StgValue>
+<StgValue><ssdm name="icmp_ln36_1"/></StgValue>
 </operation>
 
 <operation id="55" st_id="17" stage="1" lat="1">
@@ -682,7 +682,7 @@ _ifconv:17 %icmp_ln36_2 = icmp_eq  i23 %trunc_ln36, i23 0
 
 <Node id="24" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-_ifconv:18 %or_ln36 = or i1 %icmp_ln36_2, i1 %icmp_ln36
+_ifconv:18 %or_ln36 = or i1 %icmp_ln36_1, i1 %icmp_ln36
 
 ]]></Node>
 <StgValue><ssdm name="or_ln36"/></StgValue>
@@ -712,10 +712,10 @@ _ifconv:19 %tmp_s = fcmp_ogt  i32 %bitcast_ln354, i32 32767
 
 <Node id="27" bw="1" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-_ifconv:21 %tmp_64 = fcmp_ogt  i32 %control_law, i32 0
+_ifconv:21 %tmp_51 = fcmp_ogt  i32 %control_law, i32 0
 
 ]]></Node>
-<StgValue><ssdm name="tmp_64"/></StgValue>
+<StgValue><ssdm name="tmp_51"/></StgValue>
 </operation>
 
 <operation id="58" st_id="17" stage="1" lat="2">
@@ -727,10 +727,10 @@ _ifconv:21 %tmp_64 = fcmp_ogt  i32 %control_law, i32 0
 
 <Node id="30" bw="1" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-_ifconv:24 %tmp_65 = fcmp_olt  i32 %control_law, i32 0
+_ifconv:24 %tmp_52 = fcmp_olt  i32 %control_law, i32 0
 
 ]]></Node>
-<StgValue><ssdm name="tmp_65"/></StgValue>
+<StgValue><ssdm name="tmp_52"/></StgValue>
 </operation>
 </state>
 
@@ -760,7 +760,7 @@ _ifconv:19 %tmp_s = fcmp_ogt  i32 %bitcast_ln354, i32 32767
 
 <Node id="28" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-_ifconv:22 %and_ln12 = and i1 %or_ln36, i1 %tmp_64
+_ifconv:22 %and_ln12 = and i1 %or_ln36, i1 %tmp_51
 
 ]]></Node>
 <StgValue><ssdm name="and_ln12"/></StgValue>
@@ -790,10 +790,10 @@ _ifconv:23 %zext_ln12 = zext i1 %and_ln12
 
 <Node id="31" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-_ifconv:25 %and_ln12_16 = and i1 %or_ln36, i1 %tmp_65
+_ifconv:25 %and_ln12_15 = and i1 %or_ln36, i1 %tmp_52
 
 ]]></Node>
-<StgValue><ssdm name="and_ln12_16"/></StgValue>
+<StgValue><ssdm name="and_ln12_15"/></StgValue>
 </operation>
 
 <operation id="63" st_id="18" stage="1" lat="1">
@@ -805,10 +805,10 @@ _ifconv:25 %and_ln12_16 = and i1 %or_ln36, i1 %tmp_65
 
 <Node id="32" bw="2" op_0_bw="1">
 <![CDATA[
-_ifconv:26 %zext_ln12_16 = zext i1 %and_ln12_16
+_ifconv:26 %zext_ln12_15 = zext i1 %and_ln12_15
 
 ]]></Node>
-<StgValue><ssdm name="zext_ln12_16"/></StgValue>
+<StgValue><ssdm name="zext_ln12_15"/></StgValue>
 </operation>
 
 <operation id="64" st_id="18" stage="1" lat="1">
@@ -820,7 +820,7 @@ _ifconv:26 %zext_ln12_16 = zext i1 %and_ln12_16
 
 <Node id="33" bw="2" op_0_bw="2" op_1_bw="2">
 <![CDATA[
-_ifconv:27 %sub_ln12 = sub i2 %zext_ln12, i2 %zext_ln12_16
+_ifconv:27 %sub_ln12 = sub i2 %zext_ln12, i2 %zext_ln12_15
 
 ]]></Node>
 <StgValue><ssdm name="sub_ln12"/></StgValue>
@@ -1115,13 +1115,13 @@ _ifconv:34 %ret_ln42 = ret i32 %select_ln36
 </dataflow>
 <dataflow id="147" from="mul1" to="control_law" fromId="40" toId="44">
 </dataflow>
-<dataflow id="148" from="control_law" to="tmp_64" fromId="44" toId="45">
+<dataflow id="148" from="control_law" to="tmp_51" fromId="44" toId="45">
 </dataflow>
-<dataflow id="150" from="StgValue_149" to="tmp_64" fromId="149" toId="45">
+<dataflow id="150" from="StgValue_149" to="tmp_51" fromId="149" toId="45">
 </dataflow>
-<dataflow id="151" from="control_law" to="tmp_65" fromId="44" toId="46">
+<dataflow id="151" from="control_law" to="tmp_52" fromId="44" toId="46">
 </dataflow>
-<dataflow id="152" from="StgValue_149" to="tmp_65" fromId="149" toId="46">
+<dataflow id="152" from="StgValue_149" to="tmp_52" fromId="149" toId="46">
 </dataflow>
 <dataflow id="153" from="control_law" to="data_V" fromId="44" toId="47">
 </dataflow>
@@ -1145,11 +1145,11 @@ _ifconv:34 %ret_ln42 = ret i32 %select_ln36
 </dataflow>
 <dataflow id="167" from="StgValue_166" to="icmp_ln36" fromId="166" toId="53">
 </dataflow>
-<dataflow id="168" from="trunc_ln36" to="icmp_ln36_2" fromId="52" toId="54">
+<dataflow id="168" from="trunc_ln36" to="icmp_ln36_1" fromId="52" toId="54">
 </dataflow>
-<dataflow id="170" from="StgValue_169" to="icmp_ln36_2" fromId="169" toId="54">
+<dataflow id="170" from="StgValue_169" to="icmp_ln36_1" fromId="169" toId="54">
 </dataflow>
-<dataflow id="171" from="icmp_ln36_2" to="or_ln36" fromId="54" toId="55">
+<dataflow id="171" from="icmp_ln36_1" to="or_ln36" fromId="54" toId="55">
 </dataflow>
 <dataflow id="172" from="icmp_ln36" to="or_ln36" fromId="53" toId="55">
 </dataflow>
@@ -1157,13 +1157,13 @@ _ifconv:34 %ret_ln42 = ret i32 %select_ln36
 </dataflow>
 <dataflow id="175" from="StgValue_174" to="tmp_s" fromId="174" toId="56">
 </dataflow>
-<dataflow id="176" from="control_law" to="tmp_64" fromId="44" toId="57">
+<dataflow id="176" from="control_law" to="tmp_51" fromId="44" toId="57">
 </dataflow>
-<dataflow id="177" from="StgValue_149" to="tmp_64" fromId="149" toId="57">
+<dataflow id="177" from="StgValue_149" to="tmp_51" fromId="149" toId="57">
 </dataflow>
-<dataflow id="178" from="control_law" to="tmp_65" fromId="44" toId="58">
+<dataflow id="178" from="control_law" to="tmp_52" fromId="44" toId="58">
 </dataflow>
-<dataflow id="179" from="StgValue_149" to="tmp_65" fromId="149" toId="58">
+<dataflow id="179" from="StgValue_149" to="tmp_52" fromId="149" toId="58">
 </dataflow>
 <dataflow id="180" from="bitcast_ln354" to="tmp_s" fromId="50" toId="59">
 </dataflow>
@@ -1171,19 +1171,19 @@ _ifconv:34 %ret_ln42 = ret i32 %select_ln36
 </dataflow>
 <dataflow id="182" from="or_ln36" to="and_ln12" fromId="55" toId="60">
 </dataflow>
-<dataflow id="183" from="tmp_64" to="and_ln12" fromId="57" toId="60">
+<dataflow id="183" from="tmp_51" to="and_ln12" fromId="57" toId="60">
 </dataflow>
 <dataflow id="184" from="and_ln12" to="zext_ln12" fromId="60" toId="61">
 </dataflow>
-<dataflow id="185" from="or_ln36" to="and_ln12_16" fromId="55" toId="62">
+<dataflow id="185" from="or_ln36" to="and_ln12_15" fromId="55" toId="62">
 </dataflow>
-<dataflow id="186" from="tmp_65" to="and_ln12_16" fromId="58" toId="62">
+<dataflow id="186" from="tmp_52" to="and_ln12_15" fromId="58" toId="62">
 </dataflow>
-<dataflow id="187" from="and_ln12_16" to="zext_ln12_16" fromId="62" toId="63">
+<dataflow id="187" from="and_ln12_15" to="zext_ln12_15" fromId="62" toId="63">
 </dataflow>
 <dataflow id="188" from="zext_ln12" to="sub_ln12" fromId="61" toId="64">
 </dataflow>
-<dataflow id="189" from="zext_ln12_16" to="sub_ln12" fromId="63" toId="64">
+<dataflow id="189" from="zext_ln12_15" to="sub_ln12" fromId="63" toId="64">
 </dataflow>
 <dataflow id="190" from="sub_ln12" to="sext_ln37" fromId="64" toId="65">
 </dataflow>

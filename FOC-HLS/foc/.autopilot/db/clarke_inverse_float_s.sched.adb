@@ -70,7 +70,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1830839397</coreId>
+						<coreId>1919904880</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -124,7 +124,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>828321841</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -181,7 +181,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>2037542765</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -238,7 +238,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1295780106</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -295,7 +295,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1818639461</coreId>
+						<coreId>757935405</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -352,7 +352,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>540096050</coreId>
+						<coreId>1031369833</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -409,7 +409,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1145391171</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -465,7 +465,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1668445551</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -522,7 +522,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1931502951</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -578,7 +578,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>825110560</coreId>
+						<coreId>1702043749</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -603,7 +603,7 @@
 					<Obj>
 						<type>0</type>
 						<id>12</id>
-						<name>dc_11</name>
+						<name>dc_10</name>
 						<fileName>foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp</fileName>
 						<fileDirectory>/home/mklab/workspace/foc</fileDirectory>
 						<lineNumber>21</lineNumber>
@@ -635,7 +635,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1031365995</coreId>
+						<coreId>1931502951</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -692,7 +692,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2036689696</coreId>
+						<coreId>1031301478</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>31</bitwidth>
@@ -748,7 +748,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>979725673</coreId>
+						<coreId>657469801</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -804,7 +804,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>690512243</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -860,7 +860,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1953391988</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -919,7 +919,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>640955703</coreId>
+						<coreId>3098631600</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>23</bitwidth>
@@ -975,7 +975,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4294967295</coreId>
+						<coreId>1629890917</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -1032,7 +1032,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4294967295</coreId>
+						<coreId>1952917108</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -1089,7 +1089,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4294967295</coreId>
+						<coreId>997420912</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -1114,7 +1114,7 @@
 					<Obj>
 						<type>0</type>
 						<id>21</id>
-						<name>tmp_37</name>
+						<name>tmp_24</name>
 						<fileName>foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp</fileName>
 						<fileDirectory>/home/mklab/workspace/foc</fileDirectory>
 						<lineNumber>23</lineNumber>
@@ -1146,7 +1146,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4294967295</coreId>
+						<coreId>1836412474</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -1203,7 +1203,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1001133568</coreId>
+						<coreId>1764714612</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -1228,7 +1228,7 @@
 					<Obj>
 						<type>0</type>
 						<id>23</id>
-						<name>tmp_s</name>
+						<name>tmp_25</name>
 						<fileName>foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp</fileName>
 						<fileDirectory>/home/mklab/workspace/foc</fileDirectory>
 						<lineNumber>12</lineNumber>
@@ -1260,7 +1260,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1001103656</coreId>
+						<coreId>925969716</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -1317,7 +1317,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>997420912</coreId>
+						<coreId>842479155</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -1374,7 +1374,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>572669287</coreId>
+						<coreId>3418158024</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>2</bitwidth>
@@ -1398,7 +1398,7 @@
 					<Obj>
 						<type>0</type>
 						<id>26</id>
-						<name>tmp_38</name>
+						<name>tmp_s</name>
 						<fileName>foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp</fileName>
 						<fileDirectory>/home/mklab/workspace/foc</fileDirectory>
 						<lineNumber>12</lineNumber>
@@ -1430,7 +1430,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1970170228</coreId>
+						<coreId>4294967295</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -1455,7 +1455,7 @@
 					<Obj>
 						<type>0</type>
 						<id>27</id>
-						<name>and_ln12_8</name>
+						<name>and_ln12_7</name>
 						<fileName>foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp</fileName>
 						<fileDirectory>/home/mklab/workspace/foc</fileDirectory>
 						<lineNumber>12</lineNumber>
@@ -1487,7 +1487,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1936018748</coreId>
+						<coreId>3098648832</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -1512,7 +1512,7 @@
 					<Obj>
 						<type>0</type>
 						<id>28</id>
-						<name>zext_ln12_8</name>
+						<name>zext_ln12_7</name>
 						<fileName>foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp</fileName>
 						<fileDirectory>/home/mklab/workspace/foc</fileDirectory>
 						<lineNumber>12</lineNumber>
@@ -1544,7 +1544,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>997484326</coreId>
+						<coreId>4294967295</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>2</bitwidth>
@@ -1600,7 +1600,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>976894836</coreId>
+						<coreId>997420912</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>2</bitwidth>
@@ -1657,7 +1657,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1007225406</coreId>
+						<coreId>572669287</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>17</bitwidth>
@@ -1713,7 +1713,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1952675186</coreId>
+						<coreId>1970170228</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>17</bitwidth>
@@ -1771,7 +1771,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1646275700</coreId>
+						<coreId>1936018748</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>17</bitwidth>
@@ -1828,7 +1828,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1685204786</coreId>
+						<coreId>997484326</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1884,7 +1884,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1633902451</coreId>
+						<coreId>976894836</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1940,7 +1940,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1953721967</coreId>
+						<coreId>1007225406</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1966,7 +1966,7 @@
 					<Obj>
 						<type>0</type>
 						<id>36</id>
-						<name>data_V_10</name>
+						<name>data_V_9</name>
 						<fileName>/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h</fileName>
 						<fileDirectory>/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared</fileDirectory>
 						<lineNumber>315</lineNumber>
@@ -1998,7 +1998,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1936683105</coreId>
+						<coreId>1952675186</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2022,7 +2022,7 @@
 					<Obj>
 						<type>0</type>
 						<id>37</id>
-						<name>p_Result_11</name>
+						<name>p_Result_10</name>
 						<fileName>/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_int_ref.h</fileName>
 						<fileDirectory>/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared</fileDirectory>
 						<lineNumber>368</lineNumber>
@@ -2054,7 +2054,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1701273971</coreId>
+						<coreId>1869375008</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>31</bitwidth>
@@ -2110,7 +2110,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1701734249</coreId>
+						<coreId>1397508130</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2166,7 +2166,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1970037614</coreId>
+						<coreId>796093545</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2190,7 +2190,7 @@
 					<Obj>
 						<type>0</type>
 						<id>40</id>
-						<name>tmp_39</name>
+						<name>tmp_26</name>
 						<fileName>foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp</fileName>
 						<fileDirectory>/home/mklab/workspace/foc</fileDirectory>
 						<lineNumber>27</lineNumber>
@@ -2222,7 +2222,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>943141165</coreId>
+						<coreId>1937338479</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -2281,7 +2281,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1852127802</coreId>
+						<coreId>840979276</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>23</bitwidth>
@@ -2337,7 +2337,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1818439539</coreId>
+						<coreId>1226980729</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -2394,7 +2394,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2036689696</coreId>
+						<coreId>1702258035</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -2451,7 +2451,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1953656680</coreId>
+						<coreId>1936942413</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -2476,7 +2476,7 @@
 					<Obj>
 						<type>0</type>
 						<id>45</id>
-						<name>tmp_40</name>
+						<name>tmp_27</name>
 						<fileName>foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp</fileName>
 						<fileDirectory>/home/mklab/workspace/foc</fileDirectory>
 						<lineNumber>27</lineNumber>
@@ -2508,7 +2508,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1869116219</coreId>
+						<coreId>574451311</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -2565,7 +2565,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1597583711</coreId>
+						<coreId>1600877153</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -2590,7 +2590,7 @@
 					<Obj>
 						<type>0</type>
 						<id>47</id>
-						<name>tmp_41</name>
+						<name>tmp_28</name>
 						<fileName>foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp</fileName>
 						<fileDirectory>/home/mklab/workspace/foc</fileDirectory>
 						<lineNumber>12</lineNumber>
@@ -2622,7 +2622,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>690512244</coreId>
+						<coreId>1936484392</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -2647,6 +2647,176 @@
 					<Obj>
 						<type>0</type>
 						<id>48</id>
+						<name>and_ln12_8</name>
+						<fileName>foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp</fileName>
+						<fileDirectory>/home/mklab/workspace/foc</fileDirectory>
+						<lineNumber>12</lineNumber>
+						<contextFuncName>sgn&amp;lt;float&amp;gt;</contextFuncName>
+						<contextNormFuncName>sgn_float_s</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/mklab/workspace/foc</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp</first>
+											<second>sgn&amp;lt;float&amp;gt;</second>
+										</first>
+										<second>12</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>1932407862</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>1</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>2</count>
+					<item_version>0</item_version>
+					<item>182</item>
+					<item>183</item>
+				</oprand_edges>
+				<opcode>and</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>58</m_topoIndex>
+				<m_clusterGroupNumber>4</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_49">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>49</id>
+						<name>zext_ln12_8</name>
+						<fileName>foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp</fileName>
+						<fileDirectory>/home/mklab/workspace/foc</fileDirectory>
+						<lineNumber>12</lineNumber>
+						<contextFuncName>sgn&amp;lt;float&amp;gt;</contextFuncName>
+						<contextNormFuncName>sgn_float_s</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/mklab/workspace/foc</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp</first>
+											<second>sgn&amp;lt;float&amp;gt;</second>
+										</first>
+										<second>12</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>979906145</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>2</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>184</item>
+				</oprand_edges>
+				<opcode>zext</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>59</m_topoIndex>
+				<m_clusterGroupNumber>4</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_50">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>50</id>
+						<name>tmp_29</name>
+						<fileName>foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp</fileName>
+						<fileDirectory>/home/mklab/workspace/foc</fileDirectory>
+						<lineNumber>12</lineNumber>
+						<contextFuncName>sgn&amp;lt;float&amp;gt;</contextFuncName>
+						<contextNormFuncName>sgn_float_s</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/mklab/workspace/foc</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp</first>
+											<second>sgn&amp;lt;float&amp;gt;</second>
+										</first>
+										<second>12</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>644702565</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>1</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>2</count>
+					<item_version>0</item_version>
+					<item>185</item>
+					<item>186</item>
+				</oprand_edges>
+				<opcode>fcmp</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>2.78</m_delay>
+				<m_topoIndex>35</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_51">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>51</id>
 						<name>and_ln12_9</name>
 						<fileName>foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp</fileName>
 						<fileDirectory>/home/mklab/workspace/foc</fileDirectory>
@@ -2679,7 +2849,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>875639328</coreId>
+						<coreId>997484326</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -2687,8 +2857,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>182</item>
-					<item>183</item>
+					<item>187</item>
+					<item>188</item>
 				</oprand_edges>
 				<opcode>and</opcode>
 				<m_Display>0</m_Display>
@@ -2696,14 +2866,14 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>58</m_topoIndex>
+				<m_topoIndex>60</m_topoIndex>
 				<m_clusterGroupNumber>4</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_49">
+			<item class_id_reference="9" object_id="_52">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>49</id>
+						<id>52</id>
 						<name>zext_ln12_9</name>
 						<fileName>foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp</fileName>
 						<fileDirectory>/home/mklab/workspace/foc</fileDirectory>
@@ -2736,177 +2906,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>796095855</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>2</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>184</item>
-				</oprand_edges>
-				<opcode>zext</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>59</m_topoIndex>
-				<m_clusterGroupNumber>4</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_50">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>50</id>
-						<name>tmp_42</name>
-						<fileName>foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp</fileName>
-						<fileDirectory>/home/mklab/workspace/foc</fileDirectory>
-						<lineNumber>12</lineNumber>
-						<contextFuncName>sgn&amp;lt;float&amp;gt;</contextFuncName>
-						<contextNormFuncName>sgn_float_s</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/mklab/workspace/foc</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp</first>
-											<second>sgn&amp;lt;float&amp;gt;</second>
-										</first>
-										<second>12</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>1667854949</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>1</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>2</count>
-					<item_version>0</item_version>
-					<item>185</item>
-					<item>186</item>
-				</oprand_edges>
-				<opcode>fcmp</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>2.78</m_delay>
-				<m_topoIndex>35</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_51">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>51</id>
-						<name>and_ln12_10</name>
-						<fileName>foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp</fileName>
-						<fileDirectory>/home/mklab/workspace/foc</fileDirectory>
-						<lineNumber>12</lineNumber>
-						<contextFuncName>sgn&amp;lt;float&amp;gt;</contextFuncName>
-						<contextNormFuncName>sgn_float_s</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/mklab/workspace/foc</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp</first>
-											<second>sgn&amp;lt;float&amp;gt;</second>
-										</first>
-										<second>12</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>544108393</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>1</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>2</count>
-					<item_version>0</item_version>
-					<item>187</item>
-					<item>188</item>
-				</oprand_edges>
-				<opcode>and</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>60</m_topoIndex>
-				<m_clusterGroupNumber>4</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_52">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>52</id>
-						<name>zext_ln12_10</name>
-						<fileName>foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp</fileName>
-						<fileDirectory>/home/mklab/workspace/foc</fileDirectory>
-						<lineNumber>12</lineNumber>
-						<contextFuncName>sgn&amp;lt;float&amp;gt;</contextFuncName>
-						<contextNormFuncName>sgn_float_s</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/mklab/workspace/foc</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp</first>
-											<second>sgn&amp;lt;float&amp;gt;</second>
-										</first>
-										<second>12</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>1969627239</coreId>
+						<coreId>1953244788</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>2</bitwidth>
@@ -2962,7 +2962,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1819167010</coreId>
+						<coreId>1634038388</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>2</bitwidth>
@@ -3019,7 +3019,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1768713801</coreId>
+						<coreId>807414892</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>17</bitwidth>
@@ -3075,7 +3075,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1663050274</coreId>
+						<coreId>644903011</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>17</bitwidth>
@@ -3133,7 +3133,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1819619360</coreId>
+						<coreId>1819631974</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>17</bitwidth>
@@ -3190,7 +3190,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>539119430</coreId>
+						<coreId>1701994856</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -3214,7 +3214,7 @@
 					<Obj>
 						<type>0</type>
 						<id>58</id>
-						<name>conv4</name>
+						<name>conv3</name>
 						<fileName>foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp</fileName>
 						<fileDirectory>/home/mklab/workspace/foc</fileDirectory>
 						<lineNumber>28</lineNumber>
@@ -3246,7 +3246,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1869901926</coreId>
+						<coreId>1279810338</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -3302,7 +3302,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1746938939</coreId>
+						<coreId>639659892</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -3328,7 +3328,7 @@
 					<Obj>
 						<type>0</type>
 						<id>60</id>
-						<name>data_V_11</name>
+						<name>data_V_10</name>
 						<fileName>/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h</fileName>
 						<fileDirectory>/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared</fileDirectory>
 						<lineNumber>315</lineNumber>
@@ -3360,7 +3360,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1479500385</coreId>
+						<coreId>1919250021</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -3384,7 +3384,7 @@
 					<Obj>
 						<type>0</type>
 						<id>61</id>
-						<name>p_Result_12</name>
+						<name>p_Result_11</name>
 						<fileName>/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_int_ref.h</fileName>
 						<fileDirectory>/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared</fileDirectory>
 						<lineNumber>368</lineNumber>
@@ -3416,7 +3416,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>778399343</coreId>
+						<coreId>574453865</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>31</bitwidth>
@@ -3472,7 +3472,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1634038388</coreId>
+						<coreId>645165934</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -3528,7 +3528,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1730571381</coreId>
+						<coreId>1701672302</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -3552,7 +3552,7 @@
 					<Obj>
 						<type>0</type>
 						<id>64</id>
-						<name>tmp_43</name>
+						<name>tmp_30</name>
 						<fileName>foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp</fileName>
 						<fileDirectory>/home/mklab/workspace/foc</fileDirectory>
 						<lineNumber>31</lineNumber>
@@ -3584,7 +3584,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>574454117</coreId>
+						<coreId>861878577</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -3643,7 +3643,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1330007625</coreId>
+						<coreId>1030647657</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>23</bitwidth>
@@ -3699,7 +3699,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>572669294</coreId>
+						<coreId>1600742514</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -3756,7 +3756,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>645161845</coreId>
+						<coreId>1970435187</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -3813,7 +3813,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1769173605</coreId>
+						<coreId>1031365995</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -3838,7 +3838,7 @@
 					<Obj>
 						<type>0</type>
 						<id>69</id>
-						<name>tmp_44</name>
+						<name>tmp_31</name>
 						<fileName>foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp</fileName>
 						<fileDirectory>/home/mklab/workspace/foc</fileDirectory>
 						<lineNumber>31</lineNumber>
@@ -3870,7 +3870,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1226980724</coreId>
+						<coreId>943141165</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -3927,7 +3927,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>539784306</coreId>
+						<coreId>1397508187</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -3952,7 +3952,7 @@
 					<Obj>
 						<type>0</type>
 						<id>71</id>
-						<name>tmp_45</name>
+						<name>tmp_32</name>
 						<fileName>foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp</fileName>
 						<fileDirectory>/home/mklab/workspace/foc</fileDirectory>
 						<lineNumber>12</lineNumber>
@@ -3984,7 +3984,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1887007802</coreId>
+						<coreId>1919950882</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -4009,7 +4009,7 @@
 					<Obj>
 						<type>0</type>
 						<id>72</id>
-						<name>and_ln12_11</name>
+						<name>and_ln12_10</name>
 						<fileName>foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp</fileName>
 						<fileDirectory>/home/mklab/workspace/foc</fileDirectory>
 						<lineNumber>12</lineNumber>
@@ -4041,7 +4041,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1836280936</coreId>
+						<coreId>572669294</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -4066,7 +4066,7 @@
 					<Obj>
 						<type>0</type>
 						<id>73</id>
-						<name>zext_ln12_11</name>
+						<name>zext_ln12_10</name>
 						<fileName>foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp</fileName>
 						<fileDirectory>/home/mklab/workspace/foc</fileDirectory>
 						<lineNumber>12</lineNumber>
@@ -4098,7 +4098,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1668641396</coreId>
+						<coreId>645164649</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>2</bitwidth>
@@ -4122,121 +4122,7 @@
 					<Obj>
 						<type>0</type>
 						<id>74</id>
-						<name>tmp_46</name>
-						<fileName>foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp</fileName>
-						<fileDirectory>/home/mklab/workspace/foc</fileDirectory>
-						<lineNumber>12</lineNumber>
-						<contextFuncName>sgn&amp;lt;float&amp;gt;</contextFuncName>
-						<contextNormFuncName>sgn_float_s</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/mklab/workspace/foc</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp</first>
-											<second>sgn&amp;lt;float&amp;gt;</second>
-										</first>
-										<second>12</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>539107901</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>1</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>2</count>
-					<item_version>0</item_version>
-					<item>227</item>
-					<item>228</item>
-				</oprand_edges>
-				<opcode>fcmp</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>2.78</m_delay>
-				<m_topoIndex>37</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_75">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>75</id>
-						<name>and_ln12_12</name>
-						<fileName>foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp</fileName>
-						<fileDirectory>/home/mklab/workspace/foc</fileDirectory>
-						<lineNumber>12</lineNumber>
-						<contextFuncName>sgn&amp;lt;float&amp;gt;</contextFuncName>
-						<contextNormFuncName>sgn_float_s</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/mklab/workspace/foc</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp</first>
-											<second>sgn&amp;lt;float&amp;gt;</second>
-										</first>
-										<second>12</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>1818767204</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>1</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>2</count>
-					<item_version>0</item_version>
-					<item>229</item>
-					<item>230</item>
-				</oprand_edges>
-				<opcode>and</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>70</m_topoIndex>
-				<m_clusterGroupNumber>6</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_76">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>76</id>
-						<name>zext_ln12_12</name>
+						<name>tmp_33</name>
 						<fileName>foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp</fileName>
 						<fileDirectory>/home/mklab/workspace/foc</fileDirectory>
 						<lineNumber>12</lineNumber>
@@ -4269,6 +4155,120 @@
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
 						<coreId>540767087</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>1</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>2</count>
+					<item_version>0</item_version>
+					<item>227</item>
+					<item>228</item>
+				</oprand_edges>
+				<opcode>fcmp</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>2.78</m_delay>
+				<m_topoIndex>37</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_75">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>75</id>
+						<name>and_ln12_11</name>
+						<fileName>foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp</fileName>
+						<fileDirectory>/home/mklab/workspace/foc</fileDirectory>
+						<lineNumber>12</lineNumber>
+						<contextFuncName>sgn&amp;lt;float&amp;gt;</contextFuncName>
+						<contextNormFuncName>sgn_float_s</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/mklab/workspace/foc</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp</first>
+											<second>sgn&amp;lt;float&amp;gt;</second>
+										</first>
+										<second>12</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>1734439795</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>1</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>2</count>
+					<item_version>0</item_version>
+					<item>229</item>
+					<item>230</item>
+				</oprand_edges>
+				<opcode>and</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>70</m_topoIndex>
+				<m_clusterGroupNumber>6</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_76">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>76</id>
+						<name>zext_ln12_11</name>
+						<fileName>foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp</fileName>
+						<fileDirectory>/home/mklab/workspace/foc</fileDirectory>
+						<lineNumber>12</lineNumber>
+						<contextFuncName>sgn&amp;lt;float&amp;gt;</contextFuncName>
+						<contextNormFuncName>sgn_float_s</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/mklab/workspace/foc</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp</first>
+											<second>sgn&amp;lt;float&amp;gt;</second>
+										</first>
+										<second>12</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>997484326</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>2</bitwidth>
@@ -4324,7 +4324,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1952542572</coreId>
+						<coreId>1936484411</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>2</bitwidth>
@@ -4381,7 +4381,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1952917108</coreId>
+						<coreId>1952917040</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>17</bitwidth>
@@ -4437,7 +4437,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>997485606</coreId>
+						<coreId>1730556982</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>17</bitwidth>
@@ -4495,7 +4495,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1869375016</coreId>
+						<coreId>1634692198</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>17</bitwidth>
@@ -4552,7 +4552,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>997420912</coreId>
+						<coreId>825372722</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -4576,7 +4576,7 @@
 					<Obj>
 						<type>0</type>
 						<id>82</id>
-						<name>conv5</name>
+						<name>conv4</name>
 						<fileName>foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp</fileName>
 						<fileDirectory>/home/mklab/workspace/foc</fileDirectory>
 						<lineNumber>32</lineNumber>
@@ -4608,7 +4608,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1713384490</coreId>
+						<coreId>825046065</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -4664,7 +4664,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>542329928</coreId>
+						<coreId>1869635878</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -4722,7 +4722,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1634548595</coreId>
+						<coreId>1634038388</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>96</bitwidth>
@@ -4779,7 +4779,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1852399472</coreId>
+						<coreId>2020501868</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>96</bitwidth>
@@ -4836,7 +4836,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1702113134</coreId>
+						<coreId>1717924464</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>96</bitwidth>
@@ -4893,7 +4893,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1885415027</coreId>
+						<coreId>1030185332</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -5032,7 +5032,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1936028192</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -5063,7 +5063,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1596399726</coreId>
+						<coreId>574451311</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -5094,7 +5094,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1730556982</coreId>
+						<coreId>1885744749</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -5125,7 +5125,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1631286380</coreId>
+						<coreId>1853187616</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>23</bitwidth>
@@ -5156,7 +5156,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1748726892</coreId>
+						<coreId>539107901</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -5187,7 +5187,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1952917100</coreId>
+						<coreId>1919950882</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -5218,7 +5218,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>807414843</coreId>
+						<coreId>575620686</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>15</bitwidth>
@@ -5249,7 +5249,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>914199808</coreId>
+						<coreId>3418119168</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>96</bitwidth>

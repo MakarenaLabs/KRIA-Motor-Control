@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1666006233607">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1666211810732">
   <ports id="1" name="A_V_data_V" type="PortType" coreId="3621216858" bitwidth="80">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
@@ -12,25 +12,25 @@
   <ports id="4" name="A_V_last_V" type="PortType" coreId="54" bitwidth="1">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="5" name="B_V_data_V" type="PortType" coreId="1966088236" bitwidth="64" direction="DirOut">
+  <ports id="5" name="B_V_data_V" type="PortType" coreId="657469801" bitwidth="64" direction="DirOut">
     <dataInputObjs>write</dataInputObjs>
   </ports>
-  <ports id="6" name="B_V_keep_V" type="PortType" coreId="4294967295" bitwidth="8" direction="DirOut">
+  <ports id="6" name="B_V_keep_V" type="PortType" coreId="3441579744" bitwidth="8" direction="DirOut">
     <dataInputObjs>write</dataInputObjs>
   </ports>
-  <ports id="7" name="B_V_strb_V" type="PortType" coreId="1769496890" bitwidth="8" direction="DirOut">
+  <ports id="7" name="B_V_strb_V" type="PortType" coreId="976763504" bitwidth="8" direction="DirOut">
     <dataInputObjs>write</dataInputObjs>
   </ports>
-  <ports id="8" name="B_V_last_V" type="PortType" coreId="1145391171" bitwidth="1" direction="DirOut">
+  <ports id="8" name="B_V_last_V" type="PortType" coreId="1684367459" bitwidth="1" direction="DirOut">
     <dataInputObjs>write</dataInputObjs>
   </ports>
-  <ports id="9" name="control" type="PortType" coreName="RAM_1P" coreId="840975438" bitwidth="32" iftype="IfTypeRegister" arraysize="6">
+  <ports id="9" name="control" type="PortType" coreName="RAM_1P" coreId="1634887022" bitwidth="32" iftype="IfTypeRegister" arraysize="6">
     <dataOutputObjs>getelementptr</dataOutputObjs>
     <dataOutputObjs>getelementptr</dataOutputObjs>
     <dataOutputObjs>getelementptr</dataOutputObjs>
     <dataOutputObjs>getelementptr</dataOutputObjs>
   </ports>
-  <ports id="10" name="logger" type="PortType" coreName="RAM_1P" coreId="808464928" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="17">
+  <ports id="10" name="logger" type="PortType" coreName="RAM_1P" coreId="1701733735" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="17">
     <dataInputObjs>getelementptr</dataInputObjs>
     <dataInputObjs>getelementptr</dataInputObjs>
     <dataInputObjs>getelementptr</dataInputObjs>
@@ -214,7 +214,7 @@
       <dataInputObjs>A_V_last_V</dataInputObjs>
       <dataOutputObjs>extractvalue</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="26" name="tmp_data_V_3" lineNumber="293" originalName="tmp.data.V" fileName="/home/mklab/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h" fileDirectory=".." coreId="0" contextFuncName="read" bitwidth="80" opcode="extractvalue" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="26" name="tmp_data_V_3" lineNumber="293" originalName="tmp.data.V" fileName="/home/mklab/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h" fileDirectory=".." coreId="875650864" contextFuncName="read" bitwidth="80" opcode="extractvalue" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/home/mklab/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h" linenumber="293" fileDirectory="/home/mklab/workspace/foc" functionName="read"/>
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>trunc</dataOutputObjs>
@@ -222,30 +222,30 @@
       <dataOutputObjs>partselect</dataOutputObjs>
       <dataOutputObjs>partselect</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="27" name="Ia" lineNumber="30" originalName="Ia" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="Ia_fu_340_p1" coreId="0" contextFuncName="manual_control" bitwidth="16" opcode="trunc" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="27" name="Ia" lineNumber="30" originalName="Ia" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="Ia_fu_340_p1" coreId="1031040613" contextFuncName="manual_control" bitwidth="16" opcode="trunc" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="30" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
       <dataInputObjs>extractvalue</dataInputObjs>
       <dataOutputObjs>sext</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="Ib" lineNumber="31" originalName="Ib" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="Ib_reg_811" coreId="0" contextFuncName="manual_control" bitwidth="16" opcode="partselect" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="Ib" lineNumber="31" originalName="Ib" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="Ib_reg_811" coreId="536872592" contextFuncName="manual_control" bitwidth="16" opcode="partselect" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="31" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
       <dataInputObjs>extractvalue</dataInputObjs>
       <dataOutputObjs>sext</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="29" name="RPM" lineNumber="33" originalName="RPM" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="RPM_reg_816" coreId="1852142702" contextFuncName="manual_control" bitwidth="16" opcode="partselect" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="29" name="RPM" lineNumber="33" originalName="RPM" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="RPM_reg_816" coreId="1852793632" contextFuncName="manual_control" bitwidth="16" opcode="partselect" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="33" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
       <dataInputObjs>extractvalue</dataInputObjs>
       <dataOutputObjs>sext</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="30" name="Angle" lineNumber="34" originalName="Angle" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="Angle_fu_364_p4" coreId="539116877" contextFuncName="manual_control" bitwidth="16" opcode="partselect" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="30" name="Angle" lineNumber="34" originalName="Angle" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="Angle_fu_364_p4" coreId="1819243365" contextFuncName="manual_control" bitwidth="16" opcode="partselect" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="34" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
       <dataInputObjs>extractvalue</dataInputObjs>
       <dataOutputObjs>sext</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="31" name="sext_ln40" lineNumber="40" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="sext_ln40_fu_374_p1" coreId="1701273971" contextFuncName="manual_control" bitwidth="32" opcode="sext" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="31" name="sext_ln40" lineNumber="40" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="sext_ln40_fu_374_p1" coreId="875650864" contextFuncName="manual_control" bitwidth="32" opcode="sext" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="40" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
       <dataInputObjs>partselect</dataInputObjs>
       <dataOutputObjs>sitofp</dataOutputObjs>
@@ -255,7 +255,7 @@
       <dataInputObjs>sext</dataInputObjs>
       <dataOutputObjs>fsub</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="33" name="control_addr" lineNumber="40" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreId="1868980069" contextFuncName="manual_control" bitwidth="3" opcode="getelementptr" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="33" name="control_addr" lineNumber="40" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreId="1598312009" contextFuncName="manual_control" bitwidth="3" opcode="getelementptr" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="40" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
       <dataInputObjs>control</dataInputObjs>
       <dataOutputObjs>load</dataOutputObjs>
@@ -266,7 +266,7 @@
       <dataInputObjs>getelementptr</dataInputObjs>
       <dataOutputObjs>bitcast</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="35" name="bitcast_ln40" lineNumber="40" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="grp_fu_326_p1" coreId="1634755954" contextFuncName="manual_control" bitwidth="32" opcode="bitcast" nodeLabel="4.0" m_display="0" m_topoIndex="24" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="35" name="bitcast_ln40" lineNumber="40" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="grp_fu_326_p1" coreId="1630434403" contextFuncName="manual_control" bitwidth="32" opcode="bitcast" nodeLabel="4.0" m_display="0" m_topoIndex="24" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="40" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>fsub</dataOutputObjs>
@@ -277,44 +277,44 @@
       <dataInputObjs>bitcast</dataInputObjs>
       <dataOutputObjs>bitcast</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="37" name="data_V" lineNumber="315" originalName="data.V" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="data_V_fu_567_p1" coreId="666934240" contextFuncName="fp_struct" bitwidth="32" opcode="bitcast" nodeLabel="8.0" m_display="0" m_topoIndex="64" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="37" name="data_V" lineNumber="315" originalName="data.V" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="data_V_fu_567_p1" coreId="1848535907" contextFuncName="fp_struct" bitwidth="32" opcode="bitcast" nodeLabel="8.0" m_display="0" m_topoIndex="64" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" linenumber="315" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="fp_struct"/>
       <dataInputObjs>fsub</dataInputObjs>
       <dataOutputObjs>bitselect</dataOutputObjs>
       <dataOutputObjs>partselect</dataOutputObjs>
       <dataOutputObjs>trunc</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="38" name="p_Result_s" lineNumber="803" originalName="__Result__" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="p_Result_s_fu_570_p3" coreId="1850286653" contextFuncName="operator_assign" bitwidth="1" opcode="bitselect" nodeLabel="8.0" m_display="0" m_topoIndex="65" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="38" name="p_Result_s" lineNumber="803" originalName="__Result__" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="p_Result_s_fu_570_p3" coreId="1852383271" contextFuncName="operator_assign" bitwidth="1" opcode="bitselect" nodeLabel="8.0" m_display="0" m_topoIndex="65" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_int_ref.h" linenumber="803" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="operator="/>
       <dataInputObjs>bitcast</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="39" name="tmp_37" lineNumber="628" originalName="tmp" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="tmp_37_fu_578_p4" coreId="96" contextFuncName="get" bitwidth="8" opcode="partselect" nodeLabel="8.0" m_display="0" m_topoIndex="66" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="39" name="tmp_37" lineNumber="628" originalName="tmp" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="tmp_37_fu_578_p4" coreId="0" contextFuncName="get" bitwidth="8" opcode="partselect" nodeLabel="8.0" m_display="0" m_topoIndex="66" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_int_ref.h" linenumber="628" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="get"/>
       <dataInputObjs>bitcast</dataInputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
       <dataOutputObjs>sub</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="40" name="tmp_38" lineNumber="628" originalName="tmp" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="tmp_38_fu_588_p1" coreId="1869570592" contextFuncName="get" bitwidth="23" opcode="trunc" nodeLabel="8.0" m_display="0" m_topoIndex="67" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="40" name="tmp_38" lineNumber="628" originalName="tmp" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="tmp_38_fu_588_p1" coreId="0" contextFuncName="get" bitwidth="23" opcode="trunc" nodeLabel="8.0" m_display="0" m_topoIndex="67" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_int_ref.h" linenumber="628" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="get"/>
       <dataInputObjs>bitcast</dataInputObjs>
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="41" name="mantissa" lineNumber="691" originalName="mantissa" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="mantissa_fu_592_p4" coreId="1684959075" contextFuncName="operator_assign_24_1_false_AP_TRN_AP_WRAP_0" bitwidth="25" opcode="bitconcatenate" nodeLabel="8.0" m_display="0" m_topoIndex="68" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="41" name="mantissa" lineNumber="691" originalName="mantissa" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="mantissa_fu_592_p4" coreId="0" contextFuncName="operator_assign_24_1_false_AP_TRN_AP_WRAP_0" bitwidth="25" opcode="bitconcatenate" nodeLabel="8.0" m_display="0" m_topoIndex="68" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" linenumber="691" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="operator=&amp;lt;24, 1, false, AP_TRN, AP_WRAP, 0&amp;gt;"/>
       <dataInputObjs>trunc</dataInputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="42" name="zext_ln15" lineNumber="15" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="zext_ln15_fu_602_p1" coreId="666937840" contextFuncName="generic_cast_IEEE754_short_AP_TRN_ZERO_float_s" bitwidth="63" opcode="zext" nodeLabel="8.0" m_display="0" m_topoIndex="69" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="42" name="zext_ln15" lineNumber="15" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="zext_ln15_fu_602_p1" coreId="4294967295" contextFuncName="generic_cast_IEEE754_short_AP_TRN_ZERO_float_s" bitwidth="63" opcode="zext" nodeLabel="8.0" m_display="0" m_topoIndex="69" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h" linenumber="15" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="generic_cast_IEEE754&amp;lt;short, AP_TRN_ZERO, float&amp;gt;"/>
       <dataInputObjs>bitconcatenate</dataInputObjs>
       <dataOutputObjs>lshr</dataOutputObjs>
       <dataOutputObjs>shl</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="43" name="zext_ln344" lineNumber="344" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="zext_ln344_fu_606_p1" coreId="666944800" contextFuncName="expv" bitwidth="9" opcode="zext" nodeLabel="8.0" m_display="0" m_topoIndex="70" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="43" name="zext_ln344" lineNumber="344" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="zext_ln344_fu_606_p1" coreId="3100683720" contextFuncName="expv" bitwidth="9" opcode="zext" nodeLabel="8.0" m_display="0" m_topoIndex="70" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" linenumber="344" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="expv"/>
       <dataInputObjs>partselect</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
@@ -326,7 +326,7 @@
       <dataOutputObjs>select</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="45" name="isNeg" lineNumber="1363" originalName="isNeg" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="isNeg_fu_616_p3" coreId="666946144" contextFuncName="operator_ls" bitwidth="1" opcode="bitselect" nodeLabel="8.0" m_display="0" m_topoIndex="72" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="45" name="isNeg" lineNumber="1363" originalName="isNeg" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="isNeg_fu_616_p3" coreId="3100685640" contextFuncName="operator_ls" bitwidth="1" opcode="bitselect" nodeLabel="8.0" m_display="0" m_topoIndex="72" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" linenumber="1363" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="operator&amp;lt;&amp;lt;"/>
       <dataInputObjs>add</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
@@ -339,7 +339,7 @@
       <dataOutputObjs>sext</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="47" name="sext_ln1364" lineNumber="1364" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="sext_ln1364_fu_630_p1" coreId="639659892" contextFuncName="operator_ls" bitwidth="9" opcode="sext" nodeLabel="8.0" m_display="0" m_topoIndex="74" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="47" name="sext_ln1364" lineNumber="1364" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="sext_ln1364_fu_630_p1" coreId="795111282" contextFuncName="operator_ls" bitwidth="9" opcode="sext" nodeLabel="8.0" m_display="0" m_topoIndex="74" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" linenumber="1364" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="operator&amp;lt;&amp;lt;"/>
       <dataInputObjs>sub</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
@@ -351,12 +351,12 @@
       <dataInputObjs>add</dataInputObjs>
       <dataOutputObjs>sext</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="49" name="sext_ln1340" lineNumber="1340" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="sext_ln1340_fu_642_p1" coreId="574453865" contextFuncName="operator_rs" bitwidth="32" opcode="sext" nodeLabel="8.0" m_display="0" m_topoIndex="76" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="49" name="sext_ln1340" lineNumber="1340" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="sext_ln1340_fu_642_p1" coreId="543649385" contextFuncName="operator_rs" bitwidth="32" opcode="sext" nodeLabel="8.0" m_display="0" m_topoIndex="76" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" linenumber="1340" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="operator&amp;gt;&amp;gt;"/>
       <dataInputObjs>select</dataInputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="50" name="zext_ln1340" lineNumber="1340" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="zext_ln1340_fu_646_p1" coreId="645165934" contextFuncName="operator_rs" bitwidth="63" opcode="zext" nodeLabel="8.0" m_display="0" m_topoIndex="77" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="50" name="zext_ln1340" lineNumber="1340" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="zext_ln1340_fu_646_p1" coreId="1849309796" contextFuncName="operator_rs" bitwidth="63" opcode="zext" nodeLabel="8.0" m_display="0" m_topoIndex="77" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" linenumber="1340" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="operator&amp;gt;&amp;gt;"/>
       <dataInputObjs>sext</dataInputObjs>
       <dataOutputObjs>lshr</dataOutputObjs>
@@ -374,18 +374,18 @@
       <dataInputObjs>zext</dataInputObjs>
       <dataOutputObjs>partselect</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="53" name="tmp" lineNumber="671" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="tmp_fu_662_p3" coreId="1030647657" contextFuncName="operator_assign_63_39_false_AP_TRN_AP_WRAP_0" bitwidth="1" opcode="bitselect" nodeLabel="8.0" m_display="0" m_topoIndex="80" m_clusterGroupNumber="1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="53" name="tmp" lineNumber="671" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="tmp_fu_662_p3" coreId="1030185332" contextFuncName="operator_assign_63_39_false_AP_TRN_AP_WRAP_0" bitwidth="1" opcode="bitselect" nodeLabel="8.0" m_display="0" m_topoIndex="80" m_clusterGroupNumber="1">
       <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" linenumber="671" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="operator=&amp;lt;63, 39, false, AP_TRN, AP_WRAP, 0&amp;gt;"/>
       <dataInputObjs>lshr</dataInputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="54" name="zext_ln671" lineNumber="671" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="zext_ln671_fu_670_p1" coreId="1600742514" contextFuncName="operator_assign_63_39_false_AP_TRN_AP_WRAP_0" bitwidth="16" opcode="zext" nodeLabel="8.0" m_display="0" m_topoIndex="81" m_clusterGroupNumber="1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="54" name="zext_ln671" lineNumber="671" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="zext_ln671_fu_670_p1" coreId="1747936357" contextFuncName="operator_assign_63_39_false_AP_TRN_AP_WRAP_0" bitwidth="16" opcode="zext" nodeLabel="8.0" m_display="0" m_topoIndex="81" m_clusterGroupNumber="1">
       <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" linenumber="671" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="operator=&amp;lt;63, 39, false, AP_TRN, AP_WRAP, 0&amp;gt;"/>
       <dataInputObjs>bitselect</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="55" name="tmp_16" lineNumber="671" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="tmp_16_fu_674_p4" coreId="1970435187" contextFuncName="operator_assign_63_39_false_AP_TRN_AP_WRAP_0" bitwidth="16" opcode="partselect" nodeLabel="8.0" m_display="0" m_topoIndex="82" m_clusterGroupNumber="1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="55" name="tmp_16" lineNumber="671" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="tmp_16_fu_674_p4" coreId="640232052" contextFuncName="operator_assign_63_39_false_AP_TRN_AP_WRAP_0" bitwidth="16" opcode="partselect" nodeLabel="8.0" m_display="0" m_topoIndex="82" m_clusterGroupNumber="1">
       <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" linenumber="671" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="operator=&amp;lt;63, 39, false, AP_TRN, AP_WRAP, 0&amp;gt;"/>
       <dataInputObjs>shl</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
@@ -414,7 +414,7 @@
       <dataOutputObjs>add</dataOutputObjs>
       <dataOutputObjs>select</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="59" name="tmp_30" lineNumber="42" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="tmp_30_fu_706_p3" coreId="997485606" contextFuncName="manual_control" bitwidth="1" opcode="bitselect" nodeLabel="8.0" m_display="0" m_topoIndex="86" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="59" name="tmp_30" lineNumber="42" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="tmp_30_fu_706_p3" coreId="1936028192" contextFuncName="manual_control" bitwidth="1" opcode="bitselect" nodeLabel="8.0" m_display="0" m_topoIndex="86" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="42" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
       <dataInputObjs>select</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
@@ -454,7 +454,7 @@
       <dataInputObjs>select</dataInputObjs>
       <dataOutputObjs>sext</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="65" name="sext_ln48" lineNumber="48" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="grp_fu_333_p0" coreId="1852399472" contextFuncName="manual_control" bitwidth="32" opcode="sext" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="65" name="sext_ln48" lineNumber="48" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="grp_fu_333_p0" coreId="1953392928" contextFuncName="manual_control" bitwidth="32" opcode="sext" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="48" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
       <dataInputObjs>trunc</dataInputObjs>
       <dataOutputObjs>sitofp</dataOutputObjs>
@@ -464,12 +464,12 @@
       <dataInputObjs>sext</dataInputObjs>
       <dataOutputObjs>bitcast</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="67" name="bitcast_ln48" lineNumber="48" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="bitcast_ln48_fu_388_p1" coreId="1885415027" contextFuncName="manual_control" bitwidth="32" opcode="bitcast" nodeLabel="3.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="67" name="bitcast_ln48" lineNumber="48" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="bitcast_ln48_fu_388_p1" coreId="1830839397" contextFuncName="manual_control" bitwidth="32" opcode="bitcast" nodeLabel="3.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="48" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
       <dataInputObjs>sitofp</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="68" name="logger_addr" lineNumber="48" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreId="1730556982" contextFuncName="manual_control" bitwidth="5" opcode="getelementptr" nodeLabel="3.0" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="68" name="logger_addr" lineNumber="48" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreId="979725673" contextFuncName="manual_control" bitwidth="5" opcode="getelementptr" nodeLabel="3.0" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="48" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
       <dataOutputObjs>logger</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
@@ -480,7 +480,7 @@
       <dataInputObjs>bitcast</dataInputObjs>
       <dataInputObjs>getelementptr</dataInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="70" name="sext_ln49" lineNumber="49" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="sext_ln49_fu_384_p1" coreId="1634615586" contextFuncName="manual_control" bitwidth="32" opcode="sext" nodeLabel="1.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="70" name="sext_ln49" lineNumber="49" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="sext_ln49_fu_384_p1" coreId="841966703" contextFuncName="manual_control" bitwidth="32" opcode="sext" nodeLabel="1.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="49" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
       <dataInputObjs>partselect</dataInputObjs>
       <dataOutputObjs>sitofp</dataOutputObjs>
@@ -490,7 +490,7 @@
       <dataInputObjs>sext</dataInputObjs>
       <dataOutputObjs>bitcast</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="72" name="bitcast_ln49" lineNumber="49" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="bitcast_ln49_fu_397_p1" coreId="1701998624" contextFuncName="manual_control" bitwidth="32" opcode="bitcast" nodeLabel="4.0" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="72" name="bitcast_ln49" lineNumber="49" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="bitcast_ln49_fu_397_p1" coreId="1885414944" contextFuncName="manual_control" bitwidth="32" opcode="bitcast" nodeLabel="4.0" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="49" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
       <dataInputObjs>sitofp</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
@@ -506,7 +506,7 @@
       <dataInputObjs>bitcast</dataInputObjs>
       <dataInputObjs>getelementptr</dataInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="75" name="sext_ln50" lineNumber="50" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="sext_ln50_fu_538_p1" coreId="842479155" contextFuncName="manual_control" bitwidth="32" opcode="sext" nodeLabel="5.0" m_display="0" m_topoIndex="50" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="75" name="sext_ln50" lineNumber="50" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="sext_ln50_fu_538_p1" coreId="1819167010" contextFuncName="manual_control" bitwidth="32" opcode="sext" nodeLabel="5.0" m_display="0" m_topoIndex="50" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="50" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
       <dataInputObjs>partselect</dataInputObjs>
       <dataOutputObjs>sitofp</dataOutputObjs>
@@ -516,12 +516,12 @@
       <dataInputObjs>sext</dataInputObjs>
       <dataOutputObjs>bitcast</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="77" name="bitcast_ln50" lineNumber="50" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="bitcast_ln50_fu_728_p1" coreId="1685353275" contextFuncName="manual_control" bitwidth="32" opcode="bitcast" nodeLabel="8.0" m_display="0" m_topoIndex="89" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="77" name="bitcast_ln50" lineNumber="50" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="bitcast_ln50_fu_728_p1" coreId="1869375008" contextFuncName="manual_control" bitwidth="32" opcode="bitcast" nodeLabel="8.0" m_display="0" m_topoIndex="89" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="50" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
       <dataInputObjs>sitofp</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="78" name="logger_addr_18" lineNumber="50" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreId="1597583711" contextFuncName="manual_control" bitwidth="5" opcode="getelementptr" nodeLabel="8.0" m_display="0" m_topoIndex="90" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="78" name="logger_addr_18" lineNumber="50" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreId="1397508130" contextFuncName="manual_control" bitwidth="5" opcode="getelementptr" nodeLabel="8.0" m_display="0" m_topoIndex="90" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="50" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
       <dataOutputObjs>logger</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
@@ -532,7 +532,7 @@
       <dataInputObjs>bitcast</dataInputObjs>
       <dataInputObjs>getelementptr</dataInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="80" name="sext_ln51" lineNumber="51" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="sext_ln51_fu_762_p1" coreId="997420912" contextFuncName="manual_control" bitwidth="32" opcode="sext" nodeLabel="9.0" m_display="0" m_topoIndex="98" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="80" name="sext_ln51" lineNumber="51" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="sext_ln51_fu_762_p1" coreId="1937338479" contextFuncName="manual_control" bitwidth="32" opcode="sext" nodeLabel="9.0" m_display="0" m_topoIndex="98" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="51" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
       <dataInputObjs>select</dataInputObjs>
       <dataOutputObjs>sitofp</dataOutputObjs>
@@ -542,12 +542,12 @@
       <dataInputObjs>sext</dataInputObjs>
       <dataOutputObjs>bitcast</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="82" name="bitcast_ln51" lineNumber="51" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="bitcast_ln51_fu_806_p1" coreId="1818850658" contextFuncName="manual_control" bitwidth="32" opcode="bitcast" nodeLabel="12.0" m_display="0" m_topoIndex="116" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="82" name="bitcast_ln51" lineNumber="51" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="bitcast_ln51_fu_806_p1" coreId="1226980729" contextFuncName="manual_control" bitwidth="32" opcode="bitcast" nodeLabel="12.0" m_display="0" m_topoIndex="116" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="51" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
       <dataInputObjs>sitofp</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="83" name="logger_addr_19" lineNumber="51" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreId="544108393" contextFuncName="manual_control" bitwidth="5" opcode="getelementptr" nodeLabel="12.0" m_display="0" m_topoIndex="117" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="83" name="logger_addr_19" lineNumber="51" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreId="1702258035" contextFuncName="manual_control" bitwidth="5" opcode="getelementptr" nodeLabel="12.0" m_display="0" m_topoIndex="117" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="51" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
       <dataOutputObjs>logger</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
@@ -558,7 +558,7 @@
       <dataInputObjs>bitcast</dataInputObjs>
       <dataInputObjs>getelementptr</dataInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="85" name="control_addr_2" lineNumber="55" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreId="1699560457" contextFuncName="manual_control" bitwidth="3" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="85" name="control_addr_2" lineNumber="55" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreId="574451311" contextFuncName="manual_control" bitwidth="3" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="55" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
       <dataInputObjs>control</dataInputObjs>
       <dataOutputObjs>load</dataOutputObjs>
@@ -569,12 +569,12 @@
       <dataInputObjs>getelementptr</dataInputObjs>
       <dataOutputObjs>bitcast</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="87" name="Vd" lineNumber="55" originalName="Vd" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="Vd_fu_542_p1" coreId="1869833586" contextFuncName="manual_control" bitwidth="32" opcode="bitcast" nodeLabel="5.0" m_display="0" m_topoIndex="52" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="87" name="Vd" lineNumber="55" originalName="Vd" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="Vd_fu_542_p1" coreId="1936484392" contextFuncName="manual_control" bitwidth="32" opcode="bitcast" nodeLabel="5.0" m_display="0" m_topoIndex="52" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="55" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="88" name="control_addr_3" lineNumber="56" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreId="1043276322" contextFuncName="manual_control" bitwidth="3" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="88" name="control_addr_3" lineNumber="56" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreId="1932407862" contextFuncName="manual_control" bitwidth="3" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="56" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
       <dataInputObjs>control</dataInputObjs>
       <dataOutputObjs>load</dataOutputObjs>
@@ -585,12 +585,12 @@
       <dataInputObjs>getelementptr</dataInputObjs>
       <dataOutputObjs>bitcast</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="90" name="Vq" lineNumber="56" originalName="Vq" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="Vq_fu_546_p1" coreId="997420912" contextFuncName="manual_control" bitwidth="32" opcode="bitcast" nodeLabel="5.0" m_display="0" m_topoIndex="53" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="90" name="Vq" lineNumber="56" originalName="Vq" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="Vq_fu_546_p1" coreId="644702565" contextFuncName="manual_control" bitwidth="32" opcode="bitcast" nodeLabel="5.0" m_display="0" m_topoIndex="53" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="56" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="91" name="control_addr_4" lineNumber="57" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreId="1730555960" contextFuncName="manual_control" bitwidth="3" opcode="getelementptr" nodeLabel="3.0" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="91" name="control_addr_4" lineNumber="57" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreId="997484326" contextFuncName="manual_control" bitwidth="3" opcode="getelementptr" nodeLabel="3.0" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="57" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
       <dataInputObjs>control</dataInputObjs>
       <dataOutputObjs>load</dataOutputObjs>
@@ -603,37 +603,37 @@
       <dataOutputObjs>partselect</dataOutputObjs>
       <dataOutputObjs>trunc</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="93" name="p_Result_6" lineNumber="803" originalName="__Result__" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="p_Result_6_fu_402_p3" coreId="576532535" contextFuncName="operator_assign" bitwidth="1" opcode="bitselect" nodeLabel="4.0" m_display="0" m_topoIndex="29" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="93" name="p_Result_6" lineNumber="803" originalName="__Result__" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="p_Result_6_fu_402_p3" coreId="1634038388" contextFuncName="operator_assign" bitwidth="1" opcode="bitselect" nodeLabel="4.0" m_display="0" m_topoIndex="29" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_int_ref.h" linenumber="803" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="operator="/>
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="94" name="tmp_39" lineNumber="628" originalName="tmp" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="tmp_39_fu_410_p4" coreId="778135408" contextFuncName="get" bitwidth="8" opcode="partselect" nodeLabel="4.0" m_display="0" m_topoIndex="30" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="94" name="tmp_39" lineNumber="628" originalName="tmp" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="tmp_39_fu_410_p4" coreId="807414892" contextFuncName="get" bitwidth="8" opcode="partselect" nodeLabel="4.0" m_display="0" m_topoIndex="30" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_int_ref.h" linenumber="628" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="get"/>
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
       <dataOutputObjs>sub</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="95" name="tmp_40" lineNumber="628" originalName="tmp" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="tmp_40_fu_420_p1" coreId="1630499951" contextFuncName="get" bitwidth="23" opcode="trunc" nodeLabel="4.0" m_display="0" m_topoIndex="31" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="95" name="tmp_40" lineNumber="628" originalName="tmp" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="tmp_40_fu_420_p1" coreId="791158843" contextFuncName="get" bitwidth="23" opcode="trunc" nodeLabel="4.0" m_display="0" m_topoIndex="31" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_int_ref.h" linenumber="628" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="get"/>
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="96" name="mantissa_4" lineNumber="691" originalName="mantissa" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="mantissa_4_fu_424_p4" coreId="543516513" contextFuncName="operator_assign_24_1_false_AP_TRN_AP_WRAP_0" bitwidth="25" opcode="bitconcatenate" nodeLabel="4.0" m_display="0" m_topoIndex="32" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="96" name="mantissa_4" lineNumber="691" originalName="mantissa" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="mantissa_4_fu_424_p4" coreId="1702043749" contextFuncName="operator_assign_24_1_false_AP_TRN_AP_WRAP_0" bitwidth="25" opcode="bitconcatenate" nodeLabel="4.0" m_display="0" m_topoIndex="32" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" linenumber="691" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="operator=&amp;lt;24, 1, false, AP_TRN, AP_WRAP, 0&amp;gt;"/>
       <dataInputObjs>trunc</dataInputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="97" name="zext_ln15_4" lineNumber="15" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="zext_ln15_4_fu_434_p1" coreId="875639328" contextFuncName="generic_cast_IEEE754_short_AP_TRN_ZERO_float_s" bitwidth="63" opcode="zext" nodeLabel="4.0" m_display="0" m_topoIndex="33" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="97" name="zext_ln15_4" lineNumber="15" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="zext_ln15_4_fu_434_p1" coreId="1764648302" contextFuncName="generic_cast_IEEE754_short_AP_TRN_ZERO_float_s" bitwidth="63" opcode="zext" nodeLabel="4.0" m_display="0" m_topoIndex="33" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h" linenumber="15" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="generic_cast_IEEE754&amp;lt;short, AP_TRN_ZERO, float&amp;gt;"/>
       <dataInputObjs>bitconcatenate</dataInputObjs>
       <dataOutputObjs>lshr</dataOutputObjs>
       <dataOutputObjs>shl</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="98" name="zext_ln344_4" lineNumber="344" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="zext_ln344_4_fu_438_p1" coreId="1836477548" contextFuncName="expv" bitwidth="9" opcode="zext" nodeLabel="4.0" m_display="0" m_topoIndex="34" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="98" name="zext_ln344_4" lineNumber="344" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="zext_ln344_4_fu_438_p1" coreId="745305392" contextFuncName="expv" bitwidth="9" opcode="zext" nodeLabel="4.0" m_display="0" m_topoIndex="34" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" linenumber="344" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="expv"/>
       <dataInputObjs>partselect</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
@@ -645,7 +645,7 @@
       <dataOutputObjs>select</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="100" name="isNeg_4" lineNumber="1363" originalName="isNeg" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="isNeg_4_fu_448_p3" coreId="997485606" contextFuncName="operator_ls" bitwidth="1" opcode="bitselect" nodeLabel="4.0" m_display="0" m_topoIndex="36" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="100" name="isNeg_4" lineNumber="1363" originalName="isNeg" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="isNeg_4_fu_448_p3" coreId="1179535650" contextFuncName="operator_ls" bitwidth="1" opcode="bitselect" nodeLabel="4.0" m_display="0" m_topoIndex="36" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" linenumber="1363" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="operator&amp;lt;&amp;lt;"/>
       <dataInputObjs>add</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
@@ -658,7 +658,7 @@
       <dataOutputObjs>sext</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="102" name="sext_ln1364_4" lineNumber="1364" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="sext_ln1364_4_fu_462_p1" coreId="673201011" contextFuncName="operator_ls" bitwidth="9" opcode="sext" nodeLabel="4.0" m_display="0" m_topoIndex="38" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="102" name="sext_ln1364_4" lineNumber="1364" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="sext_ln1364_4_fu_462_p1" coreId="1952675186" contextFuncName="operator_ls" bitwidth="9" opcode="sext" nodeLabel="4.0" m_display="0" m_topoIndex="38" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" linenumber="1364" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="operator&amp;lt;&amp;lt;"/>
       <dataInputObjs>sub</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
@@ -670,12 +670,12 @@
       <dataInputObjs>add</dataInputObjs>
       <dataOutputObjs>sext</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="104" name="sext_ln1340_4" lineNumber="1340" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="sext_ln1340_4_fu_474_p1" coreId="574452846" contextFuncName="operator_rs" bitwidth="32" opcode="sext" nodeLabel="4.0" m_display="0" m_topoIndex="40" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="104" name="sext_ln1340_4" lineNumber="1340" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="sext_ln1340_4_fu_474_p1" coreId="1835627552" contextFuncName="operator_rs" bitwidth="32" opcode="sext" nodeLabel="4.0" m_display="0" m_topoIndex="40" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" linenumber="1340" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="operator&amp;gt;&amp;gt;"/>
       <dataInputObjs>select</dataInputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="105" name="zext_ln1340_4" lineNumber="1340" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="zext_ln1340_4_fu_478_p1" coreId="1868771122" contextFuncName="operator_rs" bitwidth="63" opcode="zext" nodeLabel="4.0" m_display="0" m_topoIndex="41" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="105" name="zext_ln1340_4" lineNumber="1340" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="zext_ln1340_4_fu_478_p1" coreId="1330926913" contextFuncName="operator_rs" bitwidth="63" opcode="zext" nodeLabel="4.0" m_display="0" m_topoIndex="41" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" linenumber="1340" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="operator&amp;gt;&amp;gt;"/>
       <dataInputObjs>sext</dataInputObjs>
       <dataOutputObjs>lshr</dataOutputObjs>
@@ -693,18 +693,18 @@
       <dataInputObjs>zext</dataInputObjs>
       <dataOutputObjs>partselect</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="108" name="tmp_36" lineNumber="671" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="tmp_36_fu_494_p3" coreId="1814459502" contextFuncName="operator_assign_63_39_false_AP_TRN_AP_WRAP_0" bitwidth="1" opcode="bitselect" nodeLabel="4.0" m_display="0" m_topoIndex="44" m_clusterGroupNumber="2">
+    <node_objs xsi:type="cdfg:CdfgNode" id="108" name="tmp_36" lineNumber="671" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="tmp_36_fu_494_p3" coreId="1948264755" contextFuncName="operator_assign_63_39_false_AP_TRN_AP_WRAP_0" bitwidth="1" opcode="bitselect" nodeLabel="4.0" m_display="0" m_topoIndex="44" m_clusterGroupNumber="2">
       <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" linenumber="671" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="operator=&amp;lt;63, 39, false, AP_TRN, AP_WRAP, 0&amp;gt;"/>
       <dataInputObjs>lshr</dataInputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="109" name="zext_ln671_4" lineNumber="671" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="zext_ln671_4_fu_502_p1" coreId="825045040" contextFuncName="operator_assign_63_39_false_AP_TRN_AP_WRAP_0" bitwidth="10" opcode="zext" nodeLabel="4.0" m_display="0" m_topoIndex="45" m_clusterGroupNumber="2">
+    <node_objs xsi:type="cdfg:CdfgNode" id="109" name="zext_ln671_4" lineNumber="671" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="zext_ln671_4_fu_502_p1" coreId="1633820723" contextFuncName="operator_assign_63_39_false_AP_TRN_AP_WRAP_0" bitwidth="10" opcode="zext" nodeLabel="4.0" m_display="0" m_topoIndex="45" m_clusterGroupNumber="2">
       <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" linenumber="671" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="operator=&amp;lt;63, 39, false, AP_TRN, AP_WRAP, 0&amp;gt;"/>
       <dataInputObjs>bitselect</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="110" name="tmp_18" lineNumber="671" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="tmp_18_fu_506_p4" coreId="1633905012" contextFuncName="operator_assign_63_39_false_AP_TRN_AP_WRAP_0" bitwidth="10" opcode="partselect" nodeLabel="4.0" m_display="0" m_topoIndex="46" m_clusterGroupNumber="2">
+    <node_objs xsi:type="cdfg:CdfgNode" id="110" name="tmp_18" lineNumber="671" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="tmp_18_fu_506_p4" coreId="1948283493" contextFuncName="operator_assign_63_39_false_AP_TRN_AP_WRAP_0" bitwidth="10" opcode="partselect" nodeLabel="4.0" m_display="0" m_topoIndex="46" m_clusterGroupNumber="2">
       <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h" linenumber="671" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="operator=&amp;lt;63, 39, false, AP_TRN, AP_WRAP, 0&amp;gt;"/>
       <dataInputObjs>shl</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
@@ -731,7 +731,7 @@
       <dataInputObjs>select</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="114" name="call_ret" lineNumber="62" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="grp_park_inverse_float_s_fu_302" coreId="1633820725" contextFuncName="manual_control" bitwidth="64" opcode="call" nodeLabel="5.0" nodeLatency="1" m_display="0" m_delay="7.01" m_topoIndex="54" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="114" name="call_ret" lineNumber="62" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="grp_park_inverse_float_s_fu_302" coreId="573978933" contextFuncName="manual_control" bitwidth="64" opcode="call" nodeLabel="5.0" nodeLatency="1" m_display="0" m_delay="7.01" m_topoIndex="54" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="62" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
       <dataInputObjs>bitcast</dataInputObjs>
       <dataInputObjs>bitcast</dataInputObjs>
@@ -740,24 +740,24 @@
       <dataOutputObjs>extractvalue</dataOutputObjs>
       <constName>park_inverse_float_s</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="115" name="Valpha" lineNumber="62" originalName="Valpha" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreId="1702064225" contextFuncName="manual_control" bitwidth="32" opcode="extractvalue" nodeLabel="6.0" m_display="0" m_topoIndex="55" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="115" name="Valpha" lineNumber="62" originalName="Valpha" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreId="1279810338" contextFuncName="manual_control" bitwidth="32" opcode="extractvalue" nodeLabel="6.0" m_display="0" m_topoIndex="55" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="62" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
       <dataInputObjs>call</dataInputObjs>
       <dataOutputObjs>bitcast</dataOutputObjs>
       <dataOutputObjs>call</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="116" name="Vbeta" lineNumber="62" originalName="Vbeta" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreId="574967113" contextFuncName="manual_control" bitwidth="32" opcode="extractvalue" nodeLabel="6.0" m_display="0" m_topoIndex="56" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="116" name="Vbeta" lineNumber="62" originalName="Vbeta" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreId="1734439795" contextFuncName="manual_control" bitwidth="32" opcode="extractvalue" nodeLabel="6.0" m_display="0" m_topoIndex="56" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="62" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
       <dataInputObjs>call</dataInputObjs>
       <dataOutputObjs>bitcast</dataOutputObjs>
       <dataOutputObjs>call</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="117" name="bitcast_ln63" lineNumber="63" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="bitcast_ln63_fu_558_p1" coreId="2003790907" contextFuncName="manual_control" bitwidth="32" opcode="bitcast" nodeLabel="6.0" m_display="0" m_topoIndex="57" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="117" name="bitcast_ln63" lineNumber="63" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="bitcast_ln63_fu_558_p1" coreId="809120305" contextFuncName="manual_control" bitwidth="32" opcode="bitcast" nodeLabel="6.0" m_display="0" m_topoIndex="57" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="63" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
       <dataInputObjs>extractvalue</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="118" name="logger_addr_20" lineNumber="63" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreId="1701273971" contextFuncName="manual_control" bitwidth="5" opcode="getelementptr" nodeLabel="6.0" m_display="0" m_topoIndex="58" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="118" name="logger_addr_20" lineNumber="63" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreId="544108393" contextFuncName="manual_control" bitwidth="5" opcode="getelementptr" nodeLabel="6.0" m_display="0" m_topoIndex="58" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="63" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
       <dataOutputObjs>logger</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
@@ -768,12 +768,12 @@
       <dataInputObjs>bitcast</dataInputObjs>
       <dataInputObjs>getelementptr</dataInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="120" name="bitcast_ln64" lineNumber="64" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="bitcast_ln64_fu_563_p1" coreId="1279810338" contextFuncName="manual_control" bitwidth="32" opcode="bitcast" nodeLabel="7.0" m_display="0" m_topoIndex="60" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="120" name="bitcast_ln64" lineNumber="64" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="bitcast_ln64_fu_563_p1" coreId="861878577" contextFuncName="manual_control" bitwidth="32" opcode="bitcast" nodeLabel="7.0" m_display="0" m_topoIndex="60" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="64" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
       <dataInputObjs>extractvalue</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="121" name="logger_addr_21" lineNumber="64" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreId="1684368999" contextFuncName="manual_control" bitwidth="5" opcode="getelementptr" nodeLabel="7.0" m_display="0" m_topoIndex="61" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="121" name="logger_addr_21" lineNumber="64" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreId="1852139296" contextFuncName="manual_control" bitwidth="5" opcode="getelementptr" nodeLabel="7.0" m_display="0" m_topoIndex="61" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="64" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
       <dataOutputObjs>logger</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
@@ -784,7 +784,7 @@
       <dataInputObjs>bitcast</dataInputObjs>
       <dataInputObjs>getelementptr</dataInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="123" name="call_ret8" lineNumber="69" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="grp_clarke_inverse_float_s_fu_313" coreId="1226965108" contextFuncName="manual_control" bitwidth="96" opcode="call" nodeLabel="7.0" nodeLatency="1" m_display="0" m_delay="7.01" m_topoIndex="63" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="123" name="call_ret8" lineNumber="69" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="grp_clarke_inverse_float_s_fu_313" coreId="1920151347" contextFuncName="manual_control" bitwidth="96" opcode="call" nodeLabel="7.0" nodeLatency="1" m_display="0" m_delay="7.01" m_topoIndex="63" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="69" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
       <dataInputObjs>extractvalue</dataInputObjs>
       <dataInputObjs>extractvalue</dataInputObjs>
@@ -793,30 +793,30 @@
       <dataOutputObjs>extractvalue</dataOutputObjs>
       <constName>clarke_inverse_float_s</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="124" name="Va" lineNumber="69" originalName="Va" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreId="1869375016" contextFuncName="manual_control" bitwidth="32" opcode="extractvalue" nodeLabel="8.0" m_display="0" m_topoIndex="92" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="124" name="Va" lineNumber="69" originalName="Va" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreId="977171553" contextFuncName="manual_control" bitwidth="32" opcode="extractvalue" nodeLabel="8.0" m_display="0" m_topoIndex="92" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="69" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
       <dataInputObjs>call</dataInputObjs>
       <dataOutputObjs>bitcast</dataOutputObjs>
       <dataOutputObjs>call</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="125" name="Vb" lineNumber="69" originalName="Vb" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreId="1852793647" contextFuncName="manual_control" bitwidth="32" opcode="extractvalue" nodeLabel="8.0" m_display="0" m_topoIndex="93" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="125" name="Vb" lineNumber="69" originalName="Vb" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreId="1747874658" contextFuncName="manual_control" bitwidth="32" opcode="extractvalue" nodeLabel="8.0" m_display="0" m_topoIndex="93" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="69" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
       <dataInputObjs>call</dataInputObjs>
       <dataOutputObjs>bitcast</dataOutputObjs>
       <dataOutputObjs>call</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="126" name="Vc" lineNumber="69" originalName="Vc" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreId="1747858485" contextFuncName="manual_control" bitwidth="32" opcode="extractvalue" nodeLabel="8.0" m_display="0" m_topoIndex="94" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="126" name="Vc" lineNumber="69" originalName="Vc" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreId="2699322" contextFuncName="manual_control" bitwidth="32" opcode="extractvalue" nodeLabel="8.0" m_display="0" m_topoIndex="94" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="69" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
       <dataInputObjs>call</dataInputObjs>
       <dataOutputObjs>bitcast</dataOutputObjs>
       <dataOutputObjs>call</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="127" name="bitcast_ln70" lineNumber="70" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="bitcast_ln70_fu_767_p1" coreId="539568244" contextFuncName="manual_control" bitwidth="32" opcode="bitcast" nodeLabel="9.0" m_display="0" m_topoIndex="100" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="127" name="bitcast_ln70" lineNumber="70" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="bitcast_ln70_fu_767_p1" coreId="1885875828" contextFuncName="manual_control" bitwidth="32" opcode="bitcast" nodeLabel="9.0" m_display="0" m_topoIndex="100" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="70" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
       <dataInputObjs>extractvalue</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="128" name="logger_addr_22" lineNumber="70" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreId="536879616" contextFuncName="manual_control" bitwidth="5" opcode="getelementptr" nodeLabel="9.0" m_display="0" m_topoIndex="101" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="128" name="logger_addr_22" lineNumber="70" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreId="1868783433" contextFuncName="manual_control" bitwidth="5" opcode="getelementptr" nodeLabel="9.0" m_display="0" m_topoIndex="101" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="70" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
       <dataOutputObjs>logger</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
@@ -827,12 +827,12 @@
       <dataInputObjs>bitcast</dataInputObjs>
       <dataInputObjs>getelementptr</dataInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="130" name="bitcast_ln71" lineNumber="71" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="bitcast_ln71_fu_771_p1" coreId="1713927010" contextFuncName="manual_control" bitwidth="32" opcode="bitcast" nodeLabel="10.0" m_display="0" m_topoIndex="104" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="130" name="bitcast_ln71" lineNumber="71" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="bitcast_ln71_fu_771_p1" coreId="1920151395" contextFuncName="manual_control" bitwidth="32" opcode="bitcast" nodeLabel="10.0" m_display="0" m_topoIndex="104" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="71" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
       <dataInputObjs>extractvalue</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="131" name="logger_addr_23" lineNumber="71" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreId="1870014240" contextFuncName="manual_control" bitwidth="5" opcode="getelementptr" nodeLabel="10.0" m_display="0" m_topoIndex="105" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="131" name="logger_addr_23" lineNumber="71" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreId="1869182051" contextFuncName="manual_control" bitwidth="5" opcode="getelementptr" nodeLabel="10.0" m_display="0" m_topoIndex="105" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="71" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
       <dataOutputObjs>logger</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
@@ -843,12 +843,12 @@
       <dataInputObjs>bitcast</dataInputObjs>
       <dataInputObjs>getelementptr</dataInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="133" name="bitcast_ln72" lineNumber="72" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="bitcast_ln72_fu_802_p1" coreId="1713913460" contextFuncName="manual_control" bitwidth="32" opcode="bitcast" nodeLabel="11.0" m_display="0" m_topoIndex="113" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="133" name="bitcast_ln72" lineNumber="72" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="bitcast_ln72_fu_802_p1" coreId="1953459305" contextFuncName="manual_control" bitwidth="32" opcode="bitcast" nodeLabel="11.0" m_display="0" m_topoIndex="113" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="72" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
       <dataInputObjs>extractvalue</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="134" name="logger_addr_24" lineNumber="72" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreId="539437428" contextFuncName="manual_control" bitwidth="5" opcode="getelementptr" nodeLabel="11.0" m_display="0" m_topoIndex="114" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="134" name="logger_addr_24" lineNumber="72" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreId="1920234335" contextFuncName="manual_control" bitwidth="5" opcode="getelementptr" nodeLabel="11.0" m_display="0" m_topoIndex="114" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="72" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
       <dataOutputObjs>logger</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
@@ -859,7 +859,7 @@
       <dataInputObjs>bitcast</dataInputObjs>
       <dataInputObjs>getelementptr</dataInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="136" name="call_ret7" lineNumber="77" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="grp_SVPWM_float_s_fu_319" coreId="1713384490" contextFuncName="manual_control" bitwidth="48" opcode="call" nodeLabel="9.0" nodeLatency="1" m_display="0" m_delay="2.78" m_topoIndex="103" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="136" name="call_ret7" lineNumber="77" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="grp_SVPWM_float_s_fu_319" coreId="980642920" contextFuncName="manual_control" bitwidth="48" opcode="call" nodeLabel="9.0" nodeLatency="1" m_display="0" m_delay="2.78" m_topoIndex="103" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="77" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
       <dataInputObjs>extractvalue</dataInputObjs>
       <dataInputObjs>extractvalue</dataInputObjs>
@@ -869,29 +869,29 @@
       <dataOutputObjs>extractvalue</dataOutputObjs>
       <constName>SVPWM_float_s</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="137" name="pwm_a" lineNumber="77" originalName="pwm_a" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreId="542329928" contextFuncName="manual_control" bitwidth="16" opcode="extractvalue" nodeLabel="10.0" m_display="0" m_topoIndex="107" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="137" name="pwm_a" lineNumber="77" originalName="pwm_a" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreId="1835099506" contextFuncName="manual_control" bitwidth="16" opcode="extractvalue" nodeLabel="10.0" m_display="0" m_topoIndex="107" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="77" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
       <dataInputObjs>call</dataInputObjs>
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="138" name="pwm_b" lineNumber="77" originalName="pwm_b" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreId="1818765420" contextFuncName="manual_control" bitwidth="16" opcode="extractvalue" nodeLabel="10.0" m_display="0" m_topoIndex="108" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="138" name="pwm_b" lineNumber="77" originalName="pwm_b" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreId="1869375008" contextFuncName="manual_control" bitwidth="16" opcode="extractvalue" nodeLabel="10.0" m_display="0" m_topoIndex="108" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="77" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
       <dataInputObjs>call</dataInputObjs>
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="139" name="pwm_c" lineNumber="77" originalName="pwm_c" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreId="1668444975" contextFuncName="manual_control" bitwidth="16" opcode="extractvalue" nodeLabel="10.0" m_display="0" m_topoIndex="109" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="139" name="pwm_c" lineNumber="77" originalName="pwm_c" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreId="793988168" contextFuncName="manual_control" bitwidth="16" opcode="extractvalue" nodeLabel="10.0" m_display="0" m_topoIndex="109" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="77" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
       <dataInputObjs>call</dataInputObjs>
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="140" name="pwmStreamObj_data_V" lineNumber="82" originalName="pwmStreamObj.data.V" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="pwmStreamObj_data_V_fu_787_p4" coreId="1702113134" contextFuncName="manual_control" bitwidth="48" opcode="bitconcatenate" nodeLabel="10.0" m_display="0" m_topoIndex="110" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="140" name="pwmStreamObj_data_V" lineNumber="82" originalName="pwmStreamObj.data.V" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="pwmStreamObj_data_V_fu_787_p4" coreId="1869377390" contextFuncName="manual_control" bitwidth="48" opcode="bitconcatenate" nodeLabel="10.0" m_display="0" m_topoIndex="110" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="82" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
       <dataInputObjs>extractvalue</dataInputObjs>
       <dataInputObjs>extractvalue</dataInputObjs>
       <dataInputObjs>extractvalue</dataInputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="141" name="zext_ln82" lineNumber="82" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="B_TDATA" coreId="1919052140" contextFuncName="manual_control" bitwidth="64" opcode="zext" nodeLabel="10.0" m_display="0" m_topoIndex="111" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="141" name="zext_ln82" lineNumber="82" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." rtlName="B_TDATA" coreId="825438509" contextFuncName="manual_control" bitwidth="64" opcode="zext" nodeLabel="10.0" m_display="0" m_topoIndex="111" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="82" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
       <dataInputObjs>bitconcatenate</dataInputObjs>
       <dataOutputObjs>write</dataOutputObjs>
@@ -905,7 +905,7 @@
       <dataOutputObjs>B_V_last_V</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="143" name="_ln85" lineNumber="85" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreId="859465774" contextFuncName="manual_control" opcode="ret" nodeLabel="12.0" m_display="0" m_topoIndex="119" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="143" name="_ln85" lineNumber="85" fileName="foc-rewrite/apc/src/FOC/foc.cpp" fileDirectory=".." coreId="690648161" contextFuncName="manual_control" opcode="ret" nodeLabel="12.0" m_display="0" m_topoIndex="119" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/foc.cpp" linenumber="85" fileDirectory="/home/mklab/workspace/foc" functionName="manual_control"/>
     </node_objs>
     <fileValidLineNumbers fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h">

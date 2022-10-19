@@ -1,6 +1,6 @@
 `timescale 1 ns / 1 ps
 
-module foc_frontend_hls_deadlock_idx3_monitor ( // for module foc_frontend_foc_frontend_inst.grp_manual_control_fu_248
+module foc_frontend_hls_deadlock_idx3_monitor ( // for module foc_frontend_foc_frontend_inst.grp_manual_control_fu_244
     input wire clock,
     input wire reset,
     input wire [9:0] axis_block_sigs,

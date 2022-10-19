@@ -12,8 +12,8 @@ module foc_frontend_hls_deadlock_idx0_monitor ( // for module foc_frontend_foc_f
 // signal declare
 reg monitor_find_block;
 wire idx4_block;
-wire idx3_block;
 wire idx2_block;
+wire idx3_block;
 wire idx1_block;
 wire sub_parallel_block;
 wire all_sub_parallel_has_block;
@@ -49,15 +49,6 @@ end
     .block(idx4_block)
 );
 
- foc_frontend_hls_deadlock_idx3_monitor foc_frontend_hls_deadlock_idx3_monitor_U (
-    .clock(clock),
-    .reset(reset),
-    .axis_block_sigs(axis_block_sigs),
-    .inst_idle_sigs(inst_idle_sigs),
-    .inst_block_sigs(inst_block_sigs),
-    .block(idx3_block)
-);
-
  foc_frontend_hls_deadlock_idx2_monitor foc_frontend_hls_deadlock_idx2_monitor_U (
     .clock(clock),
     .reset(reset),
@@ -65,6 +56,15 @@ end
     .inst_idle_sigs(inst_idle_sigs),
     .inst_block_sigs(inst_block_sigs),
     .block(idx2_block)
+);
+
+ foc_frontend_hls_deadlock_idx3_monitor foc_frontend_hls_deadlock_idx3_monitor_U (
+    .clock(clock),
+    .reset(reset),
+    .axis_block_sigs(axis_block_sigs),
+    .inst_idle_sigs(inst_idle_sigs),
+    .inst_block_sigs(inst_block_sigs),
+    .block(idx3_block)
 );
 
 endmodule

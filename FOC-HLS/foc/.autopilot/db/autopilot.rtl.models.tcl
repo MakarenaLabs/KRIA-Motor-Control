@@ -31,11 +31,7 @@ set SynModuleInfo {
   {SRCNAME SVPWM<float> MODELNAME SVPWM_float_s RTLNAME foc_frontend_SVPWM_float_s}
   {SRCNAME torque_foc MODELNAME torque_foc RTLNAME foc_frontend_torque_foc}
   {SRCNAME manual_control MODELNAME manual_control RTLNAME foc_frontend_manual_control}
-  {SRCNAME foc MODELNAME foc RTLNAME foc_frontend_foc
-    SUBMODULES {
-      {MODELNAME foc_frontend_fsqrt_32ns_32ns_32_8_no_dsp_1 RTLNAME foc_frontend_fsqrt_32ns_32ns_32_8_no_dsp_1 BINDTYPE op TYPE fsqrt IMPL fabric LATENCY 7 ALLOW_PRAGMA 1}
-    }
-  }
+  {SRCNAME foc MODELNAME foc RTLNAME foc_frontend_foc}
   {SRCNAME calibration MODELNAME calibration RTLNAME foc_frontend_calibration}
   {SRCNAME foc_frontend MODELNAME foc_frontend RTLNAME foc_frontend IS_TOP 1
     SUBMODULES {

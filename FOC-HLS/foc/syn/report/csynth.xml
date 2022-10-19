@@ -20,21 +20,21 @@
         <SummaryOfOverallLatency>
             <unit>clock cycles</unit>
             <Best-caseLatency>4</Best-caseLatency>
-            <Average-caseLatency>92</Average-caseLatency>
-            <Worst-caseLatency>269</Worst-caseLatency>
+            <Average-caseLatency>78</Average-caseLatency>
+            <Worst-caseLatency>209</Worst-caseLatency>
             <Best-caseRealTimeLatency>40.000 ns</Best-caseRealTimeLatency>
-            <Average-caseRealTimeLatency>0.920 us</Average-caseRealTimeLatency>
-            <Worst-caseRealTimeLatency>2.690 us</Worst-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>0.780 us</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>2.090 us</Worst-caseRealTimeLatency>
             <Interval-min>5</Interval-min>
-            <Interval-max>270</Interval-max>
+            <Interval-max>210</Interval-max>
         </SummaryOfOverallLatency>
     </PerformanceEstimates>
     <AreaEstimates>
         <Resources>
             <BRAM_18K>21</BRAM_18K>
-            <DSP>239</DSP>
-            <FF>24501</FF>
-            <LUT>35185</LUT>
+            <DSP>241</DSP>
+            <FF>24484</FF>
+            <LUT>35124</LUT>
             <URAM>0</URAM>
         </Resources>
         <AvailableResources>
@@ -488,22 +488,22 @@
             <ModuleName>foc_frontend</ModuleName>
             <InstancesList>
                 <Instance>
-                    <InstName>grp_calibration_fu_180</InstName>
+                    <InstName>grp_calibration_fu_176</InstName>
                     <ModuleName>calibration</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>180</ID>
+                    <ID>176</ID>
                 </Instance>
                 <Instance>
-                    <InstName>grp_torque_foc_fu_192</InstName>
+                    <InstName>grp_torque_foc_fu_188</InstName>
                     <ModuleName>torque_foc</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>192</ID>
+                    <ID>188</ID>
                     <InstancesList>
                         <Instance>
-                            <InstName>grp_low_pass_filter_float_s_fu_429</InstName>
+                            <InstName>grp_low_pass_filter_float_s_fu_431</InstName>
                             <ModuleName>low_pass_filter_float_s</ModuleName>
                             <IsCompInst>true</IsCompInst>
-                            <ID>429</ID>
+                            <ID>431</ID>
                             <InstancesList>
                                 <Instance>
                                     <InstName>grp_low_pass_filter_float_Pipeline_VITIS_LOOP_29_1_fu_60</InstName>
@@ -516,69 +516,69 @@
                             <BindInstances>faddfsub_32ns_32ns_32_4_full_dsp_1_U2 faddfsub_32ns_32ns_32_4_full_dsp_1_U2 fmul_32ns_32ns_32_3_max_dsp_1_U5 fmul_32ns_32ns_32_3_max_dsp_1_U5 fmul_32ns_32ns_32_3_max_dsp_1_U6 fadd_32ns_32ns_32_4_full_dsp_1_U3 fmul_32ns_32ns_32_3_max_dsp_1_U7 fmul_32ns_32ns_32_3_max_dsp_1_U8 fadd_32ns_32ns_32_4_full_dsp_1_U4 fmul_32ns_32ns_32_3_max_dsp_1_U5 fmul_32ns_32ns_32_3_max_dsp_1_U6 faddfsub_32ns_32ns_32_4_full_dsp_1_U2 fmul_32ns_32ns_32_3_max_dsp_1_U7 fmul_32ns_32ns_32_3_max_dsp_1_U8 fadd_32ns_32ns_32_4_full_dsp_1_U3</BindInstances>
                         </Instance>
                         <Instance>
-                            <InstName>grp_clarke_direct_float_s_fu_448</InstName>
+                            <InstName>grp_clarke_direct_float_s_fu_450</InstName>
                             <ModuleName>clarke_direct_float_s</ModuleName>
                             <IsCompInst>true</IsCompInst>
-                            <ID>448</ID>
+                            <ID>450</ID>
                             <BindInstances>fmul_32ns_32ns_32_3_max_dsp_1_U22 fadd_32ns_32ns_32_4_full_dsp_1_U21 fmul_32ns_32ns_32_3_max_dsp_1_U22 sub_ln12_fu_202_p2 sub_ln21_fu_220_p2 sub_ln12_5_fu_247_p2 sub_ln25_fu_265_p2</BindInstances>
                         </Instance>
                         <Instance>
-                            <InstName>grp_park_direct_float_s_fu_454</InstName>
+                            <InstName>grp_park_direct_float_s_fu_456</InstName>
                             <ModuleName>park_direct_float_s</ModuleName>
                             <IsCompInst>true</IsCompInst>
-                            <ID>454</ID>
+                            <ID>456</ID>
                             <BindInstances>fmul_32ns_32ns_32_3_max_dsp_1_U35 fmul_32ns_32ns_32_3_max_dsp_1_U36 fmul_32ns_32ns_32_3_max_dsp_1_U37 fmul_32ns_32ns_32_3_max_dsp_1_U38 fadd_32ns_32ns_32_4_full_dsp_1_U33 fsub_32ns_32ns_32_4_full_dsp_1_U34 sub_ln12_fu_254_p2 sub_ln31_fu_272_p2 sub_ln12_2_fu_299_p2 sub_ln35_fu_317_p2 sine_d_U cosine_d_U</BindInstances>
                         </Instance>
                         <Instance>
-                            <InstName>grp_PI_control_float_s_fu_465</InstName>
+                            <InstName>grp_PI_control_float_s_fu_467</InstName>
                             <ModuleName>PI_control_float_s</ModuleName>
                             <IsCompInst>true</IsCompInst>
-                            <ID>465</ID>
+                            <ID>467</ID>
                             <BindInstances>faddfsub_32ns_32ns_32_4_full_dsp_1_U51 faddfsub_32ns_32ns_32_4_full_dsp_1_U51 fmul_32ns_32ns_32_3_max_dsp_1_U52 fmul_32ns_32ns_32_3_max_dsp_1_U53 faddfsub_32ns_32ns_32_4_full_dsp_1_U51 sub_ln12_fu_164_p2 sub_ln37_fu_182_p2</BindInstances>
                         </Instance>
                         <Instance>
-                            <InstName>grp_PI_control_float_s_fu_476</InstName>
+                            <InstName>grp_PI_control_float_s_fu_478</InstName>
                             <ModuleName>PI_control_float_s</ModuleName>
                             <IsCompInst>true</IsCompInst>
-                            <ID>476</ID>
+                            <ID>478</ID>
                             <BindInstances>faddfsub_32ns_32ns_32_4_full_dsp_1_U51 faddfsub_32ns_32ns_32_4_full_dsp_1_U51 fmul_32ns_32ns_32_3_max_dsp_1_U52 fmul_32ns_32ns_32_3_max_dsp_1_U53 faddfsub_32ns_32ns_32_4_full_dsp_1_U51 sub_ln12_fu_164_p2 sub_ln37_fu_182_p2</BindInstances>
                         </Instance>
                         <Instance>
-                            <InstName>grp_decoupling_float_s_fu_488</InstName>
+                            <InstName>grp_decoupling_float_s_fu_490</InstName>
                             <ModuleName>decoupling_float_s</ModuleName>
                             <IsCompInst>true</IsCompInst>
-                            <ID>488</ID>
+                            <ID>490</ID>
                             <BindInstances>fmul_32ns_32ns_32_3_max_dsp_1_U64 fmul_32ns_32ns_32_3_max_dsp_1_U64 fadd_32ns_32ns_32_4_full_dsp_1_U62 fmul_32ns_32ns_32_3_max_dsp_1_U64 fadd_32ns_32ns_32_4_full_dsp_1_U62 fmul_32ns_32ns_32_3_max_dsp_1_U65 fsub_32ns_32ns_32_4_full_dsp_1_U63</BindInstances>
                         </Instance>
                         <Instance>
-                            <InstName>grp_park_inverse_float_s_fu_497</InstName>
+                            <InstName>grp_park_inverse_float_s_fu_499</InstName>
                             <ModuleName>park_inverse_float_s</ModuleName>
                             <IsCompInst>true</IsCompInst>
-                            <ID>497</ID>
+                            <ID>499</ID>
                             <BindInstances>fmul_32ns_32ns_32_3_max_dsp_1_U73 fmul_32ns_32ns_32_3_max_dsp_1_U74 fmul_32ns_32ns_32_3_max_dsp_1_U75 fmul_32ns_32ns_32_3_max_dsp_1_U76 fsub_32ns_32ns_32_4_full_dsp_1_U71 fadd_32ns_32ns_32_4_full_dsp_1_U72 sub_ln12_fu_254_p2 sub_ln31_fu_272_p2 sub_ln12_1_fu_299_p2 sub_ln35_fu_317_p2 sine_i_U cosine_i_U</BindInstances>
                         </Instance>
                         <Instance>
-                            <InstName>grp_clarke_inverse_float_s_fu_508</InstName>
+                            <InstName>grp_clarke_inverse_float_s_fu_510</InstName>
                             <ModuleName>clarke_inverse_float_s</ModuleName>
                             <IsCompInst>true</IsCompInst>
-                            <ID>508</ID>
+                            <ID>510</ID>
                             <BindInstances>fmul_32ns_32ns_32_3_max_dsp_1_U88 fsub_32ns_32ns_32_4_full_dsp_1_U86 fmul_32ns_32ns_32_3_max_dsp_1_U88 fsub_32ns_32ns_32_4_full_dsp_1_U87 fmul_32ns_32ns_32_3_max_dsp_1_U89 sub_ln12_fu_179_p2 sub_ln24_fu_197_p2 sub_ln12_3_fu_332_p2 sub_ln28_fu_350_p2 sub_ln12_4_fu_377_p2 sub_ln32_fu_395_p2</BindInstances>
                         </Instance>
                         <Instance>
-                            <InstName>grp_SVPWM_float_s_fu_514</InstName>
+                            <InstName>grp_SVPWM_float_s_fu_516</InstName>
                             <ModuleName>SVPWM_float_s</ModuleName>
                             <IsCompInst>true</IsCompInst>
-                            <ID>514</ID>
+                            <ID>516</ID>
                             <BindInstances>fmul_32ns_32ns_32_3_max_dsp_1_U101 fadd_32ns_32ns_32_4_full_dsp_1_U98 add_ln344_fu_312_p2 sub_ln1364_fu_326_p2 result_V_41_fu_394_p2 fadd_32ns_32ns_32_4_full_dsp_1_U99 add_ln344_8_fu_451_p2 sub_ln1364_7_fu_465_p2 result_V_44_fu_533_p2 fadd_32ns_32ns_32_4_full_dsp_1_U100 add_ln344_9_fu_590_p2 sub_ln1364_8_fu_604_p2 result_V_47_fu_672_p2</BindInstances>
                         </Instance>
                     </InstancesList>
-                    <BindInstances>fsub_32ns_32ns_32_4_full_dsp_1_U106 add_ln344_fu_799_p2 sub_ln1364_fu_813_p2 result_V_2_fu_881_p2 add_ln283_fu_903_p2 add_ln284_fu_923_p2 add_ln344_1_fu_1020_p2 sub_ln1364_1_fu_1034_p2 result_V_5_fu_1102_p2 add_ln344_2_fu_1132_p2 sub_ln1364_2_fu_1146_p2 result_V_10_fu_1213_p2 add_ln344_3_fu_652_p2 sub_ln1364_3_fu_666_p2 result_V_12_fu_734_p2</BindInstances>
+                    <BindInstances>fsub_32ns_32ns_32_4_full_dsp_1_U106 add_ln344_fu_801_p2 sub_ln1364_fu_815_p2 result_V_2_fu_883_p2 add_ln283_fu_905_p2 add_ln284_fu_925_p2 add_ln344_1_fu_1022_p2 sub_ln1364_1_fu_1036_p2 result_V_5_fu_1104_p2 add_ln344_2_fu_1134_p2 sub_ln1364_2_fu_1148_p2 result_V_10_fu_1215_p2 add_ln344_3_fu_654_p2 sub_ln1364_3_fu_668_p2 result_V_12_fu_736_p2</BindInstances>
                 </Instance>
                 <Instance>
-                    <InstName>grp_manual_control_fu_248</InstName>
+                    <InstName>grp_manual_control_fu_244</InstName>
                     <ModuleName>manual_control</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>248</ID>
+                    <ID>244</ID>
                     <InstancesList>
                         <Instance>
                             <InstName>grp_park_inverse_float_s_fu_302</InstName>
@@ -605,16 +605,16 @@
                     <BindInstances>fsub_32ns_32ns_32_4_full_dsp_1_U130 add_ln344_fu_610_p2 sub_ln1364_fu_624_p2 result_V_18_fu_692_p2 add_ln42_fu_714_p2 add_ln43_fu_750_p2 add_ln344_4_fu_442_p2 sub_ln1364_1_fu_456_p2 result_V_21_fu_524_p2</BindInstances>
                 </Instance>
                 <Instance>
-                    <InstName>grp_foc_fu_276</InstName>
+                    <InstName>grp_foc_fu_272</InstName>
                     <ModuleName>foc</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>276</ID>
+                    <ID>272</ID>
                     <InstancesList>
                         <Instance>
-                            <InstName>grp_low_pass_filter_float_s_fu_466</InstName>
+                            <InstName>grp_low_pass_filter_float_s_fu_437</InstName>
                             <ModuleName>low_pass_filter_float_s</ModuleName>
                             <IsCompInst>true</IsCompInst>
-                            <ID>466</ID>
+                            <ID>437</ID>
                             <InstancesList>
                                 <Instance>
                                     <InstName>grp_low_pass_filter_float_Pipeline_VITIS_LOOP_29_1_fu_60</InstName>
@@ -627,59 +627,66 @@
                             <BindInstances>faddfsub_32ns_32ns_32_4_full_dsp_1_U2 faddfsub_32ns_32ns_32_4_full_dsp_1_U2 fmul_32ns_32ns_32_3_max_dsp_1_U5 fmul_32ns_32ns_32_3_max_dsp_1_U5 fmul_32ns_32ns_32_3_max_dsp_1_U6 fadd_32ns_32ns_32_4_full_dsp_1_U3 fmul_32ns_32ns_32_3_max_dsp_1_U7 fmul_32ns_32ns_32_3_max_dsp_1_U8 fadd_32ns_32ns_32_4_full_dsp_1_U4 fmul_32ns_32ns_32_3_max_dsp_1_U5 fmul_32ns_32ns_32_3_max_dsp_1_U6 faddfsub_32ns_32ns_32_4_full_dsp_1_U2 fmul_32ns_32ns_32_3_max_dsp_1_U7 fmul_32ns_32ns_32_3_max_dsp_1_U8 fadd_32ns_32ns_32_4_full_dsp_1_U3</BindInstances>
                         </Instance>
                         <Instance>
-                            <InstName>grp_clarke_direct_float_s_fu_485</InstName>
+                            <InstName>grp_clarke_direct_float_s_fu_456</InstName>
                             <ModuleName>clarke_direct_float_s</ModuleName>
                             <IsCompInst>true</IsCompInst>
-                            <ID>485</ID>
+                            <ID>456</ID>
                             <BindInstances>fmul_32ns_32ns_32_3_max_dsp_1_U22 fadd_32ns_32ns_32_4_full_dsp_1_U21 fmul_32ns_32ns_32_3_max_dsp_1_U22 sub_ln12_fu_202_p2 sub_ln21_fu_220_p2 sub_ln12_5_fu_247_p2 sub_ln25_fu_265_p2</BindInstances>
                         </Instance>
                         <Instance>
-                            <InstName>grp_PI_control_float_s_fu_491</InstName>
+                            <InstName>grp_PI_control_float_s_fu_462</InstName>
                             <ModuleName>PI_control_float_s</ModuleName>
                             <IsCompInst>true</IsCompInst>
-                            <ID>491</ID>
+                            <ID>462</ID>
                             <BindInstances>faddfsub_32ns_32ns_32_4_full_dsp_1_U51 faddfsub_32ns_32ns_32_4_full_dsp_1_U51 fmul_32ns_32ns_32_3_max_dsp_1_U52 fmul_32ns_32ns_32_3_max_dsp_1_U53 faddfsub_32ns_32ns_32_4_full_dsp_1_U51 sub_ln12_fu_164_p2 sub_ln37_fu_182_p2</BindInstances>
                         </Instance>
                         <Instance>
-                            <InstName>grp_park_direct_float_s_fu_506</InstName>
+                            <InstName>grp_park_direct_float_s_fu_487</InstName>
                             <ModuleName>park_direct_float_s</ModuleName>
                             <IsCompInst>true</IsCompInst>
-                            <ID>506</ID>
+                            <ID>487</ID>
                             <BindInstances>fmul_32ns_32ns_32_3_max_dsp_1_U35 fmul_32ns_32ns_32_3_max_dsp_1_U36 fmul_32ns_32ns_32_3_max_dsp_1_U37 fmul_32ns_32ns_32_3_max_dsp_1_U38 fadd_32ns_32ns_32_4_full_dsp_1_U33 fsub_32ns_32ns_32_4_full_dsp_1_U34 sub_ln12_fu_254_p2 sub_ln31_fu_272_p2 sub_ln12_2_fu_299_p2 sub_ln35_fu_317_p2 sine_d_U cosine_d_U</BindInstances>
                         </Instance>
                         <Instance>
-                            <InstName>grp_decoupling_float_s_fu_517</InstName>
+                            <InstName>grp_PI_control_float_s_fu_475</InstName>
+                            <ModuleName>PI_control_float_s</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>475</ID>
+                            <BindInstances>faddfsub_32ns_32ns_32_4_full_dsp_1_U51 faddfsub_32ns_32ns_32_4_full_dsp_1_U51 fmul_32ns_32ns_32_3_max_dsp_1_U52 fmul_32ns_32ns_32_3_max_dsp_1_U53 faddfsub_32ns_32ns_32_4_full_dsp_1_U51 sub_ln12_fu_164_p2 sub_ln37_fu_182_p2</BindInstances>
+                        </Instance>
+                        <Instance>
+                            <InstName>grp_decoupling_float_s_fu_498</InstName>
                             <ModuleName>decoupling_float_s</ModuleName>
                             <IsCompInst>true</IsCompInst>
-                            <ID>517</ID>
+                            <ID>498</ID>
                             <BindInstances>fmul_32ns_32ns_32_3_max_dsp_1_U64 fmul_32ns_32ns_32_3_max_dsp_1_U64 fadd_32ns_32ns_32_4_full_dsp_1_U62 fmul_32ns_32ns_32_3_max_dsp_1_U64 fadd_32ns_32ns_32_4_full_dsp_1_U62 fmul_32ns_32ns_32_3_max_dsp_1_U65 fsub_32ns_32ns_32_4_full_dsp_1_U63</BindInstances>
                         </Instance>
                         <Instance>
-                            <InstName>grp_park_inverse_float_s_fu_526</InstName>
+                            <InstName>grp_park_inverse_float_s_fu_507</InstName>
                             <ModuleName>park_inverse_float_s</ModuleName>
                             <IsCompInst>true</IsCompInst>
-                            <ID>526</ID>
+                            <ID>507</ID>
                             <BindInstances>fmul_32ns_32ns_32_3_max_dsp_1_U73 fmul_32ns_32ns_32_3_max_dsp_1_U74 fmul_32ns_32ns_32_3_max_dsp_1_U75 fmul_32ns_32ns_32_3_max_dsp_1_U76 fsub_32ns_32ns_32_4_full_dsp_1_U71 fadd_32ns_32ns_32_4_full_dsp_1_U72 sub_ln12_fu_254_p2 sub_ln31_fu_272_p2 sub_ln12_1_fu_299_p2 sub_ln35_fu_317_p2 sine_i_U cosine_i_U</BindInstances>
                         </Instance>
                         <Instance>
-                            <InstName>grp_clarke_inverse_float_s_fu_537</InstName>
+                            <InstName>grp_clarke_inverse_float_s_fu_518</InstName>
                             <ModuleName>clarke_inverse_float_s</ModuleName>
                             <IsCompInst>true</IsCompInst>
-                            <ID>537</ID>
+                            <ID>518</ID>
                             <BindInstances>fmul_32ns_32ns_32_3_max_dsp_1_U88 fsub_32ns_32ns_32_4_full_dsp_1_U86 fmul_32ns_32ns_32_3_max_dsp_1_U88 fsub_32ns_32ns_32_4_full_dsp_1_U87 fmul_32ns_32ns_32_3_max_dsp_1_U89 sub_ln12_fu_179_p2 sub_ln24_fu_197_p2 sub_ln12_3_fu_332_p2 sub_ln28_fu_350_p2 sub_ln12_4_fu_377_p2 sub_ln32_fu_395_p2</BindInstances>
                         </Instance>
                         <Instance>
-                            <InstName>grp_SVPWM_float_s_fu_543</InstName>
+                            <InstName>grp_SVPWM_float_s_fu_524</InstName>
                             <ModuleName>SVPWM_float_s</ModuleName>
                             <IsCompInst>true</IsCompInst>
-                            <ID>543</ID>
+                            <ID>524</ID>
                             <BindInstances>fmul_32ns_32ns_32_3_max_dsp_1_U101 fadd_32ns_32ns_32_4_full_dsp_1_U98 add_ln344_fu_312_p2 sub_ln1364_fu_326_p2 result_V_41_fu_394_p2 fadd_32ns_32ns_32_4_full_dsp_1_U99 add_ln344_8_fu_451_p2 sub_ln1364_7_fu_465_p2 result_V_44_fu_533_p2 fadd_32ns_32ns_32_4_full_dsp_1_U100 add_ln344_9_fu_590_p2 sub_ln1364_8_fu_604_p2 result_V_47_fu_672_p2</BindInstances>
                         </Instance>
                     </InstancesList>
-                    <BindInstances>faddfsub_32ns_32ns_32_4_full_dsp_1_U143 add_ln344_fu_757_p2 sub_ln1364_fu_771_p2 result_V_28_fu_839_p2 add_ln128_fu_861_p2 add_ln129_fu_881_p2 sub_ln12_fu_986_p2 fmul_32ns_32ns_32_3_max_dsp_1_U144 fmul_32ns_32ns_32_3_max_dsp_1_U144 fmul_32ns_32ns_32_3_max_dsp_1_U145 faddfsub_32ns_32ns_32_4_full_dsp_1_U143 fsqrt_32ns_32ns_32_8_no_dsp_1_U151 faddfsub_32ns_32ns_32_4_full_dsp_1_U143 fmul_32ns_32ns_32_3_max_dsp_1_U144 faddfsub_32ns_32ns_32_4_full_dsp_1_U143 fsqrt_32ns_32ns_32_8_no_dsp_1_U151 add_ln344_5_fu_1263_p2 sub_ln1364_4_fu_1277_p2 result_V_32_fu_1345_p2 add_ln344_6_fu_1396_p2 sub_ln1364_5_fu_1410_p2 result_V_35_fu_1478_p2 add_ln344_7_fu_1521_p2 sub_ln1364_6_fu_1535_p2 result_V_37_fu_1603_p2</BindInstances>
+                    <BindInstances>fsub_32ns_32ns_32_4_full_dsp_1_U143 add_ln344_fu_830_p2 sub_ln1364_fu_844_p2 result_V_28_fu_912_p2 add_ln128_fu_934_p2 add_ln129_fu_954_p2 add_ln344_5_fu_1051_p2 sub_ln1364_4_fu_1065_p2 result_V_32_fu_1133_p2 add_ln344_6_fu_1163_p2 sub_ln1364_5_fu_1177_p2 result_V_35_fu_1244_p2 add_ln344_7_fu_668_p2 sub_ln1364_6_fu_682_p2 result_V_37_fu_750_p2</BindInstances>
                 </Instance>
             </InstancesList>
-            <BindInstances>add_ln344_fu_378_p2 sub_ln1364_fu_392_p2 result_V_24_fu_460_p2 buffer_velocity_U</BindInstances>
+            <BindInstances>add_ln344_fu_370_p2 sub_ln1364_fu_384_p2 result_V_24_fu_452_p2 buffer_velocity_U</BindInstances>
         </TopModule>
     </RTLDesignHierarchy>
     <ModuleInformation>
@@ -1089,7 +1096,7 @@
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsub" DSP="2" ID="" IMPL="fulldsp" LATENCY="3" LOOP="" OPTYPE="fsub" PRAGMA="" RTLNAME="fsub_32ns_32ns_32_4_full_dsp_1_U86" SOURCE="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp:20" URAM="0" VARIABLE="sub"/>
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="2" LOOP="" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_3_max_dsp_1_U88" SOURCE="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp:20" URAM="0" VARIABLE="dc"/>
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsub" DSP="2" ID="" IMPL="fulldsp" LATENCY="3" LOOP="" OPTYPE="fsub" PRAGMA="" RTLNAME="fsub_32ns_32ns_32_4_full_dsp_1_U87" SOURCE="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp:21" URAM="0" VARIABLE="sub3"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="2" LOOP="" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_3_max_dsp_1_U89" SOURCE="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp:21" URAM="0" VARIABLE="dc_11"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="2" LOOP="" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_3_max_dsp_1_U89" SOURCE="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp:21" URAM="0" VARIABLE="dc_10"/>
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln12_fu_179_p2" SOURCE="foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp:12" URAM="0" VARIABLE="sub_ln12"/>
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln24_fu_197_p2" SOURCE="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp:24" URAM="0" VARIABLE="sub_ln24"/>
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln12_3_fu_332_p2" SOURCE="foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp:12" URAM="0" VARIABLE="sub_ln12_3"/>
@@ -1142,11 +1149,11 @@
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln344_fu_312_p2" SOURCE="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:344" URAM="0" VARIABLE="add_ln344"/>
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln1364_fu_326_p2" SOURCE="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h:1364" URAM="0" VARIABLE="sub_ln1364"/>
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="result_V_41_fu_394_p2" SOURCE="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h:666" URAM="0" VARIABLE="result_V_41"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="3" LOOP="" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_4_full_dsp_1_U99" SOURCE="foc-rewrite/apc/src/FOC/../SVPWM/svpwm.h:24" URAM="0" VARIABLE="dc_12"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="3" LOOP="" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_4_full_dsp_1_U99" SOURCE="foc-rewrite/apc/src/FOC/../SVPWM/svpwm.h:24" URAM="0" VARIABLE="dc_11"/>
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln344_8_fu_451_p2" SOURCE="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:344" URAM="0" VARIABLE="add_ln344_8"/>
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln1364_7_fu_465_p2" SOURCE="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h:1364" URAM="0" VARIABLE="sub_ln1364_7"/>
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="result_V_44_fu_533_p2" SOURCE="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h:666" URAM="0" VARIABLE="result_V_44"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="3" LOOP="" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_4_full_dsp_1_U100" SOURCE="foc-rewrite/apc/src/FOC/../SVPWM/svpwm.h:29" URAM="0" VARIABLE="dc_13"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="3" LOOP="" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_4_full_dsp_1_U100" SOURCE="foc-rewrite/apc/src/FOC/../SVPWM/svpwm.h:29" URAM="0" VARIABLE="dc_12"/>
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln344_9_fu_590_p2" SOURCE="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:344" URAM="0" VARIABLE="add_ln344_9"/>
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln1364_8_fu_604_p2" SOURCE="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h:1364" URAM="0" VARIABLE="sub_ln1364_8"/>
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="result_V_47_fu_672_p2" SOURCE="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h:666" URAM="0" VARIABLE="result_V_47"/>
@@ -1192,20 +1199,20 @@
             </AreaEstimates>
             <BindNodes>
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsub" DSP="2" ID="" IMPL="fulldsp" LATENCY="3" LOOP="" OPTYPE="fsub" PRAGMA="" RTLNAME="fsub_32ns_32ns_32_4_full_dsp_1_U106" SOURCE="foc-rewrite/apc/src/FOC/foc.cpp:281" URAM="0" VARIABLE="dc"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln344_fu_799_p2" SOURCE="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:344" URAM="0" VARIABLE="add_ln344"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln1364_fu_813_p2" SOURCE="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h:1364" URAM="0" VARIABLE="sub_ln1364"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="result_V_2_fu_881_p2" SOURCE="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h:666" URAM="0" VARIABLE="result_V_2"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln283_fu_903_p2" SOURCE="foc-rewrite/apc/src/FOC/foc.cpp:283" URAM="0" VARIABLE="add_ln283"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln284_fu_923_p2" SOURCE="foc-rewrite/apc/src/FOC/foc.cpp:284" URAM="0" VARIABLE="add_ln284"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln344_1_fu_1020_p2" SOURCE="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:344" URAM="0" VARIABLE="add_ln344_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln1364_1_fu_1034_p2" SOURCE="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h:1364" URAM="0" VARIABLE="sub_ln1364_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="result_V_5_fu_1102_p2" SOURCE="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h:666" URAM="0" VARIABLE="result_V_5"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln344_2_fu_1132_p2" SOURCE="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:344" URAM="0" VARIABLE="add_ln344_2"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln1364_2_fu_1146_p2" SOURCE="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h:1364" URAM="0" VARIABLE="sub_ln1364_2"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="result_V_10_fu_1213_p2" SOURCE="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h:666" URAM="0" VARIABLE="result_V_10"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln344_3_fu_652_p2" SOURCE="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:344" URAM="0" VARIABLE="add_ln344_3"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln1364_3_fu_666_p2" SOURCE="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h:1364" URAM="0" VARIABLE="sub_ln1364_3"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="result_V_12_fu_734_p2" SOURCE="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h:666" URAM="0" VARIABLE="result_V_12"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln344_fu_801_p2" SOURCE="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:344" URAM="0" VARIABLE="add_ln344"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln1364_fu_815_p2" SOURCE="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h:1364" URAM="0" VARIABLE="sub_ln1364"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="result_V_2_fu_883_p2" SOURCE="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h:666" URAM="0" VARIABLE="result_V_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln283_fu_905_p2" SOURCE="foc-rewrite/apc/src/FOC/foc.cpp:283" URAM="0" VARIABLE="add_ln283"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln284_fu_925_p2" SOURCE="foc-rewrite/apc/src/FOC/foc.cpp:284" URAM="0" VARIABLE="add_ln284"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln344_1_fu_1022_p2" SOURCE="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:344" URAM="0" VARIABLE="add_ln344_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln1364_1_fu_1036_p2" SOURCE="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h:1364" URAM="0" VARIABLE="sub_ln1364_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="result_V_5_fu_1104_p2" SOURCE="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h:666" URAM="0" VARIABLE="result_V_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln344_2_fu_1134_p2" SOURCE="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:344" URAM="0" VARIABLE="add_ln344_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln1364_2_fu_1148_p2" SOURCE="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h:1364" URAM="0" VARIABLE="sub_ln1364_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="result_V_10_fu_1215_p2" SOURCE="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h:666" URAM="0" VARIABLE="result_V_10"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln344_3_fu_654_p2" SOURCE="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:344" URAM="0" VARIABLE="add_ln344_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln1364_3_fu_668_p2" SOURCE="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h:1364" URAM="0" VARIABLE="sub_ln1364_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="result_V_12_fu_736_p2" SOURCE="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h:666" URAM="0" VARIABLE="result_V_12"/>
             </BindNodes>
         </Module>
         <Module>
@@ -1267,13 +1274,13 @@
                     <EstimatedClockPeriod>7.300</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>255</Best-caseLatency>
-                    <Average-caseLatency>260</Average-caseLatency>
-                    <Worst-caseLatency>265</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>2.550 us</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>2.600 us</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>2.650 us</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>255 ~ 265</PipelineInitiationInterval>
+                    <Best-caseLatency>205</Best-caseLatency>
+                    <Average-caseLatency>205</Average-caseLatency>
+                    <Worst-caseLatency>205</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>2.050 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>2.050 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>2.050 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>205</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
             </PerformanceEstimates>
@@ -1282,13 +1289,13 @@
                     <BRAM_18K>8</BRAM_18K>
                     <AVAIL_BRAM>624</AVAIL_BRAM>
                     <UTIL_BRAM>1</UTIL_BRAM>
-                    <DSP>100</DSP>
+                    <DSP>102</DSP>
                     <AVAIL_DSP>1728</AVAIL_DSP>
                     <UTIL_DSP>5</UTIL_DSP>
-                    <FF>10058</FF>
+                    <FF>10041</FF>
                     <AVAIL_FF>460800</AVAIL_FF>
                     <UTIL_FF>2</UTIL_FF>
-                    <LUT>13764</LUT>
+                    <LUT>13703</LUT>
                     <AVAIL_LUT>230400</AVAIL_LUT>
                     <UTIL_LUT>5</UTIL_LUT>
                     <URAM>0</URAM>
@@ -1297,31 +1304,21 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsub" DSP="2" ID="" IMPL="fulldsp" LATENCY="3" LOOP="" OPTYPE="fsub" PRAGMA="" RTLNAME="faddfsub_32ns_32ns_32_4_full_dsp_1_U143" SOURCE="foc-rewrite/apc/src/FOC/foc.cpp:126" URAM="0" VARIABLE="dc"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln344_fu_757_p2" SOURCE="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:344" URAM="0" VARIABLE="add_ln344"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln1364_fu_771_p2" SOURCE="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h:1364" URAM="0" VARIABLE="sub_ln1364"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="result_V_28_fu_839_p2" SOURCE="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h:666" URAM="0" VARIABLE="result_V_28"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln128_fu_861_p2" SOURCE="foc-rewrite/apc/src/FOC/foc.cpp:128" URAM="0" VARIABLE="add_ln128"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln129_fu_881_p2" SOURCE="foc-rewrite/apc/src/FOC/foc.cpp:129" URAM="0" VARIABLE="add_ln129"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln12_fu_986_p2" SOURCE="foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp:12" URAM="0" VARIABLE="sub_ln12"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="2" LOOP="" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_3_max_dsp_1_U144" SOURCE="foc-rewrite/apc/src/FOC/foc.cpp:189" URAM="0" VARIABLE="Vq"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="2" LOOP="" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_3_max_dsp_1_U144" SOURCE="foc-rewrite/apc/src/FOC/../FW/field_weakening.hpp:27" URAM="0" VARIABLE="mul_i"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="2" LOOP="" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_3_max_dsp_1_U145" SOURCE="foc-rewrite/apc/src/FOC/../FW/field_weakening.hpp:27" URAM="0" VARIABLE="mul1_i"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsub" DSP="2" ID="" IMPL="fulldsp" LATENCY="3" LOOP="" OPTYPE="fsub" PRAGMA="" RTLNAME="faddfsub_32ns_32ns_32_4_full_dsp_1_U143" SOURCE="foc-rewrite/apc/src/FOC/../FW/field_weakening.hpp:27" URAM="0" VARIABLE="x_assign"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsqrt" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="" OPTYPE="fsqrt" PRAGMA="" RTLNAME="fsqrt_32ns_32ns_32_8_no_dsp_1_U151" SOURCE="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp:8" URAM="0" VARIABLE="tmp"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsub" DSP="2" ID="" IMPL="fulldsp" LATENCY="3" LOOP="" OPTYPE="fsub" PRAGMA="" RTLNAME="faddfsub_32ns_32ns_32_4_full_dsp_1_U143" SOURCE="foc-rewrite/apc/src/FOC/../FW/field_weakening.hpp:27" URAM="0" VARIABLE="err_V"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="2" LOOP="" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_3_max_dsp_1_U144" SOURCE="foc-rewrite/apc/src/FOC/../FW/field_weakening.hpp:35" URAM="0" VARIABLE="err_V_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsub" DSP="2" ID="" IMPL="fulldsp" LATENCY="3" LOOP="" OPTYPE="fsub" PRAGMA="" RTLNAME="faddfsub_32ns_32ns_32_4_full_dsp_1_U143" SOURCE="foc-rewrite/apc/src/FOC/../FW/field_weakening.hpp:40" URAM="0" VARIABLE="x_assign_4"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsqrt" DSP="0" ID="" IMPL="fabric" LATENCY="7" LOOP="" OPTYPE="fsqrt" PRAGMA="" RTLNAME="fsqrt_32ns_32ns_32_8_no_dsp_1_U151" SOURCE="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp:8" URAM="0" VARIABLE="tmp_s"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln344_5_fu_1263_p2" SOURCE="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:344" URAM="0" VARIABLE="add_ln344_5"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln1364_4_fu_1277_p2" SOURCE="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h:1364" URAM="0" VARIABLE="sub_ln1364_4"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="result_V_32_fu_1345_p2" SOURCE="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h:666" URAM="0" VARIABLE="result_V_32"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln344_6_fu_1396_p2" SOURCE="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:344" URAM="0" VARIABLE="add_ln344_6"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln1364_5_fu_1410_p2" SOURCE="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h:1364" URAM="0" VARIABLE="sub_ln1364_5"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="result_V_35_fu_1478_p2" SOURCE="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h:666" URAM="0" VARIABLE="result_V_35"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln344_7_fu_1521_p2" SOURCE="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:344" URAM="0" VARIABLE="add_ln344_7"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln1364_6_fu_1535_p2" SOURCE="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h:1364" URAM="0" VARIABLE="sub_ln1364_6"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="result_V_37_fu_1603_p2" SOURCE="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h:666" URAM="0" VARIABLE="result_V_37"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsub" DSP="2" ID="" IMPL="fulldsp" LATENCY="3" LOOP="" OPTYPE="fsub" PRAGMA="" RTLNAME="fsub_32ns_32ns_32_4_full_dsp_1_U143" SOURCE="foc-rewrite/apc/src/FOC/foc.cpp:126" URAM="0" VARIABLE="dc"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln344_fu_830_p2" SOURCE="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:344" URAM="0" VARIABLE="add_ln344"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln1364_fu_844_p2" SOURCE="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h:1364" URAM="0" VARIABLE="sub_ln1364"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="result_V_28_fu_912_p2" SOURCE="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h:666" URAM="0" VARIABLE="result_V_28"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln128_fu_934_p2" SOURCE="foc-rewrite/apc/src/FOC/foc.cpp:128" URAM="0" VARIABLE="add_ln128"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln129_fu_954_p2" SOURCE="foc-rewrite/apc/src/FOC/foc.cpp:129" URAM="0" VARIABLE="add_ln129"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln344_5_fu_1051_p2" SOURCE="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:344" URAM="0" VARIABLE="add_ln344_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln1364_4_fu_1065_p2" SOURCE="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h:1364" URAM="0" VARIABLE="sub_ln1364_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="result_V_32_fu_1133_p2" SOURCE="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h:666" URAM="0" VARIABLE="result_V_32"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln344_6_fu_1163_p2" SOURCE="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:344" URAM="0" VARIABLE="add_ln344_6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln1364_5_fu_1177_p2" SOURCE="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h:1364" URAM="0" VARIABLE="sub_ln1364_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="result_V_35_fu_1244_p2" SOURCE="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h:666" URAM="0" VARIABLE="result_V_35"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln344_7_fu_668_p2" SOURCE="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:344" URAM="0" VARIABLE="add_ln344_7"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln1364_6_fu_682_p2" SOURCE="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h:1364" URAM="0" VARIABLE="sub_ln1364_6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="result_V_37_fu_750_p2" SOURCE="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h:666" URAM="0" VARIABLE="result_V_37"/>
             </BindNodes>
         </Module>
         <Module>
@@ -1373,12 +1370,12 @@
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
                     <Best-caseLatency>4</Best-caseLatency>
-                    <Average-caseLatency>92</Average-caseLatency>
-                    <Worst-caseLatency>269</Worst-caseLatency>
+                    <Average-caseLatency>78</Average-caseLatency>
+                    <Worst-caseLatency>209</Worst-caseLatency>
                     <Best-caseRealTimeLatency>40.000 ns</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>0.920 us</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>2.690 us</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>5 ~ 270</PipelineInitiationInterval>
+                    <Average-caseRealTimeLatency>0.780 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>2.090 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>5 ~ 210</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
             </PerformanceEstimates>
@@ -1387,13 +1384,13 @@
                     <BRAM_18K>21</BRAM_18K>
                     <AVAIL_BRAM>624</AVAIL_BRAM>
                     <UTIL_BRAM>3</UTIL_BRAM>
-                    <DSP>239</DSP>
+                    <DSP>241</DSP>
                     <AVAIL_DSP>1728</AVAIL_DSP>
                     <UTIL_DSP>13</UTIL_DSP>
-                    <FF>24501</FF>
+                    <FF>24484</FF>
                     <AVAIL_FF>460800</AVAIL_FF>
                     <UTIL_FF>5</UTIL_FF>
-                    <LUT>35185</LUT>
+                    <LUT>35124</LUT>
                     <AVAIL_LUT>230400</AVAIL_LUT>
                     <UTIL_LUT>15</UTIL_LUT>
                     <URAM>0</URAM>
@@ -1402,9 +1399,9 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln344_fu_378_p2" SOURCE="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:344" URAM="0" VARIABLE="add_ln344"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln1364_fu_392_p2" SOURCE="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h:1364" URAM="0" VARIABLE="sub_ln1364"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="result_V_24_fu_460_p2" SOURCE="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h:666" URAM="0" VARIABLE="result_V_24"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln344_fu_370_p2" SOURCE="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:344" URAM="0" VARIABLE="add_ln344"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln1364_fu_384_p2" SOURCE="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h:1364" URAM="0" VARIABLE="sub_ln1364"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="result_V_24_fu_452_p2" SOURCE="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_fixed_base.h:666" URAM="0" VARIABLE="result_V_24"/>
                 <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="buffer_velocity_U" SOURCE="" URAM="0" VARIABLE="buffer_velocity"/>
             </BindNodes>
         </Module>

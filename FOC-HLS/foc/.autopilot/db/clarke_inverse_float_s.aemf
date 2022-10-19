@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1666006231919">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1666211808920">
   <ports id="1" name="Valpha" type="PortType" originalName="Valpha" coreId="3621216858" bitwidth="32">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="2" name="Vbeta" type="PortType" originalName="Vbeta" coreId="1830839397" bitwidth="32">
+  <ports id="2" name="Vbeta" type="PortType" originalName="Vbeta" coreId="1919904880" bitwidth="32">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
   <ports id="12" name="ap_return_0" direction="DirOut">
@@ -132,12 +132,12 @@
   <edges source_obj="//@blocks.0/@node_objs.84" sink_obj="//@ports.3"/>
   <edges source_obj="//@blocks.0/@node_objs.84" sink_obj="//@ports.4"/>
   <blocks id="88" name="clarke_inverse&lt;float>" type="BlockType">
-    <node_objs xsi:type="cdfg:CdfgNode" id="3" name="Vbeta_read" lineNumber="10" originalName="Vbeta" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" fileDirectory=".." coreId="0" contextFuncName="clarke_inverse_float_s" bitwidth="32" opcode="read" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="3" name="Vbeta_read" lineNumber="10" originalName="Vbeta" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" fileDirectory=".." coreId="828321841" contextFuncName="clarke_inverse_float_s" bitwidth="32" opcode="read" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" linenumber="10" fileDirectory="/home/mklab/workspace/foc" functionName="clarke_inverse&amp;lt;float&amp;gt;"/>
       <dataInputObjs>Vbeta</dataInputObjs>
       <dataOutputObjs>fmul</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="4" name="Valpha_read" lineNumber="10" originalName="Valpha" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" fileDirectory=".." coreId="0" contextFuncName="clarke_inverse_float_s" bitwidth="32" opcode="read" nodeLabel="3.0" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="4" name="Valpha_read" lineNumber="10" originalName="Valpha" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" fileDirectory=".." coreId="2037542765" contextFuncName="clarke_inverse_float_s" bitwidth="32" opcode="read" nodeLabel="3.0" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" linenumber="10" fileDirectory="/home/mklab/workspace/foc" functionName="clarke_inverse&amp;lt;float&amp;gt;"/>
       <dataInputObjs>Valpha</dataInputObjs>
       <dataOutputObjs>fsub</dataOutputObjs>
@@ -168,7 +168,7 @@
       <dataOutputObjs>select</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="data_V" lineNumber="21" originalName="data.V" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" fileDirectory=".." rtlName="data_V_fu_103_p1" coreId="1145391171" contextFuncName="clarke_inverse_float_s" bitwidth="32" opcode="bitcast" nodeLabel="3.0" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="data_V" lineNumber="21" originalName="data.V" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" fileDirectory=".." rtlName="data_V_fu_103_p1" coreId="0" contextFuncName="clarke_inverse_float_s" bitwidth="32" opcode="bitcast" nodeLabel="3.0" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" linenumber="21" fileDirectory="/home/mklab/workspace/foc" functionName="clarke_inverse&amp;lt;float&amp;gt;"/>
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>xor</dataOutputObjs>
@@ -182,7 +182,7 @@
       <dataOutputObjs>bitcast</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="bitcast_ln21_1" lineNumber="21" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" fileDirectory=".." rtlName="grp_fu_49_p0" coreId="1931502951" contextFuncName="clarke_inverse_float_s" bitwidth="32" opcode="bitcast" nodeLabel="3.0" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="bitcast_ln21_1" lineNumber="21" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" fileDirectory=".." rtlName="grp_fu_49_p0" coreId="0" contextFuncName="clarke_inverse_float_s" bitwidth="32" opcode="bitcast" nodeLabel="3.0" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" linenumber="21" fileDirectory="/home/mklab/workspace/foc" functionName="clarke_inverse&amp;lt;float&amp;gt;"/>
       <dataInputObjs>xor</dataInputObjs>
       <dataOutputObjs>fsub</dataOutputObjs>
@@ -193,7 +193,7 @@
       <dataInputObjs>fmul</dataInputObjs>
       <dataOutputObjs>fmul</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="dc_11" lineNumber="21" originalName="x" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" fileDirectory=".." rtlName="fmul_32ns_32ns_32_3_max_dsp_1_U89" coreName="FMul_maxdsp" implIndex="maxdsp" control="no" opType="fmul" coreId="30" contextFuncName="clarke_inverse_float_s" bitwidth="32" opcode="fmul" nodeLabel="7.0" nodeLatency="2" m_display="0" m_delay="7.01" m_topoIndex="31" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="dc_10" lineNumber="21" originalName="x" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" fileDirectory=".." rtlName="fmul_32ns_32ns_32_3_max_dsp_1_U89" coreName="FMul_maxdsp" implIndex="maxdsp" control="no" opType="fmul" coreId="30" contextFuncName="clarke_inverse_float_s" bitwidth="32" opcode="fmul" nodeLabel="7.0" nodeLatency="2" m_display="0" m_delay="7.01" m_topoIndex="31" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" linenumber="21" fileDirectory="/home/mklab/workspace/foc" functionName="clarke_inverse&amp;lt;float&amp;gt;"/>
       <dataInputObjs>fsub</dataInputObjs>
       <dataOutputObjs>bitcast</dataOutputObjs>
@@ -202,28 +202,28 @@
       <dataOutputObjs>select</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="p_Result_s" lineNumber="368" originalName="__Result__" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="p_Result_s_fu_118_p1" coreId="2036689696" contextFuncName="operator_assign_23_false" bitwidth="31" opcode="trunc" nodeLabel="3.0" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="p_Result_s" lineNumber="368" originalName="__Result__" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="p_Result_s_fu_118_p1" coreId="1031301478" contextFuncName="operator_assign_23_false" bitwidth="31" opcode="trunc" nodeLabel="3.0" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_int_ref.h" linenumber="368" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="operator=&amp;lt;23, false&amp;gt;"/>
       <dataInputObjs>bitcast</dataInputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="zext_ln368" lineNumber="368" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="zext_ln368_fu_122_p1" coreId="979725673" contextFuncName="operator_assign_23_false" bitwidth="32" opcode="zext" nodeLabel="3.0" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="zext_ln368" lineNumber="368" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="zext_ln368_fu_122_p1" coreId="657469801" contextFuncName="operator_assign_23_false" bitwidth="32" opcode="zext" nodeLabel="3.0" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_int_ref.h" linenumber="368" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="operator=&amp;lt;23, false&amp;gt;"/>
       <dataInputObjs>trunc</dataInputObjs>
       <dataOutputObjs>bitcast</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="bitcast_ln354" lineNumber="354" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="bitcast_ln354_fu_126_p1" coreId="690512243" contextFuncName="to_float" bitwidth="32" opcode="bitcast" nodeLabel="3.0" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="bitcast_ln354" lineNumber="354" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="bitcast_ln354_fu_126_p1" coreId="0" contextFuncName="to_float" bitwidth="32" opcode="bitcast" nodeLabel="3.0" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" linenumber="354" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="to_float"/>
       <dataInputObjs>zext</dataInputObjs>
       <dataOutputObjs>fcmp</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="tmp" lineNumber="23" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" fileDirectory=".." rtlName="tmp_fu_131_p4" coreId="1953391988" contextFuncName="clarke_inverse_float_s" bitwidth="8" opcode="partselect" nodeLabel="3.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="tmp" lineNumber="23" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" fileDirectory=".." rtlName="tmp_fu_131_p4" coreId="0" contextFuncName="clarke_inverse_float_s" bitwidth="8" opcode="partselect" nodeLabel="3.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" linenumber="23" fileDirectory="/home/mklab/workspace/foc" functionName="clarke_inverse&amp;lt;float&amp;gt;"/>
       <dataInputObjs>bitcast</dataInputObjs>
       <dataOutputObjs>icmp</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="trunc_ln23" lineNumber="23" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" fileDirectory=".." rtlName="trunc_ln23_fu_141_p1" coreId="640955703" contextFuncName="clarke_inverse_float_s" bitwidth="23" opcode="trunc" nodeLabel="3.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="trunc_ln23" lineNumber="23" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" fileDirectory=".." rtlName="trunc_ln23_fu_141_p1" coreId="3098631600" contextFuncName="clarke_inverse_float_s" bitwidth="23" opcode="trunc" nodeLabel="3.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" linenumber="23" fileDirectory="/home/mklab/workspace/foc" functionName="clarke_inverse&amp;lt;float&amp;gt;"/>
       <dataInputObjs>bitcast</dataInputObjs>
       <dataOutputObjs>icmp</dataOutputObjs>
@@ -248,7 +248,7 @@
       <dataOutputObjs>and</dataOutputObjs>
       <dataOutputObjs>and</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="tmp_37" lineNumber="23" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" fileDirectory=".." rtlName="fcmp_32ns_32ns_1_2_no_dsp_1_U92" coreName="FCompare" implIndex="auto" control="no" opType="fcmp" coreId="19" contextFuncName="clarke_inverse_float_s" bitwidth="1" opcode="fcmp" nodeLabel="3.0" nodeLatency="1" m_display="0" m_delay="2.78" m_topoIndex="17" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="tmp_24" lineNumber="23" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" fileDirectory=".." rtlName="fcmp_32ns_32ns_1_2_no_dsp_1_U92" coreName="FCompare" implIndex="auto" control="no" opType="fcmp" coreId="19" contextFuncName="clarke_inverse_float_s" bitwidth="1" opcode="fcmp" nodeLabel="3.0" nodeLatency="1" m_display="0" m_delay="2.78" m_topoIndex="17" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" linenumber="23" fileDirectory="/home/mklab/workspace/foc" functionName="clarke_inverse&amp;lt;float&amp;gt;"/>
       <dataInputObjs>bitcast</dataInputObjs>
       <dataOutputObjs>and</dataOutputObjs>
@@ -260,7 +260,7 @@
       <dataInputObjs>fcmp</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="tmp_s" lineNumber="12" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp" fileDirectory=".." rtlName="fcmp_32ns_32ns_1_2_no_dsp_1_U93" coreName="FCompare" implIndex="auto" control="no" opType="fcmp" coreId="19" contextFuncName="sgn_float_s" bitwidth="1" opcode="fcmp" nodeLabel="3.0" nodeLatency="1" m_display="0" m_delay="2.78" m_topoIndex="18" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="tmp_25" lineNumber="12" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp" fileDirectory=".." rtlName="fcmp_32ns_32ns_1_2_no_dsp_1_U93" coreName="FCompare" implIndex="auto" control="no" opType="fcmp" coreId="19" contextFuncName="sgn_float_s" bitwidth="1" opcode="fcmp" nodeLabel="3.0" nodeLatency="1" m_display="0" m_delay="2.78" m_topoIndex="18" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp" linenumber="12" fileDirectory="/home/mklab/workspace/foc" functionName="sgn&amp;lt;float&amp;gt;"/>
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>and</dataOutputObjs>
@@ -272,24 +272,24 @@
       <dataInputObjs>fcmp</dataInputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="zext_ln12" lineNumber="12" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp" fileDirectory=".." rtlName="zext_ln12_fu_167_p1" coreId="572669287" contextFuncName="sgn_float_s" bitwidth="2" opcode="zext" nodeLabel="5.0" m_display="0" m_topoIndex="21" m_clusterGroupNumber="2">
+    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="zext_ln12" lineNumber="12" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp" fileDirectory=".." rtlName="zext_ln12_fu_167_p1" coreId="3418158024" contextFuncName="sgn_float_s" bitwidth="2" opcode="zext" nodeLabel="5.0" m_display="0" m_topoIndex="21" m_clusterGroupNumber="2">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp" linenumber="12" fileDirectory="/home/mklab/workspace/foc" functionName="sgn&amp;lt;float&amp;gt;"/>
       <dataInputObjs>and</dataInputObjs>
       <dataOutputObjs>sub</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="26" name="tmp_38" lineNumber="12" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp" fileDirectory=".." rtlName="fcmp_32ns_32ns_1_2_no_dsp_1_U94" coreName="FCompare" implIndex="auto" control="no" opType="fcmp" coreId="19" contextFuncName="sgn_float_s" bitwidth="1" opcode="fcmp" nodeLabel="3.0" nodeLatency="1" m_display="0" m_delay="2.78" m_topoIndex="19" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="26" name="tmp_s" lineNumber="12" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp" fileDirectory=".." rtlName="fcmp_32ns_32ns_1_2_no_dsp_1_U94" coreName="FCompare" implIndex="auto" control="no" opType="fcmp" coreId="19" contextFuncName="sgn_float_s" bitwidth="1" opcode="fcmp" nodeLabel="3.0" nodeLatency="1" m_display="0" m_delay="2.78" m_topoIndex="19" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp" linenumber="12" fileDirectory="/home/mklab/workspace/foc" functionName="sgn&amp;lt;float&amp;gt;"/>
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>and</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="27" name="and_ln12_8" lineNumber="12" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp" fileDirectory=".." rtlName="and_ln12_8_fu_171_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="sgn_float_s" bitwidth="1" opcode="and" nodeLabel="5.0" m_display="0" m_topoIndex="22" m_clusterGroupNumber="2">
+    <node_objs xsi:type="cdfg:CdfgNode" id="27" name="and_ln12_7" lineNumber="12" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp" fileDirectory=".." rtlName="and_ln12_7_fu_171_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="sgn_float_s" bitwidth="1" opcode="and" nodeLabel="5.0" m_display="0" m_topoIndex="22" m_clusterGroupNumber="2">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp" linenumber="12" fileDirectory="/home/mklab/workspace/foc" functionName="sgn&amp;lt;float&amp;gt;"/>
       <dataInputObjs>or</dataInputObjs>
       <dataInputObjs>fcmp</dataInputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="zext_ln12_8" lineNumber="12" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp" fileDirectory=".." rtlName="zext_ln12_8_fu_175_p1" coreId="997484326" contextFuncName="sgn_float_s" bitwidth="2" opcode="zext" nodeLabel="5.0" m_display="0" m_topoIndex="23" m_clusterGroupNumber="2">
+    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="zext_ln12_7" lineNumber="12" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp" fileDirectory=".." rtlName="zext_ln12_7_fu_175_p1" coreId="4294967295" contextFuncName="sgn_float_s" bitwidth="2" opcode="zext" nodeLabel="5.0" m_display="0" m_topoIndex="23" m_clusterGroupNumber="2">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp" linenumber="12" fileDirectory="/home/mklab/workspace/foc" functionName="sgn&amp;lt;float&amp;gt;"/>
       <dataInputObjs>and</dataInputObjs>
       <dataOutputObjs>sub</dataOutputObjs>
@@ -301,12 +301,12 @@
       <dataOutputObjs>sext</dataOutputObjs>
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="30" name="sext_ln24" lineNumber="24" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" fileDirectory=".." rtlName="sext_ln24_fu_185_p1" coreId="1007225406" contextFuncName="clarke_inverse_float_s" bitwidth="17" opcode="sext" nodeLabel="5.0" m_display="0" m_topoIndex="25" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="30" name="sext_ln24" lineNumber="24" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" fileDirectory=".." rtlName="sext_ln24_fu_185_p1" coreId="572669287" contextFuncName="clarke_inverse_float_s" bitwidth="17" opcode="sext" nodeLabel="5.0" m_display="0" m_topoIndex="25" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" linenumber="24" fileDirectory="/home/mklab/workspace/foc" functionName="clarke_inverse&amp;lt;float&amp;gt;"/>
       <dataInputObjs>sub</dataInputObjs>
       <dataOutputObjs>sub</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="31" name="shl_ln" lineNumber="24" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" fileDirectory=".." rtlName="shl_ln_fu_189_p3" coreId="1952675186" contextFuncName="clarke_inverse_float_s" bitwidth="17" opcode="bitconcatenate" nodeLabel="5.0" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="31" name="shl_ln" lineNumber="24" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" fileDirectory=".." rtlName="shl_ln_fu_189_p3" coreId="1970170228" contextFuncName="clarke_inverse_float_s" bitwidth="17" opcode="bitconcatenate" nodeLabel="5.0" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" linenumber="24" fileDirectory="/home/mklab/workspace/foc" functionName="clarke_inverse&amp;lt;float&amp;gt;"/>
       <dataInputObjs>sub</dataInputObjs>
       <dataOutputObjs>sub</dataOutputObjs>
@@ -318,7 +318,7 @@
       <dataInputObjs>sext</dataInputObjs>
       <dataOutputObjs>sext</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="33" name="sext_ln24_1" lineNumber="24" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" fileDirectory=".." rtlName="sext_ln24_1_fu_203_p1" coreId="1685204786" contextFuncName="clarke_inverse_float_s" bitwidth="32" opcode="sext" nodeLabel="5.0" m_display="0" m_topoIndex="28" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="33" name="sext_ln24_1" lineNumber="24" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" fileDirectory=".." rtlName="sext_ln24_1_fu_203_p1" coreId="997484326" contextFuncName="clarke_inverse_float_s" bitwidth="32" opcode="sext" nodeLabel="5.0" m_display="0" m_topoIndex="28" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" linenumber="24" fileDirectory="/home/mklab/workspace/foc" functionName="clarke_inverse&amp;lt;float&amp;gt;"/>
       <dataInputObjs>sub</dataInputObjs>
       <dataOutputObjs>sitofp</dataOutputObjs>
@@ -335,35 +335,35 @@
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>insertvalue</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="36" name="data_V_10" lineNumber="315" originalName="data.V" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="data_V_10_fu_219_p1" coreId="1936683105" contextFuncName="fp_struct" bitwidth="32" opcode="bitcast" nodeLabel="11.0" m_display="0" m_topoIndex="38" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="36" name="data_V_9" lineNumber="315" originalName="data.V" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="data_V_9_fu_219_p1" coreId="1952675186" contextFuncName="fp_struct" bitwidth="32" opcode="bitcast" nodeLabel="11.0" m_display="0" m_topoIndex="38" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" linenumber="315" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="fp_struct"/>
       <dataInputObjs>fmul</dataInputObjs>
       <dataOutputObjs>trunc</dataOutputObjs>
       <dataOutputObjs>partselect</dataOutputObjs>
       <dataOutputObjs>trunc</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="37" name="p_Result_11" lineNumber="368" originalName="__Result__" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="p_Result_11_fu_223_p1" coreId="1701273971" contextFuncName="operator_assign_23_false" bitwidth="31" opcode="trunc" nodeLabel="11.0" m_display="0" m_topoIndex="39" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="37" name="p_Result_10" lineNumber="368" originalName="__Result__" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="p_Result_10_fu_223_p1" coreId="1869375008" contextFuncName="operator_assign_23_false" bitwidth="31" opcode="trunc" nodeLabel="11.0" m_display="0" m_topoIndex="39" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_int_ref.h" linenumber="368" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="operator=&amp;lt;23, false&amp;gt;"/>
       <dataInputObjs>bitcast</dataInputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="38" name="zext_ln368_3" lineNumber="368" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="zext_ln368_3_fu_227_p1" coreId="1701734249" contextFuncName="operator_assign_23_false" bitwidth="32" opcode="zext" nodeLabel="11.0" m_display="0" m_topoIndex="40" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="38" name="zext_ln368_3" lineNumber="368" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="zext_ln368_3_fu_227_p1" coreId="1397508130" contextFuncName="operator_assign_23_false" bitwidth="32" opcode="zext" nodeLabel="11.0" m_display="0" m_topoIndex="40" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_int_ref.h" linenumber="368" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="operator=&amp;lt;23, false&amp;gt;"/>
       <dataInputObjs>trunc</dataInputObjs>
       <dataOutputObjs>bitcast</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="39" name="bitcast_ln354_3" lineNumber="354" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="bitcast_ln354_3_fu_231_p1" coreId="1970037614" contextFuncName="to_float" bitwidth="32" opcode="bitcast" nodeLabel="11.0" m_display="0" m_topoIndex="41" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="39" name="bitcast_ln354_3" lineNumber="354" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="bitcast_ln354_3_fu_231_p1" coreId="796093545" contextFuncName="to_float" bitwidth="32" opcode="bitcast" nodeLabel="11.0" m_display="0" m_topoIndex="41" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" linenumber="354" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="to_float"/>
       <dataInputObjs>zext</dataInputObjs>
       <dataOutputObjs>fcmp</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="40" name="tmp_39" lineNumber="27" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" fileDirectory=".." rtlName="tmp_39_fu_236_p4" coreId="943141165" contextFuncName="clarke_inverse_float_s" bitwidth="8" opcode="partselect" nodeLabel="11.0" m_display="0" m_topoIndex="42" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="40" name="tmp_26" lineNumber="27" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" fileDirectory=".." rtlName="tmp_26_fu_236_p4" coreId="1937338479" contextFuncName="clarke_inverse_float_s" bitwidth="8" opcode="partselect" nodeLabel="11.0" m_display="0" m_topoIndex="42" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" linenumber="27" fileDirectory="/home/mklab/workspace/foc" functionName="clarke_inverse&amp;lt;float&amp;gt;"/>
       <dataInputObjs>bitcast</dataInputObjs>
       <dataOutputObjs>icmp</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="41" name="trunc_ln27" lineNumber="27" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" fileDirectory=".." rtlName="trunc_ln27_fu_246_p1" coreId="1852127802" contextFuncName="clarke_inverse_float_s" bitwidth="23" opcode="trunc" nodeLabel="11.0" m_display="0" m_topoIndex="43" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="41" name="trunc_ln27" lineNumber="27" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" fileDirectory=".." rtlName="trunc_ln27_fu_246_p1" coreId="840979276" contextFuncName="clarke_inverse_float_s" bitwidth="23" opcode="trunc" nodeLabel="11.0" m_display="0" m_topoIndex="43" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" linenumber="27" fileDirectory="/home/mklab/workspace/foc" functionName="clarke_inverse&amp;lt;float&amp;gt;"/>
       <dataInputObjs>bitcast</dataInputObjs>
       <dataOutputObjs>icmp</dataOutputObjs>
@@ -388,7 +388,7 @@
       <dataOutputObjs>and</dataOutputObjs>
       <dataOutputObjs>and</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="45" name="tmp_40" lineNumber="27" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" fileDirectory=".." rtlName="fcmp_32ns_32ns_1_2_no_dsp_1_U92" coreName="FCompare" implIndex="auto" control="no" opType="fcmp" coreId="19" contextFuncName="clarke_inverse_float_s" bitwidth="1" opcode="fcmp" nodeLabel="11.0" nodeLatency="1" m_display="0" m_delay="2.78" m_topoIndex="47" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="45" name="tmp_27" lineNumber="27" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" fileDirectory=".." rtlName="fcmp_32ns_32ns_1_2_no_dsp_1_U92" coreName="FCompare" implIndex="auto" control="no" opType="fcmp" coreId="19" contextFuncName="clarke_inverse_float_s" bitwidth="1" opcode="fcmp" nodeLabel="11.0" nodeLatency="1" m_display="0" m_delay="2.78" m_topoIndex="47" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" linenumber="27" fileDirectory="/home/mklab/workspace/foc" functionName="clarke_inverse&amp;lt;float&amp;gt;"/>
       <dataInputObjs>bitcast</dataInputObjs>
       <dataOutputObjs>and</dataOutputObjs>
@@ -400,36 +400,36 @@
       <dataInputObjs>fcmp</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="47" name="tmp_41" lineNumber="12" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp" fileDirectory=".." rtlName="fcmp_32ns_32ns_1_2_no_dsp_1_U92" coreName="FCompare" implIndex="auto" control="no" opType="fcmp" coreId="19" contextFuncName="sgn_float_s" bitwidth="1" opcode="fcmp" nodeLabel="10.0" nodeLatency="1" m_display="0" m_delay="2.78" m_topoIndex="34" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="47" name="tmp_28" lineNumber="12" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp" fileDirectory=".." rtlName="fcmp_32ns_32ns_1_2_no_dsp_1_U92" coreName="FCompare" implIndex="auto" control="no" opType="fcmp" coreId="19" contextFuncName="sgn_float_s" bitwidth="1" opcode="fcmp" nodeLabel="10.0" nodeLatency="1" m_display="0" m_delay="2.78" m_topoIndex="34" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp" linenumber="12" fileDirectory="/home/mklab/workspace/foc" functionName="sgn&amp;lt;float&amp;gt;"/>
       <dataInputObjs>fmul</dataInputObjs>
       <dataOutputObjs>and</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="48" name="and_ln12_9" lineNumber="12" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp" fileDirectory=".." rtlName="and_ln12_9_fu_316_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="sgn_float_s" bitwidth="1" opcode="and" nodeLabel="12.0" m_display="0" m_topoIndex="58" m_clusterGroupNumber="4">
+    <node_objs xsi:type="cdfg:CdfgNode" id="48" name="and_ln12_8" lineNumber="12" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp" fileDirectory=".." rtlName="and_ln12_8_fu_316_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="sgn_float_s" bitwidth="1" opcode="and" nodeLabel="12.0" m_display="0" m_topoIndex="58" m_clusterGroupNumber="4">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp" linenumber="12" fileDirectory="/home/mklab/workspace/foc" functionName="sgn&amp;lt;float&amp;gt;"/>
       <dataInputObjs>or</dataInputObjs>
       <dataInputObjs>fcmp</dataInputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="49" name="zext_ln12_9" lineNumber="12" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp" fileDirectory=".." rtlName="zext_ln12_9_fu_320_p1" coreId="796095855" contextFuncName="sgn_float_s" bitwidth="2" opcode="zext" nodeLabel="12.0" m_display="0" m_topoIndex="59" m_clusterGroupNumber="4">
+    <node_objs xsi:type="cdfg:CdfgNode" id="49" name="zext_ln12_8" lineNumber="12" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp" fileDirectory=".." rtlName="zext_ln12_8_fu_320_p1" coreId="979906145" contextFuncName="sgn_float_s" bitwidth="2" opcode="zext" nodeLabel="12.0" m_display="0" m_topoIndex="59" m_clusterGroupNumber="4">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp" linenumber="12" fileDirectory="/home/mklab/workspace/foc" functionName="sgn&amp;lt;float&amp;gt;"/>
       <dataInputObjs>and</dataInputObjs>
       <dataOutputObjs>sub</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="50" name="tmp_42" lineNumber="12" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp" fileDirectory=".." rtlName="fcmp_32ns_32ns_1_2_no_dsp_1_U93" coreName="FCompare" implIndex="auto" control="no" opType="fcmp" coreId="19" contextFuncName="sgn_float_s" bitwidth="1" opcode="fcmp" nodeLabel="10.0" nodeLatency="1" m_display="0" m_delay="2.78" m_topoIndex="35" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="50" name="tmp_29" lineNumber="12" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp" fileDirectory=".." rtlName="fcmp_32ns_32ns_1_2_no_dsp_1_U93" coreName="FCompare" implIndex="auto" control="no" opType="fcmp" coreId="19" contextFuncName="sgn_float_s" bitwidth="1" opcode="fcmp" nodeLabel="10.0" nodeLatency="1" m_display="0" m_delay="2.78" m_topoIndex="35" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp" linenumber="12" fileDirectory="/home/mklab/workspace/foc" functionName="sgn&amp;lt;float&amp;gt;"/>
       <dataInputObjs>fmul</dataInputObjs>
       <dataOutputObjs>and</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="51" name="and_ln12_10" lineNumber="12" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp" fileDirectory=".." rtlName="and_ln12_10_fu_324_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="sgn_float_s" bitwidth="1" opcode="and" nodeLabel="12.0" m_display="0" m_topoIndex="60" m_clusterGroupNumber="4">
+    <node_objs xsi:type="cdfg:CdfgNode" id="51" name="and_ln12_9" lineNumber="12" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp" fileDirectory=".." rtlName="and_ln12_9_fu_324_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="sgn_float_s" bitwidth="1" opcode="and" nodeLabel="12.0" m_display="0" m_topoIndex="60" m_clusterGroupNumber="4">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp" linenumber="12" fileDirectory="/home/mklab/workspace/foc" functionName="sgn&amp;lt;float&amp;gt;"/>
       <dataInputObjs>or</dataInputObjs>
       <dataInputObjs>fcmp</dataInputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="52" name="zext_ln12_10" lineNumber="12" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp" fileDirectory=".." rtlName="zext_ln12_10_fu_328_p1" coreId="1969627239" contextFuncName="sgn_float_s" bitwidth="2" opcode="zext" nodeLabel="12.0" m_display="0" m_topoIndex="61" m_clusterGroupNumber="4">
+    <node_objs xsi:type="cdfg:CdfgNode" id="52" name="zext_ln12_9" lineNumber="12" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp" fileDirectory=".." rtlName="zext_ln12_9_fu_328_p1" coreId="1953244788" contextFuncName="sgn_float_s" bitwidth="2" opcode="zext" nodeLabel="12.0" m_display="0" m_topoIndex="61" m_clusterGroupNumber="4">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp" linenumber="12" fileDirectory="/home/mklab/workspace/foc" functionName="sgn&amp;lt;float&amp;gt;"/>
       <dataInputObjs>and</dataInputObjs>
       <dataOutputObjs>sub</dataOutputObjs>
@@ -441,12 +441,12 @@
       <dataOutputObjs>sext</dataOutputObjs>
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="54" name="sext_ln28" lineNumber="28" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" fileDirectory=".." rtlName="sext_ln28_fu_338_p1" coreId="1768713801" contextFuncName="clarke_inverse_float_s" bitwidth="17" opcode="sext" nodeLabel="12.0" m_display="0" m_topoIndex="63" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="54" name="sext_ln28" lineNumber="28" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" fileDirectory=".." rtlName="sext_ln28_fu_338_p1" coreId="807414892" contextFuncName="clarke_inverse_float_s" bitwidth="17" opcode="sext" nodeLabel="12.0" m_display="0" m_topoIndex="63" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" linenumber="28" fileDirectory="/home/mklab/workspace/foc" functionName="clarke_inverse&amp;lt;float&amp;gt;"/>
       <dataInputObjs>sub</dataInputObjs>
       <dataOutputObjs>sub</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="55" name="shl_ln3" lineNumber="28" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" fileDirectory=".." rtlName="shl_ln3_fu_342_p3" coreId="1663050274" contextFuncName="clarke_inverse_float_s" bitwidth="17" opcode="bitconcatenate" nodeLabel="12.0" m_display="0" m_topoIndex="64" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="55" name="shl_ln3" lineNumber="28" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" fileDirectory=".." rtlName="shl_ln3_fu_342_p3" coreId="644903011" contextFuncName="clarke_inverse_float_s" bitwidth="17" opcode="bitconcatenate" nodeLabel="12.0" m_display="0" m_topoIndex="64" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" linenumber="28" fileDirectory="/home/mklab/workspace/foc" functionName="clarke_inverse&amp;lt;float&amp;gt;"/>
       <dataInputObjs>sub</dataInputObjs>
       <dataOutputObjs>sub</dataOutputObjs>
@@ -458,12 +458,12 @@
       <dataInputObjs>sext</dataInputObjs>
       <dataOutputObjs>sext</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="57" name="sext_ln28_1" lineNumber="28" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" fileDirectory=".." rtlName="sext_ln28_1_fu_356_p1" coreId="539119430" contextFuncName="clarke_inverse_float_s" bitwidth="32" opcode="sext" nodeLabel="12.0" m_display="0" m_topoIndex="66" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="57" name="sext_ln28_1" lineNumber="28" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" fileDirectory=".." rtlName="sext_ln28_1_fu_356_p1" coreId="1701994856" contextFuncName="clarke_inverse_float_s" bitwidth="32" opcode="sext" nodeLabel="12.0" m_display="0" m_topoIndex="66" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" linenumber="28" fileDirectory="/home/mklab/workspace/foc" functionName="clarke_inverse&amp;lt;float&amp;gt;"/>
       <dataInputObjs>sub</dataInputObjs>
       <dataOutputObjs>sitofp</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="58" name="conv4" lineNumber="28" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" fileDirectory=".." rtlName="sitofp_32s_32_4_no_dsp_1_U90" coreName="Int2Float" implIndex="auto" control="no" opType="sitofp" coreId="62" contextFuncName="clarke_inverse_float_s" bitwidth="32" opcode="sitofp" nodeLabel="12.0" nodeLatency="3" m_display="0" m_delay="5.19" m_topoIndex="67" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="58" name="conv3" lineNumber="28" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" fileDirectory=".." rtlName="sitofp_32s_32_4_no_dsp_1_U90" coreName="Int2Float" implIndex="auto" control="no" opType="sitofp" coreId="62" contextFuncName="clarke_inverse_float_s" bitwidth="32" opcode="sitofp" nodeLabel="12.0" nodeLatency="3" m_display="0" m_delay="5.19" m_topoIndex="67" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" linenumber="28" fileDirectory="/home/mklab/workspace/foc" functionName="clarke_inverse&amp;lt;float&amp;gt;"/>
       <dataInputObjs>sext</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
@@ -475,35 +475,35 @@
       <dataInputObjs>fmul</dataInputObjs>
       <dataOutputObjs>insertvalue</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="60" name="data_V_11" lineNumber="315" originalName="data.V" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="data_V_11_fu_268_p1" coreId="1479500385" contextFuncName="fp_struct" bitwidth="32" opcode="bitcast" nodeLabel="11.0" m_display="0" m_topoIndex="48" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="60" name="data_V_10" lineNumber="315" originalName="data.V" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="data_V_10_fu_268_p1" coreId="1919250021" contextFuncName="fp_struct" bitwidth="32" opcode="bitcast" nodeLabel="11.0" m_display="0" m_topoIndex="48" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" linenumber="315" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="fp_struct"/>
       <dataInputObjs>fmul</dataInputObjs>
       <dataOutputObjs>trunc</dataOutputObjs>
       <dataOutputObjs>partselect</dataOutputObjs>
       <dataOutputObjs>trunc</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="61" name="p_Result_12" lineNumber="368" originalName="__Result__" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="p_Result_12_fu_271_p1" coreId="778399343" contextFuncName="operator_assign_23_false" bitwidth="31" opcode="trunc" nodeLabel="11.0" m_display="0" m_topoIndex="49" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="61" name="p_Result_11" lineNumber="368" originalName="__Result__" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="p_Result_11_fu_271_p1" coreId="574453865" contextFuncName="operator_assign_23_false" bitwidth="31" opcode="trunc" nodeLabel="11.0" m_display="0" m_topoIndex="49" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_int_ref.h" linenumber="368" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="operator=&amp;lt;23, false&amp;gt;"/>
       <dataInputObjs>bitcast</dataInputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="62" name="zext_ln368_4" lineNumber="368" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="zext_ln368_4_fu_275_p1" coreId="1634038388" contextFuncName="operator_assign_23_false" bitwidth="32" opcode="zext" nodeLabel="11.0" m_display="0" m_topoIndex="50" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="62" name="zext_ln368_4" lineNumber="368" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="zext_ln368_4_fu_275_p1" coreId="645165934" contextFuncName="operator_assign_23_false" bitwidth="32" opcode="zext" nodeLabel="11.0" m_display="0" m_topoIndex="50" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_int_ref.h" linenumber="368" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="operator=&amp;lt;23, false&amp;gt;"/>
       <dataInputObjs>trunc</dataInputObjs>
       <dataOutputObjs>bitcast</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="63" name="bitcast_ln354_4" lineNumber="354" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="bitcast_ln354_4_fu_279_p1" coreId="1730571381" contextFuncName="to_float" bitwidth="32" opcode="bitcast" nodeLabel="11.0" m_display="0" m_topoIndex="51" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="63" name="bitcast_ln354_4" lineNumber="354" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="bitcast_ln354_4_fu_279_p1" coreId="1701672302" contextFuncName="to_float" bitwidth="32" opcode="bitcast" nodeLabel="11.0" m_display="0" m_topoIndex="51" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" linenumber="354" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="to_float"/>
       <dataInputObjs>zext</dataInputObjs>
       <dataOutputObjs>fcmp</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="64" name="tmp_43" lineNumber="31" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" fileDirectory=".." rtlName="tmp_43_fu_284_p4" coreId="574454117" contextFuncName="clarke_inverse_float_s" bitwidth="8" opcode="partselect" nodeLabel="11.0" m_display="0" m_topoIndex="52" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="64" name="tmp_30" lineNumber="31" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" fileDirectory=".." rtlName="tmp_30_fu_284_p4" coreId="861878577" contextFuncName="clarke_inverse_float_s" bitwidth="8" opcode="partselect" nodeLabel="11.0" m_display="0" m_topoIndex="52" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" linenumber="31" fileDirectory="/home/mklab/workspace/foc" functionName="clarke_inverse&amp;lt;float&amp;gt;"/>
       <dataInputObjs>bitcast</dataInputObjs>
       <dataOutputObjs>icmp</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="65" name="trunc_ln31" lineNumber="31" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" fileDirectory=".." rtlName="trunc_ln31_fu_294_p1" coreId="1330007625" contextFuncName="clarke_inverse_float_s" bitwidth="23" opcode="trunc" nodeLabel="11.0" m_display="0" m_topoIndex="53" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="65" name="trunc_ln31" lineNumber="31" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" fileDirectory=".." rtlName="trunc_ln31_fu_294_p1" coreId="1030647657" contextFuncName="clarke_inverse_float_s" bitwidth="23" opcode="trunc" nodeLabel="11.0" m_display="0" m_topoIndex="53" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" linenumber="31" fileDirectory="/home/mklab/workspace/foc" functionName="clarke_inverse&amp;lt;float&amp;gt;"/>
       <dataInputObjs>bitcast</dataInputObjs>
       <dataOutputObjs>icmp</dataOutputObjs>
@@ -528,7 +528,7 @@
       <dataOutputObjs>and</dataOutputObjs>
       <dataOutputObjs>and</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="69" name="tmp_44" lineNumber="31" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" fileDirectory=".." rtlName="fcmp_32ns_32ns_1_2_no_dsp_1_U93" coreName="FCompare" implIndex="auto" control="no" opType="fcmp" coreId="19" contextFuncName="clarke_inverse_float_s" bitwidth="1" opcode="fcmp" nodeLabel="11.0" nodeLatency="1" m_display="0" m_delay="2.78" m_topoIndex="57" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="69" name="tmp_31" lineNumber="31" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" fileDirectory=".." rtlName="fcmp_32ns_32ns_1_2_no_dsp_1_U93" coreName="FCompare" implIndex="auto" control="no" opType="fcmp" coreId="19" contextFuncName="clarke_inverse_float_s" bitwidth="1" opcode="fcmp" nodeLabel="11.0" nodeLatency="1" m_display="0" m_delay="2.78" m_topoIndex="57" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" linenumber="31" fileDirectory="/home/mklab/workspace/foc" functionName="clarke_inverse&amp;lt;float&amp;gt;"/>
       <dataInputObjs>bitcast</dataInputObjs>
       <dataOutputObjs>and</dataOutputObjs>
@@ -540,36 +540,36 @@
       <dataInputObjs>fcmp</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="71" name="tmp_45" lineNumber="12" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp" fileDirectory=".." rtlName="fcmp_32ns_32ns_1_2_no_dsp_1_U94" coreName="FCompare" implIndex="auto" control="no" opType="fcmp" coreId="19" contextFuncName="sgn_float_s" bitwidth="1" opcode="fcmp" nodeLabel="10.0" nodeLatency="1" m_display="0" m_delay="2.78" m_topoIndex="36" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="71" name="tmp_32" lineNumber="12" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp" fileDirectory=".." rtlName="fcmp_32ns_32ns_1_2_no_dsp_1_U94" coreName="FCompare" implIndex="auto" control="no" opType="fcmp" coreId="19" contextFuncName="sgn_float_s" bitwidth="1" opcode="fcmp" nodeLabel="10.0" nodeLatency="1" m_display="0" m_delay="2.78" m_topoIndex="36" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp" linenumber="12" fileDirectory="/home/mklab/workspace/foc" functionName="sgn&amp;lt;float&amp;gt;"/>
       <dataInputObjs>fmul</dataInputObjs>
       <dataOutputObjs>and</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="72" name="and_ln12_11" lineNumber="12" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp" fileDirectory=".." rtlName="and_ln12_11_fu_361_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="sgn_float_s" bitwidth="1" opcode="and" nodeLabel="12.0" m_display="0" m_topoIndex="68" m_clusterGroupNumber="6">
+    <node_objs xsi:type="cdfg:CdfgNode" id="72" name="and_ln12_10" lineNumber="12" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp" fileDirectory=".." rtlName="and_ln12_10_fu_361_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="sgn_float_s" bitwidth="1" opcode="and" nodeLabel="12.0" m_display="0" m_topoIndex="68" m_clusterGroupNumber="6">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp" linenumber="12" fileDirectory="/home/mklab/workspace/foc" functionName="sgn&amp;lt;float&amp;gt;"/>
       <dataInputObjs>or</dataInputObjs>
       <dataInputObjs>fcmp</dataInputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="73" name="zext_ln12_11" lineNumber="12" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp" fileDirectory=".." rtlName="zext_ln12_11_fu_365_p1" coreId="1668641396" contextFuncName="sgn_float_s" bitwidth="2" opcode="zext" nodeLabel="12.0" m_display="0" m_topoIndex="69" m_clusterGroupNumber="6">
+    <node_objs xsi:type="cdfg:CdfgNode" id="73" name="zext_ln12_10" lineNumber="12" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp" fileDirectory=".." rtlName="zext_ln12_10_fu_365_p1" coreId="645164649" contextFuncName="sgn_float_s" bitwidth="2" opcode="zext" nodeLabel="12.0" m_display="0" m_topoIndex="69" m_clusterGroupNumber="6">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp" linenumber="12" fileDirectory="/home/mklab/workspace/foc" functionName="sgn&amp;lt;float&amp;gt;"/>
       <dataInputObjs>and</dataInputObjs>
       <dataOutputObjs>sub</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="74" name="tmp_46" lineNumber="12" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp" fileDirectory=".." rtlName="fcmp_32ns_32ns_1_2_no_dsp_1_U95" coreName="FCompare" implIndex="auto" control="no" opType="fcmp" coreId="19" contextFuncName="sgn_float_s" bitwidth="1" opcode="fcmp" nodeLabel="10.0" nodeLatency="1" m_display="0" m_delay="2.78" m_topoIndex="37" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="74" name="tmp_33" lineNumber="12" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp" fileDirectory=".." rtlName="fcmp_32ns_32ns_1_2_no_dsp_1_U95" coreName="FCompare" implIndex="auto" control="no" opType="fcmp" coreId="19" contextFuncName="sgn_float_s" bitwidth="1" opcode="fcmp" nodeLabel="10.0" nodeLatency="1" m_display="0" m_delay="2.78" m_topoIndex="37" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp" linenumber="12" fileDirectory="/home/mklab/workspace/foc" functionName="sgn&amp;lt;float&amp;gt;"/>
       <dataInputObjs>fmul</dataInputObjs>
       <dataOutputObjs>and</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="75" name="and_ln12_12" lineNumber="12" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp" fileDirectory=".." rtlName="and_ln12_12_fu_369_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="sgn_float_s" bitwidth="1" opcode="and" nodeLabel="12.0" m_display="0" m_topoIndex="70" m_clusterGroupNumber="6">
+    <node_objs xsi:type="cdfg:CdfgNode" id="75" name="and_ln12_11" lineNumber="12" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp" fileDirectory=".." rtlName="and_ln12_11_fu_369_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="sgn_float_s" bitwidth="1" opcode="and" nodeLabel="12.0" m_display="0" m_topoIndex="70" m_clusterGroupNumber="6">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp" linenumber="12" fileDirectory="/home/mklab/workspace/foc" functionName="sgn&amp;lt;float&amp;gt;"/>
       <dataInputObjs>or</dataInputObjs>
       <dataInputObjs>fcmp</dataInputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="76" name="zext_ln12_12" lineNumber="12" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp" fileDirectory=".." rtlName="zext_ln12_12_fu_373_p1" coreId="540767087" contextFuncName="sgn_float_s" bitwidth="2" opcode="zext" nodeLabel="12.0" m_display="0" m_topoIndex="71" m_clusterGroupNumber="6">
+    <node_objs xsi:type="cdfg:CdfgNode" id="76" name="zext_ln12_11" lineNumber="12" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp" fileDirectory=".." rtlName="zext_ln12_11_fu_373_p1" coreId="997484326" contextFuncName="sgn_float_s" bitwidth="2" opcode="zext" nodeLabel="12.0" m_display="0" m_topoIndex="71" m_clusterGroupNumber="6">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp" linenumber="12" fileDirectory="/home/mklab/workspace/foc" functionName="sgn&amp;lt;float&amp;gt;"/>
       <dataInputObjs>and</dataInputObjs>
       <dataOutputObjs>sub</dataOutputObjs>
@@ -581,12 +581,12 @@
       <dataOutputObjs>sext</dataOutputObjs>
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="78" name="sext_ln32" lineNumber="32" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" fileDirectory=".." rtlName="sext_ln32_fu_383_p1" coreId="1952917108" contextFuncName="clarke_inverse_float_s" bitwidth="17" opcode="sext" nodeLabel="12.0" m_display="0" m_topoIndex="73" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="78" name="sext_ln32" lineNumber="32" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" fileDirectory=".." rtlName="sext_ln32_fu_383_p1" coreId="1952917040" contextFuncName="clarke_inverse_float_s" bitwidth="17" opcode="sext" nodeLabel="12.0" m_display="0" m_topoIndex="73" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" linenumber="32" fileDirectory="/home/mklab/workspace/foc" functionName="clarke_inverse&amp;lt;float&amp;gt;"/>
       <dataInputObjs>sub</dataInputObjs>
       <dataOutputObjs>sub</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="79" name="shl_ln4" lineNumber="32" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" fileDirectory=".." rtlName="shl_ln4_fu_387_p3" coreId="997485606" contextFuncName="clarke_inverse_float_s" bitwidth="17" opcode="bitconcatenate" nodeLabel="12.0" m_display="0" m_topoIndex="74" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="79" name="shl_ln4" lineNumber="32" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" fileDirectory=".." rtlName="shl_ln4_fu_387_p3" coreId="1730556982" contextFuncName="clarke_inverse_float_s" bitwidth="17" opcode="bitconcatenate" nodeLabel="12.0" m_display="0" m_topoIndex="74" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" linenumber="32" fileDirectory="/home/mklab/workspace/foc" functionName="clarke_inverse&amp;lt;float&amp;gt;"/>
       <dataInputObjs>sub</dataInputObjs>
       <dataOutputObjs>sub</dataOutputObjs>
@@ -598,12 +598,12 @@
       <dataInputObjs>sext</dataInputObjs>
       <dataOutputObjs>sext</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="81" name="sext_ln32_1" lineNumber="32" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" fileDirectory=".." rtlName="grp_fu_68_p0" coreId="997420912" contextFuncName="clarke_inverse_float_s" bitwidth="32" opcode="sext" nodeLabel="12.0" m_display="0" m_topoIndex="76" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="81" name="sext_ln32_1" lineNumber="32" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" fileDirectory=".." rtlName="grp_fu_68_p0" coreId="825372722" contextFuncName="clarke_inverse_float_s" bitwidth="32" opcode="sext" nodeLabel="12.0" m_display="0" m_topoIndex="76" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" linenumber="32" fileDirectory="/home/mklab/workspace/foc" functionName="clarke_inverse&amp;lt;float&amp;gt;"/>
       <dataInputObjs>sub</dataInputObjs>
       <dataOutputObjs>sitofp</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="82" name="conv5" lineNumber="32" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" fileDirectory=".." rtlName="sitofp_32s_32_4_no_dsp_1_U91" coreName="Int2Float" implIndex="auto" control="no" opType="sitofp" coreId="62" contextFuncName="clarke_inverse_float_s" bitwidth="32" opcode="sitofp" nodeLabel="12.0" nodeLatency="3" m_display="0" m_delay="5.19" m_topoIndex="77" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="82" name="conv4" lineNumber="32" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" fileDirectory=".." rtlName="sitofp_32s_32_4_no_dsp_1_U91" coreName="Int2Float" implIndex="auto" control="no" opType="sitofp" coreId="62" contextFuncName="clarke_inverse_float_s" bitwidth="32" opcode="sitofp" nodeLabel="12.0" nodeLatency="3" m_display="0" m_delay="5.19" m_topoIndex="77" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" linenumber="32" fileDirectory="/home/mklab/workspace/foc" functionName="clarke_inverse&amp;lt;float&amp;gt;"/>
       <dataInputObjs>sext</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
@@ -615,25 +615,25 @@
       <dataInputObjs>fmul</dataInputObjs>
       <dataOutputObjs>insertvalue</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="84" name="mrv" lineNumber="35" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" fileDirectory=".." coreId="1634548595" contextFuncName="clarke_inverse_float_s" bitwidth="96" opcode="insertvalue" nodeLabel="15.0" m_display="0" m_topoIndex="82" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="84" name="mrv" lineNumber="35" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" fileDirectory=".." coreId="1634038388" contextFuncName="clarke_inverse_float_s" bitwidth="96" opcode="insertvalue" nodeLabel="15.0" m_display="0" m_topoIndex="82" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" linenumber="35" fileDirectory="/home/mklab/workspace/foc" functionName="clarke_inverse&amp;lt;float&amp;gt;"/>
       <dataInputObjs>select</dataInputObjs>
       <dataOutputObjs>insertvalue</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="85" name="mrv_1" lineNumber="35" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" fileDirectory=".." coreId="1852399472" contextFuncName="clarke_inverse_float_s" bitwidth="96" opcode="insertvalue" nodeLabel="15.0" m_display="0" m_topoIndex="83" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="85" name="mrv_1" lineNumber="35" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" fileDirectory=".." coreId="2020501868" contextFuncName="clarke_inverse_float_s" bitwidth="96" opcode="insertvalue" nodeLabel="15.0" m_display="0" m_topoIndex="83" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" linenumber="35" fileDirectory="/home/mklab/workspace/foc" functionName="clarke_inverse&amp;lt;float&amp;gt;"/>
       <dataInputObjs>insertvalue</dataInputObjs>
       <dataInputObjs>select</dataInputObjs>
       <dataOutputObjs>insertvalue</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="86" name="mrv_2" lineNumber="35" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" fileDirectory=".." coreId="1702113134" contextFuncName="clarke_inverse_float_s" bitwidth="96" opcode="insertvalue" nodeLabel="15.0" m_display="0" m_topoIndex="84" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="86" name="mrv_2" lineNumber="35" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" fileDirectory=".." coreId="1717924464" contextFuncName="clarke_inverse_float_s" bitwidth="96" opcode="insertvalue" nodeLabel="15.0" m_display="0" m_topoIndex="84" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" linenumber="35" fileDirectory="/home/mklab/workspace/foc" functionName="clarke_inverse&amp;lt;float&amp;gt;"/>
       <dataInputObjs>insertvalue</dataInputObjs>
       <dataInputObjs>select</dataInputObjs>
       <dataOutputObjs>ret</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="87" name="_ln35" lineNumber="35" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" fileDirectory=".." coreId="1885415027" contextFuncName="clarke_inverse_float_s" opcode="ret" nodeLabel="15.0" m_display="0" m_topoIndex="85" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="87" name="_ln35" lineNumber="35" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" fileDirectory=".." coreId="1030185332" contextFuncName="clarke_inverse_float_s" opcode="ret" nodeLabel="15.0" m_display="0" m_topoIndex="85" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../clarke_transform/clark_inverse.hpp" linenumber="35" fileDirectory="/home/mklab/workspace/foc" functionName="clarke_inverse&amp;lt;float&amp;gt;"/>
       <dataInputObjs>insertvalue</dataInputObjs>
       <dataOutputObjs>ap_return_0</dataOutputObjs>
@@ -680,20 +680,26 @@
   <ScheduleInfo time="13"/>
   <ScheduleInfo time="14"/>
   <ScheduleInfo time="15"/>
+  <regnodes realName="tmp_s_reg_486">
+    <nodeIds>26</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_25_reg_481">
+    <nodeIds>23</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_27_reg_563">
+    <nodeIds>45</nodeIds>
+  </regnodes>
   <regnodes realName="select_ln23_reg_506">
     <nodeIds>35</nodeIds>
-  </regnodes>
-  <regnodes realName="tmp_37_reg_476">
-    <nodeIds>21</nodeIds>
-  </regnodes>
-  <regnodes realName="tmp_40_reg_563">
-    <nodeIds>45</nodeIds>
   </regnodes>
   <regnodes realName="sext_ln24_1_reg_491">
     <nodeIds>33</nodeIds>
   </regnodes>
   <regnodes realName="bitcast_ln21_1_reg_459">
     <nodeIds>10</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_31_reg_573">
+    <nodeIds>69</nodeIds>
   </regnodes>
   <regnodes realName="bitcast_ln354_3_reg_519">
     <nodeIds>39</nodeIds>
@@ -704,39 +710,39 @@
   <regnodes realName="bitcast_ln354_4_reg_541">
     <nodeIds>63</nodeIds>
   </regnodes>
-  <regnodes realName="tmp_38_reg_486">
-    <nodeIds>26</nodeIds>
-  </regnodes>
-  <regnodes realName="tmp_s_reg_481">
-    <nodeIds>23</nodeIds>
-  </regnodes>
-  <regnodes realName="tmp_46_reg_558">
-    <nodeIds>74</nodeIds>
+  <regnodes realName="tmp_32_reg_553">
+    <nodeIds>71</nodeIds>
   </regnodes>
   <regnodes realName="sext_ln32_1_reg_578">
     <nodeIds>81</nodeIds>
   </regnodes>
+  <regnodes realName="tmp_33_reg_558">
+    <nodeIds>74</nodeIds>
+  </regnodes>
   <regnodes realName="bitcast_ln354_reg_464">
     <nodeIds>15</nodeIds>
+  </regnodes>
+  <regnodes realName="dc_10_reg_511">
+    <nodeIds>12</nodeIds>
   </regnodes>
   <regnodes realName="reg_95">
     <nodeIds>5</nodeIds>
     <nodeIds>7</nodeIds>
   </regnodes>
+  <regnodes realName="tmp_28_reg_531">
+    <nodeIds>47</nodeIds>
+  </regnodes>
   <regnodes realName="sub_reg_496">
     <nodeIds>6</nodeIds>
-  </regnodes>
-  <regnodes realName="tmp_41_reg_531">
-    <nodeIds>47</nodeIds>
   </regnodes>
   <regnodes realName="Valpha_read_reg_451">
     <nodeIds>4</nodeIds>
   </regnodes>
-  <regnodes realName="dc_11_reg_511">
-    <nodeIds>12</nodeIds>
-  </regnodes>
   <regnodes realName="sub3_reg_501">
     <nodeIds>11</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_29_reg_536">
+    <nodeIds>50</nodeIds>
   </regnodes>
   <regnodes realName="Vbeta_read_reg_446">
     <nodeIds>3</nodeIds>
@@ -744,26 +750,20 @@
   <regnodes realName="sext_ln28_1_reg_568">
     <nodeIds>57</nodeIds>
   </regnodes>
-  <regnodes realName="tmp_45_reg_553">
-    <nodeIds>71</nodeIds>
+  <regnodes realName="tmp_24_reg_476">
+    <nodeIds>21</nodeIds>
   </regnodes>
   <regnodes realName="or_ln31_reg_546">
     <nodeIds>68</nodeIds>
   </regnodes>
-  <regnodes realName="tmp_44_reg_573">
-    <nodeIds>69</nodeIds>
-  </regnodes>
-  <regnodes realName="tmp_42_reg_536">
-    <nodeIds>50</nodeIds>
-  </regnodes>
   <regnodes realName="or_ln27_reg_524">
     <nodeIds>44</nodeIds>
   </regnodes>
+  <expressionNodes realName="zext_ln12_10_fu_365">
+    <nodeIds>73</nodeIds>
+  </expressionNodes>
   <expressionNodes realName="select_ln27_fu_410">
     <nodeIds>59</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="zext_ln12_11_fu_365">
-    <nodeIds>73</nodeIds>
   </expressionNodes>
   <expressionNodes realName="xor_ln21_fu_107">
     <nodeIds>9</nodeIds>
@@ -795,6 +795,12 @@
   <expressionNodes realName="shl_ln3_fu_342">
     <nodeIds>55</nodeIds>
   </expressionNodes>
+  <expressionNodes realName="tmp_26_fu_236">
+    <nodeIds>40</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln12_7_fu_175">
+    <nodeIds>28</nodeIds>
+  </expressionNodes>
   <expressionNodes realName="icmp_ln23_1_fu_151">
     <nodeIds>19</nodeIds>
   </expressionNodes>
@@ -816,20 +822,11 @@
   <expressionNodes realName="icmp_ln31_fu_298">
     <nodeIds>66</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="p_Result_11_fu_223">
-    <nodeIds>37</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="zext_ln12_12_fu_373">
-    <nodeIds>76</nodeIds>
-  </expressionNodes>
   <expressionNodes realName="and_ln31_fu_418">
     <nodeIds>70</nodeIds>
   </expressionNodes>
   <expressionNodes realName="shl_ln_fu_189">
     <nodeIds>31</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="zext_ln12_8_fu_175">
-    <nodeIds>28</nodeIds>
   </expressionNodes>
   <expressionNodes realName="mrv_2_fu_440">
     <nodeIds>86</nodeIds>
@@ -852,14 +849,14 @@
   <expressionNodes realName="and_ln27_fu_406">
     <nodeIds>46</nodeIds>
   </expressionNodes>
+  <expressionNodes realName="data_V_9_fu_219">
+    <nodeIds>36</nodeIds>
+  </expressionNodes>
   <expressionNodes realName="and_ln23_fu_208">
     <nodeIds>22</nodeIds>
   </expressionNodes>
   <expressionNodes realName="sub_ln24_fu_197">
     <nodeIds>32</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="zext_ln12_10_fu_328">
-    <nodeIds>52</nodeIds>
   </expressionNodes>
   <expressionNodes realName="sub_ln12_fu_179">
     <nodeIds>29</nodeIds>
@@ -867,8 +864,14 @@
   <expressionNodes realName="mrv_fu_429">
     <nodeIds>84</nodeIds>
   </expressionNodes>
+  <expressionNodes realName="and_ln12_7_fu_171">
+    <nodeIds>27</nodeIds>
+  </expressionNodes>
   <expressionNodes realName="sext_ln28_1_fu_356">
     <nodeIds>57</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_Result_11_fu_271">
+    <nodeIds>61</nodeIds>
   </expressionNodes>
   <expressionNodes realName="sext_ln32_1_fu_401">
     <nodeIds>81</nodeIds>
@@ -876,35 +879,29 @@
   <expressionNodes realName="icmp_ln23_fu_145">
     <nodeIds>18</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="tmp_39_fu_236">
-    <nodeIds>40</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="and_ln12_9_fu_316">
-    <nodeIds>48</nodeIds>
+  <expressionNodes realName="and_ln12_10_fu_361">
+    <nodeIds>72</nodeIds>
   </expressionNodes>
   <expressionNodes realName="or_ln27_fu_262">
     <nodeIds>44</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="and_ln12_11_fu_361">
-    <nodeIds>72</nodeIds>
+  <expressionNodes realName="and_ln12_8_fu_316">
+    <nodeIds>48</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="zext_ln12_9_fu_320">
+  <expressionNodes realName="zext_ln12_8_fu_320">
     <nodeIds>49</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="p_Result_12_fu_271">
-    <nodeIds>61</nodeIds>
+  <expressionNodes realName="and_ln12_11_fu_369">
+    <nodeIds>75</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="and_ln12_10_fu_324">
-    <nodeIds>51</nodeIds>
+  <expressionNodes realName="zext_ln12_9_fu_328">
+    <nodeIds>52</nodeIds>
   </expressionNodes>
   <expressionNodes realName="sext_ln28_fu_338">
     <nodeIds>54</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="and_ln12_12_fu_369">
-    <nodeIds>75</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="data_V_11_fu_268">
-    <nodeIds>60</nodeIds>
+  <expressionNodes realName="and_ln12_9_fu_324">
+    <nodeIds>51</nodeIds>
   </expressionNodes>
   <expressionNodes realName="or_ln31_fu_310">
     <nodeIds>68</nodeIds>
@@ -915,8 +912,14 @@
   <expressionNodes realName="bitcast_ln354_fu_126">
     <nodeIds>15</nodeIds>
   </expressionNodes>
+  <expressionNodes realName="data_V_10_fu_268">
+    <nodeIds>60</nodeIds>
+  </expressionNodes>
   <expressionNodes realName="p_Result_s_fu_118">
     <nodeIds>13</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln12_11_fu_373">
+    <nodeIds>76</nodeIds>
   </expressionNodes>
   <expressionNodes realName="zext_ln368_3_fu_227">
     <nodeIds>38</nodeIds>
@@ -942,17 +945,14 @@
   <expressionNodes realName="zext_ln368_fu_122">
     <nodeIds>14</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="tmp_43_fu_284">
-    <nodeIds>64</nodeIds>
+  <expressionNodes realName="p_Result_10_fu_223">
+    <nodeIds>37</nodeIds>
   </expressionNodes>
   <expressionNodes realName="sub_ln32_fu_395">
     <nodeIds>80</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="data_V_10_fu_219">
-    <nodeIds>36</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="and_ln12_8_fu_171">
-    <nodeIds>27</nodeIds>
+  <expressionNodes realName="tmp_30_fu_284">
+    <nodeIds>64</nodeIds>
   </expressionNodes>
   <moduleNodes realName="grp_fu_68">
     <nodeIds>82</nodeIds>

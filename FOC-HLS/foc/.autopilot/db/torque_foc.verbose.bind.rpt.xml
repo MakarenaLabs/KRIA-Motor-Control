@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'torque_foc'" level="0">
-<item name = "Date">Mon Oct 17 13:30:25 2022
+<item name = "Date">Wed Oct 19 22:36:41 2022
 </item>
 <item name = "Version">2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)</item>
 <item name = "Project">foc-rewrite</item>
@@ -31,15 +31,15 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_low_pass_filter_float_s_fu_429">low_pass_filter_float_s, 77, 77, 0.770 us, 0.770 us, 77, 77, no</column>
-<column name="grp_clarke_direct_float_s_fu_448">clarke_direct_float_s, 15, 15, 0.150 us, 0.150 us, 15, 15, no</column>
-<column name="grp_park_direct_float_s_fu_454">park_direct_float_s, 14, 14, 0.140 us, 0.140 us, 14, 14, no</column>
-<column name="grp_PI_control_float_s_fu_465">PI_control_float_s, 20, 20, 0.200 us, 0.200 us, 20, 20, no</column>
-<column name="grp_PI_control_float_s_fu_476">PI_control_float_s, 20, 20, 0.200 us, 0.200 us, 20, 20, no</column>
-<column name="grp_decoupling_float_s_fu_488">decoupling_float_s, 13, 13, 0.130 us, 0.130 us, 13, 13, no</column>
-<column name="grp_park_inverse_float_s_fu_497">park_inverse_float_s, 14, 14, 0.140 us, 0.140 us, 14, 14, no</column>
-<column name="grp_clarke_inverse_float_s_fu_508">clarke_inverse_float_s, 15, 15, 0.150 us, 0.150 us, 15, 15, no</column>
-<column name="grp_SVPWM_float_s_fu_514">SVPWM_float_s, 10, 10, 0.100 us, 0.100 us, 10, 10, no</column>
+<column name="grp_low_pass_filter_float_s_fu_431">low_pass_filter_float_s, 77, 77, 0.770 us, 0.770 us, 77, 77, no</column>
+<column name="grp_clarke_direct_float_s_fu_450">clarke_direct_float_s, 15, 15, 0.150 us, 0.150 us, 15, 15, no</column>
+<column name="grp_park_direct_float_s_fu_456">park_direct_float_s, 14, 14, 0.140 us, 0.140 us, 14, 14, no</column>
+<column name="grp_PI_control_float_s_fu_467">PI_control_float_s, 20, 20, 0.200 us, 0.200 us, 20, 20, no</column>
+<column name="grp_PI_control_float_s_fu_478">PI_control_float_s, 20, 20, 0.200 us, 0.200 us, 20, 20, no</column>
+<column name="grp_decoupling_float_s_fu_490">decoupling_float_s, 13, 13, 0.130 us, 0.130 us, 13, 13, no</column>
+<column name="grp_park_inverse_float_s_fu_499">park_inverse_float_s, 14, 14, 0.140 us, 0.140 us, 14, 14, no</column>
+<column name="grp_clarke_inverse_float_s_fu_510">clarke_inverse_float_s, 15, 15, 0.150 us, 0.150 us, 15, 15, no</column>
+<column name="grp_SVPWM_float_s_fu_516">SVPWM_float_s, 10, 10, 0.100 us, 0.100 us, 10, 10, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

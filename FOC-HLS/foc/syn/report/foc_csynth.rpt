@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'foc'
 ================================================================
-* Date:           Mon Oct 17 13:30:33 2022
+* Date:           Wed Oct 19 22:36:50 2022
 
 * Version:        2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)
 * Project:        foc-rewrite
@@ -29,7 +29,7 @@
     |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
     |   min   |   max   |    min   |    max   | min | max |   Type  |
     +---------+---------+----------+----------+-----+-----+---------+
-    |      255|      265|  2.550 us|  2.650 us|  255|  265|       no|
+    |      205|      205|  2.050 us|  2.050 us|  205|  205|       no|
     +---------+---------+----------+----------+-----+-----+---------+
 
     + Detail: 
@@ -38,14 +38,15 @@
         |                                    |                         |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
         |              Instance              |          Module         |   min   |   max   |    min   |    max   | min | max |   Type  |
         +------------------------------------+-------------------------+---------+---------+----------+----------+-----+-----+---------+
-        |grp_low_pass_filter_float_s_fu_466  |low_pass_filter_float_s  |       77|       77|  0.770 us|  0.770 us|   77|   77|       no|
-        |grp_clarke_direct_float_s_fu_485    |clarke_direct_float_s    |       15|       15|  0.150 us|  0.150 us|   15|   15|       no|
-        |grp_PI_control_float_s_fu_491       |PI_control_float_s       |       20|       20|  0.200 us|  0.200 us|   20|   20|       no|
-        |grp_park_direct_float_s_fu_506      |park_direct_float_s      |       14|       14|  0.140 us|  0.140 us|   14|   14|       no|
-        |grp_decoupling_float_s_fu_517       |decoupling_float_s       |       13|       13|  0.130 us|  0.130 us|   13|   13|       no|
-        |grp_park_inverse_float_s_fu_526     |park_inverse_float_s     |       14|       14|  0.140 us|  0.140 us|   14|   14|       no|
-        |grp_clarke_inverse_float_s_fu_537   |clarke_inverse_float_s   |       15|       15|  0.150 us|  0.150 us|   15|   15|       no|
-        |grp_SVPWM_float_s_fu_543            |SVPWM_float_s            |       10|       10|  0.100 us|  0.100 us|   10|   10|       no|
+        |grp_low_pass_filter_float_s_fu_437  |low_pass_filter_float_s  |       77|       77|  0.770 us|  0.770 us|   77|   77|       no|
+        |grp_clarke_direct_float_s_fu_456    |clarke_direct_float_s    |       15|       15|  0.150 us|  0.150 us|   15|   15|       no|
+        |grp_PI_control_float_s_fu_462       |PI_control_float_s       |       20|       20|  0.200 us|  0.200 us|   20|   20|       no|
+        |grp_PI_control_float_s_fu_475       |PI_control_float_s       |       20|       20|  0.200 us|  0.200 us|   20|   20|       no|
+        |grp_park_direct_float_s_fu_487      |park_direct_float_s      |       14|       14|  0.140 us|  0.140 us|   14|   14|       no|
+        |grp_decoupling_float_s_fu_498       |decoupling_float_s       |       13|       13|  0.130 us|  0.130 us|   13|   13|       no|
+        |grp_park_inverse_float_s_fu_507     |park_inverse_float_s     |       14|       14|  0.140 us|  0.140 us|   14|   14|       no|
+        |grp_clarke_inverse_float_s_fu_518   |clarke_inverse_float_s   |       15|       15|  0.150 us|  0.150 us|   15|   15|       no|
+        |grp_SVPWM_float_s_fu_524            |SVPWM_float_s            |       10|       10|  0.100 us|  0.100 us|   10|   10|       no|
         +------------------------------------+-------------------------+---------+---------+----------+----------+-----+-----+---------+
 
         * Loop: 
@@ -61,14 +62,14 @@
 |       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
 +-----------------+---------+------+--------+--------+-----+
 |DSP              |        -|     -|       -|       -|    -|
-|Expression       |        -|     -|       0|    2119|    -|
+|Expression       |        -|     -|       0|    1920|    -|
 |FIFO             |        -|     -|       -|       -|    -|
-|Instance         |        8|   100|    8739|   10792|    -|
+|Instance         |        8|   102|    9151|   11308|    -|
 |Memory           |        -|     -|       -|       -|    -|
-|Multiplexer      |        -|     -|       -|     853|    -|
-|Register         |        -|     -|    1319|       -|    -|
+|Multiplexer      |        -|     -|       -|     475|    -|
+|Register         |        -|     -|     890|       -|    -|
 +-----------------+---------+------+--------+--------+-----+
-|Total            |        8|   100|   10058|   13764|    0|
+|Total            |        8|   102|   10041|   13703|    0|
 +-----------------+---------+------+--------+--------+-----+
 |Available        |      624|  1728|  460800|  230400|   96|
 +-----------------+---------+------+--------+--------+-----+
@@ -77,29 +78,25 @@
 
 + Detail: 
     * Instance: 
-    +-----------------------------------------+------------------------------------+---------+----+------+------+-----+
-    |                 Instance                |               Module               | BRAM_18K| DSP|  FF  |  LUT | URAM|
-    +-----------------------------------------+------------------------------------+---------+----+------+------+-----+
-    |grp_PI_control_float_s_fu_491            |PI_control_float_s                  |        0|   8|   668|   786|    0|
-    |grp_SVPWM_float_s_fu_543                 |SVPWM_float_s                       |        0|   9|  1012|  2399|    0|
-    |grp_clarke_direct_float_s_fu_485         |clarke_direct_float_s               |        0|   5|   507|   746|    0|
-    |grp_clarke_inverse_float_s_fu_537        |clarke_inverse_float_s              |        0|  10|   994|  1291|    0|
-    |grp_decoupling_float_s_fu_517            |decoupling_float_s                  |        0|  10|   884|   829|    0|
-    |faddfsub_32ns_32ns_32_4_full_dsp_1_U143  |faddfsub_32ns_32ns_32_4_full_dsp_1  |        0|   2|   227|   214|    0|
-    |fcmp_32ns_32ns_1_2_no_dsp_1_U149         |fcmp_32ns_32ns_1_2_no_dsp_1         |        0|   0|     0|     0|    0|
-    |fcmp_32ns_32ns_1_2_no_dsp_1_U150         |fcmp_32ns_32ns_1_2_no_dsp_1         |        0|   0|     0|     0|    0|
-    |fmul_32ns_32ns_32_3_max_dsp_1_U144       |fmul_32ns_32ns_32_3_max_dsp_1       |        0|   3|   128|   135|    0|
-    |fmul_32ns_32ns_32_3_max_dsp_1_U145       |fmul_32ns_32ns_32_3_max_dsp_1       |        0|   3|   128|   135|    0|
-    |fsqrt_32ns_32ns_32_8_no_dsp_1_U151       |fsqrt_32ns_32ns_32_8_no_dsp_1       |        0|   0|     0|     0|    0|
-    |grp_low_pass_filter_float_s_fu_466       |low_pass_filter_float_s             |        0|  18|  1573|  1615|    0|
-    |grp_park_direct_float_s_fu_506           |park_direct_float_s                 |        4|  16|  1309|  1321|    0|
-    |grp_park_inverse_float_s_fu_526          |park_inverse_float_s                |        4|  16|  1309|  1321|    0|
-    |sitofp_32s_32_4_no_dsp_1_U146            |sitofp_32s_32_4_no_dsp_1            |        0|   0|     0|     0|    0|
-    |sitofp_32s_32_4_no_dsp_1_U147            |sitofp_32s_32_4_no_dsp_1            |        0|   0|     0|     0|    0|
-    |sitofp_32s_32_4_no_dsp_1_U148            |sitofp_32s_32_4_no_dsp_1            |        0|   0|     0|     0|    0|
-    +-----------------------------------------+------------------------------------+---------+----+------+------+-----+
-    |Total                                    |                                    |        8| 100|  8739| 10792|    0|
-    +-----------------------------------------+------------------------------------+---------+----+------+------+-----+
+    +-------------------------------------+--------------------------------+---------+----+------+------+-----+
+    |               Instance              |             Module             | BRAM_18K| DSP|  FF  |  LUT | URAM|
+    +-------------------------------------+--------------------------------+---------+----+------+------+-----+
+    |grp_PI_control_float_s_fu_462        |PI_control_float_s              |        0|   8|   668|   786|    0|
+    |grp_PI_control_float_s_fu_475        |PI_control_float_s              |        0|   8|   668|   786|    0|
+    |grp_SVPWM_float_s_fu_524             |SVPWM_float_s                   |        0|   9|  1012|  2399|    0|
+    |grp_clarke_direct_float_s_fu_456     |clarke_direct_float_s           |        0|   5|   507|   746|    0|
+    |grp_clarke_inverse_float_s_fu_518    |clarke_inverse_float_s          |        0|  10|   994|  1291|    0|
+    |grp_decoupling_float_s_fu_498        |decoupling_float_s              |        0|  10|   884|   829|    0|
+    |fsub_32ns_32ns_32_4_full_dsp_1_U143  |fsub_32ns_32ns_32_4_full_dsp_1  |        0|   2|   227|   214|    0|
+    |grp_low_pass_filter_float_s_fu_437   |low_pass_filter_float_s         |        0|  18|  1573|  1615|    0|
+    |grp_park_direct_float_s_fu_487       |park_direct_float_s             |        4|  16|  1309|  1321|    0|
+    |grp_park_inverse_float_s_fu_507      |park_inverse_float_s            |        4|  16|  1309|  1321|    0|
+    |sitofp_32s_32_4_no_dsp_1_U144        |sitofp_32s_32_4_no_dsp_1        |        0|   0|     0|     0|    0|
+    |sitofp_32s_32_4_no_dsp_1_U145        |sitofp_32s_32_4_no_dsp_1        |        0|   0|     0|     0|    0|
+    |sitofp_32s_32_4_no_dsp_1_U146        |sitofp_32s_32_4_no_dsp_1        |        0|   0|     0|     0|    0|
+    +-------------------------------------+--------------------------------+---------+----+------+------+-----+
+    |Total                                |                                |        8| 102|  9151| 11308|    0|
+    +-------------------------------------+--------------------------------+---------+----+------+------+-----+
 
     * DSP: 
     N/A
@@ -111,74 +108,54 @@
     N/A
 
     * Expression: 
-    +---------------------------------+----------+----+---+-----+------------+------------+
-    |          Variable Name          | Operation| DSP| FF| LUT | Bitwidth P0| Bitwidth P1|
-    +---------------------------------+----------+----+---+-----+------------+------------+
-    |add_ln128_fu_861_p2              |         +|   0|  0|   23|          16|          10|
-    |add_ln129_fu_881_p2              |         +|   0|  0|   23|          16|          11|
-    |add_ln344_5_fu_1263_p2           |         +|   0|  0|   16|           9|           8|
-    |add_ln344_6_fu_1396_p2           |         +|   0|  0|   16|           9|           8|
-    |add_ln344_7_fu_1521_p2           |         +|   0|  0|   16|           9|           8|
-    |add_ln344_fu_757_p2              |         +|   0|  0|   16|           9|           8|
-    |result_V_28_fu_839_p2            |         -|   0|  0|   23|           1|          16|
-    |result_V_32_fu_1345_p2           |         -|   0|  0|   23|           1|          16|
-    |result_V_35_fu_1478_p2           |         -|   0|  0|   23|           1|          16|
-    |result_V_37_fu_1603_p2           |         -|   0|  0|   23|           1|          16|
-    |sub_ln12_fu_986_p2               |         -|   0|  0|    9|           2|           2|
-    |sub_ln1364_4_fu_1277_p2          |         -|   0|  0|   15|           7|           8|
-    |sub_ln1364_5_fu_1410_p2          |         -|   0|  0|   15|           7|           8|
-    |sub_ln1364_6_fu_1535_p2          |         -|   0|  0|   15|           7|           8|
-    |sub_ln1364_fu_771_p2             |         -|   0|  0|   15|           7|           8|
-    |and_ln12_7_fu_977_p2             |       and|   0|  0|    2|           1|           1|
-    |and_ln12_fu_968_p2               |       and|   0|  0|    2|           1|           1|
-    |and_ln188_1_fu_1090_p2           |       and|   0|  0|    2|           1|           1|
-    |and_ln188_fu_1085_p2             |       and|   0|  0|    2|           1|           1|
-    |and_ln30_fu_1160_p2              |       and|   0|  0|    2|           1|           1|
-    |and_ln36_fu_1207_p2              |       and|   0|  0|    2|           1|           1|
-    |icmp_ln129_fu_875_p2             |      icmp|   0|  0|   13|          16|          10|
-    |icmp_ln188_1_fu_956_p2           |      icmp|   0|  0|   16|          23|           1|
-    |icmp_ln188_2_fu_1045_p2          |      icmp|   0|  0|   11|           8|           2|
-    |icmp_ln188_3_fu_1051_p2          |      icmp|   0|  0|   16|          23|           1|
-    |icmp_ln188_fu_950_p2             |      icmp|   0|  0|   11|           8|           2|
-    |icmp_ln30_3_fu_1148_p2           |      icmp|   0|  0|   16|          23|           1|
-    |icmp_ln30_fu_1142_p2             |      icmp|   0|  0|   11|           8|           2|
-    |icmp_ln36_1_fu_1195_p2           |      icmp|   0|  0|   16|          23|           1|
-    |icmp_ln36_fu_1189_p2             |      icmp|   0|  0|   11|           8|           2|
-    |r_V_13_fu_1303_p2                |      lshr|   0|  0|  176|          63|          63|
-    |r_V_15_fu_1436_p2                |      lshr|   0|  0|  176|          63|          63|
-    |r_V_17_fu_1561_p2                |      lshr|   0|  0|  176|          63|          63|
-    |r_V_fu_797_p2                    |      lshr|   0|  0|  176|          63|          63|
-    |ap_block_state1                  |        or|   0|  0|    2|           1|           1|
-    |ap_block_state62                 |        or|   0|  0|    2|           1|           1|
-    |ap_block_state9_on_subcall_done  |        or|   0|  0|    2|           1|           1|
-    |or_ln188_1_fu_1081_p2            |        or|   0|  0|    2|           1|           1|
-    |or_ln188_fu_962_p2               |        or|   0|  0|    2|           1|           1|
-    |or_ln30_fu_1154_p2               |        or|   0|  0|    2|           1|           1|
-    |or_ln36_fu_1201_p2               |        or|   0|  0|    2|           1|           1|
-    |Theta_6_fu_867_p3                |    select|   0|  0|   16|           1|          16|
-    |Theta_fu_887_p3                  |    select|   0|  0|   16|           1|          16|
-    |Vq_2_fu_1095_p3                  |    select|   0|  0|   32|           1|          32|
-    |err_V_2_fu_1213_p3               |    select|   0|  0|   32|           1|          31|
-    |result_V_38_fu_1351_p3           |    select|   0|  0|   16|           1|          16|
-    |result_V_39_fu_1609_p3           |    select|   0|  0|   16|           1|          16|
-    |result_V_fu_845_p3               |    select|   0|  0|   16|           1|          16|
-    |select_ln59_fu_1617_p3           |    select|   0|  0|   16|           1|          16|
-    |ush_5_fu_1287_p3                 |    select|   0|  0|    9|           1|           9|
-    |ush_6_fu_1420_p3                 |    select|   0|  0|    9|           1|           9|
-    |ush_7_fu_1545_p3                 |    select|   0|  0|    9|           1|           9|
-    |ush_fu_781_p3                    |    select|   0|  0|    9|           1|           9|
-    |val_5_fu_1337_p3                 |    select|   0|  0|   16|           1|          16|
-    |val_6_fu_1470_p3                 |    select|   0|  0|   16|           1|          16|
-    |val_7_fu_1595_p3                 |    select|   0|  0|   16|           1|          16|
-    |val_fu_831_p3                    |    select|   0|  0|   16|           1|          16|
-    |r_V_12_fu_803_p2                 |       shl|   0|  0|  176|          63|          63|
-    |r_V_14_fu_1309_p2                |       shl|   0|  0|  176|          63|          63|
-    |r_V_16_fu_1442_p2                |       shl|   0|  0|  176|          63|          63|
-    |r_V_18_fu_1567_p2                |       shl|   0|  0|  176|          63|          63|
-    |xor_ln182_fu_694_p2              |       xor|   0|  0|   33|          32|          33|
-    +---------------------------------+----------+----+---+-----+------------+------------+
-    |Total                            |          |   0|  0| 2119|         807|         982|
-    +---------------------------------+----------+----+---+-----+------------+------------+
+    +----------------------------------+----------+----+---+-----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT | Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+-----+------------+------------+
+    |add_ln128_fu_934_p2               |         +|   0|  0|   23|          16|          10|
+    |add_ln129_fu_954_p2               |         +|   0|  0|   23|          16|          11|
+    |add_ln344_5_fu_1051_p2            |         +|   0|  0|   16|           9|           8|
+    |add_ln344_6_fu_1163_p2            |         +|   0|  0|   16|           9|           8|
+    |add_ln344_7_fu_668_p2             |         +|   0|  0|   16|           9|           8|
+    |add_ln344_fu_830_p2               |         +|   0|  0|   16|           9|           8|
+    |result_V_28_fu_912_p2             |         -|   0|  0|   23|           1|          16|
+    |result_V_32_fu_1133_p2            |         -|   0|  0|   23|           1|          16|
+    |result_V_35_fu_1244_p2            |         -|   0|  0|   23|           1|          16|
+    |result_V_37_fu_750_p2             |         -|   0|  0|   23|           1|          16|
+    |sub_ln1364_4_fu_1065_p2           |         -|   0|  0|   15|           7|           8|
+    |sub_ln1364_5_fu_1177_p2           |         -|   0|  0|   15|           7|           8|
+    |sub_ln1364_6_fu_682_p2            |         -|   0|  0|   15|           7|           8|
+    |sub_ln1364_fu_844_p2              |         -|   0|  0|   15|           7|           8|
+    |icmp_ln129_fu_948_p2              |      icmp|   0|  0|   13|          16|          10|
+    |r_V_13_fu_1091_p2                 |      lshr|   0|  0|  176|          63|          63|
+    |r_V_15_fu_1202_p2                 |      lshr|   0|  0|  176|          63|          63|
+    |r_V_17_fu_708_p2                  |      lshr|   0|  0|  176|          63|          63|
+    |r_V_fu_870_p2                     |      lshr|   0|  0|  176|          63|          63|
+    |ap_block_state1                   |        or|   0|  0|    2|           1|           1|
+    |ap_block_state10_on_subcall_done  |        or|   0|  0|    2|           1|           1|
+    |ap_block_state14_on_subcall_done  |        or|   0|  0|    2|           1|           1|
+    |ap_block_state22                  |        or|   0|  0|    2|           1|           1|
+    |Theta_6_fu_940_p3                 |    select|   0|  0|   16|           1|          16|
+    |Theta_fu_960_p3                   |    select|   0|  0|   16|           1|          16|
+    |result_V_38_fu_1139_p3            |    select|   0|  0|   16|           1|          16|
+    |result_V_39_fu_756_p3             |    select|   0|  0|   16|           1|          16|
+    |result_V_fu_918_p3                |    select|   0|  0|   16|           1|          16|
+    |select_ln59_fu_1250_p3            |    select|   0|  0|   16|           1|          16|
+    |ush_5_fu_1075_p3                  |    select|   0|  0|    9|           1|           9|
+    |ush_6_fu_1186_p3                  |    select|   0|  0|    9|           1|           9|
+    |ush_7_fu_692_p3                   |    select|   0|  0|    9|           1|           9|
+    |ush_fu_854_p3                     |    select|   0|  0|    9|           1|           9|
+    |val_5_fu_1125_p3                  |    select|   0|  0|   16|           1|          16|
+    |val_6_fu_1236_p3                  |    select|   0|  0|   16|           1|          16|
+    |val_7_fu_742_p3                   |    select|   0|  0|   16|           1|          16|
+    |val_fu_904_p3                     |    select|   0|  0|   16|           1|          16|
+    |r_V_12_fu_876_p2                  |       shl|   0|  0|  176|          63|          63|
+    |r_V_14_fu_1097_p2                 |       shl|   0|  0|  176|          63|          63|
+    |r_V_16_fu_1208_p2                 |       shl|   0|  0|  176|          63|          63|
+    |r_V_18_fu_714_p2                  |       shl|   0|  0|  176|          63|          63|
+    |xor_ln182_fu_768_p2               |       xor|   0|  0|   33|          32|          33|
+    +----------------------------------+----------+----+---+-----+------------+------------+
+    |Total                             |          |   0|  0| 1920|         670|         896|
+    +----------------------------------+----------+----+---+-----+------------+------------+
 
     * Multiplexer: 
     +-------------------------------------+-----+-----------+-----+-----------+
@@ -187,103 +164,76 @@
     |A_TDATA_blk_n                        |    9|          2|    1|          2|
     |B_TDATA_blk_n                        |    9|          2|    1|          2|
     |C_TDATA_blk_n                        |    9|          2|    1|          2|
-    |Id_ref_vel                           |    9|          2|   32|         64|
     |Y1a_prev_o                           |    9|          2|   32|         64|
     |Y1b_prev_o                           |    9|          2|   32|         64|
     |Y2a_prev_o                           |    9|          2|   32|         64|
     |Y2b_prev_o                           |    9|          2|   32|         64|
-    |ap_NS_fsm                            |  273|         64|    1|         64|
+    |ap_NS_fsm                            |  121|         24|    1|         24|
     |control_address0                     |   14|          3|    3|          9|
-    |grp_PI_control_float_s_fu_491_KI     |   20|          4|   32|        128|
-    |grp_PI_control_float_s_fu_491_KP     |   20|          4|   32|        128|
-    |grp_PI_control_float_s_fu_491_ierr   |   20|          4|   32|        128|
-    |grp_PI_control_float_s_fu_491_ref    |   20|          4|   32|        128|
-    |grp_PI_control_float_s_fu_491_val_r  |   20|          4|   32|        128|
-    |grp_fu_550_opcode                    |   14|          3|    2|          6|
-    |grp_fu_550_p0                        |   26|          5|   32|        160|
-    |grp_fu_550_p1                        |   26|          5|   32|        160|
-    |grp_fu_556_p0                        |   20|          4|   32|        128|
-    |grp_fu_556_p1                        |   20|          4|   32|        128|
-    |grp_fu_565_p0                        |   26|          5|   32|        160|
-    |grp_fu_574_opcode                    |   20|          4|    5|         20|
-    |grp_fu_574_p0                        |   26|          5|   32|        160|
-    |grp_fu_574_p1                        |   20|          4|   32|        128|
+    |grp_PI_control_float_s_fu_462_KI     |   14|          3|   32|         96|
+    |grp_PI_control_float_s_fu_462_KP     |   14|          3|   32|         96|
+    |grp_PI_control_float_s_fu_462_ierr   |   14|          3|   32|         96|
+    |grp_PI_control_float_s_fu_462_ref    |   14|          3|   32|         96|
+    |grp_PI_control_float_s_fu_462_val_r  |   14|          3|   32|         96|
+    |grp_fu_535_p0                        |   20|          4|   32|        128|
     |logger_address0                      |   89|         18|    5|         90|
     |logger_d0                            |   89|         18|   32|        576|
-    |storemerge_reg_455                   |    9|          2|   32|         64|
     |velocity_accum_o                     |    9|          2|   32|         64|
     +-------------------------------------+-----+-----------+-----+-----------+
-    |Total                                |  853|        182|  659|       2883|
+    |Total                                |  475|         98|  396|       1633|
     +-------------------------------------+-----+-----------+-----+-----------+
 
     * Register: 
     +-------------------------------------------------+----+----+-----+-----------+
     |                       Name                      | FF | LUT| Bits| Const Bits|
     +-------------------------------------------------+----+----+-----+-----------+
-    |Ia_corr_2_reg_1784                               |  32|   0|   32|          0|
-    |Ia_corr_reg_1763                                 |  32|   0|   32|          0|
-    |Ia_reg_1712                                      |  16|   0|   16|          0|
-    |Ialpha_reg_1827                                  |  32|   0|   32|          0|
-    |Ib_corr_2_reg_1790                               |  32|   0|   32|          0|
-    |Ib_corr_reg_1768                                 |  32|   0|   32|          0|
-    |Ib_reg_1717                                      |  16|   0|   16|          0|
-    |Ibeta_reg_1833                                   |  32|   0|   32|          0|
-    |Id_ref_vel                                       |  32|   0|   32|          0|
-    |Id_reg_1839                                      |  32|   0|   32|          0|
-    |Iq_reg_1846                                      |  32|   0|   32|          0|
-    |RPM_reg_1722                                     |  16|   0|   16|          0|
-    |Theta_reg_1816                                   |  16|   0|   16|          0|
-    |Va_reg_1997                                      |  32|   0|   32|          0|
-    |Valpha_reg_1986                                  |  32|   0|   32|          0|
-    |Vb_reg_2002                                      |  32|   0|   32|          0|
-    |Vbeta_reg_1991                                   |  32|   0|   32|          0|
-    |Vc_reg_2008                                      |  32|   0|   32|          0|
-    |Vd_decoupled_reg_1940                            |  32|   0|   32|          0|
-    |Vd_reg_1929                                      |  32|   0|   32|          0|
-    |Vq_2_reg_1934                                    |  32|   0|   32|          0|
-    |Vq_decoupled_reg_1947                            |  32|   0|   32|          0|
-    |Vq_limit_vel                                     |  32|   0|   32|          0|
-    |and_ln30_reg_1960                                |   1|   0|    1|          0|
-    |ap_CS_fsm                                        |  63|   0|   63|          0|
-    |bitcast_ln182_reg_1808                           |  32|   0|   32|          0|
-    |data_V_7_reg_1888                                |  32|   0|   32|          0|
-    |data_V_8_reg_1881                                |  32|   0|   32|          0|
-    |data_V_9_reg_1801                                |  32|   0|   32|          0|
-    |err_V_1_reg_1964                                 |  32|   0|   32|          0|
-    |grp_PI_control_float_s_fu_491_ap_start_reg       |   1|   0|    1|          0|
-    |grp_SVPWM_float_s_fu_543_ap_start_reg            |   1|   0|    1|          0|
-    |grp_clarke_direct_float_s_fu_485_ap_start_reg    |   1|   0|    1|          0|
-    |grp_clarke_inverse_float_s_fu_537_ap_start_reg   |   1|   0|    1|          0|
-    |grp_decoupling_float_s_fu_517_ap_start_reg       |   1|   0|    1|          0|
-    |grp_low_pass_filter_float_s_fu_466_ap_start_reg  |   1|   0|    1|          0|
-    |grp_park_direct_float_s_fu_506_ap_start_reg      |   1|   0|    1|          0|
-    |grp_park_inverse_float_s_fu_526_ap_start_reg     |   1|   0|    1|          0|
-    |icmp_ln188_2_reg_1908                            |   1|   0|    1|          0|
-    |icmp_ln188_3_reg_1913                            |   1|   0|    1|          0|
+    |Angle_reg_1398                                   |  16|   0|   16|          0|
+    |Ia_corr_2_reg_1460                               |  32|   0|   32|          0|
+    |Ia_corr_reg_1429                                 |  32|   0|   32|          0|
+    |Ialpha_reg_1511                                  |  32|   0|   32|          0|
+    |Ib_corr_2_reg_1466                               |  32|   0|   32|          0|
+    |Ib_corr_reg_1434                                 |  32|   0|   32|          0|
+    |Ibeta_reg_1516                                   |  32|   0|   32|          0|
+    |Id_reg_1548                                      |  32|   0|   32|          0|
+    |Iq_reg_1554                                      |  32|   0|   32|          0|
+    |Theta_reg_1500                                   |  16|   0|   16|          0|
+    |Va_reg_1601                                      |  32|   0|   32|          0|
+    |Valpha_reg_1589                                  |  32|   0|   32|          0|
+    |Vb_reg_1607                                      |  32|   0|   32|          0|
+    |Vbeta_reg_1595                                   |  32|   0|   32|          0|
+    |Vc_reg_1613                                      |  32|   0|   32|          0|
+    |Vd_decoupled_reg_1577                            |  32|   0|   32|          0|
+    |Vd_reg_1572                                      |  32|   0|   32|          0|
+    |Vq_decoupled_reg_1583                            |  32|   0|   32|          0|
+    |ap_CS_fsm                                        |  23|   0|   23|          0|
+    |bitcast_ln182_reg_1492                           |  32|   0|   32|          0|
+    |conv_reg_1439                                    |  32|   0|   32|          0|
+    |dc_reg_1487                                      |  32|   0|   32|          0|
+    |grp_PI_control_float_s_fu_462_ap_start_reg       |   1|   0|    1|          0|
+    |grp_PI_control_float_s_fu_475_ap_start_reg       |   1|   0|    1|          0|
+    |grp_SVPWM_float_s_fu_524_ap_start_reg            |   1|   0|    1|          0|
+    |grp_clarke_direct_float_s_fu_456_ap_start_reg    |   1|   0|    1|          0|
+    |grp_clarke_inverse_float_s_fu_518_ap_start_reg   |   1|   0|    1|          0|
+    |grp_decoupling_float_s_fu_498_ap_start_reg       |   1|   0|    1|          0|
+    |grp_low_pass_filter_float_s_fu_437_ap_start_reg  |   1|   0|    1|          0|
+    |grp_park_direct_float_s_fu_487_ap_start_reg      |   1|   0|    1|          0|
+    |grp_park_inverse_float_s_fu_507_ap_start_reg     |   1|   0|    1|          0|
     |ierr_flux                                        |   0|   0|   32|         32|
     |ierr_torque                                      |   0|   0|   32|         32|
     |ierr_vel                                         |   0|   0|   32|         32|
-    |mul1_i_reg_1955                                  |  32|   0|   32|          0|
-    |or_ln188_reg_1871                                |   1|   0|    1|          0|
-    |p_Result_7_reg_1866                              |  31|   0|   31|          0|
-    |reg_590                                          |  32|   0|   32|          0|
-    |reg_596                                          |  32|   0|   32|          0|
-    |reg_603                                          |  32|   0|   32|          0|
-    |reg_610                                          |  32|   0|   32|          0|
-    |reg_616                                          |  32|   0|   32|          0|
-    |result_V_38_reg_1971                             |  16|   0|   16|          0|
-    |result_V_39_reg_1976                             |  16|   0|   16|          0|
-    |select_ln59_reg_1981                             |  16|   0|   16|          0|
-    |storemerge_reg_455                               |  32|   0|   32|          0|
-    |tmp_22_reg_1918                                  |   1|   0|    1|          0|
-    |tmp_23_reg_1856                                  |   1|   0|    1|          0|
-    |tmp_24_reg_1861                                  |   1|   0|    1|          0|
-    |trunc_ln99_reg_1821                              |  10|   0|   10|          0|
-    |vel_corr_4_reg_1778                              |  32|   0|   32|          0|
-    |vel_corr_reg_1757                                |  32|   0|   32|          0|
-    |xor_ln182_reg_1796                               |  32|   0|   32|          0|
+    |p_Result_8_reg_1522                              |   1|   0|    1|          0|
+    |reg_544                                          |  32|   0|   32|          0|
+    |result_V_38_reg_1538                             |  16|   0|   16|          0|
+    |result_V_39_reg_1477                             |  16|   0|   16|          0|
+    |select_ln59_reg_1543                             |  16|   0|   16|          0|
+    |tmp_68_reg_1527                                  |   8|   0|    8|          0|
+    |tmp_69_reg_1533                                  |  23|   0|   23|          0|
+    |trunc_ln99_reg_1505                              |  10|   0|   10|          0|
+    |vel_corr_4_reg_1454                              |  32|   0|   32|          0|
+    |vel_corr_reg_1423                                |  32|   0|   32|          0|
+    |xor_ln182_reg_1482                               |  32|   0|   32|          0|
     +-------------------------------------------------+----+----+-----+-----------+
-    |Total                                            |1319|   0| 1415|         96|
+    |Total                                            | 890|   0|  986|         96|
     +-------------------------------------------------+----+----+-----+-----------+
 
 

@@ -16,7 +16,7 @@
 #endif
 
 #ifndef SAT_NEG
-#define SAT_NEG 8000
+#define SAT_NEG -8000
 #endif
 
 template<typename T>

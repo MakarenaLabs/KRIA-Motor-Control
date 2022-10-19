@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'torque_foc'
 ================================================================
-* Date:           Mon Oct 17 13:30:25 2022
+* Date:           Wed Oct 19 22:36:40 2022
 
 * Version:        2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)
 * Project:        foc-rewrite
@@ -289,14 +289,14 @@ ST_13 : Operation 188 [1/1] (0.00ns)   --->   "%logger_addr_7 = getelementptr i3
 ST_13 : Operation 189 [1/1] (0.67ns)   --->   "%store_ln308 = store i32 %bitcast_ln308, i5 %logger_addr_7" [foc-rewrite/apc/src/FOC/foc.cpp:308]   --->   Operation 189 'store' 'store_ln308' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM_1P">   --->   Core 88 'RAM_1P' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 17> <RAM>
 ST_13 : Operation 190 [1/1] (0.00ns)   --->   "%bitcast_ln329 = bitcast i32 %xor_ln329" [foc-rewrite/apc/src/FOC/foc.cpp:329]   --->   Operation 190 'bitcast' 'bitcast_ln329' <Predicate = true> <Delay = 0.00>
 ST_13 : Operation 191 [1/1] (0.00ns)   --->   "%ierr_torque_load = load i32 %ierr_torque_s" [foc-rewrite/apc/src/FOC/foc.cpp:329]   --->   Operation 191 'load' 'ierr_torque_load' <Predicate = true> <Delay = 0.00>
-ST_13 : Operation 192 [2/2] (7.30ns)   --->   "%Vq = call i32 @PI_control<float>, i32 %bitcast_ln329, i32 %Iq, i32 -10, i32 -3, i32 %ierr_torque_load" [foc-rewrite/apc/src/FOC/foc.cpp:329]   --->   Operation 192 'call' 'Vq' <Predicate = true> <Delay = 7.30> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_13 : Operation 192 [2/2] (7.30ns)   --->   "%Vq = call i32 @PI_control<float>, i32 %bitcast_ln329, i32 %Iq, i32 -20, i32 -5, i32 %ierr_torque_load" [foc-rewrite/apc/src/FOC/foc.cpp:329]   --->   Operation 192 'call' 'Vq' <Predicate = true> <Delay = 7.30> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 ST_13 : Operation 193 [1/1] (0.00ns)   --->   "%ierr_flux_load = load i32 %ierr_flux_s" [foc-rewrite/apc/src/FOC/foc.cpp:333]   --->   Operation 193 'load' 'ierr_flux_load' <Predicate = true> <Delay = 0.00>
-ST_13 : Operation 194 [2/2] (7.30ns)   --->   "%Vd = call i32 @PI_control<float>, i32 0, i32 %Id, i32 -32, i32 0, i32 %ierr_flux_load" [foc-rewrite/apc/src/FOC/foc.cpp:333]   --->   Operation 194 'call' 'Vd' <Predicate = true> <Delay = 7.30> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_13 : Operation 194 [2/2] (7.30ns)   --->   "%Vd = call i32 @PI_control<float>, i32 0, i32 %Id, i32 -10, i32 -0.15, i32 %ierr_flux_load" [foc-rewrite/apc/src/FOC/foc.cpp:333]   --->   Operation 194 'call' 'Vd' <Predicate = true> <Delay = 7.30> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 14 <SV = 13> <Delay = 6.32>
 ST_14 : Operation 195 [3/4] (5.19ns)   --->   "%conv1 = sitofp i32 %sext_ln287" [foc-rewrite/apc/src/FOC/foc.cpp:287]   --->   Operation 195 'sitofp' 'conv1' <Predicate = true> <Delay = 5.19> <CoreInst = "Int2Float">   --->   Core 62 'Int2Float' <Latency = 3> <II = 1> <Delay = 5.19> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
-ST_14 : Operation 196 [1/2] (5.64ns)   --->   "%Vq = call i32 @PI_control<float>, i32 %bitcast_ln329, i32 %Iq, i32 -10, i32 -3, i32 %ierr_torque_load" [foc-rewrite/apc/src/FOC/foc.cpp:329]   --->   Operation 196 'call' 'Vq' <Predicate = true> <Delay = 5.64> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_14 : Operation 197 [1/2] (5.64ns)   --->   "%Vd = call i32 @PI_control<float>, i32 0, i32 %Id, i32 -32, i32 0, i32 %ierr_flux_load" [foc-rewrite/apc/src/FOC/foc.cpp:333]   --->   Operation 197 'call' 'Vd' <Predicate = true> <Delay = 5.64> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_14 : Operation 196 [1/2] (5.64ns)   --->   "%Vq = call i32 @PI_control<float>, i32 %bitcast_ln329, i32 %Iq, i32 -20, i32 -5, i32 %ierr_torque_load" [foc-rewrite/apc/src/FOC/foc.cpp:329]   --->   Operation 196 'call' 'Vq' <Predicate = true> <Delay = 5.64> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_14 : Operation 197 [1/2] (5.64ns)   --->   "%Vd = call i32 @PI_control<float>, i32 0, i32 %Id, i32 -10, i32 -0.15, i32 %ierr_flux_load" [foc-rewrite/apc/src/FOC/foc.cpp:333]   --->   Operation 197 'call' 'Vd' <Predicate = true> <Delay = 5.64> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 ST_14 : Operation 198 [1/1] (0.00ns)   --->   "%bitcast_ln335 = bitcast i32 %Vd" [foc-rewrite/apc/src/FOC/foc.cpp:335]   --->   Operation 198 'bitcast' 'bitcast_ln335' <Predicate = true> <Delay = 0.00>
 ST_14 : Operation 199 [1/1] (0.00ns)   --->   "%logger_addr_8 = getelementptr i32 %logger, i64 0, i64 7" [foc-rewrite/apc/src/FOC/foc.cpp:335]   --->   Operation 199 'getelementptr' 'logger_addr_8' <Predicate = true> <Delay = 0.00>
 ST_14 : Operation 200 [1/1] (0.67ns)   --->   "%store_ln335 = store i32 %bitcast_ln335, i5 %logger_addr_8" [foc-rewrite/apc/src/FOC/foc.cpp:335]   --->   Operation 200 'store' 'store_ln335' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM_1P">   --->   Core 88 'RAM_1P' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 17> <RAM>

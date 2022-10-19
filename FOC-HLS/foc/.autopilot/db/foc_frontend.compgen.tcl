@@ -1,7 +1,7 @@
 # This script segment is generated automatically by AutoPilot
 
 # Memory (RAM/ROM)  definition:
-set ID 177
+set ID 171
 set hasByteEnable 0
 set MemName foc_frontend_buffer_velocity_RAM_AUTO_1R1W
 set CoreName ap_simcore_mem
@@ -131,7 +131,7 @@ dict set axilite_register_dict control_r $port_control_r
 if {${::AESL::PGuard_simmodel_gen}} {
 	if {[info proc ::AESL_LIB_XILADAPTER::s_axilite_gen] == "::AESL_LIB_XILADAPTER::s_axilite_gen"} {
 		eval "::AESL_LIB_XILADAPTER::s_axilite_gen { \
-			id 178 \
+			id 172 \
 			corename foc_frontend_control_r_axilite \
 			name foc_frontend_control_r_s_axi \
 			ports {$port_control_r} \
@@ -153,7 +153,7 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 179 \
+    id 173 \
     name A_V_data_V \
     reset_level 0 \
     sync_rst true \
@@ -172,7 +172,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 180 \
+    id 174 \
     name A_V_keep_V \
     reset_level 0 \
     sync_rst true \
@@ -191,7 +191,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 181 \
+    id 175 \
     name A_V_strb_V \
     reset_level 0 \
     sync_rst true \
@@ -210,7 +210,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 182 \
+    id 176 \
     name A_V_last_V \
     reset_level 0 \
     sync_rst true \
@@ -229,7 +229,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 183 \
+    id 177 \
     name B_V_data_V \
     reset_level 0 \
     sync_rst true \
@@ -248,7 +248,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 184 \
+    id 178 \
     name B_V_keep_V \
     reset_level 0 \
     sync_rst true \
@@ -267,7 +267,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 185 \
+    id 179 \
     name B_V_strb_V \
     reset_level 0 \
     sync_rst true \
@@ -286,7 +286,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 186 \
+    id 180 \
     name B_V_last_V \
     reset_level 0 \
     sync_rst true \
@@ -305,7 +305,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 187 \
+    id 181 \
     name C_V_data_V \
     reset_level 0 \
     sync_rst true \
@@ -324,7 +324,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 188 \
+    id 182 \
     name C_V_keep_V \
     reset_level 0 \
     sync_rst true \
@@ -343,7 +343,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 189 \
+    id 183 \
     name C_V_strb_V \
     reset_level 0 \
     sync_rst true \
@@ -362,7 +362,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 190 \
+    id 184 \
     name C_V_last_V \
     reset_level 0 \
     sync_rst true \
@@ -424,6 +424,144 @@ if {${::AESL::PGuard_autoexp_gen}} {
     cg_default_interface_gen_dc_end
     cg_default_interface_gen_bundle_end
     AESL_LIB_XILADAPTER::native_axis_end
+}
+
+
+# RegSlice definition:
+set ID 185
+set RegSliceName foc_frontend_regslice_both
+set RegSliceInstName foc_frontend_regslice_both_U
+set CoreName ap_simcore_foc_frontend_regslice_both
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $RegSliceName BINDTYPE interface TYPE interface_regslice INSTNAME $RegSliceInstName
+}
+
+
+if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
+if {[info proc ::AESL_LIB_VIRTEX::xil_gen_regSlice] == "::AESL_LIB_VIRTEX::xil_gen_regSlice"} {
+eval "::AESL_LIB_VIRTEX::xil_gen_regSlice { \
+    name ${RegSliceName} \
+    prefix foc_frontend_ \
+    sliceTypeList 0\
+}"
+} else {
+puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_regSlice, check your platform lib"
+}
+}
+
+
+# RegSlice definition:
+set ID 186
+set RegSliceName foc_frontend_regslice_both
+set RegSliceInstName foc_frontend_regslice_both_U
+set CoreName ap_simcore_foc_frontend_regslice_both
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $RegSliceName BINDTYPE interface TYPE interface_regslice INSTNAME $RegSliceInstName
+}
+
+
+if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
+if {[info proc ::AESL_LIB_VIRTEX::xil_gen_regSlice] == "::AESL_LIB_VIRTEX::xil_gen_regSlice"} {
+eval "::AESL_LIB_VIRTEX::xil_gen_regSlice { \
+    name ${RegSliceName} \
+    prefix foc_frontend_ \
+    sliceTypeList 0\
+}"
+} else {
+puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_regSlice, check your platform lib"
+}
+}
+
+
+# RegSlice definition:
+set ID 187
+set RegSliceName foc_frontend_regslice_both
+set RegSliceInstName foc_frontend_regslice_both_U
+set CoreName ap_simcore_foc_frontend_regslice_both
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $RegSliceName BINDTYPE interface TYPE interface_regslice INSTNAME $RegSliceInstName
+}
+
+
+if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
+if {[info proc ::AESL_LIB_VIRTEX::xil_gen_regSlice] == "::AESL_LIB_VIRTEX::xil_gen_regSlice"} {
+eval "::AESL_LIB_VIRTEX::xil_gen_regSlice { \
+    name ${RegSliceName} \
+    prefix foc_frontend_ \
+    sliceTypeList 0\
+}"
+} else {
+puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_regSlice, check your platform lib"
+}
+}
+
+
+# RegSlice definition:
+set ID 188
+set RegSliceName foc_frontend_regslice_both
+set RegSliceInstName foc_frontend_regslice_both_U
+set CoreName ap_simcore_foc_frontend_regslice_both
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $RegSliceName BINDTYPE interface TYPE interface_regslice INSTNAME $RegSliceInstName
+}
+
+
+if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
+if {[info proc ::AESL_LIB_VIRTEX::xil_gen_regSlice] == "::AESL_LIB_VIRTEX::xil_gen_regSlice"} {
+eval "::AESL_LIB_VIRTEX::xil_gen_regSlice { \
+    name ${RegSliceName} \
+    prefix foc_frontend_ \
+    sliceTypeList 0\
+}"
+} else {
+puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_regSlice, check your platform lib"
+}
+}
+
+
+# RegSlice definition:
+set ID 189
+set RegSliceName foc_frontend_regslice_both
+set RegSliceInstName foc_frontend_regslice_both_U
+set CoreName ap_simcore_foc_frontend_regslice_both
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $RegSliceName BINDTYPE interface TYPE interface_regslice INSTNAME $RegSliceInstName
+}
+
+
+if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
+if {[info proc ::AESL_LIB_VIRTEX::xil_gen_regSlice] == "::AESL_LIB_VIRTEX::xil_gen_regSlice"} {
+eval "::AESL_LIB_VIRTEX::xil_gen_regSlice { \
+    name ${RegSliceName} \
+    prefix foc_frontend_ \
+    sliceTypeList 0\
+}"
+} else {
+puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_regSlice, check your platform lib"
+}
+}
+
+
+# RegSlice definition:
+set ID 190
+set RegSliceName foc_frontend_regslice_both
+set RegSliceInstName foc_frontend_regslice_both_U
+set CoreName ap_simcore_foc_frontend_regslice_both
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $RegSliceName BINDTYPE interface TYPE interface_regslice INSTNAME $RegSliceInstName
+}
+
+
+if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
+if {[info proc ::AESL_LIB_VIRTEX::xil_gen_regSlice] == "::AESL_LIB_VIRTEX::xil_gen_regSlice"} {
+eval "::AESL_LIB_VIRTEX::xil_gen_regSlice { \
+    name ${RegSliceName} \
+    prefix foc_frontend_ \
+    sliceTypeList 0\
+}"
+} else {
+puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_regSlice, check your platform lib"
+}
 }
 
 
@@ -544,144 +682,6 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_regSlice, check you
 
 # RegSlice definition:
 set ID 196
-set RegSliceName foc_frontend_regslice_both
-set RegSliceInstName foc_frontend_regslice_both_U
-set CoreName ap_simcore_foc_frontend_regslice_both
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler $RegSliceName BINDTYPE interface TYPE interface_regslice INSTNAME $RegSliceInstName
-}
-
-
-if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
-if {[info proc ::AESL_LIB_VIRTEX::xil_gen_regSlice] == "::AESL_LIB_VIRTEX::xil_gen_regSlice"} {
-eval "::AESL_LIB_VIRTEX::xil_gen_regSlice { \
-    name ${RegSliceName} \
-    prefix foc_frontend_ \
-    sliceTypeList 0\
-}"
-} else {
-puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_regSlice, check your platform lib"
-}
-}
-
-
-# RegSlice definition:
-set ID 197
-set RegSliceName foc_frontend_regslice_both
-set RegSliceInstName foc_frontend_regslice_both_U
-set CoreName ap_simcore_foc_frontend_regslice_both
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler $RegSliceName BINDTYPE interface TYPE interface_regslice INSTNAME $RegSliceInstName
-}
-
-
-if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
-if {[info proc ::AESL_LIB_VIRTEX::xil_gen_regSlice] == "::AESL_LIB_VIRTEX::xil_gen_regSlice"} {
-eval "::AESL_LIB_VIRTEX::xil_gen_regSlice { \
-    name ${RegSliceName} \
-    prefix foc_frontend_ \
-    sliceTypeList 0\
-}"
-} else {
-puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_regSlice, check your platform lib"
-}
-}
-
-
-# RegSlice definition:
-set ID 198
-set RegSliceName foc_frontend_regslice_both
-set RegSliceInstName foc_frontend_regslice_both_U
-set CoreName ap_simcore_foc_frontend_regslice_both
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler $RegSliceName BINDTYPE interface TYPE interface_regslice INSTNAME $RegSliceInstName
-}
-
-
-if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
-if {[info proc ::AESL_LIB_VIRTEX::xil_gen_regSlice] == "::AESL_LIB_VIRTEX::xil_gen_regSlice"} {
-eval "::AESL_LIB_VIRTEX::xil_gen_regSlice { \
-    name ${RegSliceName} \
-    prefix foc_frontend_ \
-    sliceTypeList 0\
-}"
-} else {
-puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_regSlice, check your platform lib"
-}
-}
-
-
-# RegSlice definition:
-set ID 199
-set RegSliceName foc_frontend_regslice_both
-set RegSliceInstName foc_frontend_regslice_both_U
-set CoreName ap_simcore_foc_frontend_regslice_both
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler $RegSliceName BINDTYPE interface TYPE interface_regslice INSTNAME $RegSliceInstName
-}
-
-
-if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
-if {[info proc ::AESL_LIB_VIRTEX::xil_gen_regSlice] == "::AESL_LIB_VIRTEX::xil_gen_regSlice"} {
-eval "::AESL_LIB_VIRTEX::xil_gen_regSlice { \
-    name ${RegSliceName} \
-    prefix foc_frontend_ \
-    sliceTypeList 0\
-}"
-} else {
-puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_regSlice, check your platform lib"
-}
-}
-
-
-# RegSlice definition:
-set ID 200
-set RegSliceName foc_frontend_regslice_both
-set RegSliceInstName foc_frontend_regslice_both_U
-set CoreName ap_simcore_foc_frontend_regslice_both
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler $RegSliceName BINDTYPE interface TYPE interface_regslice INSTNAME $RegSliceInstName
-}
-
-
-if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
-if {[info proc ::AESL_LIB_VIRTEX::xil_gen_regSlice] == "::AESL_LIB_VIRTEX::xil_gen_regSlice"} {
-eval "::AESL_LIB_VIRTEX::xil_gen_regSlice { \
-    name ${RegSliceName} \
-    prefix foc_frontend_ \
-    sliceTypeList 0\
-}"
-} else {
-puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_regSlice, check your platform lib"
-}
-}
-
-
-# RegSlice definition:
-set ID 201
-set RegSliceName foc_frontend_regslice_both
-set RegSliceInstName foc_frontend_regslice_both_U
-set CoreName ap_simcore_foc_frontend_regslice_both
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler $RegSliceName BINDTYPE interface TYPE interface_regslice INSTNAME $RegSliceInstName
-}
-
-
-if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
-if {[info proc ::AESL_LIB_VIRTEX::xil_gen_regSlice] == "::AESL_LIB_VIRTEX::xil_gen_regSlice"} {
-eval "::AESL_LIB_VIRTEX::xil_gen_regSlice { \
-    name ${RegSliceName} \
-    prefix foc_frontend_ \
-    sliceTypeList 0\
-}"
-} else {
-puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_regSlice, check your platform lib"
-}
-}
-
-
-# RegSlice definition:
-set ID 202
 set RegSliceName foc_frontend_regslice_both
 set RegSliceInstName foc_frontend_regslice_both_U
 set CoreName ap_simcore_foc_frontend_regslice_both

@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'clarke_direct_float_s'" level="0">
-<item name = "Date">Mon Oct 17 13:30:30 2022
+<item name = "Date">Wed Oct 19 22:36:47 2022
 </item>
 <item name = "Version">2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)</item>
 <item name = "Project">foc-rewrite</item>
@@ -89,9 +89,9 @@
 <column name="sub_ln12_fu_202_p2">-, 0, 0, 9, 2, 2</column>
 <column name="sub_ln21_fu_220_p2">-, 0, 0, 24, 17, 17</column>
 <column name="sub_ln25_fu_265_p2">-, 0, 0, 24, 17, 17</column>
-<column name="and_ln12_13_fu_194_p2">and, 0, 0, 2, 1, 1</column>
-<column name="and_ln12_14_fu_231_p2">and, 0, 0, 2, 1, 1</column>
-<column name="and_ln12_15_fu_239_p2">and, 0, 0, 2, 1, 1</column>
+<column name="and_ln12_12_fu_194_p2">and, 0, 0, 2, 1, 1</column>
+<column name="and_ln12_13_fu_231_p2">and, 0, 0, 2, 1, 1</column>
+<column name="and_ln12_14_fu_239_p2">and, 0, 0, 2, 1, 1</column>
 <column name="and_ln12_fu_186_p2">and, 0, 0, 2, 1, 1</column>
 <column name="and_ln20_fu_276_p2">and, 0, 0, 2, 1, 1</column>
 <column name="and_ln24_fu_287_p2">and, 0, 0, 2, 1, 1</column>
@@ -128,11 +128,11 @@
 <column name="or_ln20_reg_335">1, 0, 1, 0</column>
 <column name="or_ln24_reg_357">1, 0, 1, 0</column>
 <column name="reg_82">32, 0, 32, 0</column>
-<column name="tmp_47_reg_342">1, 0, 1, 0</column>
-<column name="tmp_48_reg_347">1, 0, 1, 0</column>
-<column name="tmp_50_reg_384">1, 0, 1, 0</column>
-<column name="tmp_51_reg_364">1, 0, 1, 0</column>
-<column name="tmp_52_reg_369">1, 0, 1, 0</column>
+<column name="tmp_34_reg_342">1, 0, 1, 0</column>
+<column name="tmp_35_reg_347">1, 0, 1, 0</column>
+<column name="tmp_37_reg_384">1, 0, 1, 0</column>
+<column name="tmp_38_reg_364">1, 0, 1, 0</column>
+<column name="tmp_39_reg_369">1, 0, 1, 0</column>
 <column name="tmp_s_reg_374">1, 0, 1, 0</column>
 </table>
 </item>

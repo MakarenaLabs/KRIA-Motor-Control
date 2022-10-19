@@ -82,9 +82,9 @@ wire    ap_CS_fsm_state17;
 wire   [0:0] or_ln36_fu_142_p2;
 reg   [0:0] or_ln36_reg_250;
 wire   [0:0] grp_fu_80_p2;
-reg   [0:0] tmp_64_reg_257;
+reg   [0:0] tmp_51_reg_257;
 wire   [0:0] grp_fu_85_p2;
-reg   [0:0] tmp_65_reg_262;
+reg   [0:0] tmp_52_reg_262;
 reg   [0:0] tmp_s_reg_267;
 wire    ap_CS_fsm_state18;
 reg   [31:0] grp_fu_60_p0;
@@ -99,12 +99,12 @@ wire   [30:0] p_Result_s_fu_103_p1;
 wire   [31:0] zext_ln368_fu_107_p1;
 wire   [7:0] tmp_fu_116_p4;
 wire   [22:0] trunc_ln36_fu_126_p1;
-wire   [0:0] icmp_ln36_2_fu_136_p2;
+wire   [0:0] icmp_ln36_1_fu_136_p2;
 wire   [0:0] icmp_ln36_fu_130_p2;
 wire   [0:0] and_ln12_fu_148_p2;
-wire   [0:0] and_ln12_16_fu_156_p2;
+wire   [0:0] and_ln12_15_fu_156_p2;
 wire   [1:0] zext_ln12_fu_152_p1;
-wire   [1:0] zext_ln12_16_fu_160_p1;
+wire   [1:0] zext_ln12_15_fu_160_p1;
 wire  signed [1:0] sub_ln12_fu_164_p2;
 wire   [16:0] shl_ln_fu_174_p3;
 wire  signed [16:0] sext_ln37_fu_170_p1;
@@ -270,8 +270,8 @@ end
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state17)) begin
         or_ln36_reg_250 <= or_ln36_fu_142_p2;
-        tmp_64_reg_257 <= grp_fu_80_p2;
-        tmp_65_reg_262 <= grp_fu_85_p2;
+        tmp_51_reg_257 <= grp_fu_80_p2;
+        tmp_52_reg_262 <= grp_fu_85_p2;
     end
 end
 
@@ -496,9 +496,9 @@ always @ (*) begin
     endcase
 end
 
-assign and_ln12_16_fu_156_p2 = (tmp_65_reg_262 & or_ln36_reg_250);
+assign and_ln12_15_fu_156_p2 = (tmp_52_reg_262 & or_ln36_reg_250);
 
-assign and_ln12_fu_148_p2 = (tmp_64_reg_257 & or_ln36_reg_250);
+assign and_ln12_fu_148_p2 = (tmp_51_reg_257 & or_ln36_reg_250);
 
 assign and_ln36_fu_193_p2 = (tmp_s_reg_267 & or_ln36_reg_250);
 
@@ -532,11 +532,11 @@ assign data_V_fu_99_p1 = reg_91;
 
 assign grp_fu_77_p0 = $signed(sub_ln37_fu_182_p2);
 
-assign icmp_ln36_2_fu_136_p2 = ((trunc_ln36_fu_126_p1 == 23'd0) ? 1'b1 : 1'b0);
+assign icmp_ln36_1_fu_136_p2 = ((trunc_ln36_fu_126_p1 == 23'd0) ? 1'b1 : 1'b0);
 
 assign icmp_ln36_fu_130_p2 = ((tmp_fu_116_p4 != 8'd255) ? 1'b1 : 1'b0);
 
-assign or_ln36_fu_142_p2 = (icmp_ln36_fu_130_p2 | icmp_ln36_2_fu_136_p2);
+assign or_ln36_fu_142_p2 = (icmp_ln36_fu_130_p2 | icmp_ln36_1_fu_136_p2);
 
 assign p_Result_s_fu_103_p1 = data_V_fu_99_p1[30:0];
 
@@ -546,7 +546,7 @@ assign sext_ln37_fu_170_p1 = sub_ln12_fu_164_p2;
 
 assign shl_ln_fu_174_p3 = {{sub_ln12_fu_164_p2}, {15'd0}};
 
-assign sub_ln12_fu_164_p2 = (zext_ln12_fu_152_p1 - zext_ln12_16_fu_160_p1);
+assign sub_ln12_fu_164_p2 = (zext_ln12_fu_152_p1 - zext_ln12_15_fu_160_p1);
 
 assign sub_ln37_fu_182_p2 = ($signed(shl_ln_fu_174_p3) - $signed(sext_ln37_fu_170_p1));
 
@@ -554,7 +554,7 @@ assign tmp_fu_116_p4 = {{data_V_fu_99_p1[30:23]}};
 
 assign trunc_ln36_fu_126_p1 = data_V_fu_99_p1[22:0];
 
-assign zext_ln12_16_fu_160_p1 = and_ln12_16_fu_156_p2;
+assign zext_ln12_15_fu_160_p1 = and_ln12_15_fu_156_p2;
 
 assign zext_ln12_fu_152_p1 = and_ln12_fu_148_p2;
 

@@ -6,7 +6,7 @@
 <Project Version="7" Minor="56" Path="/home/mklab/workspace/foc/foc-rewrite/foc/impl/ip/tmp.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="d37767e2d68e4c7abc9eb3b024ed257a"/>
+    <Option Name="Id" Val="a1752941729b41559b7eeb7c5c16cc7c"/>
     <Option Name="Part" Val="xczu7ev-ffvc1156-2-e"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -107,13 +107,6 @@
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/ip/foc_frontend_fmul_32ns_32ns_32_3_max_dsp_1_ip/foc_frontend_fmul_32ns_32ns_32_3_max_dsp_1_ip.xci">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/ip/foc_frontend_fsqrt_32ns_32ns_32_8_no_dsp_1_ip/foc_frontend_fsqrt_32ns_32ns_32_8_no_dsp_1_ip.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>

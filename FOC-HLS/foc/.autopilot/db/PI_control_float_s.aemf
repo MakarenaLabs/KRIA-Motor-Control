@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1666006231147">
-  <ports id="1" name="ref" type="PortType" originalName="ref" coreId="898855936" bitwidth="32">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1666211808160">
+  <ports id="1" name="ref" type="PortType" originalName="ref" coreId="3400411072" bitwidth="32">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="2" name="val_r" type="PortType" originalName="val" coreId="1129537348" bitwidth="32">
+  <ports id="2" name="val_r" type="PortType" originalName="val" coreId="0" bitwidth="32">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="3" name="KP" type="PortType" originalName="KP" coreId="6775156" bitwidth="32">
+  <ports id="3" name="KP" type="PortType" originalName="KP" coreId="0" bitwidth="32">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="4" name="KI" type="PortType" originalName="KI" coreId="1953724787" bitwidth="32">
+  <ports id="4" name="KI" type="PortType" originalName="KI" coreId="4294967295" bitwidth="32">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="5" name="ierr" type="PortType" originalName="ierr" coreId="1952542572" bitwidth="32">
+  <ports id="5" name="ierr" type="PortType" originalName="ierr" coreId="1630501223" bitwidth="32">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
   <ports id="15" name="ap_return" direction="DirOut">
@@ -78,17 +78,17 @@
       <dataInputObjs>KI</dataInputObjs>
       <dataOutputObjs>fmul</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="KP_read" lineNumber="8" originalName="KP" fileName="foc-rewrite/apc/src/FOC/../PI_control/PI_control.hpp" fileDirectory=".." coreId="757935405" contextFuncName="PI_control_float_s" bitwidth="32" opcode="read" nodeLabel="8.0" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="KP_read" lineNumber="8" originalName="KP" fileName="foc-rewrite/apc/src/FOC/../PI_control/PI_control.hpp" fileDirectory=".." coreId="657469801" contextFuncName="PI_control_float_s" bitwidth="32" opcode="read" nodeLabel="8.0" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../PI_control/PI_control.hpp" linenumber="8" fileDirectory="/home/mklab/workspace/foc" functionName="PI_control&amp;lt;float&amp;gt;"/>
       <dataInputObjs>KP</dataInputObjs>
       <dataOutputObjs>fmul</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="val_read" lineNumber="8" originalName="val" fileName="foc-rewrite/apc/src/FOC/../PI_control/PI_control.hpp" fileDirectory=".." coreId="1868767266" contextFuncName="PI_control_float_s" bitwidth="32" opcode="read" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="val_read" lineNumber="8" originalName="val" fileName="foc-rewrite/apc/src/FOC/../PI_control/PI_control.hpp" fileDirectory=".." coreId="1937055829" contextFuncName="PI_control_float_s" bitwidth="32" opcode="read" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../PI_control/PI_control.hpp" linenumber="8" fileDirectory="/home/mklab/workspace/foc" functionName="PI_control&amp;lt;float&amp;gt;"/>
       <dataInputObjs>val_r</dataInputObjs>
       <dataOutputObjs>fsub</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="ref_read" lineNumber="8" originalName="ref" fileName="foc-rewrite/apc/src/FOC/../PI_control/PI_control.hpp" fileDirectory=".." coreId="1717924464" contextFuncName="PI_control_float_s" bitwidth="32" opcode="read" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="ref_read" lineNumber="8" originalName="ref" fileName="foc-rewrite/apc/src/FOC/../PI_control/PI_control.hpp" fileDirectory=".." coreId="757935405" contextFuncName="PI_control_float_s" bitwidth="32" opcode="read" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../PI_control/PI_control.hpp" linenumber="8" fileDirectory="/home/mklab/workspace/foc" functionName="PI_control&amp;lt;float&amp;gt;"/>
       <dataInputObjs>ref</dataInputObjs>
       <dataOutputObjs>fsub</dataOutputObjs>
@@ -127,35 +127,35 @@
       <dataOutputObjs>fcmp</dataOutputObjs>
       <dataOutputObjs>select</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="data_V" lineNumber="315" originalName="data.V" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="data_V_fu_99_p1" coreId="572669294" contextFuncName="fp_struct" bitwidth="32" opcode="bitcast" nodeLabel="16.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="data_V" lineNumber="315" originalName="data.V" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="data_V_fu_99_p1" coreId="0" contextFuncName="fp_struct" bitwidth="32" opcode="bitcast" nodeLabel="16.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" linenumber="315" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="fp_struct"/>
       <dataInputObjs>fadd</dataInputObjs>
       <dataOutputObjs>trunc</dataOutputObjs>
       <dataOutputObjs>partselect</dataOutputObjs>
       <dataOutputObjs>trunc</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="p_Result_s" lineNumber="368" originalName="__Result__" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="p_Result_s_fu_103_p1" coreId="1528970616" contextFuncName="operator_assign_23_false" bitwidth="31" opcode="trunc" nodeLabel="16.0" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="p_Result_s" lineNumber="368" originalName="__Result__" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="p_Result_s_fu_103_p1" coreId="0" contextFuncName="operator_assign_23_false" bitwidth="31" opcode="trunc" nodeLabel="16.0" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_int_ref.h" linenumber="368" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="operator=&amp;lt;23, false&amp;gt;"/>
       <dataInputObjs>bitcast</dataInputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="zext_ln368" lineNumber="368" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="zext_ln368_fu_107_p1" coreId="1986614843" contextFuncName="operator_assign_23_false" bitwidth="32" opcode="zext" nodeLabel="16.0" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="zext_ln368" lineNumber="368" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="zext_ln368_fu_107_p1" coreId="1597059121" contextFuncName="operator_assign_23_false" bitwidth="32" opcode="zext" nodeLabel="16.0" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_int_ref.h" linenumber="368" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="operator=&amp;lt;23, false&amp;gt;"/>
       <dataInputObjs>trunc</dataInputObjs>
       <dataOutputObjs>bitcast</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="bitcast_ln354" lineNumber="354" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="bitcast_ln354_fu_111_p1" coreId="1634562924" contextFuncName="to_float" bitwidth="32" opcode="bitcast" nodeLabel="16.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="bitcast_ln354" lineNumber="354" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" fileDirectory="../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="bitcast_ln354_fu_111_p1" coreId="1330007625" contextFuncName="to_float" bitwidth="32" opcode="bitcast" nodeLabel="16.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" linenumber="354" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="to_float"/>
       <dataInputObjs>zext</dataInputObjs>
       <dataOutputObjs>fcmp</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="tmp" lineNumber="36" fileName="foc-rewrite/apc/src/FOC/../PI_control/PI_control.hpp" fileDirectory=".." rtlName="tmp_fu_116_p4" coreId="1919251317" contextFuncName="PI_control_float_s" bitwidth="8" opcode="partselect" nodeLabel="16.0" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="tmp" lineNumber="36" fileName="foc-rewrite/apc/src/FOC/../PI_control/PI_control.hpp" fileDirectory=".." rtlName="tmp_fu_116_p4" coreId="1043276322" contextFuncName="PI_control_float_s" bitwidth="8" opcode="partselect" nodeLabel="16.0" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../PI_control/PI_control.hpp" linenumber="36" fileDirectory="/home/mklab/workspace/foc" functionName="PI_control&amp;lt;float&amp;gt;"/>
       <dataInputObjs>bitcast</dataInputObjs>
       <dataOutputObjs>icmp</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="trunc_ln36" lineNumber="36" fileName="foc-rewrite/apc/src/FOC/../PI_control/PI_control.hpp" fileDirectory=".." rtlName="trunc_ln36_fu_126_p1" coreId="1937337441" contextFuncName="PI_control_float_s" bitwidth="23" opcode="trunc" nodeLabel="16.0" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="trunc_ln36" lineNumber="36" fileName="foc-rewrite/apc/src/FOC/../PI_control/PI_control.hpp" fileDirectory=".." rtlName="trunc_ln36_fu_126_p1" coreId="997420912" contextFuncName="PI_control_float_s" bitwidth="23" opcode="trunc" nodeLabel="16.0" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../PI_control/PI_control.hpp" linenumber="36" fileDirectory="/home/mklab/workspace/foc" functionName="PI_control&amp;lt;float&amp;gt;"/>
       <dataInputObjs>bitcast</dataInputObjs>
       <dataOutputObjs>icmp</dataOutputObjs>
@@ -166,7 +166,7 @@
       <dataOutputObjs>or</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="icmp_ln36_2" lineNumber="36" fileName="foc-rewrite/apc/src/FOC/../PI_control/PI_control.hpp" fileDirectory=".." rtlName="icmp_ln36_2_fu_136_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="PI_control_float_s" bitwidth="1" opcode="icmp" nodeLabel="16.0" m_display="0" m_delay="1.05" m_topoIndex="20" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="icmp_ln36_1" lineNumber="36" fileName="foc-rewrite/apc/src/FOC/../PI_control/PI_control.hpp" fileDirectory=".." rtlName="icmp_ln36_1_fu_136_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="PI_control_float_s" bitwidth="1" opcode="icmp" nodeLabel="16.0" m_display="0" m_delay="1.05" m_topoIndex="20" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../PI_control/PI_control.hpp" linenumber="36" fileDirectory="/home/mklab/workspace/foc" functionName="PI_control&amp;lt;float&amp;gt;"/>
       <dataInputObjs>trunc</dataInputObjs>
       <dataOutputObjs>or</dataOutputObjs>
@@ -192,7 +192,7 @@
       <dataInputObjs>fcmp</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="27" name="tmp_64" lineNumber="12" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp" fileDirectory=".." rtlName="fcmp_32ns_32ns_1_2_no_dsp_1_U55" coreName="FCompare" implIndex="auto" control="no" opType="fcmp" coreId="19" contextFuncName="sgn_float_s" bitwidth="1" opcode="fcmp" nodeLabel="15.0" nodeLatency="1" m_display="0" m_delay="2.78" m_topoIndex="11" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="27" name="tmp_51" lineNumber="12" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp" fileDirectory=".." rtlName="fcmp_32ns_32ns_1_2_no_dsp_1_U55" coreName="FCompare" implIndex="auto" control="no" opType="fcmp" coreId="19" contextFuncName="sgn_float_s" bitwidth="1" opcode="fcmp" nodeLabel="15.0" nodeLatency="1" m_display="0" m_delay="2.78" m_topoIndex="11" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp" linenumber="12" fileDirectory="/home/mklab/workspace/foc" functionName="sgn&amp;lt;float&amp;gt;"/>
       <dataInputObjs>fadd</dataInputObjs>
       <dataOutputObjs>and</dataOutputObjs>
@@ -204,24 +204,24 @@
       <dataInputObjs>fcmp</dataInputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="29" name="zext_ln12" lineNumber="12" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp" fileDirectory=".." rtlName="zext_ln12_fu_152_p1" coreId="1629890932" contextFuncName="sgn_float_s" bitwidth="2" opcode="zext" nodeLabel="17.0" m_display="0" m_topoIndex="24" m_clusterGroupNumber="2">
+    <node_objs xsi:type="cdfg:CdfgNode" id="29" name="zext_ln12" lineNumber="12" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp" fileDirectory=".." rtlName="zext_ln12_fu_152_p1" coreId="790766141" contextFuncName="sgn_float_s" bitwidth="2" opcode="zext" nodeLabel="17.0" m_display="0" m_topoIndex="24" m_clusterGroupNumber="2">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp" linenumber="12" fileDirectory="/home/mklab/workspace/foc" functionName="sgn&amp;lt;float&amp;gt;"/>
       <dataInputObjs>and</dataInputObjs>
       <dataOutputObjs>sub</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="30" name="tmp_65" lineNumber="12" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp" fileDirectory=".." rtlName="fcmp_32ns_32ns_1_2_no_dsp_1_U56" coreName="FCompare" implIndex="auto" control="no" opType="fcmp" coreId="19" contextFuncName="sgn_float_s" bitwidth="1" opcode="fcmp" nodeLabel="15.0" nodeLatency="1" m_display="0" m_delay="2.78" m_topoIndex="12" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="30" name="tmp_52" lineNumber="12" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp" fileDirectory=".." rtlName="fcmp_32ns_32ns_1_2_no_dsp_1_U56" coreName="FCompare" implIndex="auto" control="no" opType="fcmp" coreId="19" contextFuncName="sgn_float_s" bitwidth="1" opcode="fcmp" nodeLabel="15.0" nodeLatency="1" m_display="0" m_delay="2.78" m_topoIndex="12" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp" linenumber="12" fileDirectory="/home/mklab/workspace/foc" functionName="sgn&amp;lt;float&amp;gt;"/>
       <dataInputObjs>fadd</dataInputObjs>
       <dataOutputObjs>and</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="31" name="and_ln12_16" lineNumber="12" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp" fileDirectory=".." rtlName="and_ln12_16_fu_156_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="sgn_float_s" bitwidth="1" opcode="and" nodeLabel="17.0" m_display="0" m_topoIndex="25" m_clusterGroupNumber="2">
+    <node_objs xsi:type="cdfg:CdfgNode" id="31" name="and_ln12_15" lineNumber="12" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp" fileDirectory=".." rtlName="and_ln12_15_fu_156_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="sgn_float_s" bitwidth="1" opcode="and" nodeLabel="17.0" m_display="0" m_topoIndex="25" m_clusterGroupNumber="2">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp" linenumber="12" fileDirectory="/home/mklab/workspace/foc" functionName="sgn&amp;lt;float&amp;gt;"/>
       <dataInputObjs>or</dataInputObjs>
       <dataInputObjs>fcmp</dataInputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="32" name="zext_ln12_16" lineNumber="12" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp" fileDirectory=".." rtlName="zext_ln12_16_fu_160_p1" coreId="840979276" contextFuncName="sgn_float_s" bitwidth="2" opcode="zext" nodeLabel="17.0" m_display="0" m_topoIndex="26" m_clusterGroupNumber="2">
+    <node_objs xsi:type="cdfg:CdfgNode" id="32" name="zext_ln12_15" lineNumber="12" fileName="foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp" fileDirectory=".." rtlName="zext_ln12_15_fu_160_p1" coreId="825372722" contextFuncName="sgn_float_s" bitwidth="2" opcode="zext" nodeLabel="17.0" m_display="0" m_topoIndex="26" m_clusterGroupNumber="2">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../clarke_transform/../common.hpp" linenumber="12" fileDirectory="/home/mklab/workspace/foc" functionName="sgn&amp;lt;float&amp;gt;"/>
       <dataInputObjs>and</dataInputObjs>
       <dataOutputObjs>sub</dataOutputObjs>
@@ -233,12 +233,12 @@
       <dataOutputObjs>sext</dataOutputObjs>
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="34" name="sext_ln37" lineNumber="37" fileName="foc-rewrite/apc/src/FOC/../PI_control/PI_control.hpp" fileDirectory=".." rtlName="sext_ln37_fu_170_p1" coreId="791884082" contextFuncName="PI_control_float_s" bitwidth="17" opcode="sext" nodeLabel="17.0" m_display="0" m_topoIndex="28" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="34" name="sext_ln37" lineNumber="37" fileName="foc-rewrite/apc/src/FOC/../PI_control/PI_control.hpp" fileDirectory=".." rtlName="sext_ln37_fu_170_p1" coreId="1765504108" contextFuncName="PI_control_float_s" bitwidth="17" opcode="sext" nodeLabel="17.0" m_display="0" m_topoIndex="28" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../PI_control/PI_control.hpp" linenumber="37" fileDirectory="/home/mklab/workspace/foc" functionName="PI_control&amp;lt;float&amp;gt;"/>
       <dataInputObjs>sub</dataInputObjs>
       <dataOutputObjs>sub</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="35" name="shl_ln" lineNumber="37" fileName="foc-rewrite/apc/src/FOC/../PI_control/PI_control.hpp" fileDirectory=".." rtlName="shl_ln_fu_174_p3" coreId="1313415741" contextFuncName="PI_control_float_s" bitwidth="17" opcode="bitconcatenate" nodeLabel="17.0" m_display="0" m_topoIndex="29" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="35" name="shl_ln" lineNumber="37" fileName="foc-rewrite/apc/src/FOC/../PI_control/PI_control.hpp" fileDirectory=".." rtlName="shl_ln_fu_174_p3" coreId="1935961193" contextFuncName="PI_control_float_s" bitwidth="17" opcode="bitconcatenate" nodeLabel="17.0" m_display="0" m_topoIndex="29" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../PI_control/PI_control.hpp" linenumber="37" fileDirectory="/home/mklab/workspace/foc" functionName="PI_control&amp;lt;float&amp;gt;"/>
       <dataInputObjs>sub</dataInputObjs>
       <dataOutputObjs>sub</dataOutputObjs>
@@ -250,7 +250,7 @@
       <dataInputObjs>sext</dataInputObjs>
       <dataOutputObjs>sext</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="37" name="sext_ln37_1" lineNumber="37" fileName="foc-rewrite/apc/src/FOC/../PI_control/PI_control.hpp" fileDirectory=".." rtlName="grp_fu_77_p0" coreId="976974951" contextFuncName="PI_control_float_s" bitwidth="32" opcode="sext" nodeLabel="17.0" m_display="0" m_topoIndex="31" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="37" name="sext_ln37_1" lineNumber="37" fileName="foc-rewrite/apc/src/FOC/../PI_control/PI_control.hpp" fileDirectory=".." rtlName="grp_fu_77_p0" coreId="1814459491" contextFuncName="PI_control_float_s" bitwidth="32" opcode="sext" nodeLabel="17.0" m_display="0" m_topoIndex="31" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../PI_control/PI_control.hpp" linenumber="37" fileDirectory="/home/mklab/workspace/foc" functionName="PI_control&amp;lt;float&amp;gt;"/>
       <dataInputObjs>sub</dataInputObjs>
       <dataOutputObjs>sitofp</dataOutputObjs>
@@ -267,7 +267,7 @@
       <dataInputObjs>fadd</dataInputObjs>
       <dataOutputObjs>ret</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="40" name="_ln42" lineNumber="42" fileName="foc-rewrite/apc/src/FOC/../PI_control/PI_control.hpp" fileDirectory=".." coreId="779314286" contextFuncName="PI_control_float_s" opcode="ret" nodeLabel="20.0" m_display="0" m_topoIndex="35" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="40" name="_ln42" lineNumber="42" fileName="foc-rewrite/apc/src/FOC/../PI_control/PI_control.hpp" fileDirectory=".." coreId="1920151347" contextFuncName="PI_control_float_s" opcode="ret" nodeLabel="20.0" m_display="0" m_topoIndex="35" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="foc-rewrite/apc/src/FOC/../PI_control/PI_control.hpp" linenumber="42" fileDirectory="/home/mklab/workspace/foc" functionName="PI_control&amp;lt;float&amp;gt;"/>
       <dataInputObjs>select</dataInputObjs>
       <dataOutputObjs>ap_return</dataOutputObjs>
@@ -320,9 +320,6 @@
     <nodeIds>11</nodeIds>
     <nodeIds>15</nodeIds>
   </regnodes>
-  <regnodes realName="tmp_65_reg_262">
-    <nodeIds>30</nodeIds>
-  </regnodes>
   <regnodes realName="ref_read_reg_210">
     <nodeIds>10</nodeIds>
   </regnodes>
@@ -338,6 +335,9 @@
   <regnodes realName="or_ln36_reg_250">
     <nodeIds>24</nodeIds>
   </regnodes>
+  <regnodes realName="tmp_52_reg_262">
+    <nodeIds>30</nodeIds>
+  </regnodes>
   <regnodes realName="mul1_reg_240">
     <nodeIds>14</nodeIds>
   </regnodes>
@@ -350,7 +350,7 @@
   <regnodes realName="mul_reg_235">
     <nodeIds>13</nodeIds>
   </regnodes>
-  <regnodes realName="tmp_64_reg_257">
+  <regnodes realName="tmp_51_reg_257">
     <nodeIds>27</nodeIds>
   </regnodes>
   <regnodes realName="val_read_reg_205">
@@ -359,7 +359,7 @@
   <regnodes realName="bitcast_ln354_reg_245">
     <nodeIds>19</nodeIds>
   </regnodes>
-  <expressionNodes realName="and_ln12_16_fu_156">
+  <expressionNodes realName="and_ln12_15_fu_156">
     <nodeIds>31</nodeIds>
   </expressionNodes>
   <expressionNodes realName="sext_ln37_fu_170">
@@ -392,6 +392,9 @@
   <expressionNodes realName="zext_ln12_fu_152">
     <nodeIds>29</nodeIds>
   </expressionNodes>
+  <expressionNodes realName="zext_ln12_15_fu_160">
+    <nodeIds>32</nodeIds>
+  </expressionNodes>
   <expressionNodes realName="zext_ln368_fu_107">
     <nodeIds>18</nodeIds>
   </expressionNodes>
@@ -401,16 +404,13 @@
   <expressionNodes realName="p_Result_s_fu_103">
     <nodeIds>17</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="zext_ln12_16_fu_160">
-    <nodeIds>32</nodeIds>
-  </expressionNodes>
   <expressionNodes realName="icmp_ln36_fu_130">
     <nodeIds>22</nodeIds>
   </expressionNodes>
   <expressionNodes realName="and_ln12_fu_148">
     <nodeIds>28</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="icmp_ln36_2_fu_136">
+  <expressionNodes realName="icmp_ln36_1_fu_136">
     <nodeIds>23</nodeIds>
   </expressionNodes>
   <expressionNodes realName="and_ln36_fu_193">

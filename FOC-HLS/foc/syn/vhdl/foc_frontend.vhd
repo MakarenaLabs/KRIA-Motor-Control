@@ -58,7 +58,7 @@ end;
 architecture behav of foc_frontend is 
     attribute CORE_GENERATION_INFO : STRING;
     attribute CORE_GENERATION_INFO of behav : architecture is
-    "foc_frontend_foc_frontend,hls_ip_2021_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xczu7ev-ffvc1156-2-e,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=7.300000,HLS_SYN_LAT=92,HLS_SYN_TPT=none,HLS_SYN_MEM=21,HLS_SYN_DSP=0,HLS_SYN_FF=24501,HLS_SYN_LUT=35185,HLS_VERSION=2021_2}";
+    "foc_frontend_foc_frontend,hls_ip_2021_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xczu7ev-ffvc1156-2-e,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=7.300000,HLS_SYN_LAT=78,HLS_SYN_TPT=none,HLS_SYN_MEM=21,HLS_SYN_DSP=0,HLS_SYN_FF=24484,HLS_SYN_LUT=35124,HLS_VERSION=2021_2}";
     constant ap_const_logic_0 : STD_LOGIC := '0';
     constant ap_const_lv1_0 : STD_LOGIC_VECTOR (0 downto 0) := "0";
     constant ap_const_logic_1 : STD_LOGIC := '1';
@@ -77,7 +77,6 @@ architecture behav of foc_frontend is
     constant ap_const_lv32_2 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000010";
     constant ap_const_lv32_5 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000101";
     constant ap_const_lv32_3 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000011";
-    constant ap_const_boolean_0 : BOOLEAN := false;
     constant ap_const_lv64_5 : STD_LOGIC_VECTOR (63 downto 0) := "0000000000000000000000000000000000000000000000000000000000000101";
     constant ap_const_lv32_1F : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000011111";
     constant ap_const_lv32_17 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000010111";
@@ -88,6 +87,7 @@ architecture behav of foc_frontend is
     constant ap_const_lv8_7F : STD_LOGIC_VECTOR (7 downto 0) := "01111111";
     constant ap_const_lv32_18 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000011000";
     constant ap_const_lv32_37 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000110111";
+    constant ap_const_boolean_0 : BOOLEAN := false;
     constant ap_const_lv32_6 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000110";
 
     signal ap_local_deadlock : STD_LOGIC_VECTOR (0 downto 0);
@@ -117,147 +117,147 @@ architecture behav of foc_frontend is
     attribute fsm_encoding of ap_CS_fsm_state5 : signal is "none";
     signal ap_CS_fsm_state1 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state1 : signal is "none";
-    signal result_V_fu_466_p3 : STD_LOGIC_VECTOR (31 downto 0);
-    signal result_V_reg_479 : STD_LOGIC_VECTOR (31 downto 0);
+    signal result_V_fu_458_p3 : STD_LOGIC_VECTOR (31 downto 0);
+    signal result_V_reg_471 : STD_LOGIC_VECTOR (31 downto 0);
     signal ap_CS_fsm_state2 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state2 : signal is "none";
-    signal grp_calibration_fu_180_ap_start : STD_LOGIC;
-    signal grp_calibration_fu_180_ap_done : STD_LOGIC;
-    signal grp_calibration_fu_180_ap_idle : STD_LOGIC;
-    signal grp_calibration_fu_180_ap_ready : STD_LOGIC;
-    signal grp_calibration_fu_180_B_TDATA : STD_LOGIC_VECTOR (63 downto 0);
-    signal grp_calibration_fu_180_B_TVALID : STD_LOGIC;
-    signal grp_calibration_fu_180_B_TREADY : STD_LOGIC;
-    signal grp_calibration_fu_180_B_TKEEP : STD_LOGIC_VECTOR (7 downto 0);
-    signal grp_calibration_fu_180_B_TSTRB : STD_LOGIC_VECTOR (7 downto 0);
-    signal grp_calibration_fu_180_B_TLAST : STD_LOGIC_VECTOR (0 downto 0);
-    signal grp_torque_foc_fu_192_ap_start : STD_LOGIC;
-    signal grp_torque_foc_fu_192_ap_done : STD_LOGIC;
-    signal grp_torque_foc_fu_192_ap_idle : STD_LOGIC;
-    signal grp_torque_foc_fu_192_ap_ready : STD_LOGIC;
-    signal grp_torque_foc_fu_192_A_TREADY : STD_LOGIC;
-    signal grp_torque_foc_fu_192_B_TDATA : STD_LOGIC_VECTOR (63 downto 0);
-    signal grp_torque_foc_fu_192_B_TVALID : STD_LOGIC;
-    signal grp_torque_foc_fu_192_B_TREADY : STD_LOGIC;
-    signal grp_torque_foc_fu_192_B_TKEEP : STD_LOGIC_VECTOR (7 downto 0);
-    signal grp_torque_foc_fu_192_B_TSTRB : STD_LOGIC_VECTOR (7 downto 0);
-    signal grp_torque_foc_fu_192_B_TLAST : STD_LOGIC_VECTOR (0 downto 0);
-    signal grp_torque_foc_fu_192_C_TDATA : STD_LOGIC_VECTOR (63 downto 0);
-    signal grp_torque_foc_fu_192_C_TVALID : STD_LOGIC;
-    signal grp_torque_foc_fu_192_C_TREADY : STD_LOGIC;
-    signal grp_torque_foc_fu_192_C_TKEEP : STD_LOGIC_VECTOR (7 downto 0);
-    signal grp_torque_foc_fu_192_C_TSTRB : STD_LOGIC_VECTOR (7 downto 0);
-    signal grp_torque_foc_fu_192_C_TLAST : STD_LOGIC_VECTOR (0 downto 0);
-    signal grp_torque_foc_fu_192_control_address0 : STD_LOGIC_VECTOR (2 downto 0);
-    signal grp_torque_foc_fu_192_control_ce0 : STD_LOGIC;
-    signal grp_torque_foc_fu_192_logger_address0 : STD_LOGIC_VECTOR (4 downto 0);
-    signal grp_torque_foc_fu_192_logger_ce0 : STD_LOGIC;
-    signal grp_torque_foc_fu_192_logger_we0 : STD_LOGIC;
-    signal grp_torque_foc_fu_192_logger_d0 : STD_LOGIC_VECTOR (31 downto 0);
-    signal grp_torque_foc_fu_192_velocity_accum_o : STD_LOGIC_VECTOR (31 downto 0);
-    signal grp_torque_foc_fu_192_velocity_accum_o_ap_vld : STD_LOGIC;
-    signal grp_torque_foc_fu_192_buffer_velocity_address0 : STD_LOGIC_VECTOR (4 downto 0);
-    signal grp_torque_foc_fu_192_buffer_velocity_ce0 : STD_LOGIC;
-    signal grp_torque_foc_fu_192_buffer_velocity_we0 : STD_LOGIC;
-    signal grp_torque_foc_fu_192_buffer_velocity_d0 : STD_LOGIC_VECTOR (31 downto 0);
-    signal grp_torque_foc_fu_192_Y1a_prev_o : STD_LOGIC_VECTOR (31 downto 0);
-    signal grp_torque_foc_fu_192_Y1a_prev_o_ap_vld : STD_LOGIC;
-    signal grp_torque_foc_fu_192_Y1b_prev_o : STD_LOGIC_VECTOR (31 downto 0);
-    signal grp_torque_foc_fu_192_Y1b_prev_o_ap_vld : STD_LOGIC;
-    signal grp_torque_foc_fu_192_Y2a_prev_o : STD_LOGIC_VECTOR (31 downto 0);
-    signal grp_torque_foc_fu_192_Y2a_prev_o_ap_vld : STD_LOGIC;
-    signal grp_torque_foc_fu_192_Y2b_prev_o : STD_LOGIC_VECTOR (31 downto 0);
-    signal grp_torque_foc_fu_192_Y2b_prev_o_ap_vld : STD_LOGIC;
-    signal grp_manual_control_fu_248_ap_start : STD_LOGIC;
-    signal grp_manual_control_fu_248_ap_done : STD_LOGIC;
-    signal grp_manual_control_fu_248_ap_idle : STD_LOGIC;
-    signal grp_manual_control_fu_248_ap_ready : STD_LOGIC;
-    signal grp_manual_control_fu_248_A_TREADY : STD_LOGIC;
-    signal grp_manual_control_fu_248_B_TDATA : STD_LOGIC_VECTOR (63 downto 0);
-    signal grp_manual_control_fu_248_B_TVALID : STD_LOGIC;
-    signal grp_manual_control_fu_248_B_TREADY : STD_LOGIC;
-    signal grp_manual_control_fu_248_B_TKEEP : STD_LOGIC_VECTOR (7 downto 0);
-    signal grp_manual_control_fu_248_B_TSTRB : STD_LOGIC_VECTOR (7 downto 0);
-    signal grp_manual_control_fu_248_B_TLAST : STD_LOGIC_VECTOR (0 downto 0);
-    signal grp_manual_control_fu_248_control_address0 : STD_LOGIC_VECTOR (2 downto 0);
-    signal grp_manual_control_fu_248_control_ce0 : STD_LOGIC;
-    signal grp_manual_control_fu_248_logger_address0 : STD_LOGIC_VECTOR (4 downto 0);
-    signal grp_manual_control_fu_248_logger_ce0 : STD_LOGIC;
-    signal grp_manual_control_fu_248_logger_we0 : STD_LOGIC;
-    signal grp_manual_control_fu_248_logger_d0 : STD_LOGIC_VECTOR (31 downto 0);
-    signal grp_foc_fu_276_ap_start : STD_LOGIC;
-    signal grp_foc_fu_276_ap_done : STD_LOGIC;
-    signal grp_foc_fu_276_ap_idle : STD_LOGIC;
-    signal grp_foc_fu_276_ap_ready : STD_LOGIC;
-    signal grp_foc_fu_276_A_TREADY : STD_LOGIC;
-    signal grp_foc_fu_276_B_TDATA : STD_LOGIC_VECTOR (63 downto 0);
-    signal grp_foc_fu_276_B_TVALID : STD_LOGIC;
-    signal grp_foc_fu_276_B_TREADY : STD_LOGIC;
-    signal grp_foc_fu_276_B_TKEEP : STD_LOGIC_VECTOR (7 downto 0);
-    signal grp_foc_fu_276_B_TSTRB : STD_LOGIC_VECTOR (7 downto 0);
-    signal grp_foc_fu_276_B_TLAST : STD_LOGIC_VECTOR (0 downto 0);
-    signal grp_foc_fu_276_C_TDATA : STD_LOGIC_VECTOR (63 downto 0);
-    signal grp_foc_fu_276_C_TVALID : STD_LOGIC;
-    signal grp_foc_fu_276_C_TREADY : STD_LOGIC;
-    signal grp_foc_fu_276_C_TKEEP : STD_LOGIC_VECTOR (7 downto 0);
-    signal grp_foc_fu_276_C_TSTRB : STD_LOGIC_VECTOR (7 downto 0);
-    signal grp_foc_fu_276_C_TLAST : STD_LOGIC_VECTOR (0 downto 0);
-    signal grp_foc_fu_276_control_address0 : STD_LOGIC_VECTOR (2 downto 0);
-    signal grp_foc_fu_276_control_ce0 : STD_LOGIC;
-    signal grp_foc_fu_276_logger_address0 : STD_LOGIC_VECTOR (4 downto 0);
-    signal grp_foc_fu_276_logger_ce0 : STD_LOGIC;
-    signal grp_foc_fu_276_logger_we0 : STD_LOGIC;
-    signal grp_foc_fu_276_logger_d0 : STD_LOGIC_VECTOR (31 downto 0);
-    signal grp_foc_fu_276_velocity_accum_o : STD_LOGIC_VECTOR (31 downto 0);
-    signal grp_foc_fu_276_velocity_accum_o_ap_vld : STD_LOGIC;
-    signal grp_foc_fu_276_buffer_velocity_address0 : STD_LOGIC_VECTOR (4 downto 0);
-    signal grp_foc_fu_276_buffer_velocity_ce0 : STD_LOGIC;
-    signal grp_foc_fu_276_buffer_velocity_we0 : STD_LOGIC;
-    signal grp_foc_fu_276_buffer_velocity_d0 : STD_LOGIC_VECTOR (31 downto 0);
-    signal grp_foc_fu_276_Y1a_prev_o : STD_LOGIC_VECTOR (31 downto 0);
-    signal grp_foc_fu_276_Y1a_prev_o_ap_vld : STD_LOGIC;
-    signal grp_foc_fu_276_Y1b_prev_o : STD_LOGIC_VECTOR (31 downto 0);
-    signal grp_foc_fu_276_Y1b_prev_o_ap_vld : STD_LOGIC;
-    signal grp_foc_fu_276_Y2a_prev_o : STD_LOGIC_VECTOR (31 downto 0);
-    signal grp_foc_fu_276_Y2a_prev_o_ap_vld : STD_LOGIC;
-    signal grp_foc_fu_276_Y2b_prev_o : STD_LOGIC_VECTOR (31 downto 0);
-    signal grp_foc_fu_276_Y2b_prev_o_ap_vld : STD_LOGIC;
-    signal grp_calibration_fu_180_ap_start_reg : STD_LOGIC := '0';
-    signal grp_torque_foc_fu_192_ap_start_reg : STD_LOGIC := '0';
+    signal grp_calibration_fu_176_ap_start : STD_LOGIC;
+    signal grp_calibration_fu_176_ap_done : STD_LOGIC;
+    signal grp_calibration_fu_176_ap_idle : STD_LOGIC;
+    signal grp_calibration_fu_176_ap_ready : STD_LOGIC;
+    signal grp_calibration_fu_176_B_TDATA : STD_LOGIC_VECTOR (63 downto 0);
+    signal grp_calibration_fu_176_B_TVALID : STD_LOGIC;
+    signal grp_calibration_fu_176_B_TREADY : STD_LOGIC;
+    signal grp_calibration_fu_176_B_TKEEP : STD_LOGIC_VECTOR (7 downto 0);
+    signal grp_calibration_fu_176_B_TSTRB : STD_LOGIC_VECTOR (7 downto 0);
+    signal grp_calibration_fu_176_B_TLAST : STD_LOGIC_VECTOR (0 downto 0);
+    signal grp_torque_foc_fu_188_ap_start : STD_LOGIC;
+    signal grp_torque_foc_fu_188_ap_done : STD_LOGIC;
+    signal grp_torque_foc_fu_188_ap_idle : STD_LOGIC;
+    signal grp_torque_foc_fu_188_ap_ready : STD_LOGIC;
+    signal grp_torque_foc_fu_188_A_TREADY : STD_LOGIC;
+    signal grp_torque_foc_fu_188_B_TDATA : STD_LOGIC_VECTOR (63 downto 0);
+    signal grp_torque_foc_fu_188_B_TVALID : STD_LOGIC;
+    signal grp_torque_foc_fu_188_B_TREADY : STD_LOGIC;
+    signal grp_torque_foc_fu_188_B_TKEEP : STD_LOGIC_VECTOR (7 downto 0);
+    signal grp_torque_foc_fu_188_B_TSTRB : STD_LOGIC_VECTOR (7 downto 0);
+    signal grp_torque_foc_fu_188_B_TLAST : STD_LOGIC_VECTOR (0 downto 0);
+    signal grp_torque_foc_fu_188_C_TDATA : STD_LOGIC_VECTOR (63 downto 0);
+    signal grp_torque_foc_fu_188_C_TVALID : STD_LOGIC;
+    signal grp_torque_foc_fu_188_C_TREADY : STD_LOGIC;
+    signal grp_torque_foc_fu_188_C_TKEEP : STD_LOGIC_VECTOR (7 downto 0);
+    signal grp_torque_foc_fu_188_C_TSTRB : STD_LOGIC_VECTOR (7 downto 0);
+    signal grp_torque_foc_fu_188_C_TLAST : STD_LOGIC_VECTOR (0 downto 0);
+    signal grp_torque_foc_fu_188_control_address0 : STD_LOGIC_VECTOR (2 downto 0);
+    signal grp_torque_foc_fu_188_control_ce0 : STD_LOGIC;
+    signal grp_torque_foc_fu_188_logger_address0 : STD_LOGIC_VECTOR (4 downto 0);
+    signal grp_torque_foc_fu_188_logger_ce0 : STD_LOGIC;
+    signal grp_torque_foc_fu_188_logger_we0 : STD_LOGIC;
+    signal grp_torque_foc_fu_188_logger_d0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal grp_torque_foc_fu_188_velocity_accum_o : STD_LOGIC_VECTOR (31 downto 0);
+    signal grp_torque_foc_fu_188_velocity_accum_o_ap_vld : STD_LOGIC;
+    signal grp_torque_foc_fu_188_buffer_velocity_address0 : STD_LOGIC_VECTOR (4 downto 0);
+    signal grp_torque_foc_fu_188_buffer_velocity_ce0 : STD_LOGIC;
+    signal grp_torque_foc_fu_188_buffer_velocity_we0 : STD_LOGIC;
+    signal grp_torque_foc_fu_188_buffer_velocity_d0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal grp_torque_foc_fu_188_Y1a_prev_o : STD_LOGIC_VECTOR (31 downto 0);
+    signal grp_torque_foc_fu_188_Y1a_prev_o_ap_vld : STD_LOGIC;
+    signal grp_torque_foc_fu_188_Y1b_prev_o : STD_LOGIC_VECTOR (31 downto 0);
+    signal grp_torque_foc_fu_188_Y1b_prev_o_ap_vld : STD_LOGIC;
+    signal grp_torque_foc_fu_188_Y2a_prev_o : STD_LOGIC_VECTOR (31 downto 0);
+    signal grp_torque_foc_fu_188_Y2a_prev_o_ap_vld : STD_LOGIC;
+    signal grp_torque_foc_fu_188_Y2b_prev_o : STD_LOGIC_VECTOR (31 downto 0);
+    signal grp_torque_foc_fu_188_Y2b_prev_o_ap_vld : STD_LOGIC;
+    signal grp_manual_control_fu_244_ap_start : STD_LOGIC;
+    signal grp_manual_control_fu_244_ap_done : STD_LOGIC;
+    signal grp_manual_control_fu_244_ap_idle : STD_LOGIC;
+    signal grp_manual_control_fu_244_ap_ready : STD_LOGIC;
+    signal grp_manual_control_fu_244_A_TREADY : STD_LOGIC;
+    signal grp_manual_control_fu_244_B_TDATA : STD_LOGIC_VECTOR (63 downto 0);
+    signal grp_manual_control_fu_244_B_TVALID : STD_LOGIC;
+    signal grp_manual_control_fu_244_B_TREADY : STD_LOGIC;
+    signal grp_manual_control_fu_244_B_TKEEP : STD_LOGIC_VECTOR (7 downto 0);
+    signal grp_manual_control_fu_244_B_TSTRB : STD_LOGIC_VECTOR (7 downto 0);
+    signal grp_manual_control_fu_244_B_TLAST : STD_LOGIC_VECTOR (0 downto 0);
+    signal grp_manual_control_fu_244_control_address0 : STD_LOGIC_VECTOR (2 downto 0);
+    signal grp_manual_control_fu_244_control_ce0 : STD_LOGIC;
+    signal grp_manual_control_fu_244_logger_address0 : STD_LOGIC_VECTOR (4 downto 0);
+    signal grp_manual_control_fu_244_logger_ce0 : STD_LOGIC;
+    signal grp_manual_control_fu_244_logger_we0 : STD_LOGIC;
+    signal grp_manual_control_fu_244_logger_d0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal grp_foc_fu_272_ap_start : STD_LOGIC;
+    signal grp_foc_fu_272_ap_done : STD_LOGIC;
+    signal grp_foc_fu_272_ap_idle : STD_LOGIC;
+    signal grp_foc_fu_272_ap_ready : STD_LOGIC;
+    signal grp_foc_fu_272_A_TREADY : STD_LOGIC;
+    signal grp_foc_fu_272_B_TDATA : STD_LOGIC_VECTOR (63 downto 0);
+    signal grp_foc_fu_272_B_TVALID : STD_LOGIC;
+    signal grp_foc_fu_272_B_TREADY : STD_LOGIC;
+    signal grp_foc_fu_272_B_TKEEP : STD_LOGIC_VECTOR (7 downto 0);
+    signal grp_foc_fu_272_B_TSTRB : STD_LOGIC_VECTOR (7 downto 0);
+    signal grp_foc_fu_272_B_TLAST : STD_LOGIC_VECTOR (0 downto 0);
+    signal grp_foc_fu_272_C_TDATA : STD_LOGIC_VECTOR (63 downto 0);
+    signal grp_foc_fu_272_C_TVALID : STD_LOGIC;
+    signal grp_foc_fu_272_C_TREADY : STD_LOGIC;
+    signal grp_foc_fu_272_C_TKEEP : STD_LOGIC_VECTOR (7 downto 0);
+    signal grp_foc_fu_272_C_TSTRB : STD_LOGIC_VECTOR (7 downto 0);
+    signal grp_foc_fu_272_C_TLAST : STD_LOGIC_VECTOR (0 downto 0);
+    signal grp_foc_fu_272_control_address0 : STD_LOGIC_VECTOR (2 downto 0);
+    signal grp_foc_fu_272_control_ce0 : STD_LOGIC;
+    signal grp_foc_fu_272_logger_address0 : STD_LOGIC_VECTOR (4 downto 0);
+    signal grp_foc_fu_272_logger_ce0 : STD_LOGIC;
+    signal grp_foc_fu_272_logger_we0 : STD_LOGIC;
+    signal grp_foc_fu_272_logger_d0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal grp_foc_fu_272_velocity_accum_o : STD_LOGIC_VECTOR (31 downto 0);
+    signal grp_foc_fu_272_velocity_accum_o_ap_vld : STD_LOGIC;
+    signal grp_foc_fu_272_buffer_velocity_address0 : STD_LOGIC_VECTOR (4 downto 0);
+    signal grp_foc_fu_272_buffer_velocity_ce0 : STD_LOGIC;
+    signal grp_foc_fu_272_buffer_velocity_we0 : STD_LOGIC;
+    signal grp_foc_fu_272_buffer_velocity_d0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal grp_foc_fu_272_Y1a_prev_o : STD_LOGIC_VECTOR (31 downto 0);
+    signal grp_foc_fu_272_Y1a_prev_o_ap_vld : STD_LOGIC;
+    signal grp_foc_fu_272_Y1b_prev_o : STD_LOGIC_VECTOR (31 downto 0);
+    signal grp_foc_fu_272_Y1b_prev_o_ap_vld : STD_LOGIC;
+    signal grp_foc_fu_272_Y2a_prev_o : STD_LOGIC_VECTOR (31 downto 0);
+    signal grp_foc_fu_272_Y2a_prev_o_ap_vld : STD_LOGIC;
+    signal grp_foc_fu_272_Y2b_prev_o : STD_LOGIC_VECTOR (31 downto 0);
+    signal grp_foc_fu_272_Y2b_prev_o_ap_vld : STD_LOGIC;
+    signal grp_calibration_fu_176_ap_start_reg : STD_LOGIC := '0';
+    signal grp_torque_foc_fu_188_ap_start_reg : STD_LOGIC := '0';
     signal ap_CS_fsm_state3 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state3 : signal is "none";
     signal ap_CS_fsm_state4 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state4 : signal is "none";
-    signal grp_manual_control_fu_248_ap_start_reg : STD_LOGIC := '0';
+    signal grp_manual_control_fu_244_ap_start_reg : STD_LOGIC := '0';
     signal ap_CS_fsm_state6 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state6 : signal is "none";
-    signal grp_foc_fu_276_ap_start_reg : STD_LOGIC := '0';
-    signal ap_predicate_op68_call_state4 : BOOLEAN;
-    signal ap_block_state4_on_subcall_done : BOOLEAN;
-    signal tmp_42_fu_356_p1 : STD_LOGIC_VECTOR (22 downto 0);
-    signal mantissa_fu_360_p4 : STD_LOGIC_VECTOR (24 downto 0);
-    signal tmp_41_fu_346_p4 : STD_LOGIC_VECTOR (7 downto 0);
-    signal zext_ln344_fu_374_p1 : STD_LOGIC_VECTOR (8 downto 0);
-    signal add_ln344_fu_378_p2 : STD_LOGIC_VECTOR (8 downto 0);
-    signal sub_ln1364_fu_392_p2 : STD_LOGIC_VECTOR (7 downto 0);
-    signal isNeg_fu_384_p3 : STD_LOGIC_VECTOR (0 downto 0);
-    signal sext_ln1364_fu_398_p1 : STD_LOGIC_VECTOR (8 downto 0);
-    signal ush_fu_402_p3 : STD_LOGIC_VECTOR (8 downto 0);
-    signal sext_ln1340_fu_410_p1 : STD_LOGIC_VECTOR (31 downto 0);
-    signal zext_ln15_fu_370_p1 : STD_LOGIC_VECTOR (78 downto 0);
-    signal zext_ln1340_fu_414_p1 : STD_LOGIC_VECTOR (78 downto 0);
-    signal r_V_fu_418_p2 : STD_LOGIC_VECTOR (78 downto 0);
-    signal tmp_fu_430_p3 : STD_LOGIC_VECTOR (0 downto 0);
-    signal r_V_11_fu_424_p2 : STD_LOGIC_VECTOR (78 downto 0);
-    signal zext_ln671_fu_438_p1 : STD_LOGIC_VECTOR (31 downto 0);
-    signal tmp_s_fu_442_p4 : STD_LOGIC_VECTOR (31 downto 0);
-    signal val_fu_452_p3 : STD_LOGIC_VECTOR (31 downto 0);
-    signal p_Result_s_fu_338_p3 : STD_LOGIC_VECTOR (0 downto 0);
-    signal result_V_24_fu_460_p2 : STD_LOGIC_VECTOR (31 downto 0);
+    signal grp_foc_fu_272_ap_start_reg : STD_LOGIC := '0';
+    signal tmp_42_fu_348_p1 : STD_LOGIC_VECTOR (22 downto 0);
+    signal mantissa_fu_352_p4 : STD_LOGIC_VECTOR (24 downto 0);
+    signal tmp_41_fu_338_p4 : STD_LOGIC_VECTOR (7 downto 0);
+    signal zext_ln344_fu_366_p1 : STD_LOGIC_VECTOR (8 downto 0);
+    signal add_ln344_fu_370_p2 : STD_LOGIC_VECTOR (8 downto 0);
+    signal sub_ln1364_fu_384_p2 : STD_LOGIC_VECTOR (7 downto 0);
+    signal isNeg_fu_376_p3 : STD_LOGIC_VECTOR (0 downto 0);
+    signal sext_ln1364_fu_390_p1 : STD_LOGIC_VECTOR (8 downto 0);
+    signal ush_fu_394_p3 : STD_LOGIC_VECTOR (8 downto 0);
+    signal sext_ln1340_fu_402_p1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal zext_ln15_fu_362_p1 : STD_LOGIC_VECTOR (78 downto 0);
+    signal zext_ln1340_fu_406_p1 : STD_LOGIC_VECTOR (78 downto 0);
+    signal r_V_fu_410_p2 : STD_LOGIC_VECTOR (78 downto 0);
+    signal tmp_fu_422_p3 : STD_LOGIC_VECTOR (0 downto 0);
+    signal r_V_11_fu_416_p2 : STD_LOGIC_VECTOR (78 downto 0);
+    signal zext_ln671_fu_430_p1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal tmp_s_fu_434_p4 : STD_LOGIC_VECTOR (31 downto 0);
+    signal val_fu_444_p3 : STD_LOGIC_VECTOR (31 downto 0);
+    signal p_Result_s_fu_330_p3 : STD_LOGIC_VECTOR (0 downto 0);
+    signal result_V_24_fu_452_p2 : STD_LOGIC_VECTOR (31 downto 0);
     signal ap_NS_fsm : STD_LOGIC_VECTOR (6 downto 0);
     signal ap_ST_fsm_state1_blk : STD_LOGIC;
     signal ap_ST_fsm_state2_blk : STD_LOGIC;
     signal ap_ST_fsm_state3_blk : STD_LOGIC;
+    signal ap_predicate_op68_call_state4 : BOOLEAN;
+    signal ap_block_state4_on_subcall_done : BOOLEAN;
     signal ap_ST_fsm_state4_blk : STD_LOGIC;
     signal ap_ST_fsm_state5_blk : STD_LOGIC;
     signal ap_ST_fsm_state6_blk : STD_LOGIC;
@@ -561,156 +561,156 @@ begin
         d0 => buffer_velocity_d0,
         q0 => buffer_velocity_q0);
 
-    grp_calibration_fu_180 : component foc_frontend_calibration
+    grp_calibration_fu_176 : component foc_frontend_calibration
     port map (
         ap_clk => ap_clk,
         ap_rst => ap_rst_n_inv,
-        ap_start => grp_calibration_fu_180_ap_start,
-        ap_done => grp_calibration_fu_180_ap_done,
-        ap_idle => grp_calibration_fu_180_ap_idle,
-        ap_ready => grp_calibration_fu_180_ap_ready,
-        B_TDATA => grp_calibration_fu_180_B_TDATA,
-        B_TVALID => grp_calibration_fu_180_B_TVALID,
-        B_TREADY => grp_calibration_fu_180_B_TREADY,
-        B_TKEEP => grp_calibration_fu_180_B_TKEEP,
-        B_TSTRB => grp_calibration_fu_180_B_TSTRB,
-        B_TLAST => grp_calibration_fu_180_B_TLAST);
+        ap_start => grp_calibration_fu_176_ap_start,
+        ap_done => grp_calibration_fu_176_ap_done,
+        ap_idle => grp_calibration_fu_176_ap_idle,
+        ap_ready => grp_calibration_fu_176_ap_ready,
+        B_TDATA => grp_calibration_fu_176_B_TDATA,
+        B_TVALID => grp_calibration_fu_176_B_TVALID,
+        B_TREADY => grp_calibration_fu_176_B_TREADY,
+        B_TKEEP => grp_calibration_fu_176_B_TKEEP,
+        B_TSTRB => grp_calibration_fu_176_B_TSTRB,
+        B_TLAST => grp_calibration_fu_176_B_TLAST);
 
-    grp_torque_foc_fu_192 : component foc_frontend_torque_foc
+    grp_torque_foc_fu_188 : component foc_frontend_torque_foc
     port map (
         ap_clk => ap_clk,
         ap_rst => ap_rst_n_inv,
-        ap_start => grp_torque_foc_fu_192_ap_start,
-        ap_done => grp_torque_foc_fu_192_ap_done,
-        ap_idle => grp_torque_foc_fu_192_ap_idle,
-        ap_ready => grp_torque_foc_fu_192_ap_ready,
+        ap_start => grp_torque_foc_fu_188_ap_start,
+        ap_done => grp_torque_foc_fu_188_ap_done,
+        ap_idle => grp_torque_foc_fu_188_ap_idle,
+        ap_ready => grp_torque_foc_fu_188_ap_ready,
         A_TDATA => A_TDATA_int_regslice,
         A_TVALID => A_TVALID_int_regslice,
-        A_TREADY => grp_torque_foc_fu_192_A_TREADY,
+        A_TREADY => grp_torque_foc_fu_188_A_TREADY,
         A_TKEEP => A_TKEEP_int_regslice,
         A_TSTRB => A_TSTRB_int_regslice,
         A_TLAST => A_TLAST_int_regslice,
-        B_TDATA => grp_torque_foc_fu_192_B_TDATA,
-        B_TVALID => grp_torque_foc_fu_192_B_TVALID,
-        B_TREADY => grp_torque_foc_fu_192_B_TREADY,
-        B_TKEEP => grp_torque_foc_fu_192_B_TKEEP,
-        B_TSTRB => grp_torque_foc_fu_192_B_TSTRB,
-        B_TLAST => grp_torque_foc_fu_192_B_TLAST,
-        C_TDATA => grp_torque_foc_fu_192_C_TDATA,
-        C_TVALID => grp_torque_foc_fu_192_C_TVALID,
-        C_TREADY => grp_torque_foc_fu_192_C_TREADY,
-        C_TKEEP => grp_torque_foc_fu_192_C_TKEEP,
-        C_TSTRB => grp_torque_foc_fu_192_C_TSTRB,
-        C_TLAST => grp_torque_foc_fu_192_C_TLAST,
-        control_address0 => grp_torque_foc_fu_192_control_address0,
-        control_ce0 => grp_torque_foc_fu_192_control_ce0,
+        B_TDATA => grp_torque_foc_fu_188_B_TDATA,
+        B_TVALID => grp_torque_foc_fu_188_B_TVALID,
+        B_TREADY => grp_torque_foc_fu_188_B_TREADY,
+        B_TKEEP => grp_torque_foc_fu_188_B_TKEEP,
+        B_TSTRB => grp_torque_foc_fu_188_B_TSTRB,
+        B_TLAST => grp_torque_foc_fu_188_B_TLAST,
+        C_TDATA => grp_torque_foc_fu_188_C_TDATA,
+        C_TVALID => grp_torque_foc_fu_188_C_TVALID,
+        C_TREADY => grp_torque_foc_fu_188_C_TREADY,
+        C_TKEEP => grp_torque_foc_fu_188_C_TKEEP,
+        C_TSTRB => grp_torque_foc_fu_188_C_TSTRB,
+        C_TLAST => grp_torque_foc_fu_188_C_TLAST,
+        control_address0 => grp_torque_foc_fu_188_control_address0,
+        control_ce0 => grp_torque_foc_fu_188_control_ce0,
         control_q0 => control_q0,
-        logger_address0 => grp_torque_foc_fu_192_logger_address0,
-        logger_ce0 => grp_torque_foc_fu_192_logger_ce0,
-        logger_we0 => grp_torque_foc_fu_192_logger_we0,
-        logger_d0 => grp_torque_foc_fu_192_logger_d0,
+        logger_address0 => grp_torque_foc_fu_188_logger_address0,
+        logger_ce0 => grp_torque_foc_fu_188_logger_ce0,
+        logger_we0 => grp_torque_foc_fu_188_logger_we0,
+        logger_d0 => grp_torque_foc_fu_188_logger_d0,
         velocity_accum_i => velocity_accum,
-        velocity_accum_o => grp_torque_foc_fu_192_velocity_accum_o,
-        velocity_accum_o_ap_vld => grp_torque_foc_fu_192_velocity_accum_o_ap_vld,
-        buffer_velocity_address0 => grp_torque_foc_fu_192_buffer_velocity_address0,
-        buffer_velocity_ce0 => grp_torque_foc_fu_192_buffer_velocity_ce0,
-        buffer_velocity_we0 => grp_torque_foc_fu_192_buffer_velocity_we0,
-        buffer_velocity_d0 => grp_torque_foc_fu_192_buffer_velocity_d0,
+        velocity_accum_o => grp_torque_foc_fu_188_velocity_accum_o,
+        velocity_accum_o_ap_vld => grp_torque_foc_fu_188_velocity_accum_o_ap_vld,
+        buffer_velocity_address0 => grp_torque_foc_fu_188_buffer_velocity_address0,
+        buffer_velocity_ce0 => grp_torque_foc_fu_188_buffer_velocity_ce0,
+        buffer_velocity_we0 => grp_torque_foc_fu_188_buffer_velocity_we0,
+        buffer_velocity_d0 => grp_torque_foc_fu_188_buffer_velocity_d0,
         buffer_velocity_q0 => buffer_velocity_q0,
         Y1a_prev_i => Y1a_prev,
-        Y1a_prev_o => grp_torque_foc_fu_192_Y1a_prev_o,
-        Y1a_prev_o_ap_vld => grp_torque_foc_fu_192_Y1a_prev_o_ap_vld,
+        Y1a_prev_o => grp_torque_foc_fu_188_Y1a_prev_o,
+        Y1a_prev_o_ap_vld => grp_torque_foc_fu_188_Y1a_prev_o_ap_vld,
         Y1b_prev_i => Y1b_prev,
-        Y1b_prev_o => grp_torque_foc_fu_192_Y1b_prev_o,
-        Y1b_prev_o_ap_vld => grp_torque_foc_fu_192_Y1b_prev_o_ap_vld,
+        Y1b_prev_o => grp_torque_foc_fu_188_Y1b_prev_o,
+        Y1b_prev_o_ap_vld => grp_torque_foc_fu_188_Y1b_prev_o_ap_vld,
         Y2a_prev_i => Y2a_prev,
-        Y2a_prev_o => grp_torque_foc_fu_192_Y2a_prev_o,
-        Y2a_prev_o_ap_vld => grp_torque_foc_fu_192_Y2a_prev_o_ap_vld,
+        Y2a_prev_o => grp_torque_foc_fu_188_Y2a_prev_o,
+        Y2a_prev_o_ap_vld => grp_torque_foc_fu_188_Y2a_prev_o_ap_vld,
         Y2b_prev_i => Y2b_prev,
-        Y2b_prev_o => grp_torque_foc_fu_192_Y2b_prev_o,
-        Y2b_prev_o_ap_vld => grp_torque_foc_fu_192_Y2b_prev_o_ap_vld);
+        Y2b_prev_o => grp_torque_foc_fu_188_Y2b_prev_o,
+        Y2b_prev_o_ap_vld => grp_torque_foc_fu_188_Y2b_prev_o_ap_vld);
 
-    grp_manual_control_fu_248 : component foc_frontend_manual_control
+    grp_manual_control_fu_244 : component foc_frontend_manual_control
     port map (
         ap_clk => ap_clk,
         ap_rst => ap_rst_n_inv,
-        ap_start => grp_manual_control_fu_248_ap_start,
-        ap_done => grp_manual_control_fu_248_ap_done,
-        ap_idle => grp_manual_control_fu_248_ap_idle,
-        ap_ready => grp_manual_control_fu_248_ap_ready,
+        ap_start => grp_manual_control_fu_244_ap_start,
+        ap_done => grp_manual_control_fu_244_ap_done,
+        ap_idle => grp_manual_control_fu_244_ap_idle,
+        ap_ready => grp_manual_control_fu_244_ap_ready,
         A_TDATA => A_TDATA_int_regslice,
         A_TVALID => A_TVALID_int_regslice,
-        A_TREADY => grp_manual_control_fu_248_A_TREADY,
+        A_TREADY => grp_manual_control_fu_244_A_TREADY,
         A_TKEEP => A_TKEEP_int_regslice,
         A_TSTRB => A_TSTRB_int_regslice,
         A_TLAST => A_TLAST_int_regslice,
-        B_TDATA => grp_manual_control_fu_248_B_TDATA,
-        B_TVALID => grp_manual_control_fu_248_B_TVALID,
-        B_TREADY => grp_manual_control_fu_248_B_TREADY,
-        B_TKEEP => grp_manual_control_fu_248_B_TKEEP,
-        B_TSTRB => grp_manual_control_fu_248_B_TSTRB,
-        B_TLAST => grp_manual_control_fu_248_B_TLAST,
-        control_address0 => grp_manual_control_fu_248_control_address0,
-        control_ce0 => grp_manual_control_fu_248_control_ce0,
+        B_TDATA => grp_manual_control_fu_244_B_TDATA,
+        B_TVALID => grp_manual_control_fu_244_B_TVALID,
+        B_TREADY => grp_manual_control_fu_244_B_TREADY,
+        B_TKEEP => grp_manual_control_fu_244_B_TKEEP,
+        B_TSTRB => grp_manual_control_fu_244_B_TSTRB,
+        B_TLAST => grp_manual_control_fu_244_B_TLAST,
+        control_address0 => grp_manual_control_fu_244_control_address0,
+        control_ce0 => grp_manual_control_fu_244_control_ce0,
         control_q0 => control_q0,
-        logger_address0 => grp_manual_control_fu_248_logger_address0,
-        logger_ce0 => grp_manual_control_fu_248_logger_ce0,
-        logger_we0 => grp_manual_control_fu_248_logger_we0,
-        logger_d0 => grp_manual_control_fu_248_logger_d0);
+        logger_address0 => grp_manual_control_fu_244_logger_address0,
+        logger_ce0 => grp_manual_control_fu_244_logger_ce0,
+        logger_we0 => grp_manual_control_fu_244_logger_we0,
+        logger_d0 => grp_manual_control_fu_244_logger_d0);
 
-    grp_foc_fu_276 : component foc_frontend_foc
+    grp_foc_fu_272 : component foc_frontend_foc
     port map (
         ap_clk => ap_clk,
         ap_rst => ap_rst_n_inv,
-        ap_start => grp_foc_fu_276_ap_start,
-        ap_done => grp_foc_fu_276_ap_done,
-        ap_idle => grp_foc_fu_276_ap_idle,
-        ap_ready => grp_foc_fu_276_ap_ready,
+        ap_start => grp_foc_fu_272_ap_start,
+        ap_done => grp_foc_fu_272_ap_done,
+        ap_idle => grp_foc_fu_272_ap_idle,
+        ap_ready => grp_foc_fu_272_ap_ready,
         A_TDATA => A_TDATA_int_regslice,
         A_TVALID => A_TVALID_int_regslice,
-        A_TREADY => grp_foc_fu_276_A_TREADY,
+        A_TREADY => grp_foc_fu_272_A_TREADY,
         A_TKEEP => A_TKEEP_int_regslice,
         A_TSTRB => A_TSTRB_int_regslice,
         A_TLAST => A_TLAST_int_regslice,
-        B_TDATA => grp_foc_fu_276_B_TDATA,
-        B_TVALID => grp_foc_fu_276_B_TVALID,
-        B_TREADY => grp_foc_fu_276_B_TREADY,
-        B_TKEEP => grp_foc_fu_276_B_TKEEP,
-        B_TSTRB => grp_foc_fu_276_B_TSTRB,
-        B_TLAST => grp_foc_fu_276_B_TLAST,
-        C_TDATA => grp_foc_fu_276_C_TDATA,
-        C_TVALID => grp_foc_fu_276_C_TVALID,
-        C_TREADY => grp_foc_fu_276_C_TREADY,
-        C_TKEEP => grp_foc_fu_276_C_TKEEP,
-        C_TSTRB => grp_foc_fu_276_C_TSTRB,
-        C_TLAST => grp_foc_fu_276_C_TLAST,
-        control_address0 => grp_foc_fu_276_control_address0,
-        control_ce0 => grp_foc_fu_276_control_ce0,
+        B_TDATA => grp_foc_fu_272_B_TDATA,
+        B_TVALID => grp_foc_fu_272_B_TVALID,
+        B_TREADY => grp_foc_fu_272_B_TREADY,
+        B_TKEEP => grp_foc_fu_272_B_TKEEP,
+        B_TSTRB => grp_foc_fu_272_B_TSTRB,
+        B_TLAST => grp_foc_fu_272_B_TLAST,
+        C_TDATA => grp_foc_fu_272_C_TDATA,
+        C_TVALID => grp_foc_fu_272_C_TVALID,
+        C_TREADY => grp_foc_fu_272_C_TREADY,
+        C_TKEEP => grp_foc_fu_272_C_TKEEP,
+        C_TSTRB => grp_foc_fu_272_C_TSTRB,
+        C_TLAST => grp_foc_fu_272_C_TLAST,
+        control_address0 => grp_foc_fu_272_control_address0,
+        control_ce0 => grp_foc_fu_272_control_ce0,
         control_q0 => control_q0,
-        logger_address0 => grp_foc_fu_276_logger_address0,
-        logger_ce0 => grp_foc_fu_276_logger_ce0,
-        logger_we0 => grp_foc_fu_276_logger_we0,
-        logger_d0 => grp_foc_fu_276_logger_d0,
+        logger_address0 => grp_foc_fu_272_logger_address0,
+        logger_ce0 => grp_foc_fu_272_logger_ce0,
+        logger_we0 => grp_foc_fu_272_logger_we0,
+        logger_d0 => grp_foc_fu_272_logger_d0,
         velocity_accum_i => velocity_accum,
-        velocity_accum_o => grp_foc_fu_276_velocity_accum_o,
-        velocity_accum_o_ap_vld => grp_foc_fu_276_velocity_accum_o_ap_vld,
-        buffer_velocity_address0 => grp_foc_fu_276_buffer_velocity_address0,
-        buffer_velocity_ce0 => grp_foc_fu_276_buffer_velocity_ce0,
-        buffer_velocity_we0 => grp_foc_fu_276_buffer_velocity_we0,
-        buffer_velocity_d0 => grp_foc_fu_276_buffer_velocity_d0,
+        velocity_accum_o => grp_foc_fu_272_velocity_accum_o,
+        velocity_accum_o_ap_vld => grp_foc_fu_272_velocity_accum_o_ap_vld,
+        buffer_velocity_address0 => grp_foc_fu_272_buffer_velocity_address0,
+        buffer_velocity_ce0 => grp_foc_fu_272_buffer_velocity_ce0,
+        buffer_velocity_we0 => grp_foc_fu_272_buffer_velocity_we0,
+        buffer_velocity_d0 => grp_foc_fu_272_buffer_velocity_d0,
         buffer_velocity_q0 => buffer_velocity_q0,
         Y1a_prev_i => Y1a_prev,
-        Y1a_prev_o => grp_foc_fu_276_Y1a_prev_o,
-        Y1a_prev_o_ap_vld => grp_foc_fu_276_Y1a_prev_o_ap_vld,
+        Y1a_prev_o => grp_foc_fu_272_Y1a_prev_o,
+        Y1a_prev_o_ap_vld => grp_foc_fu_272_Y1a_prev_o_ap_vld,
         Y1b_prev_i => Y1b_prev,
-        Y1b_prev_o => grp_foc_fu_276_Y1b_prev_o,
-        Y1b_prev_o_ap_vld => grp_foc_fu_276_Y1b_prev_o_ap_vld,
+        Y1b_prev_o => grp_foc_fu_272_Y1b_prev_o,
+        Y1b_prev_o_ap_vld => grp_foc_fu_272_Y1b_prev_o_ap_vld,
         Y2a_prev_i => Y2a_prev,
-        Y2a_prev_o => grp_foc_fu_276_Y2a_prev_o,
-        Y2a_prev_o_ap_vld => grp_foc_fu_276_Y2a_prev_o_ap_vld,
+        Y2a_prev_o => grp_foc_fu_272_Y2a_prev_o,
+        Y2a_prev_o_ap_vld => grp_foc_fu_272_Y2a_prev_o_ap_vld,
         Y2b_prev_i => Y2b_prev,
-        Y2b_prev_o => grp_foc_fu_276_Y2b_prev_o,
-        Y2b_prev_o_ap_vld => grp_foc_fu_276_Y2b_prev_o_ap_vld);
+        Y2b_prev_o => grp_foc_fu_272_Y2b_prev_o,
+        Y2b_prev_o_ap_vld => grp_foc_fu_272_Y2b_prev_o_ap_vld);
 
     control_r_s_axi_U : component foc_frontend_control_r_s_axi
     generic map (
@@ -930,64 +930,64 @@ begin
     end process;
 
 
-    grp_calibration_fu_180_ap_start_reg_assign_proc : process(ap_clk)
+    grp_calibration_fu_176_ap_start_reg_assign_proc : process(ap_clk)
     begin
         if (ap_clk'event and ap_clk =  '1') then
             if (ap_rst_n_inv = '1') then
-                grp_calibration_fu_180_ap_start_reg <= ap_const_logic_0;
+                grp_calibration_fu_176_ap_start_reg <= ap_const_logic_0;
             else
-                if (((result_V_fu_466_p3 = ap_const_lv32_2) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
-                    grp_calibration_fu_180_ap_start_reg <= ap_const_logic_1;
-                elsif ((grp_calibration_fu_180_ap_ready = ap_const_logic_1)) then 
-                    grp_calibration_fu_180_ap_start_reg <= ap_const_logic_0;
+                if (((result_V_fu_458_p3 = ap_const_lv32_2) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
+                    grp_calibration_fu_176_ap_start_reg <= ap_const_logic_1;
+                elsif ((grp_calibration_fu_176_ap_ready = ap_const_logic_1)) then 
+                    grp_calibration_fu_176_ap_start_reg <= ap_const_logic_0;
                 end if; 
             end if;
         end if;
     end process;
 
 
-    grp_foc_fu_276_ap_start_reg_assign_proc : process(ap_clk)
+    grp_foc_fu_272_ap_start_reg_assign_proc : process(ap_clk)
     begin
         if (ap_clk'event and ap_clk =  '1') then
             if (ap_rst_n_inv = '1') then
-                grp_foc_fu_276_ap_start_reg <= ap_const_logic_0;
+                grp_foc_fu_272_ap_start_reg <= ap_const_logic_0;
             else
-                if (((result_V_reg_479 = ap_const_lv32_3) and (ap_const_logic_1 = ap_CS_fsm_state3))) then 
-                    grp_foc_fu_276_ap_start_reg <= ap_const_logic_1;
-                elsif ((grp_foc_fu_276_ap_ready = ap_const_logic_1)) then 
-                    grp_foc_fu_276_ap_start_reg <= ap_const_logic_0;
+                if (((result_V_reg_471 = ap_const_lv32_3) and (ap_const_logic_1 = ap_CS_fsm_state3))) then 
+                    grp_foc_fu_272_ap_start_reg <= ap_const_logic_1;
+                elsif ((grp_foc_fu_272_ap_ready = ap_const_logic_1)) then 
+                    grp_foc_fu_272_ap_start_reg <= ap_const_logic_0;
                 end if; 
             end if;
         end if;
     end process;
 
 
-    grp_manual_control_fu_248_ap_start_reg_assign_proc : process(ap_clk)
+    grp_manual_control_fu_244_ap_start_reg_assign_proc : process(ap_clk)
     begin
         if (ap_clk'event and ap_clk =  '1') then
             if (ap_rst_n_inv = '1') then
-                grp_manual_control_fu_248_ap_start_reg <= ap_const_logic_0;
+                grp_manual_control_fu_244_ap_start_reg <= ap_const_logic_0;
             else
-                if (((ap_const_logic_1 = ap_CS_fsm_state6) or ((result_V_reg_479 = ap_const_lv32_4) and (ap_const_logic_1 = ap_CS_fsm_state3)))) then 
-                    grp_manual_control_fu_248_ap_start_reg <= ap_const_logic_1;
-                elsif ((grp_manual_control_fu_248_ap_ready = ap_const_logic_1)) then 
-                    grp_manual_control_fu_248_ap_start_reg <= ap_const_logic_0;
+                if (((ap_const_logic_1 = ap_CS_fsm_state6) or ((result_V_reg_471 = ap_const_lv32_4) and (ap_const_logic_1 = ap_CS_fsm_state3)))) then 
+                    grp_manual_control_fu_244_ap_start_reg <= ap_const_logic_1;
+                elsif ((grp_manual_control_fu_244_ap_ready = ap_const_logic_1)) then 
+                    grp_manual_control_fu_244_ap_start_reg <= ap_const_logic_0;
                 end if; 
             end if;
         end if;
     end process;
 
 
-    grp_torque_foc_fu_192_ap_start_reg_assign_proc : process(ap_clk)
+    grp_torque_foc_fu_188_ap_start_reg_assign_proc : process(ap_clk)
     begin
         if (ap_clk'event and ap_clk =  '1') then
             if (ap_rst_n_inv = '1') then
-                grp_torque_foc_fu_192_ap_start_reg <= ap_const_logic_0;
+                grp_torque_foc_fu_188_ap_start_reg <= ap_const_logic_0;
             else
-                if (((result_V_reg_479 = ap_const_lv32_5) and (ap_const_logic_1 = ap_CS_fsm_state3))) then 
-                    grp_torque_foc_fu_192_ap_start_reg <= ap_const_logic_1;
-                elsif ((grp_torque_foc_fu_192_ap_ready = ap_const_logic_1)) then 
-                    grp_torque_foc_fu_192_ap_start_reg <= ap_const_logic_0;
+                if (((result_V_reg_471 = ap_const_lv32_5) and (ap_const_logic_1 = ap_CS_fsm_state3))) then 
+                    grp_torque_foc_fu_188_ap_start_reg <= ap_const_logic_1;
+                elsif ((grp_torque_foc_fu_188_ap_ready = ap_const_logic_1)) then 
+                    grp_torque_foc_fu_188_ap_start_reg <= ap_const_logic_0;
                 end if; 
             end if;
         end if;
@@ -998,10 +998,10 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if ((ap_const_logic_1 = ap_CS_fsm_state4)) then
-                if (((result_V_reg_479 = ap_const_lv32_3) and (grp_foc_fu_276_Y1a_prev_o_ap_vld = ap_const_logic_1))) then 
-                    Y1a_prev <= grp_foc_fu_276_Y1a_prev_o;
-                elsif (((result_V_reg_479 = ap_const_lv32_5) and (grp_torque_foc_fu_192_Y1a_prev_o_ap_vld = ap_const_logic_1))) then 
-                    Y1a_prev <= grp_torque_foc_fu_192_Y1a_prev_o;
+                if (((result_V_reg_471 = ap_const_lv32_3) and (grp_foc_fu_272_Y1a_prev_o_ap_vld = ap_const_logic_1))) then 
+                    Y1a_prev <= grp_foc_fu_272_Y1a_prev_o;
+                elsif (((result_V_reg_471 = ap_const_lv32_5) and (grp_torque_foc_fu_188_Y1a_prev_o_ap_vld = ap_const_logic_1))) then 
+                    Y1a_prev <= grp_torque_foc_fu_188_Y1a_prev_o;
                 end if;
             end if; 
         end if;
@@ -1011,10 +1011,10 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if ((ap_const_logic_1 = ap_CS_fsm_state4)) then
-                if (((result_V_reg_479 = ap_const_lv32_3) and (grp_foc_fu_276_Y1b_prev_o_ap_vld = ap_const_logic_1))) then 
-                    Y1b_prev <= grp_foc_fu_276_Y1b_prev_o;
-                elsif (((result_V_reg_479 = ap_const_lv32_5) and (grp_torque_foc_fu_192_Y1b_prev_o_ap_vld = ap_const_logic_1))) then 
-                    Y1b_prev <= grp_torque_foc_fu_192_Y1b_prev_o;
+                if (((result_V_reg_471 = ap_const_lv32_3) and (grp_foc_fu_272_Y1b_prev_o_ap_vld = ap_const_logic_1))) then 
+                    Y1b_prev <= grp_foc_fu_272_Y1b_prev_o;
+                elsif (((result_V_reg_471 = ap_const_lv32_5) and (grp_torque_foc_fu_188_Y1b_prev_o_ap_vld = ap_const_logic_1))) then 
+                    Y1b_prev <= grp_torque_foc_fu_188_Y1b_prev_o;
                 end if;
             end if; 
         end if;
@@ -1024,10 +1024,10 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if ((ap_const_logic_1 = ap_CS_fsm_state4)) then
-                if (((result_V_reg_479 = ap_const_lv32_3) and (grp_foc_fu_276_Y2a_prev_o_ap_vld = ap_const_logic_1))) then 
-                    Y2a_prev <= grp_foc_fu_276_Y2a_prev_o;
-                elsif (((result_V_reg_479 = ap_const_lv32_5) and (grp_torque_foc_fu_192_Y2a_prev_o_ap_vld = ap_const_logic_1))) then 
-                    Y2a_prev <= grp_torque_foc_fu_192_Y2a_prev_o;
+                if (((result_V_reg_471 = ap_const_lv32_3) and (grp_foc_fu_272_Y2a_prev_o_ap_vld = ap_const_logic_1))) then 
+                    Y2a_prev <= grp_foc_fu_272_Y2a_prev_o;
+                elsif (((result_V_reg_471 = ap_const_lv32_5) and (grp_torque_foc_fu_188_Y2a_prev_o_ap_vld = ap_const_logic_1))) then 
+                    Y2a_prev <= grp_torque_foc_fu_188_Y2a_prev_o;
                 end if;
             end if; 
         end if;
@@ -1037,10 +1037,10 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if ((ap_const_logic_1 = ap_CS_fsm_state4)) then
-                if (((result_V_reg_479 = ap_const_lv32_3) and (grp_foc_fu_276_Y2b_prev_o_ap_vld = ap_const_logic_1))) then 
-                    Y2b_prev <= grp_foc_fu_276_Y2b_prev_o;
-                elsif (((result_V_reg_479 = ap_const_lv32_5) and (grp_torque_foc_fu_192_Y2b_prev_o_ap_vld = ap_const_logic_1))) then 
-                    Y2b_prev <= grp_torque_foc_fu_192_Y2b_prev_o;
+                if (((result_V_reg_471 = ap_const_lv32_3) and (grp_foc_fu_272_Y2b_prev_o_ap_vld = ap_const_logic_1))) then 
+                    Y2b_prev <= grp_foc_fu_272_Y2b_prev_o;
+                elsif (((result_V_reg_471 = ap_const_lv32_5) and (grp_torque_foc_fu_188_Y2b_prev_o_ap_vld = ap_const_logic_1))) then 
+                    Y2b_prev <= grp_torque_foc_fu_188_Y2b_prev_o;
                 end if;
             end if; 
         end if;
@@ -1050,10 +1050,10 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if ((ap_const_logic_1 = ap_CS_fsm_state4)) then
-                if (((result_V_reg_479 = ap_const_lv32_3) and (grp_foc_fu_276_velocity_accum_o_ap_vld = ap_const_logic_1))) then 
-                    velocity_accum <= grp_foc_fu_276_velocity_accum_o;
-                elsif (((result_V_reg_479 = ap_const_lv32_5) and (grp_torque_foc_fu_192_velocity_accum_o_ap_vld = ap_const_logic_1))) then 
-                    velocity_accum <= grp_torque_foc_fu_192_velocity_accum_o;
+                if (((result_V_reg_471 = ap_const_lv32_3) and (grp_foc_fu_272_velocity_accum_o_ap_vld = ap_const_logic_1))) then 
+                    velocity_accum <= grp_foc_fu_272_velocity_accum_o;
+                elsif (((result_V_reg_471 = ap_const_lv32_5) and (grp_torque_foc_fu_188_velocity_accum_o_ap_vld = ap_const_logic_1))) then 
+                    velocity_accum <= grp_torque_foc_fu_188_velocity_accum_o;
                 end if;
             end if; 
         end if;
@@ -1062,20 +1062,20 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if ((ap_const_logic_1 = ap_CS_fsm_state2)) then
-                result_V_reg_479 <= result_V_fu_466_p3;
+                result_V_reg_471 <= result_V_fu_458_p3;
             end if;
         end if;
     end process;
 
-    ap_NS_fsm_assign_proc : process (ap_CS_fsm, ap_CS_fsm_state5, result_V_fu_466_p3, result_V_reg_479, ap_CS_fsm_state2, grp_calibration_fu_180_ap_done, ap_CS_fsm_state4, ap_block_state4_on_subcall_done, regslice_both_B_V_data_V_U_apdone_blk, regslice_both_C_V_data_V_U_apdone_blk, ap_CS_fsm_state7, A_TVALID_int_regslice)
+    ap_NS_fsm_assign_proc : process (ap_CS_fsm, ap_CS_fsm_state5, result_V_fu_458_p3, result_V_reg_471, ap_CS_fsm_state2, grp_calibration_fu_176_ap_done, ap_CS_fsm_state4, ap_block_state4_on_subcall_done, regslice_both_B_V_data_V_U_apdone_blk, regslice_both_C_V_data_V_U_apdone_blk, ap_CS_fsm_state7, A_TVALID_int_regslice)
     begin
         case ap_CS_fsm is
             when ap_ST_fsm_state1 => 
                 ap_NS_fsm <= ap_ST_fsm_state2;
             when ap_ST_fsm_state2 => 
-                if ((not((result_V_fu_466_p3 = ap_const_lv32_3)) and not((result_V_fu_466_p3 = ap_const_lv32_4)) and not((result_V_fu_466_p3 = ap_const_lv32_5)) and not((result_V_fu_466_p3 = ap_const_lv32_2)) and (ap_const_logic_1 = ap_CS_fsm_state2))) then
+                if ((not((result_V_fu_458_p3 = ap_const_lv32_3)) and not((result_V_fu_458_p3 = ap_const_lv32_4)) and not((result_V_fu_458_p3 = ap_const_lv32_5)) and not((result_V_fu_458_p3 = ap_const_lv32_2)) and (ap_const_logic_1 = ap_CS_fsm_state2))) then
                     ap_NS_fsm <= ap_ST_fsm_state6;
-                elsif (((result_V_fu_466_p3 = ap_const_lv32_2) and (ap_const_logic_1 = ap_CS_fsm_state2))) then
+                elsif (((result_V_fu_458_p3 = ap_const_lv32_2) and (ap_const_logic_1 = ap_CS_fsm_state2))) then
                     ap_NS_fsm <= ap_ST_fsm_state5;
                 else
                     ap_NS_fsm <= ap_ST_fsm_state3;
@@ -1083,13 +1083,13 @@ begin
             when ap_ST_fsm_state3 => 
                 ap_NS_fsm <= ap_ST_fsm_state4;
             when ap_ST_fsm_state4 => 
-                if ((not((result_V_reg_479 = ap_const_lv32_2)) and (ap_const_logic_1 = ap_CS_fsm_state4) and (ap_const_boolean_0 = ap_block_state4_on_subcall_done))) then
+                if ((not((result_V_reg_471 = ap_const_lv32_2)) and (ap_const_logic_1 = ap_CS_fsm_state4) and (ap_const_boolean_0 = ap_block_state4_on_subcall_done))) then
                     ap_NS_fsm <= ap_ST_fsm_state7;
                 else
                     ap_NS_fsm <= ap_ST_fsm_state4;
                 end if;
             when ap_ST_fsm_state5 => 
-                if ((not(((grp_calibration_fu_180_ap_done = ap_const_logic_0) or (ap_const_logic_0 = A_TVALID_int_regslice))) and (ap_const_logic_1 = ap_CS_fsm_state5))) then
+                if ((not(((grp_calibration_fu_176_ap_done = ap_const_logic_0) or (ap_const_logic_0 = A_TVALID_int_regslice))) and (ap_const_logic_1 = ap_CS_fsm_state5))) then
                     ap_NS_fsm <= ap_ST_fsm_state7;
                 else
                     ap_NS_fsm <= ap_ST_fsm_state5;
@@ -1118,80 +1118,80 @@ begin
 
     A_TREADY <= regslice_both_A_V_data_V_U_ack_in;
 
-    A_TREADY_int_regslice_assign_proc : process(ap_CS_fsm_state5, result_V_reg_479, grp_calibration_fu_180_ap_done, grp_torque_foc_fu_192_A_TREADY, grp_manual_control_fu_248_A_TREADY, grp_foc_fu_276_A_TREADY, ap_CS_fsm_state4, A_TVALID_int_regslice)
+    A_TREADY_int_regslice_assign_proc : process(ap_CS_fsm_state5, result_V_reg_471, grp_calibration_fu_176_ap_done, grp_torque_foc_fu_188_A_TREADY, grp_manual_control_fu_244_A_TREADY, grp_foc_fu_272_A_TREADY, ap_CS_fsm_state4, A_TVALID_int_regslice)
     begin
-        if ((not(((grp_calibration_fu_180_ap_done = ap_const_logic_0) or (ap_const_logic_0 = A_TVALID_int_regslice))) and (ap_const_logic_1 = ap_CS_fsm_state5))) then 
+        if ((not(((grp_calibration_fu_176_ap_done = ap_const_logic_0) or (ap_const_logic_0 = A_TVALID_int_regslice))) and (ap_const_logic_1 = ap_CS_fsm_state5))) then 
             A_TREADY_int_regslice <= ap_const_logic_1;
-        elsif (((result_V_reg_479 = ap_const_lv32_3) and (ap_const_logic_1 = ap_CS_fsm_state4))) then 
-            A_TREADY_int_regslice <= grp_foc_fu_276_A_TREADY;
-        elsif (((not((result_V_reg_479 = ap_const_lv32_3)) and not((result_V_reg_479 = ap_const_lv32_2)) and not((result_V_reg_479 = ap_const_lv32_4)) and not((result_V_reg_479 = ap_const_lv32_5)) and (ap_const_logic_1 = ap_CS_fsm_state4)) or ((result_V_reg_479 = ap_const_lv32_4) and (ap_const_logic_1 = ap_CS_fsm_state4)))) then 
-            A_TREADY_int_regslice <= grp_manual_control_fu_248_A_TREADY;
-        elsif (((result_V_reg_479 = ap_const_lv32_5) and (ap_const_logic_1 = ap_CS_fsm_state4))) then 
-            A_TREADY_int_regslice <= grp_torque_foc_fu_192_A_TREADY;
+        elsif (((result_V_reg_471 = ap_const_lv32_3) and (ap_const_logic_1 = ap_CS_fsm_state4))) then 
+            A_TREADY_int_regslice <= grp_foc_fu_272_A_TREADY;
+        elsif (((not((result_V_reg_471 = ap_const_lv32_3)) and not((result_V_reg_471 = ap_const_lv32_2)) and not((result_V_reg_471 = ap_const_lv32_4)) and not((result_V_reg_471 = ap_const_lv32_5)) and (ap_const_logic_1 = ap_CS_fsm_state4)) or ((result_V_reg_471 = ap_const_lv32_4) and (ap_const_logic_1 = ap_CS_fsm_state4)))) then 
+            A_TREADY_int_regslice <= grp_manual_control_fu_244_A_TREADY;
+        elsif (((result_V_reg_471 = ap_const_lv32_5) and (ap_const_logic_1 = ap_CS_fsm_state4))) then 
+            A_TREADY_int_regslice <= grp_torque_foc_fu_188_A_TREADY;
         else 
             A_TREADY_int_regslice <= ap_const_logic_0;
         end if; 
     end process;
 
 
-    B_TDATA_int_regslice_assign_proc : process(ap_CS_fsm_state5, result_V_reg_479, grp_calibration_fu_180_B_TDATA, grp_calibration_fu_180_B_TVALID, grp_torque_foc_fu_192_B_TDATA, grp_torque_foc_fu_192_B_TVALID, grp_manual_control_fu_248_B_TDATA, grp_manual_control_fu_248_B_TVALID, grp_foc_fu_276_B_TDATA, grp_foc_fu_276_B_TVALID, ap_CS_fsm_state4)
+    B_TDATA_int_regslice_assign_proc : process(ap_CS_fsm_state5, result_V_reg_471, grp_calibration_fu_176_B_TDATA, grp_calibration_fu_176_B_TVALID, grp_torque_foc_fu_188_B_TDATA, grp_torque_foc_fu_188_B_TVALID, grp_manual_control_fu_244_B_TDATA, grp_manual_control_fu_244_B_TVALID, grp_foc_fu_272_B_TDATA, grp_foc_fu_272_B_TVALID, ap_CS_fsm_state4)
     begin
-        if (((result_V_reg_479 = ap_const_lv32_3) and (ap_const_logic_1 = ap_CS_fsm_state4) and (grp_foc_fu_276_B_TVALID = ap_const_logic_1))) then 
-            B_TDATA_int_regslice <= grp_foc_fu_276_B_TDATA;
-        elsif (((not((result_V_reg_479 = ap_const_lv32_3)) and not((result_V_reg_479 = ap_const_lv32_2)) and not((result_V_reg_479 = ap_const_lv32_4)) and not((result_V_reg_479 = ap_const_lv32_5)) and (ap_const_logic_1 = ap_CS_fsm_state4) and (grp_manual_control_fu_248_B_TVALID = ap_const_logic_1)) or ((result_V_reg_479 = ap_const_lv32_4) and (ap_const_logic_1 = ap_CS_fsm_state4) and (grp_manual_control_fu_248_B_TVALID = ap_const_logic_1)))) then 
-            B_TDATA_int_regslice <= grp_manual_control_fu_248_B_TDATA;
-        elsif (((result_V_reg_479 = ap_const_lv32_5) and (ap_const_logic_1 = ap_CS_fsm_state4) and (grp_torque_foc_fu_192_B_TVALID = ap_const_logic_1))) then 
-            B_TDATA_int_regslice <= grp_torque_foc_fu_192_B_TDATA;
-        elsif (((grp_calibration_fu_180_B_TVALID = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state5))) then 
-            B_TDATA_int_regslice <= grp_calibration_fu_180_B_TDATA;
+        if (((result_V_reg_471 = ap_const_lv32_3) and (ap_const_logic_1 = ap_CS_fsm_state4) and (grp_foc_fu_272_B_TVALID = ap_const_logic_1))) then 
+            B_TDATA_int_regslice <= grp_foc_fu_272_B_TDATA;
+        elsif (((not((result_V_reg_471 = ap_const_lv32_3)) and not((result_V_reg_471 = ap_const_lv32_2)) and not((result_V_reg_471 = ap_const_lv32_4)) and not((result_V_reg_471 = ap_const_lv32_5)) and (ap_const_logic_1 = ap_CS_fsm_state4) and (grp_manual_control_fu_244_B_TVALID = ap_const_logic_1)) or ((result_V_reg_471 = ap_const_lv32_4) and (ap_const_logic_1 = ap_CS_fsm_state4) and (grp_manual_control_fu_244_B_TVALID = ap_const_logic_1)))) then 
+            B_TDATA_int_regslice <= grp_manual_control_fu_244_B_TDATA;
+        elsif (((result_V_reg_471 = ap_const_lv32_5) and (ap_const_logic_1 = ap_CS_fsm_state4) and (grp_torque_foc_fu_188_B_TVALID = ap_const_logic_1))) then 
+            B_TDATA_int_regslice <= grp_torque_foc_fu_188_B_TDATA;
+        elsif (((grp_calibration_fu_176_B_TVALID = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state5))) then 
+            B_TDATA_int_regslice <= grp_calibration_fu_176_B_TDATA;
         else 
             B_TDATA_int_regslice <= "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         end if; 
     end process;
 
 
-    B_TKEEP_int_regslice_assign_proc : process(ap_CS_fsm_state5, result_V_reg_479, grp_calibration_fu_180_B_TVALID, grp_calibration_fu_180_B_TKEEP, grp_torque_foc_fu_192_B_TVALID, grp_torque_foc_fu_192_B_TKEEP, grp_manual_control_fu_248_B_TVALID, grp_manual_control_fu_248_B_TKEEP, grp_foc_fu_276_B_TVALID, grp_foc_fu_276_B_TKEEP, ap_CS_fsm_state4)
+    B_TKEEP_int_regslice_assign_proc : process(ap_CS_fsm_state5, result_V_reg_471, grp_calibration_fu_176_B_TVALID, grp_calibration_fu_176_B_TKEEP, grp_torque_foc_fu_188_B_TVALID, grp_torque_foc_fu_188_B_TKEEP, grp_manual_control_fu_244_B_TVALID, grp_manual_control_fu_244_B_TKEEP, grp_foc_fu_272_B_TVALID, grp_foc_fu_272_B_TKEEP, ap_CS_fsm_state4)
     begin
-        if (((result_V_reg_479 = ap_const_lv32_3) and (ap_const_logic_1 = ap_CS_fsm_state4) and (grp_foc_fu_276_B_TVALID = ap_const_logic_1))) then 
-            B_TKEEP_int_regslice <= grp_foc_fu_276_B_TKEEP;
-        elsif (((not((result_V_reg_479 = ap_const_lv32_3)) and not((result_V_reg_479 = ap_const_lv32_2)) and not((result_V_reg_479 = ap_const_lv32_4)) and not((result_V_reg_479 = ap_const_lv32_5)) and (ap_const_logic_1 = ap_CS_fsm_state4) and (grp_manual_control_fu_248_B_TVALID = ap_const_logic_1)) or ((result_V_reg_479 = ap_const_lv32_4) and (ap_const_logic_1 = ap_CS_fsm_state4) and (grp_manual_control_fu_248_B_TVALID = ap_const_logic_1)))) then 
-            B_TKEEP_int_regslice <= grp_manual_control_fu_248_B_TKEEP;
-        elsif (((result_V_reg_479 = ap_const_lv32_5) and (ap_const_logic_1 = ap_CS_fsm_state4) and (grp_torque_foc_fu_192_B_TVALID = ap_const_logic_1))) then 
-            B_TKEEP_int_regslice <= grp_torque_foc_fu_192_B_TKEEP;
-        elsif (((grp_calibration_fu_180_B_TVALID = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state5))) then 
-            B_TKEEP_int_regslice <= grp_calibration_fu_180_B_TKEEP;
+        if (((result_V_reg_471 = ap_const_lv32_3) and (ap_const_logic_1 = ap_CS_fsm_state4) and (grp_foc_fu_272_B_TVALID = ap_const_logic_1))) then 
+            B_TKEEP_int_regslice <= grp_foc_fu_272_B_TKEEP;
+        elsif (((not((result_V_reg_471 = ap_const_lv32_3)) and not((result_V_reg_471 = ap_const_lv32_2)) and not((result_V_reg_471 = ap_const_lv32_4)) and not((result_V_reg_471 = ap_const_lv32_5)) and (ap_const_logic_1 = ap_CS_fsm_state4) and (grp_manual_control_fu_244_B_TVALID = ap_const_logic_1)) or ((result_V_reg_471 = ap_const_lv32_4) and (ap_const_logic_1 = ap_CS_fsm_state4) and (grp_manual_control_fu_244_B_TVALID = ap_const_logic_1)))) then 
+            B_TKEEP_int_regslice <= grp_manual_control_fu_244_B_TKEEP;
+        elsif (((result_V_reg_471 = ap_const_lv32_5) and (ap_const_logic_1 = ap_CS_fsm_state4) and (grp_torque_foc_fu_188_B_TVALID = ap_const_logic_1))) then 
+            B_TKEEP_int_regslice <= grp_torque_foc_fu_188_B_TKEEP;
+        elsif (((grp_calibration_fu_176_B_TVALID = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state5))) then 
+            B_TKEEP_int_regslice <= grp_calibration_fu_176_B_TKEEP;
         else 
             B_TKEEP_int_regslice <= "XXXXXXXX";
         end if; 
     end process;
 
 
-    B_TLAST_int_regslice_assign_proc : process(ap_CS_fsm_state5, result_V_reg_479, grp_calibration_fu_180_B_TVALID, grp_calibration_fu_180_B_TLAST, grp_torque_foc_fu_192_B_TVALID, grp_torque_foc_fu_192_B_TLAST, grp_manual_control_fu_248_B_TVALID, grp_manual_control_fu_248_B_TLAST, grp_foc_fu_276_B_TVALID, grp_foc_fu_276_B_TLAST, ap_CS_fsm_state4)
+    B_TLAST_int_regslice_assign_proc : process(ap_CS_fsm_state5, result_V_reg_471, grp_calibration_fu_176_B_TVALID, grp_calibration_fu_176_B_TLAST, grp_torque_foc_fu_188_B_TVALID, grp_torque_foc_fu_188_B_TLAST, grp_manual_control_fu_244_B_TVALID, grp_manual_control_fu_244_B_TLAST, grp_foc_fu_272_B_TVALID, grp_foc_fu_272_B_TLAST, ap_CS_fsm_state4)
     begin
-        if (((result_V_reg_479 = ap_const_lv32_3) and (ap_const_logic_1 = ap_CS_fsm_state4) and (grp_foc_fu_276_B_TVALID = ap_const_logic_1))) then 
-            B_TLAST_int_regslice <= grp_foc_fu_276_B_TLAST;
-        elsif (((not((result_V_reg_479 = ap_const_lv32_3)) and not((result_V_reg_479 = ap_const_lv32_2)) and not((result_V_reg_479 = ap_const_lv32_4)) and not((result_V_reg_479 = ap_const_lv32_5)) and (ap_const_logic_1 = ap_CS_fsm_state4) and (grp_manual_control_fu_248_B_TVALID = ap_const_logic_1)) or ((result_V_reg_479 = ap_const_lv32_4) and (ap_const_logic_1 = ap_CS_fsm_state4) and (grp_manual_control_fu_248_B_TVALID = ap_const_logic_1)))) then 
-            B_TLAST_int_regslice <= grp_manual_control_fu_248_B_TLAST;
-        elsif (((result_V_reg_479 = ap_const_lv32_5) and (ap_const_logic_1 = ap_CS_fsm_state4) and (grp_torque_foc_fu_192_B_TVALID = ap_const_logic_1))) then 
-            B_TLAST_int_regslice <= grp_torque_foc_fu_192_B_TLAST;
-        elsif (((grp_calibration_fu_180_B_TVALID = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state5))) then 
-            B_TLAST_int_regslice <= grp_calibration_fu_180_B_TLAST;
+        if (((result_V_reg_471 = ap_const_lv32_3) and (ap_const_logic_1 = ap_CS_fsm_state4) and (grp_foc_fu_272_B_TVALID = ap_const_logic_1))) then 
+            B_TLAST_int_regslice <= grp_foc_fu_272_B_TLAST;
+        elsif (((not((result_V_reg_471 = ap_const_lv32_3)) and not((result_V_reg_471 = ap_const_lv32_2)) and not((result_V_reg_471 = ap_const_lv32_4)) and not((result_V_reg_471 = ap_const_lv32_5)) and (ap_const_logic_1 = ap_CS_fsm_state4) and (grp_manual_control_fu_244_B_TVALID = ap_const_logic_1)) or ((result_V_reg_471 = ap_const_lv32_4) and (ap_const_logic_1 = ap_CS_fsm_state4) and (grp_manual_control_fu_244_B_TVALID = ap_const_logic_1)))) then 
+            B_TLAST_int_regslice <= grp_manual_control_fu_244_B_TLAST;
+        elsif (((result_V_reg_471 = ap_const_lv32_5) and (ap_const_logic_1 = ap_CS_fsm_state4) and (grp_torque_foc_fu_188_B_TVALID = ap_const_logic_1))) then 
+            B_TLAST_int_regslice <= grp_torque_foc_fu_188_B_TLAST;
+        elsif (((grp_calibration_fu_176_B_TVALID = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state5))) then 
+            B_TLAST_int_regslice <= grp_calibration_fu_176_B_TLAST;
         else 
             B_TLAST_int_regslice <= "X";
         end if; 
     end process;
 
 
-    B_TSTRB_int_regslice_assign_proc : process(ap_CS_fsm_state5, result_V_reg_479, grp_calibration_fu_180_B_TVALID, grp_calibration_fu_180_B_TSTRB, grp_torque_foc_fu_192_B_TVALID, grp_torque_foc_fu_192_B_TSTRB, grp_manual_control_fu_248_B_TVALID, grp_manual_control_fu_248_B_TSTRB, grp_foc_fu_276_B_TVALID, grp_foc_fu_276_B_TSTRB, ap_CS_fsm_state4)
+    B_TSTRB_int_regslice_assign_proc : process(ap_CS_fsm_state5, result_V_reg_471, grp_calibration_fu_176_B_TVALID, grp_calibration_fu_176_B_TSTRB, grp_torque_foc_fu_188_B_TVALID, grp_torque_foc_fu_188_B_TSTRB, grp_manual_control_fu_244_B_TVALID, grp_manual_control_fu_244_B_TSTRB, grp_foc_fu_272_B_TVALID, grp_foc_fu_272_B_TSTRB, ap_CS_fsm_state4)
     begin
-        if (((result_V_reg_479 = ap_const_lv32_3) and (ap_const_logic_1 = ap_CS_fsm_state4) and (grp_foc_fu_276_B_TVALID = ap_const_logic_1))) then 
-            B_TSTRB_int_regslice <= grp_foc_fu_276_B_TSTRB;
-        elsif (((not((result_V_reg_479 = ap_const_lv32_3)) and not((result_V_reg_479 = ap_const_lv32_2)) and not((result_V_reg_479 = ap_const_lv32_4)) and not((result_V_reg_479 = ap_const_lv32_5)) and (ap_const_logic_1 = ap_CS_fsm_state4) and (grp_manual_control_fu_248_B_TVALID = ap_const_logic_1)) or ((result_V_reg_479 = ap_const_lv32_4) and (ap_const_logic_1 = ap_CS_fsm_state4) and (grp_manual_control_fu_248_B_TVALID = ap_const_logic_1)))) then 
-            B_TSTRB_int_regslice <= grp_manual_control_fu_248_B_TSTRB;
-        elsif (((result_V_reg_479 = ap_const_lv32_5) and (ap_const_logic_1 = ap_CS_fsm_state4) and (grp_torque_foc_fu_192_B_TVALID = ap_const_logic_1))) then 
-            B_TSTRB_int_regslice <= grp_torque_foc_fu_192_B_TSTRB;
-        elsif (((grp_calibration_fu_180_B_TVALID = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state5))) then 
-            B_TSTRB_int_regslice <= grp_calibration_fu_180_B_TSTRB;
+        if (((result_V_reg_471 = ap_const_lv32_3) and (ap_const_logic_1 = ap_CS_fsm_state4) and (grp_foc_fu_272_B_TVALID = ap_const_logic_1))) then 
+            B_TSTRB_int_regslice <= grp_foc_fu_272_B_TSTRB;
+        elsif (((not((result_V_reg_471 = ap_const_lv32_3)) and not((result_V_reg_471 = ap_const_lv32_2)) and not((result_V_reg_471 = ap_const_lv32_4)) and not((result_V_reg_471 = ap_const_lv32_5)) and (ap_const_logic_1 = ap_CS_fsm_state4) and (grp_manual_control_fu_244_B_TVALID = ap_const_logic_1)) or ((result_V_reg_471 = ap_const_lv32_4) and (ap_const_logic_1 = ap_CS_fsm_state4) and (grp_manual_control_fu_244_B_TVALID = ap_const_logic_1)))) then 
+            B_TSTRB_int_regslice <= grp_manual_control_fu_244_B_TSTRB;
+        elsif (((result_V_reg_471 = ap_const_lv32_5) and (ap_const_logic_1 = ap_CS_fsm_state4) and (grp_torque_foc_fu_188_B_TVALID = ap_const_logic_1))) then 
+            B_TSTRB_int_regslice <= grp_torque_foc_fu_188_B_TSTRB;
+        elsif (((grp_calibration_fu_176_B_TVALID = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state5))) then 
+            B_TSTRB_int_regslice <= grp_calibration_fu_176_B_TSTRB;
         else 
             B_TSTRB_int_regslice <= "XXXXXXXX";
         end if; 
@@ -1199,29 +1199,29 @@ begin
 
     B_TVALID <= regslice_both_B_V_data_V_U_vld_out;
 
-    B_TVALID_int_regslice_assign_proc : process(ap_CS_fsm_state5, result_V_reg_479, grp_calibration_fu_180_B_TVALID, grp_torque_foc_fu_192_B_TVALID, grp_manual_control_fu_248_B_TVALID, grp_foc_fu_276_B_TVALID, ap_CS_fsm_state4)
+    B_TVALID_int_regslice_assign_proc : process(ap_CS_fsm_state5, result_V_reg_471, grp_calibration_fu_176_B_TVALID, grp_torque_foc_fu_188_B_TVALID, grp_manual_control_fu_244_B_TVALID, grp_foc_fu_272_B_TVALID, ap_CS_fsm_state4)
     begin
-        if (((result_V_reg_479 = ap_const_lv32_3) and (ap_const_logic_1 = ap_CS_fsm_state4))) then 
-            B_TVALID_int_regslice <= grp_foc_fu_276_B_TVALID;
-        elsif (((not((result_V_reg_479 = ap_const_lv32_3)) and not((result_V_reg_479 = ap_const_lv32_2)) and not((result_V_reg_479 = ap_const_lv32_4)) and not((result_V_reg_479 = ap_const_lv32_5)) and (ap_const_logic_1 = ap_CS_fsm_state4)) or ((result_V_reg_479 = ap_const_lv32_4) and (ap_const_logic_1 = ap_CS_fsm_state4)))) then 
-            B_TVALID_int_regslice <= grp_manual_control_fu_248_B_TVALID;
-        elsif (((result_V_reg_479 = ap_const_lv32_5) and (ap_const_logic_1 = ap_CS_fsm_state4))) then 
-            B_TVALID_int_regslice <= grp_torque_foc_fu_192_B_TVALID;
+        if (((result_V_reg_471 = ap_const_lv32_3) and (ap_const_logic_1 = ap_CS_fsm_state4))) then 
+            B_TVALID_int_regslice <= grp_foc_fu_272_B_TVALID;
+        elsif (((not((result_V_reg_471 = ap_const_lv32_3)) and not((result_V_reg_471 = ap_const_lv32_2)) and not((result_V_reg_471 = ap_const_lv32_4)) and not((result_V_reg_471 = ap_const_lv32_5)) and (ap_const_logic_1 = ap_CS_fsm_state4)) or ((result_V_reg_471 = ap_const_lv32_4) and (ap_const_logic_1 = ap_CS_fsm_state4)))) then 
+            B_TVALID_int_regslice <= grp_manual_control_fu_244_B_TVALID;
+        elsif (((result_V_reg_471 = ap_const_lv32_5) and (ap_const_logic_1 = ap_CS_fsm_state4))) then 
+            B_TVALID_int_regslice <= grp_torque_foc_fu_188_B_TVALID;
         elsif ((ap_const_logic_1 = ap_CS_fsm_state5)) then 
-            B_TVALID_int_regslice <= grp_calibration_fu_180_B_TVALID;
+            B_TVALID_int_regslice <= grp_calibration_fu_176_B_TVALID;
         else 
             B_TVALID_int_regslice <= ap_const_logic_0;
         end if; 
     end process;
 
 
-    C_TDATA_int_regslice_assign_proc : process(result_V_reg_479, grp_torque_foc_fu_192_C_TDATA, grp_torque_foc_fu_192_C_TVALID, grp_foc_fu_276_C_TDATA, grp_foc_fu_276_C_TVALID, ap_CS_fsm_state4)
+    C_TDATA_int_regslice_assign_proc : process(result_V_reg_471, grp_torque_foc_fu_188_C_TDATA, grp_torque_foc_fu_188_C_TVALID, grp_foc_fu_272_C_TDATA, grp_foc_fu_272_C_TVALID, ap_CS_fsm_state4)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state4)) then
-            if (((result_V_reg_479 = ap_const_lv32_3) and (grp_foc_fu_276_C_TVALID = ap_const_logic_1))) then 
-                C_TDATA_int_regslice <= grp_foc_fu_276_C_TDATA;
-            elsif (((result_V_reg_479 = ap_const_lv32_5) and (grp_torque_foc_fu_192_C_TVALID = ap_const_logic_1))) then 
-                C_TDATA_int_regslice <= grp_torque_foc_fu_192_C_TDATA;
+            if (((result_V_reg_471 = ap_const_lv32_3) and (grp_foc_fu_272_C_TVALID = ap_const_logic_1))) then 
+                C_TDATA_int_regslice <= grp_foc_fu_272_C_TDATA;
+            elsif (((result_V_reg_471 = ap_const_lv32_5) and (grp_torque_foc_fu_188_C_TVALID = ap_const_logic_1))) then 
+                C_TDATA_int_regslice <= grp_torque_foc_fu_188_C_TDATA;
             else 
                 C_TDATA_int_regslice <= "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
             end if;
@@ -1231,13 +1231,13 @@ begin
     end process;
 
 
-    C_TKEEP_int_regslice_assign_proc : process(result_V_reg_479, grp_torque_foc_fu_192_C_TVALID, grp_torque_foc_fu_192_C_TKEEP, grp_foc_fu_276_C_TVALID, grp_foc_fu_276_C_TKEEP, ap_CS_fsm_state4)
+    C_TKEEP_int_regslice_assign_proc : process(result_V_reg_471, grp_torque_foc_fu_188_C_TVALID, grp_torque_foc_fu_188_C_TKEEP, grp_foc_fu_272_C_TVALID, grp_foc_fu_272_C_TKEEP, ap_CS_fsm_state4)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state4)) then
-            if (((result_V_reg_479 = ap_const_lv32_3) and (grp_foc_fu_276_C_TVALID = ap_const_logic_1))) then 
-                C_TKEEP_int_regslice <= grp_foc_fu_276_C_TKEEP;
-            elsif (((result_V_reg_479 = ap_const_lv32_5) and (grp_torque_foc_fu_192_C_TVALID = ap_const_logic_1))) then 
-                C_TKEEP_int_regslice <= grp_torque_foc_fu_192_C_TKEEP;
+            if (((result_V_reg_471 = ap_const_lv32_3) and (grp_foc_fu_272_C_TVALID = ap_const_logic_1))) then 
+                C_TKEEP_int_regslice <= grp_foc_fu_272_C_TKEEP;
+            elsif (((result_V_reg_471 = ap_const_lv32_5) and (grp_torque_foc_fu_188_C_TVALID = ap_const_logic_1))) then 
+                C_TKEEP_int_regslice <= grp_torque_foc_fu_188_C_TKEEP;
             else 
                 C_TKEEP_int_regslice <= "XXXXXXXX";
             end if;
@@ -1247,13 +1247,13 @@ begin
     end process;
 
 
-    C_TLAST_int_regslice_assign_proc : process(result_V_reg_479, grp_torque_foc_fu_192_C_TVALID, grp_torque_foc_fu_192_C_TLAST, grp_foc_fu_276_C_TVALID, grp_foc_fu_276_C_TLAST, ap_CS_fsm_state4)
+    C_TLAST_int_regslice_assign_proc : process(result_V_reg_471, grp_torque_foc_fu_188_C_TVALID, grp_torque_foc_fu_188_C_TLAST, grp_foc_fu_272_C_TVALID, grp_foc_fu_272_C_TLAST, ap_CS_fsm_state4)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state4)) then
-            if (((result_V_reg_479 = ap_const_lv32_3) and (grp_foc_fu_276_C_TVALID = ap_const_logic_1))) then 
-                C_TLAST_int_regslice <= grp_foc_fu_276_C_TLAST;
-            elsif (((result_V_reg_479 = ap_const_lv32_5) and (grp_torque_foc_fu_192_C_TVALID = ap_const_logic_1))) then 
-                C_TLAST_int_regslice <= grp_torque_foc_fu_192_C_TLAST;
+            if (((result_V_reg_471 = ap_const_lv32_3) and (grp_foc_fu_272_C_TVALID = ap_const_logic_1))) then 
+                C_TLAST_int_regslice <= grp_foc_fu_272_C_TLAST;
+            elsif (((result_V_reg_471 = ap_const_lv32_5) and (grp_torque_foc_fu_188_C_TVALID = ap_const_logic_1))) then 
+                C_TLAST_int_regslice <= grp_torque_foc_fu_188_C_TLAST;
             else 
                 C_TLAST_int_regslice <= "X";
             end if;
@@ -1263,13 +1263,13 @@ begin
     end process;
 
 
-    C_TSTRB_int_regslice_assign_proc : process(result_V_reg_479, grp_torque_foc_fu_192_C_TVALID, grp_torque_foc_fu_192_C_TSTRB, grp_foc_fu_276_C_TVALID, grp_foc_fu_276_C_TSTRB, ap_CS_fsm_state4)
+    C_TSTRB_int_regslice_assign_proc : process(result_V_reg_471, grp_torque_foc_fu_188_C_TVALID, grp_torque_foc_fu_188_C_TSTRB, grp_foc_fu_272_C_TVALID, grp_foc_fu_272_C_TSTRB, ap_CS_fsm_state4)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state4)) then
-            if (((result_V_reg_479 = ap_const_lv32_3) and (grp_foc_fu_276_C_TVALID = ap_const_logic_1))) then 
-                C_TSTRB_int_regslice <= grp_foc_fu_276_C_TSTRB;
-            elsif (((result_V_reg_479 = ap_const_lv32_5) and (grp_torque_foc_fu_192_C_TVALID = ap_const_logic_1))) then 
-                C_TSTRB_int_regslice <= grp_torque_foc_fu_192_C_TSTRB;
+            if (((result_V_reg_471 = ap_const_lv32_3) and (grp_foc_fu_272_C_TVALID = ap_const_logic_1))) then 
+                C_TSTRB_int_regslice <= grp_foc_fu_272_C_TSTRB;
+            elsif (((result_V_reg_471 = ap_const_lv32_5) and (grp_torque_foc_fu_188_C_TVALID = ap_const_logic_1))) then 
+                C_TSTRB_int_regslice <= grp_torque_foc_fu_188_C_TSTRB;
             else 
                 C_TSTRB_int_regslice <= "XXXXXXXX";
             end if;
@@ -1280,13 +1280,13 @@ begin
 
     C_TVALID <= regslice_both_C_V_data_V_U_vld_out;
 
-    C_TVALID_int_regslice_assign_proc : process(result_V_reg_479, grp_torque_foc_fu_192_C_TVALID, grp_foc_fu_276_C_TVALID, ap_CS_fsm_state4)
+    C_TVALID_int_regslice_assign_proc : process(result_V_reg_471, grp_torque_foc_fu_188_C_TVALID, grp_foc_fu_272_C_TVALID, ap_CS_fsm_state4)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state4)) then
-            if ((result_V_reg_479 = ap_const_lv32_3)) then 
-                C_TVALID_int_regslice <= grp_foc_fu_276_C_TVALID;
-            elsif ((result_V_reg_479 = ap_const_lv32_5)) then 
-                C_TVALID_int_regslice <= grp_torque_foc_fu_192_C_TVALID;
+            if ((result_V_reg_471 = ap_const_lv32_3)) then 
+                C_TVALID_int_regslice <= grp_foc_fu_272_C_TVALID;
+            elsif ((result_V_reg_471 = ap_const_lv32_5)) then 
+                C_TVALID_int_regslice <= grp_torque_foc_fu_188_C_TVALID;
             else 
                 C_TVALID_int_regslice <= ap_const_logic_0;
             end if;
@@ -1295,7 +1295,7 @@ begin
         end if; 
     end process;
 
-    add_ln344_fu_378_p2 <= std_logic_vector(unsigned(zext_ln344_fu_374_p1) + unsigned(ap_const_lv9_181));
+    add_ln344_fu_370_p2 <= std_logic_vector(unsigned(zext_ln344_fu_366_p1) + unsigned(ap_const_lv9_181));
     ap_CS_fsm_state1 <= ap_CS_fsm(0);
     ap_CS_fsm_state2 <= ap_CS_fsm(1);
     ap_CS_fsm_state3 <= ap_CS_fsm(2);
@@ -1317,9 +1317,9 @@ begin
     end process;
 
 
-    ap_ST_fsm_state5_blk_assign_proc : process(grp_calibration_fu_180_ap_done, A_TVALID_int_regslice)
+    ap_ST_fsm_state5_blk_assign_proc : process(grp_calibration_fu_176_ap_done, A_TVALID_int_regslice)
     begin
-        if (((grp_calibration_fu_180_ap_done = ap_const_logic_0) or (ap_const_logic_0 = A_TVALID_int_regslice))) then 
+        if (((grp_calibration_fu_176_ap_done = ap_const_logic_0) or (ap_const_logic_0 = A_TVALID_int_regslice))) then 
             ap_ST_fsm_state5_blk <= ap_const_logic_1;
         else 
             ap_ST_fsm_state5_blk <= ap_const_logic_0;
@@ -1338,9 +1338,9 @@ begin
     end process;
 
 
-    ap_block_state4_on_subcall_done_assign_proc : process(result_V_reg_479, grp_torque_foc_fu_192_ap_done, grp_manual_control_fu_248_ap_done, grp_foc_fu_276_ap_done, ap_predicate_op68_call_state4)
+    ap_block_state4_on_subcall_done_assign_proc : process(result_V_reg_471, grp_torque_foc_fu_188_ap_done, grp_manual_control_fu_244_ap_done, grp_foc_fu_272_ap_done, ap_predicate_op68_call_state4)
     begin
-                ap_block_state4_on_subcall_done <= (((ap_predicate_op68_call_state4 = ap_const_boolean_1) and (grp_manual_control_fu_248_ap_done = ap_const_logic_0)) or ((result_V_reg_479 = ap_const_lv32_3) and (grp_foc_fu_276_ap_done = ap_const_logic_0)) or ((result_V_reg_479 = ap_const_lv32_4) and (grp_manual_control_fu_248_ap_done = ap_const_logic_0)) or ((result_V_reg_479 = ap_const_lv32_5) and (grp_torque_foc_fu_192_ap_done = ap_const_logic_0)));
+                ap_block_state4_on_subcall_done <= (((ap_predicate_op68_call_state4 = ap_const_boolean_1) and (grp_manual_control_fu_244_ap_done = ap_const_logic_0)) or ((result_V_reg_471 = ap_const_lv32_3) and (grp_foc_fu_272_ap_done = ap_const_logic_0)) or ((result_V_reg_471 = ap_const_lv32_4) and (grp_manual_control_fu_244_ap_done = ap_const_logic_0)) or ((result_V_reg_471 = ap_const_lv32_5) and (grp_torque_foc_fu_188_ap_done = ap_const_logic_0)));
     end process;
 
 
@@ -1352,9 +1352,9 @@ begin
     ap_local_block <= ap_const_logic_0;
     ap_local_deadlock <= ap_const_lv1_0;
 
-    ap_predicate_op68_call_state4_assign_proc : process(result_V_reg_479)
+    ap_predicate_op68_call_state4_assign_proc : process(result_V_reg_471)
     begin
-                ap_predicate_op68_call_state4 <= (not((result_V_reg_479 = ap_const_lv32_3)) and not((result_V_reg_479 = ap_const_lv32_2)) and not((result_V_reg_479 = ap_const_lv32_4)) and not((result_V_reg_479 = ap_const_lv32_5)));
+                ap_predicate_op68_call_state4 <= (not((result_V_reg_471 = ap_const_lv32_3)) and not((result_V_reg_471 = ap_const_lv32_2)) and not((result_V_reg_471 = ap_const_lv32_4)) and not((result_V_reg_471 = ap_const_lv32_5)));
     end process;
 
 
@@ -1364,13 +1364,13 @@ begin
     end process;
 
 
-    buffer_velocity_address0_assign_proc : process(result_V_reg_479, grp_torque_foc_fu_192_buffer_velocity_address0, grp_foc_fu_276_buffer_velocity_address0, ap_CS_fsm_state4)
+    buffer_velocity_address0_assign_proc : process(result_V_reg_471, grp_torque_foc_fu_188_buffer_velocity_address0, grp_foc_fu_272_buffer_velocity_address0, ap_CS_fsm_state4)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state4)) then
-            if ((result_V_reg_479 = ap_const_lv32_3)) then 
-                buffer_velocity_address0 <= grp_foc_fu_276_buffer_velocity_address0;
-            elsif ((result_V_reg_479 = ap_const_lv32_5)) then 
-                buffer_velocity_address0 <= grp_torque_foc_fu_192_buffer_velocity_address0;
+            if ((result_V_reg_471 = ap_const_lv32_3)) then 
+                buffer_velocity_address0 <= grp_foc_fu_272_buffer_velocity_address0;
+            elsif ((result_V_reg_471 = ap_const_lv32_5)) then 
+                buffer_velocity_address0 <= grp_torque_foc_fu_188_buffer_velocity_address0;
             else 
                 buffer_velocity_address0 <= "XXXXX";
             end if;
@@ -1380,13 +1380,13 @@ begin
     end process;
 
 
-    buffer_velocity_ce0_assign_proc : process(result_V_reg_479, grp_torque_foc_fu_192_buffer_velocity_ce0, grp_foc_fu_276_buffer_velocity_ce0, ap_CS_fsm_state4)
+    buffer_velocity_ce0_assign_proc : process(result_V_reg_471, grp_torque_foc_fu_188_buffer_velocity_ce0, grp_foc_fu_272_buffer_velocity_ce0, ap_CS_fsm_state4)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state4)) then
-            if ((result_V_reg_479 = ap_const_lv32_3)) then 
-                buffer_velocity_ce0 <= grp_foc_fu_276_buffer_velocity_ce0;
-            elsif ((result_V_reg_479 = ap_const_lv32_5)) then 
-                buffer_velocity_ce0 <= grp_torque_foc_fu_192_buffer_velocity_ce0;
+            if ((result_V_reg_471 = ap_const_lv32_3)) then 
+                buffer_velocity_ce0 <= grp_foc_fu_272_buffer_velocity_ce0;
+            elsif ((result_V_reg_471 = ap_const_lv32_5)) then 
+                buffer_velocity_ce0 <= grp_torque_foc_fu_188_buffer_velocity_ce0;
             else 
                 buffer_velocity_ce0 <= ap_const_logic_0;
             end if;
@@ -1396,13 +1396,13 @@ begin
     end process;
 
 
-    buffer_velocity_d0_assign_proc : process(result_V_reg_479, grp_torque_foc_fu_192_buffer_velocity_d0, grp_foc_fu_276_buffer_velocity_d0, ap_CS_fsm_state4)
+    buffer_velocity_d0_assign_proc : process(result_V_reg_471, grp_torque_foc_fu_188_buffer_velocity_d0, grp_foc_fu_272_buffer_velocity_d0, ap_CS_fsm_state4)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state4)) then
-            if ((result_V_reg_479 = ap_const_lv32_3)) then 
-                buffer_velocity_d0 <= grp_foc_fu_276_buffer_velocity_d0;
-            elsif ((result_V_reg_479 = ap_const_lv32_5)) then 
-                buffer_velocity_d0 <= grp_torque_foc_fu_192_buffer_velocity_d0;
+            if ((result_V_reg_471 = ap_const_lv32_3)) then 
+                buffer_velocity_d0 <= grp_foc_fu_272_buffer_velocity_d0;
+            elsif ((result_V_reg_471 = ap_const_lv32_5)) then 
+                buffer_velocity_d0 <= grp_torque_foc_fu_188_buffer_velocity_d0;
             else 
                 buffer_velocity_d0 <= "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
             end if;
@@ -1412,13 +1412,13 @@ begin
     end process;
 
 
-    buffer_velocity_we0_assign_proc : process(result_V_reg_479, grp_torque_foc_fu_192_buffer_velocity_we0, grp_foc_fu_276_buffer_velocity_we0, ap_CS_fsm_state4)
+    buffer_velocity_we0_assign_proc : process(result_V_reg_471, grp_torque_foc_fu_188_buffer_velocity_we0, grp_foc_fu_272_buffer_velocity_we0, ap_CS_fsm_state4)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state4)) then
-            if ((result_V_reg_479 = ap_const_lv32_3)) then 
-                buffer_velocity_we0 <= grp_foc_fu_276_buffer_velocity_we0;
-            elsif ((result_V_reg_479 = ap_const_lv32_5)) then 
-                buffer_velocity_we0 <= grp_torque_foc_fu_192_buffer_velocity_we0;
+            if ((result_V_reg_471 = ap_const_lv32_3)) then 
+                buffer_velocity_we0 <= grp_foc_fu_272_buffer_velocity_we0;
+            elsif ((result_V_reg_471 = ap_const_lv32_5)) then 
+                buffer_velocity_we0 <= grp_torque_foc_fu_188_buffer_velocity_we0;
             else 
                 buffer_velocity_we0 <= ap_const_logic_0;
             end if;
@@ -1428,129 +1428,129 @@ begin
     end process;
 
 
-    control_address0_assign_proc : process(ap_CS_fsm_state1, result_V_reg_479, grp_torque_foc_fu_192_control_address0, grp_manual_control_fu_248_control_address0, grp_foc_fu_276_control_address0, ap_CS_fsm_state4)
+    control_address0_assign_proc : process(ap_CS_fsm_state1, result_V_reg_471, grp_torque_foc_fu_188_control_address0, grp_manual_control_fu_244_control_address0, grp_foc_fu_272_control_address0, ap_CS_fsm_state4)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state1)) then 
             control_address0 <= ap_const_lv64_5(3 - 1 downto 0);
-        elsif (((result_V_reg_479 = ap_const_lv32_3) and (ap_const_logic_1 = ap_CS_fsm_state4))) then 
-            control_address0 <= grp_foc_fu_276_control_address0;
-        elsif (((not((result_V_reg_479 = ap_const_lv32_3)) and not((result_V_reg_479 = ap_const_lv32_2)) and not((result_V_reg_479 = ap_const_lv32_4)) and not((result_V_reg_479 = ap_const_lv32_5)) and (ap_const_logic_1 = ap_CS_fsm_state4)) or ((result_V_reg_479 = ap_const_lv32_4) and (ap_const_logic_1 = ap_CS_fsm_state4)))) then 
-            control_address0 <= grp_manual_control_fu_248_control_address0;
-        elsif (((result_V_reg_479 = ap_const_lv32_5) and (ap_const_logic_1 = ap_CS_fsm_state4))) then 
-            control_address0 <= grp_torque_foc_fu_192_control_address0;
+        elsif (((result_V_reg_471 = ap_const_lv32_3) and (ap_const_logic_1 = ap_CS_fsm_state4))) then 
+            control_address0 <= grp_foc_fu_272_control_address0;
+        elsif (((not((result_V_reg_471 = ap_const_lv32_3)) and not((result_V_reg_471 = ap_const_lv32_2)) and not((result_V_reg_471 = ap_const_lv32_4)) and not((result_V_reg_471 = ap_const_lv32_5)) and (ap_const_logic_1 = ap_CS_fsm_state4)) or ((result_V_reg_471 = ap_const_lv32_4) and (ap_const_logic_1 = ap_CS_fsm_state4)))) then 
+            control_address0 <= grp_manual_control_fu_244_control_address0;
+        elsif (((result_V_reg_471 = ap_const_lv32_5) and (ap_const_logic_1 = ap_CS_fsm_state4))) then 
+            control_address0 <= grp_torque_foc_fu_188_control_address0;
         else 
             control_address0 <= "XXX";
         end if; 
     end process;
 
 
-    control_ce0_assign_proc : process(ap_CS_fsm_state1, result_V_reg_479, grp_torque_foc_fu_192_control_ce0, grp_manual_control_fu_248_control_ce0, grp_foc_fu_276_control_ce0, ap_CS_fsm_state4)
+    control_ce0_assign_proc : process(ap_CS_fsm_state1, result_V_reg_471, grp_torque_foc_fu_188_control_ce0, grp_manual_control_fu_244_control_ce0, grp_foc_fu_272_control_ce0, ap_CS_fsm_state4)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state1)) then 
             control_ce0 <= ap_const_logic_1;
-        elsif (((result_V_reg_479 = ap_const_lv32_3) and (ap_const_logic_1 = ap_CS_fsm_state4))) then 
-            control_ce0 <= grp_foc_fu_276_control_ce0;
-        elsif (((not((result_V_reg_479 = ap_const_lv32_3)) and not((result_V_reg_479 = ap_const_lv32_2)) and not((result_V_reg_479 = ap_const_lv32_4)) and not((result_V_reg_479 = ap_const_lv32_5)) and (ap_const_logic_1 = ap_CS_fsm_state4)) or ((result_V_reg_479 = ap_const_lv32_4) and (ap_const_logic_1 = ap_CS_fsm_state4)))) then 
-            control_ce0 <= grp_manual_control_fu_248_control_ce0;
-        elsif (((result_V_reg_479 = ap_const_lv32_5) and (ap_const_logic_1 = ap_CS_fsm_state4))) then 
-            control_ce0 <= grp_torque_foc_fu_192_control_ce0;
+        elsif (((result_V_reg_471 = ap_const_lv32_3) and (ap_const_logic_1 = ap_CS_fsm_state4))) then 
+            control_ce0 <= grp_foc_fu_272_control_ce0;
+        elsif (((not((result_V_reg_471 = ap_const_lv32_3)) and not((result_V_reg_471 = ap_const_lv32_2)) and not((result_V_reg_471 = ap_const_lv32_4)) and not((result_V_reg_471 = ap_const_lv32_5)) and (ap_const_logic_1 = ap_CS_fsm_state4)) or ((result_V_reg_471 = ap_const_lv32_4) and (ap_const_logic_1 = ap_CS_fsm_state4)))) then 
+            control_ce0 <= grp_manual_control_fu_244_control_ce0;
+        elsif (((result_V_reg_471 = ap_const_lv32_5) and (ap_const_logic_1 = ap_CS_fsm_state4))) then 
+            control_ce0 <= grp_torque_foc_fu_188_control_ce0;
         else 
             control_ce0 <= ap_const_logic_0;
         end if; 
     end process;
 
-    grp_calibration_fu_180_B_TREADY <= (ap_CS_fsm_state5 and B_TREADY_int_regslice);
-    grp_calibration_fu_180_ap_start <= grp_calibration_fu_180_ap_start_reg;
-    grp_foc_fu_276_B_TREADY <= (ap_CS_fsm_state4 and B_TREADY_int_regslice);
-    grp_foc_fu_276_C_TREADY <= (ap_CS_fsm_state4 and C_TREADY_int_regslice);
-    grp_foc_fu_276_ap_start <= grp_foc_fu_276_ap_start_reg;
-    grp_manual_control_fu_248_B_TREADY <= (ap_CS_fsm_state4 and B_TREADY_int_regslice);
-    grp_manual_control_fu_248_ap_start <= grp_manual_control_fu_248_ap_start_reg;
-    grp_torque_foc_fu_192_B_TREADY <= (ap_CS_fsm_state4 and B_TREADY_int_regslice);
-    grp_torque_foc_fu_192_C_TREADY <= (ap_CS_fsm_state4 and C_TREADY_int_regslice);
-    grp_torque_foc_fu_192_ap_start <= grp_torque_foc_fu_192_ap_start_reg;
-    isNeg_fu_384_p3 <= add_ln344_fu_378_p2(8 downto 8);
+    grp_calibration_fu_176_B_TREADY <= (ap_CS_fsm_state5 and B_TREADY_int_regslice);
+    grp_calibration_fu_176_ap_start <= grp_calibration_fu_176_ap_start_reg;
+    grp_foc_fu_272_B_TREADY <= (ap_CS_fsm_state4 and B_TREADY_int_regslice);
+    grp_foc_fu_272_C_TREADY <= (ap_CS_fsm_state4 and C_TREADY_int_regslice);
+    grp_foc_fu_272_ap_start <= grp_foc_fu_272_ap_start_reg;
+    grp_manual_control_fu_244_B_TREADY <= (ap_CS_fsm_state4 and B_TREADY_int_regslice);
+    grp_manual_control_fu_244_ap_start <= grp_manual_control_fu_244_ap_start_reg;
+    grp_torque_foc_fu_188_B_TREADY <= (ap_CS_fsm_state4 and B_TREADY_int_regslice);
+    grp_torque_foc_fu_188_C_TREADY <= (ap_CS_fsm_state4 and C_TREADY_int_regslice);
+    grp_torque_foc_fu_188_ap_start <= grp_torque_foc_fu_188_ap_start_reg;
+    isNeg_fu_376_p3 <= add_ln344_fu_370_p2(8 downto 8);
 
-    logger_address0_assign_proc : process(result_V_reg_479, grp_torque_foc_fu_192_logger_address0, grp_manual_control_fu_248_logger_address0, grp_foc_fu_276_logger_address0, ap_CS_fsm_state4)
+    logger_address0_assign_proc : process(result_V_reg_471, grp_torque_foc_fu_188_logger_address0, grp_manual_control_fu_244_logger_address0, grp_foc_fu_272_logger_address0, ap_CS_fsm_state4)
     begin
-        if (((result_V_reg_479 = ap_const_lv32_3) and (ap_const_logic_1 = ap_CS_fsm_state4))) then 
-            logger_address0 <= grp_foc_fu_276_logger_address0;
-        elsif (((not((result_V_reg_479 = ap_const_lv32_3)) and not((result_V_reg_479 = ap_const_lv32_2)) and not((result_V_reg_479 = ap_const_lv32_4)) and not((result_V_reg_479 = ap_const_lv32_5)) and (ap_const_logic_1 = ap_CS_fsm_state4)) or ((result_V_reg_479 = ap_const_lv32_4) and (ap_const_logic_1 = ap_CS_fsm_state4)))) then 
-            logger_address0 <= grp_manual_control_fu_248_logger_address0;
-        elsif (((result_V_reg_479 = ap_const_lv32_5) and (ap_const_logic_1 = ap_CS_fsm_state4))) then 
-            logger_address0 <= grp_torque_foc_fu_192_logger_address0;
+        if (((result_V_reg_471 = ap_const_lv32_3) and (ap_const_logic_1 = ap_CS_fsm_state4))) then 
+            logger_address0 <= grp_foc_fu_272_logger_address0;
+        elsif (((not((result_V_reg_471 = ap_const_lv32_3)) and not((result_V_reg_471 = ap_const_lv32_2)) and not((result_V_reg_471 = ap_const_lv32_4)) and not((result_V_reg_471 = ap_const_lv32_5)) and (ap_const_logic_1 = ap_CS_fsm_state4)) or ((result_V_reg_471 = ap_const_lv32_4) and (ap_const_logic_1 = ap_CS_fsm_state4)))) then 
+            logger_address0 <= grp_manual_control_fu_244_logger_address0;
+        elsif (((result_V_reg_471 = ap_const_lv32_5) and (ap_const_logic_1 = ap_CS_fsm_state4))) then 
+            logger_address0 <= grp_torque_foc_fu_188_logger_address0;
         else 
             logger_address0 <= "XXXXX";
         end if; 
     end process;
 
 
-    logger_ce0_assign_proc : process(result_V_reg_479, grp_torque_foc_fu_192_logger_ce0, grp_manual_control_fu_248_logger_ce0, grp_foc_fu_276_logger_ce0, ap_CS_fsm_state4)
+    logger_ce0_assign_proc : process(result_V_reg_471, grp_torque_foc_fu_188_logger_ce0, grp_manual_control_fu_244_logger_ce0, grp_foc_fu_272_logger_ce0, ap_CS_fsm_state4)
     begin
-        if (((result_V_reg_479 = ap_const_lv32_3) and (ap_const_logic_1 = ap_CS_fsm_state4))) then 
-            logger_ce0 <= grp_foc_fu_276_logger_ce0;
-        elsif (((not((result_V_reg_479 = ap_const_lv32_3)) and not((result_V_reg_479 = ap_const_lv32_2)) and not((result_V_reg_479 = ap_const_lv32_4)) and not((result_V_reg_479 = ap_const_lv32_5)) and (ap_const_logic_1 = ap_CS_fsm_state4)) or ((result_V_reg_479 = ap_const_lv32_4) and (ap_const_logic_1 = ap_CS_fsm_state4)))) then 
-            logger_ce0 <= grp_manual_control_fu_248_logger_ce0;
-        elsif (((result_V_reg_479 = ap_const_lv32_5) and (ap_const_logic_1 = ap_CS_fsm_state4))) then 
-            logger_ce0 <= grp_torque_foc_fu_192_logger_ce0;
+        if (((result_V_reg_471 = ap_const_lv32_3) and (ap_const_logic_1 = ap_CS_fsm_state4))) then 
+            logger_ce0 <= grp_foc_fu_272_logger_ce0;
+        elsif (((not((result_V_reg_471 = ap_const_lv32_3)) and not((result_V_reg_471 = ap_const_lv32_2)) and not((result_V_reg_471 = ap_const_lv32_4)) and not((result_V_reg_471 = ap_const_lv32_5)) and (ap_const_logic_1 = ap_CS_fsm_state4)) or ((result_V_reg_471 = ap_const_lv32_4) and (ap_const_logic_1 = ap_CS_fsm_state4)))) then 
+            logger_ce0 <= grp_manual_control_fu_244_logger_ce0;
+        elsif (((result_V_reg_471 = ap_const_lv32_5) and (ap_const_logic_1 = ap_CS_fsm_state4))) then 
+            logger_ce0 <= grp_torque_foc_fu_188_logger_ce0;
         else 
             logger_ce0 <= ap_const_logic_0;
         end if; 
     end process;
 
 
-    logger_d0_assign_proc : process(result_V_reg_479, grp_torque_foc_fu_192_logger_d0, grp_manual_control_fu_248_logger_d0, grp_foc_fu_276_logger_d0, ap_CS_fsm_state4)
+    logger_d0_assign_proc : process(result_V_reg_471, grp_torque_foc_fu_188_logger_d0, grp_manual_control_fu_244_logger_d0, grp_foc_fu_272_logger_d0, ap_CS_fsm_state4)
     begin
-        if (((result_V_reg_479 = ap_const_lv32_3) and (ap_const_logic_1 = ap_CS_fsm_state4))) then 
-            logger_d0 <= grp_foc_fu_276_logger_d0;
-        elsif (((not((result_V_reg_479 = ap_const_lv32_3)) and not((result_V_reg_479 = ap_const_lv32_2)) and not((result_V_reg_479 = ap_const_lv32_4)) and not((result_V_reg_479 = ap_const_lv32_5)) and (ap_const_logic_1 = ap_CS_fsm_state4)) or ((result_V_reg_479 = ap_const_lv32_4) and (ap_const_logic_1 = ap_CS_fsm_state4)))) then 
-            logger_d0 <= grp_manual_control_fu_248_logger_d0;
-        elsif (((result_V_reg_479 = ap_const_lv32_5) and (ap_const_logic_1 = ap_CS_fsm_state4))) then 
-            logger_d0 <= grp_torque_foc_fu_192_logger_d0;
+        if (((result_V_reg_471 = ap_const_lv32_3) and (ap_const_logic_1 = ap_CS_fsm_state4))) then 
+            logger_d0 <= grp_foc_fu_272_logger_d0;
+        elsif (((not((result_V_reg_471 = ap_const_lv32_3)) and not((result_V_reg_471 = ap_const_lv32_2)) and not((result_V_reg_471 = ap_const_lv32_4)) and not((result_V_reg_471 = ap_const_lv32_5)) and (ap_const_logic_1 = ap_CS_fsm_state4)) or ((result_V_reg_471 = ap_const_lv32_4) and (ap_const_logic_1 = ap_CS_fsm_state4)))) then 
+            logger_d0 <= grp_manual_control_fu_244_logger_d0;
+        elsif (((result_V_reg_471 = ap_const_lv32_5) and (ap_const_logic_1 = ap_CS_fsm_state4))) then 
+            logger_d0 <= grp_torque_foc_fu_188_logger_d0;
         else 
             logger_d0 <= "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         end if; 
     end process;
 
 
-    logger_we0_assign_proc : process(result_V_reg_479, grp_torque_foc_fu_192_logger_we0, grp_manual_control_fu_248_logger_we0, grp_foc_fu_276_logger_we0, ap_CS_fsm_state4)
+    logger_we0_assign_proc : process(result_V_reg_471, grp_torque_foc_fu_188_logger_we0, grp_manual_control_fu_244_logger_we0, grp_foc_fu_272_logger_we0, ap_CS_fsm_state4)
     begin
-        if (((result_V_reg_479 = ap_const_lv32_3) and (ap_const_logic_1 = ap_CS_fsm_state4))) then 
-            logger_we0 <= grp_foc_fu_276_logger_we0;
-        elsif (((not((result_V_reg_479 = ap_const_lv32_3)) and not((result_V_reg_479 = ap_const_lv32_2)) and not((result_V_reg_479 = ap_const_lv32_4)) and not((result_V_reg_479 = ap_const_lv32_5)) and (ap_const_logic_1 = ap_CS_fsm_state4)) or ((result_V_reg_479 = ap_const_lv32_4) and (ap_const_logic_1 = ap_CS_fsm_state4)))) then 
-            logger_we0 <= grp_manual_control_fu_248_logger_we0;
-        elsif (((result_V_reg_479 = ap_const_lv32_5) and (ap_const_logic_1 = ap_CS_fsm_state4))) then 
-            logger_we0 <= grp_torque_foc_fu_192_logger_we0;
+        if (((result_V_reg_471 = ap_const_lv32_3) and (ap_const_logic_1 = ap_CS_fsm_state4))) then 
+            logger_we0 <= grp_foc_fu_272_logger_we0;
+        elsif (((not((result_V_reg_471 = ap_const_lv32_3)) and not((result_V_reg_471 = ap_const_lv32_2)) and not((result_V_reg_471 = ap_const_lv32_4)) and not((result_V_reg_471 = ap_const_lv32_5)) and (ap_const_logic_1 = ap_CS_fsm_state4)) or ((result_V_reg_471 = ap_const_lv32_4) and (ap_const_logic_1 = ap_CS_fsm_state4)))) then 
+            logger_we0 <= grp_manual_control_fu_244_logger_we0;
+        elsif (((result_V_reg_471 = ap_const_lv32_5) and (ap_const_logic_1 = ap_CS_fsm_state4))) then 
+            logger_we0 <= grp_torque_foc_fu_188_logger_we0;
         else 
             logger_we0 <= ap_const_logic_0;
         end if; 
     end process;
 
-    mantissa_fu_360_p4 <= ((ap_const_lv1_1 & tmp_42_fu_356_p1) & ap_const_lv1_0);
-    p_Result_s_fu_338_p3 <= control_q0(31 downto 31);
-    r_V_11_fu_424_p2 <= std_logic_vector(shift_left(unsigned(zext_ln15_fu_370_p1),to_integer(unsigned('0' & zext_ln1340_fu_414_p1(31-1 downto 0)))));
-    r_V_fu_418_p2 <= std_logic_vector(shift_right(unsigned(zext_ln15_fu_370_p1),to_integer(unsigned('0' & zext_ln1340_fu_414_p1(31-1 downto 0)))));
-    result_V_24_fu_460_p2 <= std_logic_vector(unsigned(ap_const_lv32_0) - unsigned(val_fu_452_p3));
-    result_V_fu_466_p3 <= 
-        result_V_24_fu_460_p2 when (p_Result_s_fu_338_p3(0) = '1') else 
-        val_fu_452_p3;
-        sext_ln1340_fu_410_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(ush_fu_402_p3),32));
+    mantissa_fu_352_p4 <= ((ap_const_lv1_1 & tmp_42_fu_348_p1) & ap_const_lv1_0);
+    p_Result_s_fu_330_p3 <= control_q0(31 downto 31);
+    r_V_11_fu_416_p2 <= std_logic_vector(shift_left(unsigned(zext_ln15_fu_362_p1),to_integer(unsigned('0' & zext_ln1340_fu_406_p1(31-1 downto 0)))));
+    r_V_fu_410_p2 <= std_logic_vector(shift_right(unsigned(zext_ln15_fu_362_p1),to_integer(unsigned('0' & zext_ln1340_fu_406_p1(31-1 downto 0)))));
+    result_V_24_fu_452_p2 <= std_logic_vector(unsigned(ap_const_lv32_0) - unsigned(val_fu_444_p3));
+    result_V_fu_458_p3 <= 
+        result_V_24_fu_452_p2 when (p_Result_s_fu_330_p3(0) = '1') else 
+        val_fu_444_p3;
+        sext_ln1340_fu_402_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(ush_fu_394_p3),32));
 
-        sext_ln1364_fu_398_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(sub_ln1364_fu_392_p2),9));
+        sext_ln1364_fu_390_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(sub_ln1364_fu_384_p2),9));
 
-    sub_ln1364_fu_392_p2 <= std_logic_vector(unsigned(ap_const_lv8_7F) - unsigned(tmp_41_fu_346_p4));
-    tmp_41_fu_346_p4 <= control_q0(30 downto 23);
-    tmp_42_fu_356_p1 <= control_q0(23 - 1 downto 0);
-    tmp_fu_430_p3 <= r_V_fu_418_p2(24 downto 24);
-    tmp_s_fu_442_p4 <= r_V_11_fu_424_p2(55 downto 24);
-    ush_fu_402_p3 <= 
-        sext_ln1364_fu_398_p1 when (isNeg_fu_384_p3(0) = '1') else 
-        add_ln344_fu_378_p2;
-    val_fu_452_p3 <= 
-        zext_ln671_fu_438_p1 when (isNeg_fu_384_p3(0) = '1') else 
-        tmp_s_fu_442_p4;
-    zext_ln1340_fu_414_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(sext_ln1340_fu_410_p1),79));
-    zext_ln15_fu_370_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(mantissa_fu_360_p4),79));
-    zext_ln344_fu_374_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(tmp_41_fu_346_p4),9));
-    zext_ln671_fu_438_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(tmp_fu_430_p3),32));
+    sub_ln1364_fu_384_p2 <= std_logic_vector(unsigned(ap_const_lv8_7F) - unsigned(tmp_41_fu_338_p4));
+    tmp_41_fu_338_p4 <= control_q0(30 downto 23);
+    tmp_42_fu_348_p1 <= control_q0(23 - 1 downto 0);
+    tmp_fu_422_p3 <= r_V_fu_410_p2(24 downto 24);
+    tmp_s_fu_434_p4 <= r_V_11_fu_416_p2(55 downto 24);
+    ush_fu_394_p3 <= 
+        sext_ln1364_fu_390_p1 when (isNeg_fu_376_p3(0) = '1') else 
+        add_ln344_fu_370_p2;
+    val_fu_444_p3 <= 
+        zext_ln671_fu_430_p1 when (isNeg_fu_376_p3(0) = '1') else 
+        tmp_s_fu_434_p4;
+    zext_ln1340_fu_406_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(sext_ln1340_fu_402_p1),79));
+    zext_ln15_fu_362_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(mantissa_fu_352_p4),79));
+    zext_ln344_fu_366_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(tmp_41_fu_338_p4),9));
+    zext_ln671_fu_430_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(tmp_fu_422_p3),32));
 end behav;

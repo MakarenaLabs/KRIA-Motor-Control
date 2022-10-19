@@ -2,5 +2,5 @@
 <Messages>
 	<Message severity="INFO" prefix="[IMPL 213-8]" key="IMPL_8_1776" tag="" content="Exporting RTL as a Vivado IP." resolution=""/>
 	<Message severity="INFO" prefix="[HLS 200-802]" key="HLS 200-802" tag="" content="Generated output file foc-rewrite/export.zip" resolution=""/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Command export_design CPU user time: 17.12 seconds. CPU system time: 1.47 seconds. Elapsed time: 19.99 seconds; current allocated memory: -926.359 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Command export_design CPU user time: 16.76 seconds. CPU system time: 1.34 seconds. Elapsed time: 19.39 seconds; current allocated memory: 10.855 MB." resolution=""/>
 </Messages>

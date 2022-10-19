@@ -159,19 +159,19 @@ void foc(hls::stream<ap_axis<80,0,0,0> > &A, hls::stream<ap_axis<64,0,0,0> > &B,
 //	const TYPE  KP_PI_VEL = -3; //-1.75 //-200
 //	const TYPE  KI_PI_VEL = -2.25;  //-1.5 //-5
 	const TYPE  KP_PI_VEL = -2; //-1.75 //-200
-	const TYPE  KI_PI_VEL = -1.75;  //-1.5 //-5
+	const TYPE  KI_PI_VEL = -0.75; //-1.75;  //-1.5 //-5
 	volatile static TYPE ierr_vel = 0;
 
 //	const TYPE  KP_PI_TORQUE = 5; //2 //-5000
 //	const TYPE  KI_PI_TORQUE = 3.5; //1.75
 	const TYPE  KP_PI_TORQUE = 3; //2 //-5000
-	const TYPE  KI_PI_TORQUE = 2; //1.75
+	const TYPE  KI_PI_TORQUE = 0.5; //1.75
 	volatile static TYPE ierr_torque = 0;
 
 //	const TYPE  KP_PI_FLUX = -5; //-5 //-4096
 //	const TYPE  KI_PI_FLUX = -2; //0
-	const TYPE  KP_PI_FLUX = 1.5; //-5 //-4096
-	const TYPE  KI_PI_FLUX = 0.15; //0
+	const TYPE  KP_PI_FLUX = -1.5; //-5 //-4096
+	const TYPE  KI_PI_FLUX = -0.05; //0
 	volatile static TYPE ierr_flux = 0;
 
 	static TYPE Id_ref_vel = 0;
@@ -185,9 +185,9 @@ void foc(hls::stream<ap_axis<80,0,0,0> > &A, hls::stream<ap_axis<64,0,0,0> > &B,
 	TYPE Vq = 0;
 	PI_control<TYPE>(ref_torque, Iq, KP_PI_TORQUE, KI_PI_TORQUE, ierr_torque, &Vq);
 
-	if(hls::abs(Vq) > Vq_limit_vel){
-		Vq = sgn<TYPE>(Vq) * Vq_limit_vel;
-	}
+//	if(hls::abs(Vq) > Vq_limit_vel){
+//		Vq = sgn<TYPE>(Vq) * Vq_limit_vel;
+//	}
 
 
 	//flux
@@ -207,7 +207,7 @@ void foc(hls::stream<ap_axis<80,0,0,0> > &A, hls::stream<ap_axis<64,0,0,0> > &B,
 
 
 	//--------------------FIELD WEAKENING-------------------------
-	field_weakening<TYPE>(Vd_decoupled, Vq_decoupled, &Id_ref_vel, &Vq_limit_vel);
+//	field_weakening<TYPE>(Vd_decoupled, Vq_decoupled, &Id_ref_vel, &Vq_limit_vel);
 	//--------------------FIELD WEAKENING-------------------------
 
 	//--------------------PARK INVERSE-----------------------------
@@ -313,14 +313,14 @@ void torque_foc(hls::stream<ap_axis<80,0,0,0> > &A, hls::stream<ap_axis<64,0,0,0
 
 //	const TYPE  KP_PI_TORQUE_ = -10; //-200
 //	const TYPE  KI_PI_TORQUE_ = -3; //-5
-	const TYPE  KP_PI_TORQUE_ = -10; //-200
-	const TYPE  KI_PI_TORQUE_ = -3; //-5
+	const TYPE  KP_PI_TORQUE_ = -20; //-200
+	const TYPE  KI_PI_TORQUE_ = -5; //-5
 	volatile static TYPE ierr_torque_ = 0;
 
 //	const TYPE  KP_PI_FLUX_ = -32; //-4096
 //	const TYPE  KI_PI_FLUX_ = -0; //0
-	const TYPE  KP_PI_FLUX_ = -32; //-4096
-	const TYPE  KI_PI_FLUX_ = -0; //0
+	const TYPE  KP_PI_FLUX_ = -10; //-4096
+	const TYPE  KI_PI_FLUX_ = -0.15; //0
 	volatile static TYPE ierr_flux_ = 0;
 
 	//torque

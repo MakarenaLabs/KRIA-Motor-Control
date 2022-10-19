@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'foc_frontend'
 ================================================================
-* Date:           Mon Oct 17 13:30:28 2022
+* Date:           Wed Oct 19 22:36:44 2022
 
 * Version:        2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)
 * Project:        foc-rewrite
@@ -29,7 +29,7 @@
     |  Latency (cycles) |  Latency (absolute)  |  Interval | Pipeline|
     |   min   |   max   |    min    |    max   | min | max |   Type  |
     +---------+---------+-----------+----------+-----+-----+---------+
-    |        4|      269|  40.000 ns|  2.690 us|    5|  270|       no|
+    |        4|      209|  40.000 ns|  2.090 us|    5|  210|       no|
     +---------+---------+-----------+----------+-----+-----+---------+
 
     + Detail: 
@@ -102,11 +102,11 @@ ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void
 ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i8 %C_V_keep_V"   --->   Operation 24 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i8 %C_V_strb_V"   --->   Operation 25 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %C_V_last_V"   --->   Operation 26 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %control, void @empty_9, i32 0, i32 0, void @empty_6, i32 0, i32 0, void @empty_5, void @empty_4, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_6"   --->   Operation 27 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %control, void @empty_5, i32 0, i32 0, void @empty_6, i32 0, i32 0, void @empty_9, void @empty_4, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_6"   --->   Operation 27 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %control, void @empty_3, i32 0, i32 0, void @empty_6, i32 1, i32 0, void @empty_6, void @empty_6, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_6"   --->   Operation 28 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 29 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %control, i64 666, i64 207, i64 1"   --->   Operation 29 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %control"   --->   Operation 30 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 31 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %logger, void @empty_9, i32 0, i32 0, void @empty_6, i32 0, i32 0, void @empty_5, void @empty_2, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_6"   --->   Operation 31 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 31 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %logger, void @empty_5, i32 0, i32 0, void @empty_6, i32 0, i32 0, void @empty_9, void @empty_2, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_6"   --->   Operation 31 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 32 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %logger, void @empty_3, i32 0, i32 0, void @empty_6, i32 1, i32 0, void @empty_6, void @empty_6, void @empty_6, i32 0, i32 0, i32 0, i32 0, void @empty_6, void @empty_6"   --->   Operation 32 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 33 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %logger, i64 666, i64 207, i64 1"   --->   Operation 33 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 34 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %logger"   --->   Operation 34 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
@@ -138,14 +138,14 @@ ST_2 : Operation 58 [2/2] (0.00ns)   --->   "%call_ln22 = call void @calibration
 State 3 <SV = 2> <Delay = 5.62>
 ST_3 : Operation 59 [2/2] (5.19ns)   --->   "%call_ln28 = call void @torque_foc, i80 %A_V_data_V, i10 %A_V_keep_V, i10 %A_V_strb_V, i1 %A_V_last_V, i64 %B_V_data_V, i8 %B_V_keep_V, i8 %B_V_strb_V, i1 %B_V_last_V, i64 %C_V_data_V, i8 %C_V_keep_V, i8 %C_V_strb_V, i1 %C_V_last_V, i32 %control, i32 %logger, i32 %velocity_accum, i32 %buffer_velocity, i32 %Y1a_prev, i32 %Y1b_prev, i32 %Y2a_prev, i32 %Y2b_prev, i32 %sine_d, i32 %cosine_d, i32 %ierr_torque_s, i32 %ierr_flux_s, i32 %sine_i, i32 %cosine_i" [foc-rewrite/apc/src/front/frontend.cpp:28]   --->   Operation 59 'call' 'call_ln28' <Predicate = (result_V == 5)> <Delay = 5.19> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 ST_3 : Operation 60 [2/2] (5.62ns)   --->   "%call_ln26 = call void @manual_control, i80 %A_V_data_V, i10 %A_V_keep_V, i10 %A_V_strb_V, i1 %A_V_last_V, i64 %B_V_data_V, i8 %B_V_keep_V, i8 %B_V_strb_V, i1 %B_V_last_V, i32 %control, i32 %logger, i32 %sine_i, i32 %cosine_i" [foc-rewrite/apc/src/front/frontend.cpp:26]   --->   Operation 60 'call' 'call_ln26' <Predicate = (result_V == 4)> <Delay = 5.62> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_3 : Operation 61 [2/2] (5.19ns)   --->   "%call_ln24 = call void @foc, i80 %A_V_data_V, i10 %A_V_keep_V, i10 %A_V_strb_V, i1 %A_V_last_V, i64 %B_V_data_V, i8 %B_V_keep_V, i8 %B_V_strb_V, i1 %B_V_last_V, i64 %C_V_data_V, i8 %C_V_keep_V, i8 %C_V_strb_V, i1 %C_V_last_V, i32 %control, i32 %logger, i32 %velocity_accum, i32 %buffer_velocity, i32 %Y1a_prev, i32 %Y1b_prev, i32 %Y2a_prev, i32 %Y2b_prev, i32 %sine_d, i32 %cosine_d, i32 %ierr_vel, i32 %ierr_torque, i32 %Vq_limit_vel, i32 %Id_ref_vel, i32 %ierr_flux, i32 %sine_i, i32 %cosine_i" [foc-rewrite/apc/src/front/frontend.cpp:24]   --->   Operation 61 'call' 'call_ln24' <Predicate = (result_V == 3)> <Delay = 5.19> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 61 [2/2] (5.19ns)   --->   "%call_ln24 = call void @foc, i80 %A_V_data_V, i10 %A_V_keep_V, i10 %A_V_strb_V, i1 %A_V_last_V, i64 %B_V_data_V, i8 %B_V_keep_V, i8 %B_V_strb_V, i1 %B_V_last_V, i64 %C_V_data_V, i8 %C_V_keep_V, i8 %C_V_strb_V, i1 %C_V_last_V, i32 %control, i32 %logger, i32 %velocity_accum, i32 %buffer_velocity, i32 %Y1a_prev, i32 %Y1b_prev, i32 %Y2a_prev, i32 %Y2b_prev, i32 %sine_d, i32 %cosine_d, i32 %ierr_vel, i32 %ierr_torque, i32 %ierr_flux, i32 %sine_i, i32 %cosine_i" [foc-rewrite/apc/src/front/frontend.cpp:24]   --->   Operation 61 'call' 'call_ln24' <Predicate = (result_V == 3)> <Delay = 5.19> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 4 <SV = 3> <Delay = 3.76>
 ST_4 : Operation 62 [1/2] (3.76ns)   --->   "%call_ln28 = call void @torque_foc, i80 %A_V_data_V, i10 %A_V_keep_V, i10 %A_V_strb_V, i1 %A_V_last_V, i64 %B_V_data_V, i8 %B_V_keep_V, i8 %B_V_strb_V, i1 %B_V_last_V, i64 %C_V_data_V, i8 %C_V_keep_V, i8 %C_V_strb_V, i1 %C_V_last_V, i32 %control, i32 %logger, i32 %velocity_accum, i32 %buffer_velocity, i32 %Y1a_prev, i32 %Y1b_prev, i32 %Y2a_prev, i32 %Y2b_prev, i32 %sine_d, i32 %cosine_d, i32 %ierr_torque_s, i32 %ierr_flux_s, i32 %sine_i, i32 %cosine_i" [foc-rewrite/apc/src/front/frontend.cpp:28]   --->   Operation 62 'call' 'call_ln28' <Predicate = (result_V == 5)> <Delay = 3.76> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 ST_4 : Operation 63 [1/1] (0.00ns)   --->   "%br_ln29 = br void" [foc-rewrite/apc/src/front/frontend.cpp:29]   --->   Operation 63 'br' 'br_ln29' <Predicate = (result_V == 5)> <Delay = 0.00>
 ST_4 : Operation 64 [1/2] (3.76ns)   --->   "%call_ln26 = call void @manual_control, i80 %A_V_data_V, i10 %A_V_keep_V, i10 %A_V_strb_V, i1 %A_V_last_V, i64 %B_V_data_V, i8 %B_V_keep_V, i8 %B_V_strb_V, i1 %B_V_last_V, i32 %control, i32 %logger, i32 %sine_i, i32 %cosine_i" [foc-rewrite/apc/src/front/frontend.cpp:26]   --->   Operation 64 'call' 'call_ln26' <Predicate = (result_V == 4)> <Delay = 3.76> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 ST_4 : Operation 65 [1/1] (0.00ns)   --->   "%br_ln27 = br void" [foc-rewrite/apc/src/front/frontend.cpp:27]   --->   Operation 65 'br' 'br_ln27' <Predicate = (result_V == 4)> <Delay = 0.00>
-ST_4 : Operation 66 [1/2] (3.76ns)   --->   "%call_ln24 = call void @foc, i80 %A_V_data_V, i10 %A_V_keep_V, i10 %A_V_strb_V, i1 %A_V_last_V, i64 %B_V_data_V, i8 %B_V_keep_V, i8 %B_V_strb_V, i1 %B_V_last_V, i64 %C_V_data_V, i8 %C_V_keep_V, i8 %C_V_strb_V, i1 %C_V_last_V, i32 %control, i32 %logger, i32 %velocity_accum, i32 %buffer_velocity, i32 %Y1a_prev, i32 %Y1b_prev, i32 %Y2a_prev, i32 %Y2b_prev, i32 %sine_d, i32 %cosine_d, i32 %ierr_vel, i32 %ierr_torque, i32 %Vq_limit_vel, i32 %Id_ref_vel, i32 %ierr_flux, i32 %sine_i, i32 %cosine_i" [foc-rewrite/apc/src/front/frontend.cpp:24]   --->   Operation 66 'call' 'call_ln24' <Predicate = (result_V == 3)> <Delay = 3.76> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 66 [1/2] (3.76ns)   --->   "%call_ln24 = call void @foc, i80 %A_V_data_V, i10 %A_V_keep_V, i10 %A_V_strb_V, i1 %A_V_last_V, i64 %B_V_data_V, i8 %B_V_keep_V, i8 %B_V_strb_V, i1 %B_V_last_V, i64 %C_V_data_V, i8 %C_V_keep_V, i8 %C_V_strb_V, i1 %C_V_last_V, i32 %control, i32 %logger, i32 %velocity_accum, i32 %buffer_velocity, i32 %Y1a_prev, i32 %Y1b_prev, i32 %Y2a_prev, i32 %Y2b_prev, i32 %sine_d, i32 %cosine_d, i32 %ierr_vel, i32 %ierr_torque, i32 %ierr_flux, i32 %sine_i, i32 %cosine_i" [foc-rewrite/apc/src/front/frontend.cpp:24]   --->   Operation 66 'call' 'call_ln24' <Predicate = (result_V == 3)> <Delay = 3.76> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 ST_4 : Operation 67 [1/1] (0.00ns)   --->   "%br_ln25 = br void" [foc-rewrite/apc/src/front/frontend.cpp:25]   --->   Operation 67 'br' 'br_ln25' <Predicate = (result_V == 3)> <Delay = 0.00>
 ST_4 : Operation 68 [1/2] (3.76ns)   --->   "%call_ln30 = call void @manual_control, i80 %A_V_data_V, i10 %A_V_keep_V, i10 %A_V_strb_V, i1 %A_V_last_V, i64 %B_V_data_V, i8 %B_V_keep_V, i8 %B_V_strb_V, i1 %B_V_last_V, i32 %control, i32 %logger, i32 %sine_i, i32 %cosine_i" [foc-rewrite/apc/src/front/frontend.cpp:30]   --->   Operation 68 'call' 'call_ln30' <Predicate = (result_V != 2 & result_V != 3 & result_V != 4 & result_V != 5)> <Delay = 3.76> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 ST_4 : Operation 69 [1/1] (0.00ns)   --->   "%br_ln0 = br void"   --->   Operation 69 'br' 'br_ln0' <Predicate = (result_V != 2 & result_V != 3 & result_V != 4 & result_V != 5)> <Delay = 0.00>
@@ -172,34 +172,34 @@ Target clock period: 10ns, clock uncertainty: 2.7ns.
 
  <State 1>: 0.677ns
 The critical path consists of the following:
-	'getelementptr' operation ('control_addr', foc-rewrite/apc/src/front/frontend.cpp:16) [57]  (0 ns)
-	'load' operation ('x', foc-rewrite/apc/src/front/frontend.cpp:16) on array 'control' [58]  (0.677 ns)
+	'getelementptr' operation ('control_addr', foc-rewrite/apc/src/front/frontend.cpp:16) [55]  (0 ns)
+	'load' operation ('x', foc-rewrite/apc/src/front/frontend.cpp:16) on array 'control' [56]  (0.677 ns)
 
  <State 2>: 5.41ns
 The critical path consists of the following:
-	'load' operation ('x', foc-rewrite/apc/src/front/frontend.cpp:16) on array 'control' [58]  (0.677 ns)
-	'add' operation ('sh', /wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:344) [65]  (0.765 ns)
-	'select' operation ('ush') [69]  (0.398 ns)
-	'lshr' operation ('r.V') [72]  (0 ns)
-	'select' operation ('val') [77]  (1.39 ns)
-	'sub' operation ('result.V') [78]  (1.02 ns)
-	'select' operation ('result.V', /wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:59) [79]  (0.449 ns)
+	'load' operation ('x', foc-rewrite/apc/src/front/frontend.cpp:16) on array 'control' [56]  (0.677 ns)
+	'add' operation ('sh', /wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:344) [63]  (0.765 ns)
+	'select' operation ('ush') [67]  (0.398 ns)
+	'lshr' operation ('r.V') [70]  (0 ns)
+	'select' operation ('val') [75]  (1.39 ns)
+	'sub' operation ('result.V') [76]  (1.02 ns)
+	'select' operation ('result.V', /wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:59) [77]  (0.449 ns)
 	blocking operation 0.721 ns on control path)
 
  <State 3>: 5.62ns
 The critical path consists of the following:
-	'call' operation ('call_ln26', foc-rewrite/apc/src/front/frontend.cpp:26) to 'manual_control' [85]  (5.62 ns)
+	'call' operation ('call_ln26', foc-rewrite/apc/src/front/frontend.cpp:26) to 'manual_control' [83]  (5.62 ns)
 
  <State 4>: 3.76ns
 The critical path consists of the following:
-	'call' operation ('call_ln28', foc-rewrite/apc/src/front/frontend.cpp:28) to 'torque_foc' [82]  (3.76 ns)
+	'call' operation ('call_ln26', foc-rewrite/apc/src/front/frontend.cpp:26) to 'manual_control' [83]  (3.76 ns)
 
  <State 5>: 0ns
 The critical path consists of the following:
 
  <State 6>: 5.62ns
 The critical path consists of the following:
-	'call' operation ('call_ln30', foc-rewrite/apc/src/front/frontend.cpp:30) to 'manual_control' [95]  (5.62 ns)
+	'call' operation ('call_ln30', foc-rewrite/apc/src/front/frontend.cpp:30) to 'manual_control' [93]  (5.62 ns)
 
  <State 7>: 0ns
 The critical path consists of the following:

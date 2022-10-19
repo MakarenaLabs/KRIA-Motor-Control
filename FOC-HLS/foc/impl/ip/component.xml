@@ -490,7 +490,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>928a7b3a</spirit:value>
+            <spirit:value>1b3c3739</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -509,7 +509,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>41e1458e</spirit:value>
+            <spirit:value>cf51a271</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -528,7 +528,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>64cf9a4f</spirit:value>
+            <spirit:value>c89e1feb</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -547,7 +547,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>8226f71a</spirit:value>
+            <spirit:value>72971ab6</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1216,10 +1216,6 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/foc_frontend_fsqrt_32ns_32ns_32_8_no_dsp_1_ip.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>hdl/ip/foc_frontend_fadd_32ns_32ns_32_4_full_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
@@ -1294,10 +1290,6 @@
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/verilog/foc_frontend_foc.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/foc_frontend_fsqrt_32ns_32ns_32_8_no_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1462,11 +1454,6 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/foc_frontend_fsqrt_32ns_32ns_32_8_no_dsp_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>hdl/verilog/foc_frontend_fsub_32ns_32ns_32_4_full_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
@@ -1575,11 +1562,6 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/foc_frontend_fsqrt_32ns_32ns_32_8_no_dsp_1_ip.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>hdl/ip/foc_frontend_fadd_32ns_32ns_32_4_full_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
@@ -1619,10 +1601,6 @@
       <spirit:name>xilinx_vhdlsynthesis_view_fileset</spirit:name>
       <spirit:file>
         <spirit:name>hdl/ip/foc_frontend_fsub_32ns_32ns_32_4_full_dsp_1_ip.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/ip/foc_frontend_fsqrt_32ns_32ns_32_8_no_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1699,10 +1677,6 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/foc_frontend_fsqrt_32ns_32ns_32_8_no_dsp_1.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>hdl/vhdl/foc_frontend_fsub_32ns_32ns_32_4_full_dsp_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
@@ -1757,7 +1731,7 @@
       <spirit:file>
         <spirit:name>hdl/vhdl/foc_frontend.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_ed992e0f</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_d017b334</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -1833,11 +1807,6 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/foc_frontend_fsqrt_32ns_32ns_32_8_no_dsp_1.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>hdl/vhdl/foc_frontend_fsub_32ns_32ns_32_4_full_dsp_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
@@ -1909,11 +1878,6 @@
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/ip/foc_frontend_fsub_32ns_32ns_32_4_full_dsp_1_ip.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/ip/foc_frontend_fsqrt_32ns_32ns_32_8_no_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -2057,8 +2021,8 @@
       </xilinx:taxonomies>
       <xilinx:displayName>Foc_frontend</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>2112729270</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2022-10-17T11:31:06Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>2112732697</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2022-10-19T20:37:48Z</xilinx:coreCreationDateTime>
       <xilinx:sdxKernelAttributes>
         <xilinx:sdx_kernel>true</xilinx:sdx_kernel>
         <xilinx:sdx_kernel_type>hls</xilinx:sdx_kernel_type>
@@ -2068,7 +2032,7 @@
       <xilinx:xilinxVersion>2021.2</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="d2488662"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="d35ee566"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="95b4119e"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="c2f6c1cc"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="497ccf3f"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="18a4dd13"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="be2a02a2"/>

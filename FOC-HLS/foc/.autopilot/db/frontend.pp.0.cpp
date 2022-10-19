@@ -32404,8 +32404,8 @@ void field_weakening(T Vd, T Vq, T *Id_ref, T *Vq_limit){
  }
  else{
   err_V = err_V * K;
-  if(err_V < -16000){
-   err_V = -16000;
+  if(err_V < - -8000){
+   err_V = - -8000;
   }
   *Id_ref = err_V;
   *Vq_limit = hls::sqrt(144000000 - Vd*Vd);

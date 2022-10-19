@@ -32401,8 +32401,8 @@ void field_weakening(T Vd, T Vq, T *Id_ref, T *Vq_limit){
  }
  else{
   err_V = err_V * K;
-  if(err_V < -16000){
-   err_V = -16000;
+  if(err_V < - -8000){
+   err_V = - -8000;
   }
   *Id_ref = err_V;
   *Vq_limit = hls::sqrt(144000000 - Vd*Vd);
@@ -32602,19 +32602,19 @@ void foc(hls::stream<ap_axis<80,0,0,0> > &A, hls::stream<ap_axis<64,0,0,0> > &B,
 
 
  const float KP_PI_VEL = -2;
- const float KI_PI_VEL = -1.75;
+ const float KI_PI_VEL = -0.75;
  volatile static float ierr_vel = 0;
 
 
 
  const float KP_PI_TORQUE = 3;
- const float KI_PI_TORQUE = 2;
+ const float KI_PI_TORQUE = 0.5;
  volatile static float ierr_torque = 0;
 
 
 
- const float KP_PI_FLUX = 1.5;
- const float KI_PI_FLUX = 0.15;
+ const float KP_PI_FLUX = -1.5;
+ const float KI_PI_FLUX = -0.05;
  volatile static float ierr_flux = 0;
 
  static float Id_ref_vel = 0;
@@ -32628,9 +32628,9 @@ void foc(hls::stream<ap_axis<80,0,0,0> > &A, hls::stream<ap_axis<64,0,0,0> > &B,
  float Vq = 0;
  PI_control<float>(ref_torque, Iq, KP_PI_TORQUE, KI_PI_TORQUE, ierr_torque, &Vq);
 
- if(hls::abs(Vq) > Vq_limit_vel){
-  Vq = sgn<float>(Vq) * Vq_limit_vel;
- }
+
+
+
 
 
 
@@ -32646,14 +32646,7 @@ void foc(hls::stream<ap_axis<80,0,0,0> > &A, hls::stream<ap_axis<64,0,0,0> > &B,
  decoupling<float>(Id, Iq, Vd, Vq, RPM, &Vd_decoupled, &Vq_decoupled);
  logger[15] = Vd_decoupled;
  logger[16] = Vq_decoupled;
-
-
-
-
- field_weakening<float>(Vd_decoupled, Vq_decoupled, &Id_ref_vel, &Vq_limit_vel);
-
-
-
+# 214 "foc-rewrite/apc/src/FOC/foc.cpp"
  float Valpha = 0, Vbeta = 0;
  park_inverse<float>(Vd_decoupled, Vq_decoupled, Angle, &Valpha, &Vbeta);
  logger[9] = Valpha;
@@ -32742,14 +32735,14 @@ void torque_foc(hls::stream<ap_axis<80,0,0,0> > &A, hls::stream<ap_axis<64,0,0,0
 
 
 
- const float KP_PI_TORQUE_ = -10;
- const float KI_PI_TORQUE_ = -3;
+ const float KP_PI_TORQUE_ = -20;
+ const float KI_PI_TORQUE_ = -5;
  volatile static float ierr_torque_ = 0;
 
 
 
- const float KP_PI_FLUX_ = -32;
- const float KI_PI_FLUX_ = -0;
+ const float KP_PI_FLUX_ = -10;
+ const float KI_PI_FLUX_ = -0.15;
  volatile static float ierr_flux_ = 0;
 
 

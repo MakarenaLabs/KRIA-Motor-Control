@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'SVPWM_float_s'" level="0">
-<item name = "Date">Mon Oct 17 13:30:32 2022
+<item name = "Date">Wed Oct 19 22:36:49 2022
 </item>
 <item name = "Version">2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)</item>
 <item name = "Project">foc-rewrite</item>
@@ -136,8 +136,8 @@
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
 <column name="ap_CS_fsm">11, 0, 11, 0</column>
-<column name="dc_12_reg_752">32, 0, 32, 0</column>
-<column name="dc_13_reg_757">32, 0, 32, 0</column>
+<column name="dc_11_reg_752">32, 0, 32, 0</column>
+<column name="dc_12_reg_757">32, 0, 32, 0</column>
 <column name="dc_reg_747">32, 0, 32, 0</column>
 <column name="min_1_reg_735">32, 0, 32, 0</column>
 <column name="min_reg_728">32, 0, 32, 0</column>

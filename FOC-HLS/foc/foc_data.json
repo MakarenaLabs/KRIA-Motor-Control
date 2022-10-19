@@ -99,7 +99,7 @@
     "ClockPeriod": "10",
     "Uncertainty": "2.7",
     "IsCombinational": "0",
-    "II": "5 ~ 270",
+    "II": "5 ~ 210",
     "Latency": "4"
   },
   "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 10.000 [get_ports ap_clk]"]},
@@ -893,15 +893,15 @@
       "Instances": [
         {
           "ModuleName": "calibration",
-          "InstanceName": "grp_calibration_fu_180"
+          "InstanceName": "grp_calibration_fu_176"
         },
         {
           "ModuleName": "torque_foc",
-          "InstanceName": "grp_torque_foc_fu_192",
+          "InstanceName": "grp_torque_foc_fu_188",
           "Instances": [
             {
               "ModuleName": "low_pass_filter_float_s",
-              "InstanceName": "grp_low_pass_filter_float_s_fu_429",
+              "InstanceName": "grp_low_pass_filter_float_s_fu_431",
               "Instances": [{
                   "ModuleName": "low_pass_filter_float_Pipeline_VITIS_LOOP_29_1",
                   "InstanceName": "grp_low_pass_filter_float_Pipeline_VITIS_LOOP_29_1_fu_60"
@@ -909,41 +909,41 @@
             },
             {
               "ModuleName": "clarke_direct_float_s",
-              "InstanceName": "grp_clarke_direct_float_s_fu_448"
+              "InstanceName": "grp_clarke_direct_float_s_fu_450"
             },
             {
               "ModuleName": "park_direct_float_s",
-              "InstanceName": "grp_park_direct_float_s_fu_454"
+              "InstanceName": "grp_park_direct_float_s_fu_456"
             },
             {
               "ModuleName": "PI_control_float_s",
-              "InstanceName": "grp_PI_control_float_s_fu_465"
+              "InstanceName": "grp_PI_control_float_s_fu_467"
             },
             {
               "ModuleName": "PI_control_float_s",
-              "InstanceName": "grp_PI_control_float_s_fu_476"
+              "InstanceName": "grp_PI_control_float_s_fu_478"
             },
             {
               "ModuleName": "decoupling_float_s",
-              "InstanceName": "grp_decoupling_float_s_fu_488"
+              "InstanceName": "grp_decoupling_float_s_fu_490"
             },
             {
               "ModuleName": "park_inverse_float_s",
-              "InstanceName": "grp_park_inverse_float_s_fu_497"
+              "InstanceName": "grp_park_inverse_float_s_fu_499"
             },
             {
               "ModuleName": "clarke_inverse_float_s",
-              "InstanceName": "grp_clarke_inverse_float_s_fu_508"
+              "InstanceName": "grp_clarke_inverse_float_s_fu_510"
             },
             {
               "ModuleName": "SVPWM_float_s",
-              "InstanceName": "grp_SVPWM_float_s_fu_514"
+              "InstanceName": "grp_SVPWM_float_s_fu_516"
             }
           ]
         },
         {
           "ModuleName": "manual_control",
-          "InstanceName": "grp_manual_control_fu_248",
+          "InstanceName": "grp_manual_control_fu_244",
           "Instances": [
             {
               "ModuleName": "park_inverse_float_s",
@@ -961,11 +961,11 @@
         },
         {
           "ModuleName": "foc",
-          "InstanceName": "grp_foc_fu_276",
+          "InstanceName": "grp_foc_fu_272",
           "Instances": [
             {
               "ModuleName": "low_pass_filter_float_s",
-              "InstanceName": "grp_low_pass_filter_float_s_fu_466",
+              "InstanceName": "grp_low_pass_filter_float_s_fu_437",
               "Instances": [{
                   "ModuleName": "low_pass_filter_float_Pipeline_VITIS_LOOP_29_1",
                   "InstanceName": "grp_low_pass_filter_float_Pipeline_VITIS_LOOP_29_1_fu_60"
@@ -973,31 +973,35 @@
             },
             {
               "ModuleName": "clarke_direct_float_s",
-              "InstanceName": "grp_clarke_direct_float_s_fu_485"
+              "InstanceName": "grp_clarke_direct_float_s_fu_456"
             },
             {
               "ModuleName": "PI_control_float_s",
-              "InstanceName": "grp_PI_control_float_s_fu_491"
+              "InstanceName": "grp_PI_control_float_s_fu_462"
             },
             {
               "ModuleName": "park_direct_float_s",
-              "InstanceName": "grp_park_direct_float_s_fu_506"
+              "InstanceName": "grp_park_direct_float_s_fu_487"
+            },
+            {
+              "ModuleName": "PI_control_float_s",
+              "InstanceName": "grp_PI_control_float_s_fu_475"
             },
             {
               "ModuleName": "decoupling_float_s",
-              "InstanceName": "grp_decoupling_float_s_fu_517"
+              "InstanceName": "grp_decoupling_float_s_fu_498"
             },
             {
               "ModuleName": "park_inverse_float_s",
-              "InstanceName": "grp_park_inverse_float_s_fu_526"
+              "InstanceName": "grp_park_inverse_float_s_fu_507"
             },
             {
               "ModuleName": "clarke_inverse_float_s",
-              "InstanceName": "grp_clarke_inverse_float_s_fu_537"
+              "InstanceName": "grp_clarke_inverse_float_s_fu_518"
             },
             {
               "ModuleName": "SVPWM_float_s",
-              "InstanceName": "grp_SVPWM_float_s_fu_543"
+              "InstanceName": "grp_SVPWM_float_s_fu_524"
             }
           ]
         }
@@ -1465,12 +1469,10 @@
       },
       "foc": {
         "Latency": {
-          "LatencyBest": "255",
-          "LatencyAvg": "260",
-          "LatencyWorst": "265",
-          "PipelineIIMin": "255",
-          "PipelineIIMax": "265",
-          "PipelineII": "255 ~ 265",
+          "LatencyBest": "205",
+          "LatencyAvg": "205",
+          "LatencyWorst": "205",
+          "PipelineII": "205",
           "PipelineDepth": "",
           "PipelineType": "no"
         },
@@ -1483,13 +1485,13 @@
           "BRAM_18K": "8",
           "AVAIL_BRAM": "624",
           "UTIL_BRAM": "1",
-          "DSP": "100",
+          "DSP": "102",
           "AVAIL_DSP": "1728",
           "UTIL_DSP": "5",
-          "FF": "10058",
+          "FF": "10041",
           "AVAIL_FF": "460800",
           "UTIL_FF": "2",
-          "LUT": "13764",
+          "LUT": "13703",
           "AVAIL_LUT": "230400",
           "UTIL_LUT": "5",
           "URAM": "0",
@@ -1532,11 +1534,11 @@
       "foc_frontend": {
         "Latency": {
           "LatencyBest": "4",
-          "LatencyAvg": "92",
-          "LatencyWorst": "269",
+          "LatencyAvg": "78",
+          "LatencyWorst": "209",
           "PipelineIIMin": "5",
-          "PipelineIIMax": "270",
-          "PipelineII": "5 ~ 270",
+          "PipelineIIMax": "210",
+          "PipelineII": "5 ~ 210",
           "PipelineDepth": "",
           "PipelineType": "no"
         },
@@ -1549,13 +1551,13 @@
           "BRAM_18K": "21",
           "AVAIL_BRAM": "624",
           "UTIL_BRAM": "3",
-          "DSP": "239",
+          "DSP": "241",
           "AVAIL_DSP": "1728",
           "UTIL_DSP": "13",
-          "FF": "24501",
+          "FF": "24484",
           "AVAIL_FF": "460800",
           "UTIL_FF": "5",
-          "LUT": "35185",
+          "LUT": "35124",
           "AVAIL_LUT": "230400",
           "UTIL_LUT": "15",
           "URAM": "0",
@@ -1568,7 +1570,7 @@
   "GenerateBdFiles": "0",
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2022-10-17 13:30:50 CEST",
+    "Time": "2022-10-19 22:37:32 CEST",
     "ToolName": "vitis_hls",
     "ToolVersion": "2021.2"
   }
