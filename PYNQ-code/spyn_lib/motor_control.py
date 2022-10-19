@@ -1,6 +1,7 @@
 from .utils import *
 from .constants import *
 from pynq import Overlay
+import numpy as np
 
 class motor_control():
     
@@ -9,6 +10,8 @@ class motor_control():
         self.ol_.download() # program PL
         self.foc_ = None # FOC control
         self.ref_ = 0 # reference of the controller
+        self.Ialpha_ = None
+        self.Ibeta_ = None
         self.mode_ = "off" # mode of the controller
         self.modes_ = ["velocity", "torque", "manual", "calibration","off"] #possible modes
         self.log_keys_ = ["velocity", "Ia", "Ib", "Ialpha", "Ibeta", "Id", "Iq", "Vd", "Vq", "Valpha", "Vbeta", "Va", "Vb", "Vc", "encoder_position", "Vd_dec", "Vq_dec"] # logger keys
@@ -61,6 +64,20 @@ class motor_control():
         self.foc_ = self.ol_.foc_frontend_0 # get IP from vivado prj
         angle_shift = self.__align_phase_a() # align the motor on phase A
         self.foc_.mmio.write(self.const_val_dict["control_args"]["angle_shift"], float_to_uint(angle_shift)) # save the value
+        
+        time.sleep(1)
+        self.foc_.mmio.write(self.const_val_dict["control_args"]["state"], float_to_uint(float(self.const_val_dict["mode"]["velocity"])))
+        time.sleep(1)
+        self.foc_.mmio.write(self.const_val_dict["control_args"]["ref"], float_to_uint(float(-200))) # little value to warm up controller
+        time.sleep(2)
+        self.foc_.mmio.write(self.const_val_dict["control_args"]["state"], float_to_uint(float(self.const_val_dict["mode"]["torque"])))
+        time.sleep(1)
+        self.foc_.mmio.write(self.const_val_dict["control_args"]["ref"], float_to_uint(float(-500))) # little value to warm up controller
+        time.sleep(2)
+        self.foc_.mmio.write(self.const_val_dict["control_args"]["state"], float_to_uint(float(self.const_val_dict["mode"]["velocity"])))
+        time.sleep(1)
+        self.foc_.mmio.write(self.const_val_dict["control_args"]["ref"], float_to_uint(float(0))) # little value to warm up controller
+        
         return
     
     def set_mode(self, mode: str):
@@ -93,6 +110,12 @@ class motor_control():
         self.ref_ = value
         self.status_["ref"] = self.ref_
         self.foc_.mmio.write(self.const_val_dict["control_args"]["ref"], float_to_uint(float(self.ref_)))
+        ##TESTING PURPOSES##
+        #if -2000 <= self.ref_ <= 0:
+        #    self.foc_.mmio.write(self.const_val_dict["control_args"]["ref"], float_to_uint(float(self.ref_)))
+        #else:
+        #    self.foc_.mmio.write(self.const_val_dict["control_args"]["ref"], float_to_uint(float(-self.ref_)))
+        ##TESTING PURPOSES##
         return
     
     def log_info(self):
@@ -104,5 +127,15 @@ class motor_control():
     def get_logger_dict(self):
         return self.status_
     
+    def get_alpha_beta(self, len_=1000):
+        self.Ialpha = np.zeros(len_)
+        self.Ibeta = np.zeros(len_)
+        for i in range(1000):
+            self.log_info()
+            dict_ = self.get_logger_dict()
+            self.Ialpha[i] = dict_["log"]["Ialpha"]
+            self.Ibeta[i] = dict_["log"]["Ibeta"]
+
+        return self.Ialpha, self.Ibeta
     
 
