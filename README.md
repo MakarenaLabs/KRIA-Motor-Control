@@ -1,5 +1,7 @@
 # KRIA-Motor-Control
 
+## FOR THE MOMENT PLEASE JUST TEST THE PYNQ-code FOLDER, SOON THE REPO WILL BE UPDATED!!! THANK YOU FOR YOUR COOPERATION
+
 ## Modules
 To test immediately the application on a KR260, you can upload the content of the folder `PYNQ-code` in the board. The requirements are to have ubuntu 22.04 and PYNQ 3.0 installed.
 
