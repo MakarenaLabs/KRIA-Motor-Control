@@ -8,7 +8,7 @@
 # Manual run: vivado -mode tcl   , open_project ${outDir}/vv/${_platform_name_}
 
 # exit with error if not correct # of args
-if {$argc == 4} {
+if {$argc == 2 || $argc == 3} {
 	puts "running vivado prj.tcl"
 } else {
 	puts "prj.tcl wrong number of args"
@@ -18,9 +18,6 @@ if {$argc == 4} {
 # Set the project name
 set _platform_name_ [lindex $argv 0]
 set outDir [lindex $argv 1]
-set part_n [lindex $argv 2]
-set path_constr [lindex $argv 3]
-
 
 # uncomment following for debug/dev
 #set _platform_name_ zcu104_foc
@@ -33,8 +30,13 @@ set _bd_name_ "design_1"
 puts "name: ${_platform_name_}"
 puts "outDir: ${outDir}"
 
+# if 3 args, exit for testing purposes
+if {$argc == 3} {
+	exit
+}
+
 # Create project
-create_project -force ${_platform_name_} ${outDir}/vv -part ${part_n}
+create_project -force ${_platform_name_} ${outDir}/vv -part xczu7ev-ffvc1156-2-e
 
 # Set project properties
 #board part repo doesnt translate correctly in .xsa to use same mechanics as
@@ -54,7 +56,7 @@ update_ip_catalog -rebuild
 # Adding sources referenced in BDs
 #import_files -quiet -fileset sources_1 ./src/hdl/blart.v
 
-import_files -quiet -fileset constrs_1 ${path_constr}
+import_files -quiet -fileset constrs_1 ./src/constraints/zcu104_IIoT-EDDP.xdc
 
 
 # Proc to create BD ${_bd_name_}
@@ -77,7 +79,7 @@ set_property platform.default_output_type hw_export [current_project]
 
 
 reset_run synth_1
-launch_runs -jobs 1 synth_1
+launch_runs -jobs 12 synth_1
 wait_on_run synth_1
 
 

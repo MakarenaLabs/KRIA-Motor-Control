@@ -1,0 +1,284 @@
+
+*** Running vivado
+    with args -log design_1_Angle_Encoder_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_Angle_Encoder_0.tcl
+
+
+****** Vivado v2021.2 (64-bit)
+  **** SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+  **** IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+Sourcing tcl script '/home/mklab/.Xilinx/Vivado/Vivado_init.tcl'
+58 Beta devices matching pattern found, 0 enabled.
+enable_beta_device: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2811.582 ; gain = 0.426 ; free physical = 7058 ; free virtual = 56084
+source design_1_Angle_Encoder_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/src/ipRepo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/mklab/Xilinx/Vivado/2021.2/data/ip'.
+Command: synth_design -top design_1_Angle_Encoder_0 -part xczu7ev-ffvc1156-2-e -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Device 21-403] Loading part xczu7ev-ffvc1156-2-e
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 24019
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:53 . Memory (MB): peak = 3216.141 ; gain = 155.797 ; free physical = 157 ; free virtual = 41231
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'design_1_Angle_Encoder_0' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_Angle_Encoder_0/synth/design_1_Angle_Encoder_0.vhd:75]
+	Parameter C_M_AXIS_TDATA_WIDTH bound to: 16 - type: integer 
+	Parameter C_FILTER_WIDTH bound to: 32 - type: integer 
+	Parameter C_CPR bound to: 1000 - type: integer 
+	Parameter C_OUT_PERIOD bound to: 64 - type: integer 
+	Parameter C_ANGLE_AXIS bound to: 1 - type: bool 
+	Parameter C_PERIOD_AXIS bound to: 0 - type: bool 
+	Parameter C_RPM_AXIS bound to: 1 - type: bool 
+	Parameter C_USE_SHIFT bound to: 0 - type: bool 
+	Parameter C_INVERS_DIR bound to: 0 - type: bool 
+	Parameter C_CLK_FREQ bound to: 100000000 - type: integer 
+INFO: [Synth 8-3491] module 'axis_encoder_v1_0' declared at '/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/c455/hdl/axis_encoder_v1_0.vhd:23' bound to instance 'U0' of component 'axis_encoder_v1_0' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_Angle_Encoder_0/synth/design_1_Angle_Encoder_0.vhd:131]
+INFO: [Synth 8-638] synthesizing module 'axis_encoder_v1_0' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/c455/hdl/axis_encoder_v1_0.vhd:64]
+INFO: [Synth 8-256] done synthesizing module 'axis_encoder_v1_0' (1#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/c455/hdl/axis_encoder_v1_0.vhd:64]
+INFO: [Synth 8-256] done synthesizing module 'design_1_Angle_Encoder_0' (2#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_Angle_Encoder_0/synth/design_1_Angle_Encoder_0.vhd:75]
+WARNING: [Synth 8-7129] Port angle_shift[15] in module axis_encoder_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port angle_shift[14] in module axis_encoder_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port angle_shift[13] in module axis_encoder_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port angle_shift[12] in module axis_encoder_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port angle_shift[11] in module axis_encoder_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port angle_shift[10] in module axis_encoder_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port angle_shift[9] in module axis_encoder_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port angle_shift[8] in module axis_encoder_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port angle_shift[7] in module axis_encoder_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port angle_shift[6] in module axis_encoder_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port angle_shift[5] in module axis_encoder_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port angle_shift[4] in module axis_encoder_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port angle_shift[3] in module axis_encoder_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port angle_shift[2] in module axis_encoder_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port angle_shift[1] in module axis_encoder_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port angle_shift[0] in module axis_encoder_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axis_aresetn in module axis_encoder_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_period_tready in module axis_encoder_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_angle_tready in module axis_encoder_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_rpm_tready in module axis_encoder_v1_0 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:01:06 . Memory (MB): peak = 3268.078 ; gain = 207.734 ; free physical = 806 ; free virtual = 41020
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:01:08 . Memory (MB): peak = 3285.891 ; gain = 225.547 ; free physical = 703 ; free virtual = 40976
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:01:08 . Memory (MB): peak = 3285.891 ; gain = 225.547 ; free physical = 703 ; free virtual = 40976
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3285.891 ; gain = 0.000 ; free physical = 704 ; free virtual = 40980
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3442.734 ; gain = 0.000 ; free physical = 2361 ; free virtual = 35231
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.13 . Memory (MB): peak = 3466.547 ; gain = 23.812 ; free physical = 3225 ; free virtual = 36113
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:03:02 . Memory (MB): peak = 3466.547 ; gain = 406.203 ; free physical = 6854 ; free virtual = 39871
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu7ev-ffvc1156-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:03:02 . Memory (MB): peak = 3466.547 ; gain = 406.203 ; free physical = 6853 ; free virtual = 39870
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:03:02 . Memory (MB): peak = 3466.547 ; gain = 406.203 ; free physical = 6851 ; free virtual = 39869
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:03:03 . Memory (MB): peak = 3466.547 ; gain = 406.203 ; free physical = 6786 ; free virtual = 39817
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input   32 Bit       Adders := 1     
+	   2 Input   16 Bit       Adders := 5     
+	   3 Input   16 Bit       Adders := 1     
+	   2 Input    6 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 3     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               31 Bit    Registers := 3     
+	               16 Bit    Registers := 9     
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 3     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 12    
++---Muxes : 
+	   2 Input   16 Bit        Muxes := 5     
+	   2 Input    6 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 4     
+	   2 Input    1 Bit        Muxes := 14    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1728 (col length:144)
+BRAMs: 624 (col length: RAMB18 144 RAMB36 72)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port axis_aresetn in module design_1_Angle_Encoder_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_angle_tready in module design_1_Angle_Encoder_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_rpm_tready in module design_1_Angle_Encoder_0 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:03:08 . Memory (MB): peak = 3466.547 ; gain = 406.203 ; free physical = 6088 ; free virtual = 39150
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:03:28 . Memory (MB): peak = 3825.852 ; gain = 765.508 ; free physical = 153 ; free virtual = 33257
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:03:28 . Memory (MB): peak = 3825.852 ; gain = 765.508 ; free physical = 152 ; free virtual = 33250
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:31 ; elapsed = 00:03:29 . Memory (MB): peak = 3854.898 ; gain = 794.555 ; free physical = 224 ; free virtual = 33309
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:03:35 . Memory (MB): peak = 3854.898 ; gain = 794.555 ; free physical = 175 ; free virtual = 33138
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:03:35 . Memory (MB): peak = 3854.898 ; gain = 794.555 ; free physical = 176 ; free virtual = 33136
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:03:35 . Memory (MB): peak = 3854.898 ; gain = 794.555 ; free physical = 174 ; free virtual = 33113
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:03:35 . Memory (MB): peak = 3854.898 ; gain = 794.555 ; free physical = 174 ; free virtual = 33113
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:03:35 . Memory (MB): peak = 3854.898 ; gain = 794.555 ; free physical = 174 ; free virtual = 33117
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:03:35 . Memory (MB): peak = 3854.898 ; gain = 794.555 ; free physical = 174 ; free virtual = 33117
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++-------------------------+--------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name              | RTL Name           | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++-------------------------+--------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|design_1_Angle_Encoder_0 | U0/dp_valid_reg[3] | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
++-------------------------+--------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY8 |    17|
+|2     |LUT1   |    23|
+|3     |LUT2   |    73|
+|4     |LUT3   |    18|
+|5     |LUT4   |    87|
+|6     |LUT5   |    24|
+|7     |LUT6   |    44|
+|8     |SRL16E |     1|
+|9     |FDRE   |   309|
+|10    |FDSE   |    10|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:03:36 . Memory (MB): peak = 3854.898 ; gain = 794.555 ; free physical = 172 ; free virtual = 33116
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:36 ; elapsed = 00:01:50 . Memory (MB): peak = 3854.898 ; gain = 613.898 ; free physical = 265 ; free virtual = 33123
+Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:03:37 . Memory (MB): peak = 3854.906 ; gain = 794.555 ; free physical = 263 ; free virtual = 33122
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3865.867 ; gain = 0.000 ; free physical = 539 ; free virtual = 33527
+INFO: [Netlist 29-17] Analyzing 17 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3921.695 ; gain = 0.000 ; free physical = 347 ; free virtual = 33471
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 6e58e5f2
+INFO: [Common 17-83] Releasing license: Synthesis
+23 Infos, 24 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:54 ; elapsed = 00:05:03 . Memory (MB): peak = 3921.695 ; gain = 1110.113 ; free physical = 895 ; free virtual = 34069
+INFO: [Common 17-1381] The checkpoint '/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/design_1_Angle_Encoder_0_synth_1/design_1_Angle_Encoder_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_Angle_Encoder_0, cache-ID = 5d34f3bc0d207606
+INFO: [Common 17-1381] The checkpoint '/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/design_1_Angle_Encoder_0_synth_1/design_1_Angle_Encoder_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_Angle_Encoder_0_utilization_synth.rpt -pb design_1_Angle_Encoder_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Oct 31 12:54:02 2022...

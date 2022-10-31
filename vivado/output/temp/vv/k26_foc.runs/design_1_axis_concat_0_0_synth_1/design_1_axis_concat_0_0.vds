@@ -1,0 +1,222 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Mon Oct 31 12:48:30 2022
+# Process ID: 23797
+# Current directory: /home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/design_1_axis_concat_0_0_synth_1
+# Command line: vivado -log design_1_axis_concat_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_axis_concat_0_0.tcl
+# Log file: /home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/design_1_axis_concat_0_0_synth_1/design_1_axis_concat_0_0.vds
+# Journal file: /home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/design_1_axis_concat_0_0_synth_1/vivado.jou
+# Running On: mklab-ssd-2, OS: Linux, CPU Frequency: 3769.167 MHz, CPU Physical cores: 6, Host memory: 15694 MB
+#-----------------------------------------------------------
+Sourcing tcl script '/home/mklab/.Xilinx/Vivado/Vivado_init.tcl'
+58 Beta devices matching pattern found, 0 enabled.
+enable_beta_device: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2811.641 ; gain = 0.426 ; free physical = 7059 ; free virtual = 56085
+source design_1_axis_concat_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/src/ipRepo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/mklab/Xilinx/Vivado/2021.2/data/ip'.
+Command: synth_design -top design_1_axis_concat_0_0 -part xczu7ev-ffvc1156-2-e -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Device 21-403] Loading part xczu7ev-ffvc1156-2-e
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 24012
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:53 . Memory (MB): peak = 3217.199 ; gain = 156.797 ; free physical = 157 ; free virtual = 41231
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'design_1_axis_concat_0_0' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_axis_concat_0_0/synth/design_1_axis_concat_0_0.vhd:75]
+	Parameter C_A_TDATA_WIDTH bound to: 48 - type: integer 
+	Parameter C_B_TDATA_WIDTH bound to: 16 - type: integer 
+	Parameter C_TVALID_TYPE bound to: 0 - type: integer 
+	Parameter C_C_TDATA_WIDTH bound to: 16 - type: integer 
+	Parameter M_TDATA_WIDTH bound to: 80 - type: integer 
+	Parameter C_IN_CHANNELS bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'axis_concat_v1_0' declared at '/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/28ed/hdl/axis_concat_v1_0.vhd:20' bound to instance 'U0' of component 'axis_concat_v1_0' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_axis_concat_0_0/synth/design_1_axis_concat_0_0.vhd:131]
+INFO: [Synth 8-638] synthesizing module 'axis_concat_v1_0' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/28ed/hdl/axis_concat_v1_0.vhd:52]
+INFO: [Synth 8-256] done synthesizing module 'axis_concat_v1_0' (1#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/28ed/hdl/axis_concat_v1_0.vhd:52]
+INFO: [Synth 8-256] done synthesizing module 'design_1_axis_concat_0_0' (2#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_axis_concat_0_0/synth/design_1_axis_concat_0_0.vhd:75]
+WARNING: [Synth 8-7129] Port s_axis_aclk in module axis_concat_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_aresetn in module axis_concat_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sb_axis_tvalid in module axis_concat_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sc_axis_tvalid in module axis_concat_v1_0 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:01:06 . Memory (MB): peak = 3266.137 ; gain = 205.734 ; free physical = 791 ; free virtual = 41006
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:01:08 . Memory (MB): peak = 3283.949 ; gain = 223.547 ; free physical = 711 ; free virtual = 40979
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:01:08 . Memory (MB): peak = 3283.949 ; gain = 223.547 ; free physical = 710 ; free virtual = 40978
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3283.949 ; gain = 0.000 ; free physical = 701 ; free virtual = 40972
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3364.824 ; gain = 0.000 ; free physical = 166 ; free virtual = 38474
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:08 . Memory (MB): peak = 3376.730 ; gain = 11.906 ; free physical = 132 ; free virtual = 37451
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:02:57 . Memory (MB): peak = 3376.730 ; gain = 316.328 ; free physical = 6702 ; free virtual = 39658
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu7ev-ffvc1156-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:02:57 . Memory (MB): peak = 3376.730 ; gain = 316.328 ; free physical = 6734 ; free virtual = 39691
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:02:57 . Memory (MB): peak = 3376.730 ; gain = 316.328 ; free physical = 6735 ; free virtual = 39693
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:02:58 . Memory (MB): peak = 3376.730 ; gain = 316.328 ; free physical = 6703 ; free virtual = 39664
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1728 (col length:144)
+BRAMs: 624 (col length: RAMB18 144 RAMB36 72)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3330] design design_1_axis_concat_0_0 has an empty top module
+WARNING: [Synth 8-7129] Port s_axis_aclk in module design_1_axis_concat_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_aresetn in module design_1_axis_concat_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sb_axis_tvalid in module design_1_axis_concat_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sc_axis_tvalid in module design_1_axis_concat_0_0 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:03:01 . Memory (MB): peak = 3376.730 ; gain = 316.328 ; free physical = 6726 ; free virtual = 39708
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:03:21 . Memory (MB): peak = 3807.121 ; gain = 746.719 ; free physical = 2199 ; free virtual = 35374
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:03:21 . Memory (MB): peak = 3807.121 ; gain = 746.719 ; free physical = 2197 ; free virtual = 35373
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:03:21 . Memory (MB): peak = 3826.152 ; gain = 765.750 ; free physical = 2187 ; free virtual = 35363
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:03:27 . Memory (MB): peak = 3832.090 ; gain = 771.688 ; free physical = 167 ; free virtual = 33320
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:03:27 . Memory (MB): peak = 3832.090 ; gain = 771.688 ; free physical = 170 ; free virtual = 33322
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:03:27 . Memory (MB): peak = 3832.090 ; gain = 771.688 ; free physical = 155 ; free virtual = 33298
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:03:27 . Memory (MB): peak = 3832.090 ; gain = 771.688 ; free physical = 155 ; free virtual = 33298
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:03:27 . Memory (MB): peak = 3832.090 ; gain = 771.688 ; free physical = 154 ; free virtual = 33297
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:03:27 . Memory (MB): peak = 3832.090 ; gain = 771.688 ; free physical = 154 ; free virtual = 33297
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++-+-----+------+
+| |Cell |Count |
++-+-----+------+
++-+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:03:27 . Memory (MB): peak = 3832.090 ; gain = 771.688 ; free physical = 155 ; free virtual = 33284
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:32 ; elapsed = 00:02:33 . Memory (MB): peak = 3832.090 ; gain = 678.906 ; free physical = 183 ; free virtual = 33306
+Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:03:28 . Memory (MB): peak = 3832.098 ; gain = 771.688 ; free physical = 182 ; free virtual = 33305
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3832.098 ; gain = 0.000 ; free physical = 190 ; free virtual = 33302
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3870.777 ; gain = 0.000 ; free physical = 231 ; free virtual = 33313
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 8ff4fcfa
+INFO: [Common 17-83] Releasing license: Synthesis
+21 Infos, 10 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:49 ; elapsed = 00:04:52 . Memory (MB): peak = 3870.777 ; gain = 1059.137 ; free physical = 364 ; free virtual = 33449
+INFO: [Common 17-1381] The checkpoint '/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/design_1_axis_concat_0_0_synth_1/design_1_axis_concat_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_axis_concat_0_0, cache-ID = acc2ae09f0c1278a
+INFO: [Common 17-1381] The checkpoint '/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/design_1_axis_concat_0_0_synth_1/design_1_axis_concat_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_axis_concat_0_0_utilization_synth.rpt -pb design_1_axis_concat_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Oct 31 12:53:51 2022...
