@@ -1,14 +1,14 @@
 // Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-// Date        : Mon Oct 31 12:47:15 2022
+// Date        : Mon Oct 31 14:27:09 2022
 // Host        : mklab-ssd-2 running 64-bit Ubuntu 20.04.2 LTS
 // Command     : write_verilog -force -mode funcsim
-//               /home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_6_0/design_1_proc_sys_reset_6_0_sim_netlist.v
+//               /home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_6_0/design_1_proc_sys_reset_6_0_sim_netlist.v
 // Design      : design_1_proc_sys_reset_6_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
-// Device      : xczu7ev-ffvc1156-2-e
+// Device      : xck26-sfvc784-2LV-c
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 

@@ -1,5 +1,3 @@
-
-
 #################################################################################
 # Vivado makefile
 #
@@ -7,6 +5,8 @@
 # set variables if not exported from parent makefile
 PLATFORM ?= k26_foc
 OUT_DIR  ?= ./output
+PART_N ?= xck26-sfvc784-2LV-c
+PATH_CONSTR ?= ./src/constraints/kr260.xdc
 
 
 .PHONY: all
@@ -22,7 +22,7 @@ vivado: ${OUT_DIR}/temp/xsa/$(PLATFORM).xsa
 
 ${OUT_DIR}/temp/xsa/$(PLATFORM).xsa : ./scripts/prj.tcl
 	@echo '************ Building Vivado Project ************'
-	vivado -nojournal -nolog -mode batch -source ./scripts/prj.tcl -tclargs ${PLATFORM} ${OUT_DIR}/temp
+	vivado -nojournal -nolog -mode batch -source ./scripts/prj.tcl -tclargs ${PLATFORM} ${OUT_DIR}/temp ${PART_N} ${PATH_CONSTR}
 
 #${OUT_DIR}/temp:
 #	mkdir -p $(OUT_DIR)/temp

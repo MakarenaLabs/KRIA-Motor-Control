@@ -1,14 +1,14 @@
 // Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-// Date        : Mon Oct 31 12:54:02 2022
+// Date        : Mon Oct 31 14:37:33 2022
 // Host        : mklab-ssd-2 running 64-bit Ubuntu 20.04.2 LTS
 // Command     : write_verilog -force -mode funcsim
-//               /home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_AXI_StreamCapture_0_0/design_1_AXI_StreamCapture_0_0_sim_netlist.v
+//               /home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_AXI_StreamCapture_0_0/design_1_AXI_StreamCapture_0_0_sim_netlist.v
 // Design      : design_1_AXI_StreamCapture_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
-// Device      : xczu7ev-ffvc1156-2-e
+// Device      : xck26-sfvc784-2LV-c
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
@@ -52,25 +52,25 @@ module design_1_AXI_StreamCapture_0_0
     s_axi_rresp,
     s_axi_rvalid,
     s_axi_rready);
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 axi_aclk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME axi_aclk, ASSOCIATED_BUSIF S_AXI:m_axis_s2mm:m_axis_s2mm_cmd:s_axis:s_axis_s2mm_sts, ASSOCIATED_RESET axi_aresetn, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_1_psu_0_pl_clk0, INSERT_VIP 0" *) input axi_aclk;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 axi_aclk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME axi_aclk, ASSOCIATED_BUSIF S_AXI:m_axis_s2mm:m_axis_s2mm_cmd:s_axis:s_axis_s2mm_sts, ASSOCIATED_RESET axi_aresetn, FREQ_HZ 200000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_1_clk_wiz_1_0_clk_out1, INSERT_VIP 0" *) input axi_aclk;
   (* x_interface_info = "xilinx.com:signal:reset:1.0 axi_aresetn RST" *) (* x_interface_parameter = "XIL_INTERFACENAME axi_aresetn, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input axi_aresetn;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 s_axis TVALID" *) (* x_interface_parameter = "XIL_INTERFACENAME s_axis, TDATA_NUM_BYTES 8, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN design_1_psu_0_pl_clk0, LAYERED_METADATA undef, INSERT_VIP 0" *) input s_axis_tvalid;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 s_axis TVALID" *) (* x_interface_parameter = "XIL_INTERFACENAME s_axis, TDATA_NUM_BYTES 8, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 200000000, PHASE 0.0, CLK_DOMAIN design_1_clk_wiz_1_0_clk_out1, LAYERED_METADATA undef, INSERT_VIP 0" *) input s_axis_tvalid;
   (* x_interface_info = "xilinx.com:interface:axis:1.0 s_axis TREADY" *) output s_axis_tready;
   (* x_interface_info = "xilinx.com:interface:axis:1.0 s_axis TDATA" *) input [63:0]s_axis_tdata;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 m_axis_s2mm TVALID" *) (* x_interface_parameter = "XIL_INTERFACENAME m_axis_s2mm, TDATA_NUM_BYTES 8, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN design_1_psu_0_pl_clk0, LAYERED_METADATA undef, INSERT_VIP 0" *) output m_axis_s2mm_tvalid;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 m_axis_s2mm TVALID" *) (* x_interface_parameter = "XIL_INTERFACENAME m_axis_s2mm, TDATA_NUM_BYTES 8, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 200000000, PHASE 0.0, CLK_DOMAIN design_1_clk_wiz_1_0_clk_out1, LAYERED_METADATA undef, INSERT_VIP 0" *) output m_axis_s2mm_tvalid;
   (* x_interface_info = "xilinx.com:interface:axis:1.0 m_axis_s2mm TDATA" *) output [63:0]m_axis_s2mm_tdata;
   (* x_interface_info = "xilinx.com:interface:axis:1.0 m_axis_s2mm TKEEP" *) output [7:0]m_axis_s2mm_tkeep;
   (* x_interface_info = "xilinx.com:interface:axis:1.0 m_axis_s2mm TLAST" *) output m_axis_s2mm_tlast;
   (* x_interface_info = "xilinx.com:interface:axis:1.0 m_axis_s2mm TREADY" *) input m_axis_s2mm_tready;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 m_axis_s2mm_cmd TVALID" *) (* x_interface_parameter = "XIL_INTERFACENAME m_axis_s2mm_cmd, TDATA_NUM_BYTES 9, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN design_1_psu_0_pl_clk0, LAYERED_METADATA undef, INSERT_VIP 0" *) output m_axis_s2mm_cmd_tvalid;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 m_axis_s2mm_cmd TVALID" *) (* x_interface_parameter = "XIL_INTERFACENAME m_axis_s2mm_cmd, TDATA_NUM_BYTES 9, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 200000000, PHASE 0.0, CLK_DOMAIN design_1_clk_wiz_1_0_clk_out1, LAYERED_METADATA undef, INSERT_VIP 0" *) output m_axis_s2mm_cmd_tvalid;
   (* x_interface_info = "xilinx.com:interface:axis:1.0 m_axis_s2mm_cmd TDATA" *) output [71:0]m_axis_s2mm_cmd_tdata;
   (* x_interface_info = "xilinx.com:interface:axis:1.0 m_axis_s2mm_cmd TREADY" *) input m_axis_s2mm_cmd_tready;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 s_axis_s2mm_sts TREADY" *) (* x_interface_parameter = "XIL_INTERFACENAME s_axis_s2mm_sts, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN design_1_psu_0_pl_clk0, LAYERED_METADATA undef, INSERT_VIP 0" *) output s_axis_s2mm_sts_tready;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 s_axis_s2mm_sts TREADY" *) (* x_interface_parameter = "XIL_INTERFACENAME s_axis_s2mm_sts, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 200000000, PHASE 0.0, CLK_DOMAIN design_1_clk_wiz_1_0_clk_out1, LAYERED_METADATA undef, INSERT_VIP 0" *) output s_axis_s2mm_sts_tready;
   (* x_interface_info = "xilinx.com:interface:axis:1.0 s_axis_s2mm_sts TDATA" *) input [31:0]s_axis_s2mm_sts_tdata;
   (* x_interface_info = "xilinx.com:interface:axis:1.0 s_axis_s2mm_sts TKEEP" *) input [3:0]s_axis_s2mm_sts_tkeep;
   (* x_interface_info = "xilinx.com:interface:axis:1.0 s_axis_s2mm_sts TLAST" *) input s_axis_s2mm_sts_tlast;
   (* x_interface_info = "xilinx.com:interface:axis:1.0 s_axis_s2mm_sts TVALID" *) input s_axis_s2mm_sts_tvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI AWADDR" *) (* x_interface_parameter = "XIL_INTERFACENAME S_AXI, WIZ_DATA_WIDTH 32, WIZ_NUM_REG 8, SUPPORTS_NARROW_BURST 0, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 5, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, NUM_READ_OUTSTANDING 8, NUM_WRITE_OUTSTANDING 8, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN design_1_psu_0_pl_clk0, NUM_READ_THREADS 4, NUM_WRITE_THREADS 4, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) input [4:0]s_axi_awaddr;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI AWADDR" *) (* x_interface_parameter = "XIL_INTERFACENAME S_AXI, WIZ_DATA_WIDTH 32, WIZ_NUM_REG 8, SUPPORTS_NARROW_BURST 0, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 200000000, ID_WIDTH 0, ADDR_WIDTH 5, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, NUM_READ_OUTSTANDING 8, NUM_WRITE_OUTSTANDING 8, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN design_1_clk_wiz_1_0_clk_out1, NUM_READ_THREADS 4, NUM_WRITE_THREADS 4, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) input [4:0]s_axi_awaddr;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI AWPROT" *) input [2:0]s_axi_awprot;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI AWVALID" *) input s_axi_awvalid;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI AWREADY" *) output s_axi_awready;

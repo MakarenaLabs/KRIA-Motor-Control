@@ -10,23 +10,22 @@
 
 Sourcing tcl script '/home/mklab/.Xilinx/Vivado/Vivado_init.tcl'
 58 Beta devices matching pattern found, 0 enabled.
-enable_beta_device: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2811.645 ; gain = 0.426 ; free physical = 7058 ; free virtual = 56084
 source design_1_axi_datamover_0_0.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/src/ipRepo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/mklab/workspace/KRIA-Motor-Control/vivado/src/ipRepo'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/mklab/Xilinx/Vivado/2021.2/data/ip'.
-Command: synth_design -top design_1_axi_datamover_0_0 -part xczu7ev-ffvc1156-2-e -mode out_of_context
+Command: synth_design -top design_1_axi_datamover_0_0 -part xck26-sfvc784-2LV-c -mode out_of_context
 Starting synth_design
-Attempting to get a license for feature 'Synthesis' and/or device 'xczu7ev'
-INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu7ev'
-INFO: [Device 21-403] Loading part xczu7ev-ffvc1156-2-e
+Attempting to get a license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Device 21-403] Loading part xck26-sfvc784-2LV-c
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 24020
+INFO: [Synth 8-7075] Helper process launched with PID 9514
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:01:02 . Memory (MB): peak = 3221.172 ; gain = 158.766 ; free physical = 148 ; free virtual = 40657
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 3080.762 ; gain = 146.766 ; free physical = 4717 ; free virtual = 60450
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'design_1_axi_datamover_0_0' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_axi_datamover_0_0/synth/design_1_axi_datamover_0_0.vhd:99]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_datamover_0_0' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_axi_datamover_0_0/synth/design_1_axi_datamover_0_0.vhd:99]
 	Parameter C_INCLUDE_MM2S bound to: 0 - type: integer 
 	Parameter C_M_AXI_MM2S_ARID bound to: 0 - type: integer 
 	Parameter C_M_AXI_MM2S_ID_WIDTH bound to: 4 - type: integer 
@@ -64,103 +63,103 @@ INFO: [Synth 8-638] synthesizing module 'design_1_axi_datamover_0_0' [/home/mkla
 	Parameter C_ENABLE_S2MM_ADV_SIG bound to: 0 - type: integer 
 	Parameter C_ENABLE_MM2S_ADV_SIG bound to: 0 - type: integer 
 	Parameter C_CMD_WIDTH bound to: 72 - type: integer 
-INFO: [Synth 8-3491] module 'axi_datamover' declared at '/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:54991' bound to instance 'U0' of component 'axi_datamover' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_axi_datamover_0_0/synth/design_1_axi_datamover_0_0.vhd:284]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:55439]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_mm2s_omit_wrap' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:53209]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_mm2s_omit_wrap' (1#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:53209]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_s2mm_full_wrap' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:49997]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_reset' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:153]
-WARNING: [Synth 8-6014] Unused sequential element sig_cmd_stat_rst_int_reg_n_reg was removed.  [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:191]
-WARNING: [Synth 8-6014] Unused sequential element sig_mmap_rst_reg_n_reg was removed.  [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:194]
-WARNING: [Synth 8-6014] Unused sequential element sig_stream_rst_reg_n_reg was removed.  [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:197]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_reset' (2#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:153]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_cmd_status' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:2698]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
-INFO: [Synth 8-638] synthesizing module 'srl_fifo_f' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
-INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
-INFO: [Synth 8-638] synthesizing module 'cntr_incr_decr_addn_f' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:143]
-INFO: [Synth 8-256] done synthesizing module 'cntr_incr_decr_addn_f' (3#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:143]
-INFO: [Synth 8-638] synthesizing module 'dynshreg_f' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
-INFO: [Synth 8-256] done synthesizing module 'dynshreg_f' (4#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
-INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f' (5#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
-INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f' (6#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo' (7#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized0' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
-INFO: [Synth 8-638] synthesizing module 'srl_fifo_f__parameterized0' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
-INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f__parameterized0' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
-INFO: [Synth 8-638] synthesizing module 'dynshreg_f__parameterized0' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
-INFO: [Synth 8-256] done synthesizing module 'dynshreg_f__parameterized0' (7#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
-INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f__parameterized0' (7#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
-INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f__parameterized0' (7#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized0' (7#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_cmd_status' (8#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:2698]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_wr_status_cntl' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:17704]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized1' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
-INFO: [Synth 8-638] synthesizing module 'srl_fifo_f__parameterized1' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
-INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f__parameterized1' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
-INFO: [Synth 8-638] synthesizing module 'cntr_incr_decr_addn_f__parameterized0' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:143]
-INFO: [Synth 8-256] done synthesizing module 'cntr_incr_decr_addn_f__parameterized0' (8#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:143]
-INFO: [Synth 8-638] synthesizing module 'dynshreg_f__parameterized1' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
-INFO: [Synth 8-256] done synthesizing module 'dynshreg_f__parameterized1' (8#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
-INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f__parameterized1' (8#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
-INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f__parameterized1' (8#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized1' (8#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized2' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
-INFO: [Synth 8-638] synthesizing module 'srl_fifo_f__parameterized2' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
-INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f__parameterized2' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
-INFO: [Synth 8-638] synthesizing module 'dynshreg_f__parameterized2' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
-INFO: [Synth 8-256] done synthesizing module 'dynshreg_f__parameterized2' (8#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
-INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f__parameterized2' (8#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
-INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f__parameterized2' (8#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized2' (8#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_wr_status_cntl' (9#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:17704]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_ibttcc' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:25731]
-WARNING: [Synth 8-6014] Unused sequential element sig_input_reg_full_reg was removed.  [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:26374]
-WARNING: [Synth 8-6014] Unused sequential element sig_psm_ld_calc2_reg was removed.  [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:26578]
-WARNING: [Synth 8-6014] Unused sequential element sig_child_cmd_reg_empty_reg was removed.  [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:27034]
-WARNING: [Synth 8-6014] Unused sequential element sig_first_child_xfer_reg was removed.  [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:27579]
-WARNING: [Synth 8-6014] Unused sequential element sig_xfer_is_seq_reg was removed.  [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:28078]
-WARNING: [Synth 8-6014] Unused sequential element sig_xfer_reg_empty_reg was removed.  [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:28171]
-WARNING: [Synth 8-6014] Unused sequential element sig_xfer_reg_full_reg was removed.  [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:28172]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_ibttcc' (10#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:25731]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_skid_buf' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:19500]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_skid_buf' (11#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:19500]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_s2mm_realign' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:47011]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized3' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
-INFO: [Synth 8-638] synthesizing module 'srl_fifo_f__parameterized3' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
-INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f__parameterized3' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
-INFO: [Synth 8-638] synthesizing module 'dynshreg_f__parameterized3' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
-INFO: [Synth 8-256] done synthesizing module 'dynshreg_f__parameterized3' (11#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
-INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f__parameterized3' (11#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
-INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f__parameterized3' (11#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized3' (11#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_s2mm_scatter' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:45117]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_mssai_skid_buf' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:44167]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_ms_strb_set' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:42603]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_ms_strb_set' (12#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:42603]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_mssai_skid_buf' (13#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:44167]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_strb_gen2' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:4342]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_strb_gen2' (14#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:4342]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_slice' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:44856]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_slice' (15#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:44856]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized4' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
-INFO: [Synth 8-638] synthesizing module 'srl_fifo_f__parameterized4' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
-INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f__parameterized4' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
-INFO: [Synth 8-638] synthesizing module 'cntr_incr_decr_addn_f__parameterized1' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:143]
-INFO: [Synth 8-256] done synthesizing module 'cntr_incr_decr_addn_f__parameterized1' (15#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:143]
-INFO: [Synth 8-638] synthesizing module 'dynshreg_f__parameterized4' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
-INFO: [Synth 8-256] done synthesizing module 'dynshreg_f__parameterized4' (15#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
-INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f__parameterized4' (15#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
-INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f__parameterized4' (15#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized4' (15#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_s2mm_scatter' (16#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:45117]
-WARNING: [Synth 8-6014] Unused sequential element sig_sm_ld_scatter_cmd_reg was removed.  [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:47510]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_s2mm_realign' (17#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:47011]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_indet_btt' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:28430]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_stbs_set_nodre' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:24209]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_stbs_set_nodre' (18#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:24209]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_sfifo_autord' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:1295]
-INFO: [Synth 8-638] synthesizing module 'sync_fifo_fg' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/a4ed/hdl/lib_fifo_v1_0_rfs.vhd:2250]
+INFO: [Synth 8-3491] module 'axi_datamover' declared at '/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:54991' bound to instance 'U0' of component 'axi_datamover' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_axi_datamover_0_0/synth/design_1_axi_datamover_0_0.vhd:284]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:55439]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_mm2s_omit_wrap' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:53209]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_mm2s_omit_wrap' (1#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:53209]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_s2mm_full_wrap' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:49997]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_reset' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:153]
+WARNING: [Synth 8-6014] Unused sequential element sig_cmd_stat_rst_int_reg_n_reg was removed.  [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:191]
+WARNING: [Synth 8-6014] Unused sequential element sig_mmap_rst_reg_n_reg was removed.  [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:194]
+WARNING: [Synth 8-6014] Unused sequential element sig_stream_rst_reg_n_reg was removed.  [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:197]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_reset' (2#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:153]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_cmd_status' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:2698]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_f' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-638] synthesizing module 'cntr_incr_decr_addn_f' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:143]
+INFO: [Synth 8-256] done synthesizing module 'cntr_incr_decr_addn_f' (3#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:143]
+INFO: [Synth 8-638] synthesizing module 'dynshreg_f' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'dynshreg_f' (4#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f' (5#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f' (6#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo' (7#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized0' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_f__parameterized0' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f__parameterized0' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-638] synthesizing module 'dynshreg_f__parameterized0' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'dynshreg_f__parameterized0' (7#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f__parameterized0' (7#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f__parameterized0' (7#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized0' (7#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_cmd_status' (8#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:2698]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_wr_status_cntl' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:17704]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized1' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_f__parameterized1' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f__parameterized1' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-638] synthesizing module 'cntr_incr_decr_addn_f__parameterized0' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:143]
+INFO: [Synth 8-256] done synthesizing module 'cntr_incr_decr_addn_f__parameterized0' (8#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:143]
+INFO: [Synth 8-638] synthesizing module 'dynshreg_f__parameterized1' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'dynshreg_f__parameterized1' (8#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f__parameterized1' (8#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f__parameterized1' (8#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized1' (8#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized2' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_f__parameterized2' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f__parameterized2' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-638] synthesizing module 'dynshreg_f__parameterized2' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'dynshreg_f__parameterized2' (8#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f__parameterized2' (8#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f__parameterized2' (8#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized2' (8#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_wr_status_cntl' (9#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:17704]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_ibttcc' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:25731]
+WARNING: [Synth 8-6014] Unused sequential element sig_input_reg_full_reg was removed.  [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:26374]
+WARNING: [Synth 8-6014] Unused sequential element sig_psm_ld_calc2_reg was removed.  [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:26578]
+WARNING: [Synth 8-6014] Unused sequential element sig_child_cmd_reg_empty_reg was removed.  [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:27034]
+WARNING: [Synth 8-6014] Unused sequential element sig_first_child_xfer_reg was removed.  [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:27579]
+WARNING: [Synth 8-6014] Unused sequential element sig_xfer_is_seq_reg was removed.  [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:28078]
+WARNING: [Synth 8-6014] Unused sequential element sig_xfer_reg_empty_reg was removed.  [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:28171]
+WARNING: [Synth 8-6014] Unused sequential element sig_xfer_reg_full_reg was removed.  [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:28172]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_ibttcc' (10#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:25731]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_skid_buf' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:19500]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_skid_buf' (11#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:19500]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_s2mm_realign' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:47011]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized3' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_f__parameterized3' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f__parameterized3' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-638] synthesizing module 'dynshreg_f__parameterized3' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'dynshreg_f__parameterized3' (11#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f__parameterized3' (11#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f__parameterized3' (11#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized3' (11#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_s2mm_scatter' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:45117]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_mssai_skid_buf' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:44167]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_ms_strb_set' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:42603]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_ms_strb_set' (12#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:42603]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_mssai_skid_buf' (13#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:44167]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_strb_gen2' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:4342]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_strb_gen2' (14#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:4342]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_slice' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:44856]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_slice' (15#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:44856]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized4' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_f__parameterized4' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f__parameterized4' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-638] synthesizing module 'cntr_incr_decr_addn_f__parameterized1' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:143]
+INFO: [Synth 8-256] done synthesizing module 'cntr_incr_decr_addn_f__parameterized1' (15#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:143]
+INFO: [Synth 8-638] synthesizing module 'dynshreg_f__parameterized4' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'dynshreg_f__parameterized4' (15#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f__parameterized4' (15#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f__parameterized4' (15#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized4' (15#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_s2mm_scatter' (16#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:45117]
+WARNING: [Synth 8-6014] Unused sequential element sig_sm_ld_scatter_cmd_reg was removed.  [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:47510]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_s2mm_realign' (17#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:47011]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_indet_btt' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:28430]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_stbs_set_nodre' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:24209]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_stbs_set_nodre' (18#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:24209]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_sfifo_autord' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:1295]
+INFO: [Synth 8-638] synthesizing module 'sync_fifo_fg' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/a4ed/hdl/lib_fifo_v1_0_rfs.vhd:2250]
 	Parameter FIFO_MEMORY_TYPE bound to: auto - type: string 
 	Parameter FIFO_WRITE_DEPTH bound to: 16 - type: integer 
 	Parameter WRITE_DATA_WIDTH bound to: 9 - type: integer 
@@ -176,7 +175,7 @@ INFO: [Synth 8-638] synthesizing module 'sync_fifo_fg' [/home/mklab/workspace/ii
 	Parameter DOUT_RESET_VALUE bound to: 0 - type: string 
 	Parameter ECC_MODE bound to: no_ecc - type: string 
 	Parameter WAKEUP_TIME bound to: 0 - type: integer 
-INFO: [Synth 8-3491] module 'xpm_fifo_sync' declared at '/home/mklab/Xilinx/Vivado/2021.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1951' bound to instance 'xpm_fifo_sync_inst' of component 'xpm_fifo_sync' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/a4ed/hdl/lib_fifo_v1_0_rfs.vhd:2627]
+INFO: [Synth 8-3491] module 'xpm_fifo_sync' declared at '/home/mklab/Xilinx/Vivado/2021.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1951' bound to instance 'xpm_fifo_sync_inst' of component 'xpm_fifo_sync' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/a4ed/hdl/lib_fifo_v1_0_rfs.vhd:2627]
 INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_sync' [/home/mklab/Xilinx/Vivado/2021.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1951]
 INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_base' [/home/mklab/Xilinx/Vivado/2021.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:56]
 INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn' [/home/mklab/Xilinx/Vivado/2021.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
@@ -205,11 +204,11 @@ WARNING: [Synth 8-6014] Unused sequential element gen_pntr_flags_cc.gae_cc_std.r
 WARNING: [Synth 8-6014] Unused sequential element gen_fwft.empty_fwft_fb_reg was removed.  [/home/mklab/Xilinx/Vivado/2021.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1390]
 INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_base' (23#1) [/home/mklab/Xilinx/Vivado/2021.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:56]
 INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_sync' (24#1) [/home/mklab/Xilinx/Vivado/2021.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1951]
-INFO: [Synth 8-256] done synthesizing module 'sync_fifo_fg' (25#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/a4ed/hdl/lib_fifo_v1_0_rfs.vhd:2250]
-WARNING: [Synth 8-6014] Unused sequential element hold_ff_q_reg was removed.  [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:1513]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_sfifo_autord' (26#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:1295]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_sfifo_autord__parameterized0' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:1295]
-INFO: [Synth 8-638] synthesizing module 'sync_fifo_fg__parameterized0' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/a4ed/hdl/lib_fifo_v1_0_rfs.vhd:2250]
+INFO: [Synth 8-256] done synthesizing module 'sync_fifo_fg' (25#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/a4ed/hdl/lib_fifo_v1_0_rfs.vhd:2250]
+WARNING: [Synth 8-6014] Unused sequential element hold_ff_q_reg was removed.  [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:1513]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_sfifo_autord' (26#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:1295]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_sfifo_autord__parameterized0' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:1295]
+INFO: [Synth 8-638] synthesizing module 'sync_fifo_fg__parameterized0' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/a4ed/hdl/lib_fifo_v1_0_rfs.vhd:2250]
 	Parameter FIFO_MEMORY_TYPE bound to: block - type: string 
 	Parameter FIFO_WRITE_DEPTH bound to: 128 - type: integer 
 	Parameter WRITE_DATA_WIDTH bound to: 74 - type: integer 
@@ -225,7 +224,7 @@ INFO: [Synth 8-638] synthesizing module 'sync_fifo_fg__parameterized0' [/home/mk
 	Parameter DOUT_RESET_VALUE bound to: 0 - type: string 
 	Parameter ECC_MODE bound to: no_ecc - type: string 
 	Parameter WAKEUP_TIME bound to: 0 - type: integer 
-INFO: [Synth 8-3491] module 'xpm_fifo_sync' declared at '/home/mklab/Xilinx/Vivado/2021.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1951' bound to instance 'xpm_fifo_sync_inst' of component 'xpm_fifo_sync' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/a4ed/hdl/lib_fifo_v1_0_rfs.vhd:2627]
+INFO: [Synth 8-3491] module 'xpm_fifo_sync' declared at '/home/mklab/Xilinx/Vivado/2021.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1951' bound to instance 'xpm_fifo_sync_inst' of component 'xpm_fifo_sync' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/a4ed/hdl/lib_fifo_v1_0_rfs.vhd:2627]
 INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_sync__parameterized1' [/home/mklab/Xilinx/Vivado/2021.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1951]
 INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_base__parameterized0' [/home/mklab/Xilinx/Vivado/2021.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:56]
 INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized4' [/home/mklab/Xilinx/Vivado/2021.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
@@ -247,43 +246,43 @@ WARNING: [Synth 8-6014] Unused sequential element gen_pntr_flags_cc.gae_cc_std.r
 WARNING: [Synth 8-6014] Unused sequential element gen_fwft.empty_fwft_fb_reg was removed.  [/home/mklab/Xilinx/Vivado/2021.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1390]
 INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_base__parameterized0' (26#1) [/home/mklab/Xilinx/Vivado/2021.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:56]
 INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_sync__parameterized1' (26#1) [/home/mklab/Xilinx/Vivado/2021.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1951]
-INFO: [Synth 8-256] done synthesizing module 'sync_fifo_fg__parameterized0' (26#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/a4ed/hdl/lib_fifo_v1_0_rfs.vhd:2250]
-WARNING: [Synth 8-6014] Unused sequential element hold_ff_q_reg was removed.  [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:1513]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_sfifo_autord__parameterized0' (26#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:1295]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_skid_buf__parameterized0' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:19500]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_skid_buf__parameterized0' (26#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:19500]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_indet_btt' (27#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:28430]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_addr_cntl' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:10000]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized5' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
-INFO: [Synth 8-638] synthesizing module 'srl_fifo_f__parameterized5' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
-INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f__parameterized5' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
-INFO: [Synth 8-638] synthesizing module 'dynshreg_f__parameterized5' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
-INFO: [Synth 8-256] done synthesizing module 'dynshreg_f__parameterized5' (27#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
-INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f__parameterized5' (27#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
-INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f__parameterized5' (27#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized5' (27#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
-WARNING: [Synth 8-6014] Unused sequential element sig_next_tag_reg_reg was removed.  [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:10410]
-WARNING: [Synth 8-6014] Unused sequential element sig_next_cmd_cmplt_reg_reg was removed.  [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:10417]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_addr_cntl' (28#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:10000]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_wrdata_cntl' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:15674]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized6' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
-INFO: [Synth 8-638] synthesizing module 'srl_fifo_f__parameterized6' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
-INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f__parameterized6' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
-INFO: [Synth 8-638] synthesizing module 'dynshreg_f__parameterized6' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
-INFO: [Synth 8-256] done synthesizing module 'dynshreg_f__parameterized6' (28#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
-INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f__parameterized6' (28#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
-INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f__parameterized6' (28#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized6' (28#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
-WARNING: [Synth 8-6014] Unused sequential element sig_next_last_strb_reg_reg was removed.  [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:16965]
-WARNING: [Synth 8-6014] Unused sequential element sig_next_eof_reg_reg was removed.  [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:16970]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_wrdata_cntl' (29#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:15674]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_skid2mm_buf' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:18998]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_wr_demux' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:14117]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_wr_demux' (30#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:14117]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_skid2mm_buf' (31#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:18998]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_s2mm_full_wrap' (32#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:49997]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover' (33#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:55439]
-INFO: [Synth 8-256] done synthesizing module 'design_1_axi_datamover_0_0' (34#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_axi_datamover_0_0/synth/design_1_axi_datamover_0_0.vhd:99]
+INFO: [Synth 8-256] done synthesizing module 'sync_fifo_fg__parameterized0' (26#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/a4ed/hdl/lib_fifo_v1_0_rfs.vhd:2250]
+WARNING: [Synth 8-6014] Unused sequential element hold_ff_q_reg was removed.  [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:1513]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_sfifo_autord__parameterized0' (26#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:1295]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_skid_buf__parameterized0' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:19500]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_skid_buf__parameterized0' (26#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:19500]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_indet_btt' (27#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:28430]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_addr_cntl' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:10000]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized5' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_f__parameterized5' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f__parameterized5' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-638] synthesizing module 'dynshreg_f__parameterized5' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'dynshreg_f__parameterized5' (27#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f__parameterized5' (27#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f__parameterized5' (27#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized5' (27#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+WARNING: [Synth 8-6014] Unused sequential element sig_next_tag_reg_reg was removed.  [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:10410]
+WARNING: [Synth 8-6014] Unused sequential element sig_next_cmd_cmplt_reg_reg was removed.  [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:10417]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_addr_cntl' (28#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:10000]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_wrdata_cntl' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:15674]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized6' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_f__parameterized6' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f__parameterized6' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-638] synthesizing module 'dynshreg_f__parameterized6' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'dynshreg_f__parameterized6' (28#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f__parameterized6' (28#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f__parameterized6' (28#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized6' (28#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+WARNING: [Synth 8-6014] Unused sequential element sig_next_last_strb_reg_reg was removed.  [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:16965]
+WARNING: [Synth 8-6014] Unused sequential element sig_next_eof_reg_reg was removed.  [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:16970]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_wrdata_cntl' (29#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:15674]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_skid2mm_buf' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:18998]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_wr_demux' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:14117]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_wr_demux' (30#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:14117]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_skid2mm_buf' (31#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:18998]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_s2mm_full_wrap' (32#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:49997]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover' (33#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/9b19/hdl/axi_datamover_v5_1_vh_rfs.vhd:55439]
+INFO: [Synth 8-256] done synthesizing module 'design_1_axi_datamover_0_0' (34#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_axi_datamover_0_0/synth/design_1_axi_datamover_0_0.vhd:99]
 WARNING: [Synth 8-7129] Port debeat_saddr_lsb[2] in module axi_datamover_wr_demux is either unconnected or has no load
 WARNING: [Synth 8-7129] Port debeat_saddr_lsb[1] in module axi_datamover_wr_demux is either unconnected or has no load
 WARNING: [Synth 8-7129] Port debeat_saddr_lsb[0] in module axi_datamover_wr_demux is either unconnected or has no load
@@ -386,60 +385,59 @@ WARNING: [Synth 8-7129] Port regcea in module xpm_memory_base is either unconnec
 WARNING: [Synth 8-7129] Port injectsbiterra in module xpm_memory_base is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:01:56 . Memory (MB): peak = 3392.078 ; gain = 329.672 ; free physical = 186 ; free virtual = 37200
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 3259.668 ; gain = 325.672 ; free physical = 4807 ; free virtual = 60542
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:02:38 . Memory (MB): peak = 3409.891 ; gain = 347.484 ; free physical = 179 ; free virtual = 34120
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 3274.512 ; gain = 340.516 ; free physical = 4803 ; free virtual = 60538
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:02:38 . Memory (MB): peak = 3409.891 ; gain = 347.484 ; free physical = 178 ; free virtual = 34119
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 3274.512 ; gain = 340.516 ; free physical = 4803 ; free virtual = 60538
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.08 . Memory (MB): peak = 3415.828 ; gain = 0.000 ; free physical = 4104 ; free virtual = 37053
+Netlist sorting complete. Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3288.449 ; gain = 0.000 ; free physical = 4798 ; free virtual = 60533
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_axi_datamover_0_0/design_1_axi_datamover_0_0_ooc.xdc] for cell 'U0'
-create_clock: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 3563.578 ; gain = 0.000 ; free physical = 6115 ; free virtual = 39177
-Finished Parsing XDC File [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_axi_datamover_0_0/design_1_axi_datamover_0_0_ooc.xdc] for cell 'U0'
-Parsing XDC File [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_axi_datamover_0_0/design_1_axi_datamover_0_0.xdc] for cell 'U0'
-Finished Parsing XDC File [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_axi_datamover_0_0/design_1_axi_datamover_0_0.xdc] for cell 'U0'
-Parsing XDC File [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/design_1_axi_datamover_0_0_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/design_1_axi_datamover_0_0_synth_1/dont_touch.xdc]
-Parsing XDC File [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_axi_datamover_0_0/design_1_axi_datamover_0_0_clocks.xdc] for cell 'U0'
-Finished Parsing XDC File [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_axi_datamover_0_0/design_1_axi_datamover_0_0_clocks.xdc] for cell 'U0'
+Parsing XDC File [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_axi_datamover_0_0/design_1_axi_datamover_0_0_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_axi_datamover_0_0/design_1_axi_datamover_0_0_ooc.xdc] for cell 'U0'
+Parsing XDC File [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_axi_datamover_0_0/design_1_axi_datamover_0_0.xdc] for cell 'U0'
+Finished Parsing XDC File [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_axi_datamover_0_0/design_1_axi_datamover_0_0.xdc] for cell 'U0'
+Parsing XDC File [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.runs/design_1_axi_datamover_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.runs/design_1_axi_datamover_0_0_synth_1/dont_touch.xdc]
+Parsing XDC File [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_axi_datamover_0_0/design_1_axi_datamover_0_0_clocks.xdc] for cell 'U0'
+Finished Parsing XDC File [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_axi_datamover_0_0/design_1_axi_datamover_0_0_clocks.xdc] for cell 'U0'
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/mklab/Xilinx/Vivado/2021.2/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_axi_datamover_0_0_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_axi_datamover_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 INFO: [Project 1-1714] 2 XPM XDC files have been applied to the design.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3563.578 ; gain = 0.000 ; free physical = 6038 ; free virtual = 39103
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3427.293 ; gain = 0.000 ; free physical = 4704 ; free virtual = 60439
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.10 . Memory (MB): peak = 3563.578 ; gain = 0.000 ; free physical = 6001 ; free virtual = 39066
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3427.293 ; gain = 0.000 ; free physical = 4703 ; free virtual = 60439
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:28 ; elapsed = 00:03:15 . Memory (MB): peak = 3563.578 ; gain = 501.172 ; free physical = 3817 ; free virtual = 36940
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 3427.293 ; gain = 493.297 ; free physical = 4785 ; free virtual = 60520
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
-Loading part: xczu7ev-ffvc1156-2-e
+Loading part: xck26-sfvc784-2LV-c
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:28 ; elapsed = 00:03:16 . Memory (MB): peak = 3563.578 ; gain = 501.172 ; free physical = 3810 ; free virtual = 36934
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 3427.293 ; gain = 493.297 ; free physical = 4785 ; free virtual = 60520
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property KEEP_HIERARCHY = SOFT for U0. (constraint file  /home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/design_1_axi_datamover_0_0_synth_1/dont_touch.xdc, line 9).
+Applied set_property KEEP_HIERARCHY = SOFT for U0. (constraint file  /home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.runs/design_1_axi_datamover_0_0_synth_1/dont_touch.xdc, line 9).
 Applied set_property KEEP_HIERARCHY = SOFT for U0/\GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER /\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT /I_XD_FIFO/\NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO /\xpm_fifo_instance.xpm_fifo_sync_inst . (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for U0/\GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER /\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT /I_DATA_FIFO/\BLK_MEM.I_SYNC_FIFOGEN_FIFO /\xpm_fifo_instance.xpm_fifo_sync_inst . (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:03:16 . Memory (MB): peak = 3563.578 ; gain = 501.172 ; free physical = 3784 ; free virtual = 36908
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 3427.293 ; gain = 493.297 ; free physical = 4785 ; free virtual = 60520
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'sig_psm_state_reg' in module 'axi_datamover_ibttcc'
 INFO: [Synth 8-802] inferred FSM for state register 'sig_csm_state_reg' in module 'axi_datamover_ibttcc'
@@ -501,7 +499,7 @@ INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'gen_fwft.curr_fwft_state_reg' using encoding 'sequential' in module 'xpm_fifo_base__parameterized0'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:31 ; elapsed = 00:03:18 . Memory (MB): peak = 3563.578 ; gain = 501.172 ; free physical = 3046 ; free virtual = 36199
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 3427.293 ; gain = 493.297 ; free physical = 4776 ; free virtual = 60513
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -578,8 +576,8 @@ Finished RTL Component Statistics
 Start Part Resource Summary
 ---------------------------------------------------------------------------------
 Part Resources:
-DSPs: 1728 (col length:144)
-BRAMs: 624 (col length: RAMB18 144 RAMB36 72)
+DSPs: 1248 (col length:96)
+BRAMs: 288 (col length: RAMB18 96 RAMB36 48)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
@@ -597,7 +595,7 @@ INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM 
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 INFO: [Synth 8-3332] Sequential element (GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_INCLUDE_IBTTCC.I_S2MM_MSTR_IBTTCC/FSM_onehot_sig_csm_state_reg[3]) is unused and will be removed from module axi_datamover.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:39 ; elapsed = 00:03:29 . Memory (MB): peak = 3563.578 ; gain = 501.172 ; free physical = 192 ; free virtual = 33277
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 3427.293 ; gain = 493.297 ; free physical = 4749 ; free virtual = 60493
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
@@ -629,7 +627,7 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:51 ; elapsed = 00:03:49 . Memory (MB): peak = 3845.172 ; gain = 782.766 ; free physical = 653 ; free virtual = 34606
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 3702.262 ; gain = 768.266 ; free physical = 4191 ; free virtual = 59935
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
@@ -637,7 +635,7 @@ Start Timing Optimization
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:53 ; elapsed = 00:03:52 . Memory (MB): peak = 3904.242 ; gain = 841.836 ; free physical = 700 ; free virtual = 34909
+Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 3759.332 ; gain = 825.336 ; free physical = 4151 ; free virtual = 59895
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -665,7 +663,7 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:54 ; elapsed = 00:03:52 . Memory (MB): peak = 3920.258 ; gain = 857.852 ; free physical = 671 ; free virtual = 34995
+Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 3775.348 ; gain = 841.352 ; free physical = 4146 ; free virtual = 59890
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -683,37 +681,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:57 ; elapsed = 00:03:56 . Memory (MB): peak = 3920.258 ; gain = 857.852 ; free physical = 700 ; free virtual = 35532
+Finished IO Insertion : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 3775.348 ; gain = 841.352 ; free physical = 4146 ; free virtual = 59890
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:57 ; elapsed = 00:03:56 . Memory (MB): peak = 3920.258 ; gain = 857.852 ; free physical = 700 ; free virtual = 35532
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 3775.348 ; gain = 841.352 ; free physical = 4146 ; free virtual = 59890
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:57 ; elapsed = 00:03:56 . Memory (MB): peak = 3920.258 ; gain = 857.852 ; free physical = 701 ; free virtual = 35559
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 3775.348 ; gain = 841.352 ; free physical = 4146 ; free virtual = 59890
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:57 ; elapsed = 00:03:56 . Memory (MB): peak = 3920.258 ; gain = 857.852 ; free physical = 701 ; free virtual = 35560
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 3775.348 ; gain = 841.352 ; free physical = 4146 ; free virtual = 59890
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:57 ; elapsed = 00:03:56 . Memory (MB): peak = 3920.258 ; gain = 857.852 ; free physical = 701 ; free virtual = 35566
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 3775.348 ; gain = 841.352 ; free physical = 4146 ; free virtual = 59890
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:57 ; elapsed = 00:03:56 . Memory (MB): peak = 3920.258 ; gain = 857.852 ; free physical = 701 ; free virtual = 35566
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 3775.348 ; gain = 841.352 ; free physical = 4146 ; free virtual = 59890
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -765,18 +763,18 @@ Report Cell Usage:
 |13    |FDSE     |    55|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:57 ; elapsed = 00:03:56 . Memory (MB): peak = 3920.258 ; gain = 857.852 ; free physical = 701 ; free virtual = 35573
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 3775.348 ; gain = 841.352 ; free physical = 4146 ; free virtual = 59890
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 245 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:46 ; elapsed = 00:03:26 . Memory (MB): peak = 3920.258 ; gain = 704.164 ; free physical = 742 ; free virtual = 35650
-Synthesis Optimization Complete : Time (s): cpu = 00:00:57 ; elapsed = 00:03:57 . Memory (MB): peak = 3920.266 ; gain = 857.852 ; free physical = 742 ; free virtual = 35650
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 3775.348 ; gain = 688.570 ; free physical = 4186 ; free virtual = 59930
+Synthesis Optimization Complete : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 3775.355 ; gain = 841.352 ; free physical = 4186 ; free virtual = 59930
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3920.266 ; gain = 0.000 ; free physical = 791 ; free virtual = 35936
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3775.355 ; gain = 0.000 ; free physical = 4274 ; free virtual = 60018
 INFO: [Netlist 29-17] Analyzing 17 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3975.055 ; gain = 0.000 ; free physical = 687 ; free virtual = 35929
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3829.145 ; gain = 0.000 ; free physical = 4207 ; free virtual = 59951
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1 instances were transformed.
   RAM32M16 => RAM32M16 (RAMD32(x14), RAMS32(x2)): 1 instance 
@@ -785,10 +783,10 @@ Synth Design complete, checksum: a7c56dc
 INFO: [Common 17-83] Releasing license: Synthesis
 212 Infos, 126 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:13 ; elapsed = 00:05:21 . Memory (MB): peak = 3975.055 ; gain = 1163.410 ; free physical = 894 ; free virtual = 36175
-INFO: [Common 17-1381] The checkpoint '/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/design_1_axi_datamover_0_0_synth_1/design_1_axi_datamover_0_0.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_axi_datamover_0_0, cache-ID = 1361caecad4d0c0d
+synth_design: Time (s): cpu = 00:00:41 ; elapsed = 00:00:41 . Memory (MB): peak = 3829.145 ; gain = 983.148 ; free physical = 4423 ; free virtual = 60167
+INFO: [Common 17-1381] The checkpoint '/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.runs/design_1_axi_datamover_0_0_synth_1/design_1_axi_datamover_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_axi_datamover_0_0, cache-ID = 4a46c6d61c8a1be0
 INFO: [Coretcl 2-1174] Renamed 79 cell refs.
-INFO: [Common 17-1381] The checkpoint '/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/design_1_axi_datamover_0_0_synth_1/design_1_axi_datamover_0_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint '/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.runs/design_1_axi_datamover_0_0_synth_1/design_1_axi_datamover_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_axi_datamover_0_0_utilization_synth.rpt -pb design_1_axi_datamover_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Oct 31 12:54:21 2022...
+INFO: [Common 17-206] Exiting Vivado at Mon Oct 31 14:28:47 2022...

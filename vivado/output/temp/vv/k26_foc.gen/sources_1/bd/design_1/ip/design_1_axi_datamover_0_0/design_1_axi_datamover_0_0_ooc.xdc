@@ -52,8 +52,8 @@
 # #########################################################
 
 
-create_clock -period 10 -name m_axi_s2mm_aclk [get_ports m_axi_s2mm_aclk]
+create_clock -period 5 -name m_axi_s2mm_aclk [get_ports m_axi_s2mm_aclk]
 
-create_clock -period 10 -name m_axis_s2mm_cmdsts_awclk [get_ports m_axis_s2mm_cmdsts_awclk]
+create_clock -period 5 -name m_axis_s2mm_cmdsts_awclk [get_ports m_axis_s2mm_cmdsts_awclk]
 
 

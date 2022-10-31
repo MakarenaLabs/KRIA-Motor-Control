@@ -43,8 +43,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 set list_projs [get_projects -quiet]
 if { $list_projs eq "" } {
-   create_project project_1 myproj -part xczu7ev-ffvc1156-2-e
-   # set_property BOARD_PART em.xilinx.com:zcu104:part0:1.0 [current_project]
+   create_project project_1 myproj -part xck26-sfvc784-2LV-c
 }
 
 
@@ -1232,6 +1231,9 @@ connect_bd_net [get_bd_pins tx_fifo/s_axis_aclk] [get_bd_pins clk_wiz_1/clk_out2
 connect_bd_net [get_bd_pins Angle_Encoder/axis_aclk] [get_bd_pins clk_wiz_1/clk_out2]
 connect_bd_net [get_bd_pins Ib_Ia/aclk] [get_bd_pins clk_wiz_1/clk_out2]
 connect_bd_net [get_bd_pins dbg_fifo/s_axis_aclk] [get_bd_pins clk_wiz_1/clk_out2]
+connect_bd_net [get_bd_pins psu/pl_clk0] [get_bd_pins clk_wiz_1/clk_in1]
+delete_bd_objs [get_bd_nets clk_wiz_0_clk_out1] [get_bd_cells clk_wiz_0]
+connect_bd_net [get_bd_pins clk_mux_0/clk1] [get_bd_pins clk_wiz_1/clk_out2]
 
 assign_bd_address
 

@@ -10,23 +10,22 @@
 
 Sourcing tcl script '/home/mklab/.Xilinx/Vivado/Vivado_init.tcl'
 58 Beta devices matching pattern found, 0 enabled.
-enable_beta_device: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2811.582 ; gain = 0.426 ; free physical = 7058 ; free virtual = 56084
 source design_1_AXI_StreamCapture_0_0.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/src/ipRepo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/mklab/workspace/KRIA-Motor-Control/vivado/src/ipRepo'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/mklab/Xilinx/Vivado/2021.2/data/ip'.
-Command: synth_design -top design_1_AXI_StreamCapture_0_0 -part xczu7ev-ffvc1156-2-e -mode out_of_context
+Command: synth_design -top design_1_AXI_StreamCapture_0_0 -part xck26-sfvc784-2LV-c -mode out_of_context
 Starting synth_design
-Attempting to get a license for feature 'Synthesis' and/or device 'xczu7ev'
-INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu7ev'
-INFO: [Device 21-403] Loading part xczu7ev-ffvc1156-2-e
+Attempting to get a license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Device 21-403] Loading part xck26-sfvc784-2LV-c
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 24011
+INFO: [Synth 8-7075] Helper process launched with PID 11279
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:54 . Memory (MB): peak = 3217.109 ; gain = 156.766 ; free physical = 168 ; free virtual = 41172
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 3077.793 ; gain = 145.797 ; free physical = 4106 ; free virtual = 59865
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'design_1_AXI_StreamCapture_0_0' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_AXI_StreamCapture_0_0/synth/design_1_AXI_StreamCapture_0_0.vhd:98]
+INFO: [Synth 8-638] synthesizing module 'design_1_AXI_StreamCapture_0_0' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_AXI_StreamCapture_0_0/synth/design_1_AXI_StreamCapture_0_0.vhd:98]
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 5 - type: integer 
 	Parameter C_BLOCK_SIZE bound to: 8192 - type: integer 
@@ -34,17 +33,17 @@ INFO: [Synth 8-638] synthesizing module 'design_1_AXI_StreamCapture_0_0' [/home/
 	Parameter C_DATA_SYNC_TRIG bound to: 0 - type: bool 
 	Parameter C_PRETRIG bound to: 0 - type: bool 
 	Parameter C_S_AXIS_DATA_WIDTH bound to: 64 - type: integer 
-INFO: [Synth 8-3491] module 'AXI_StreamCapture_v1_0' declared at '/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/2d05/hdl/AXI_StreamCapture_v1_0.vhd:20' bound to instance 'U0' of component 'AXI_StreamCapture_v1_0' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_AXI_StreamCapture_0_0/synth/design_1_AXI_StreamCapture_0_0.vhd:208]
-INFO: [Synth 8-638] synthesizing module 'AXI_StreamCapture_v1_0' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/2d05/hdl/AXI_StreamCapture_v1_0.vhd:94]
+INFO: [Synth 8-3491] module 'AXI_StreamCapture_v1_0' declared at '/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/2d05/hdl/AXI_StreamCapture_v1_0.vhd:20' bound to instance 'U0' of component 'AXI_StreamCapture_v1_0' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_AXI_StreamCapture_0_0/synth/design_1_AXI_StreamCapture_0_0.vhd:208]
+INFO: [Synth 8-638] synthesizing module 'AXI_StreamCapture_v1_0' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/2d05/hdl/AXI_StreamCapture_v1_0.vhd:94]
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 5 - type: integer 
-INFO: [Synth 8-3491] module 'AXI_StreamCapture_v1_0_S_AXI' declared at '/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/2d05/hdl/AXI_StreamCapture_v1_0_S_AXI.vhd:20' bound to instance 'AXI_StreamCapture_v1_0_S_AXI_inst' of component 'AXI_StreamCapture_v1_0_S_AXI' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/2d05/hdl/AXI_StreamCapture_v1_0.vhd:168]
-INFO: [Synth 8-638] synthesizing module 'AXI_StreamCapture_v1_0_S_AXI' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/2d05/hdl/AXI_StreamCapture_v1_0_S_AXI.vhd:109]
-INFO: [Synth 8-226] default block is never used [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/2d05/hdl/AXI_StreamCapture_v1_0_S_AXI.vhd:420]
-INFO: [Synth 8-256] done synthesizing module 'AXI_StreamCapture_v1_0_S_AXI' (1#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/2d05/hdl/AXI_StreamCapture_v1_0_S_AXI.vhd:109]
-WARNING: [Synth 8-6014] Unused sequential element pretrigger_count_reg was removed.  [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/2d05/hdl/AXI_StreamCapture_v1_0.vhd:213]
-INFO: [Synth 8-256] done synthesizing module 'AXI_StreamCapture_v1_0' (2#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/2d05/hdl/AXI_StreamCapture_v1_0.vhd:94]
-INFO: [Synth 8-256] done synthesizing module 'design_1_AXI_StreamCapture_0_0' (3#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_AXI_StreamCapture_0_0/synth/design_1_AXI_StreamCapture_0_0.vhd:98]
+INFO: [Synth 8-3491] module 'AXI_StreamCapture_v1_0_S_AXI' declared at '/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/2d05/hdl/AXI_StreamCapture_v1_0_S_AXI.vhd:20' bound to instance 'AXI_StreamCapture_v1_0_S_AXI_inst' of component 'AXI_StreamCapture_v1_0_S_AXI' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/2d05/hdl/AXI_StreamCapture_v1_0.vhd:168]
+INFO: [Synth 8-638] synthesizing module 'AXI_StreamCapture_v1_0_S_AXI' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/2d05/hdl/AXI_StreamCapture_v1_0_S_AXI.vhd:109]
+INFO: [Synth 8-226] default block is never used [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/2d05/hdl/AXI_StreamCapture_v1_0_S_AXI.vhd:420]
+INFO: [Synth 8-256] done synthesizing module 'AXI_StreamCapture_v1_0_S_AXI' (1#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/2d05/hdl/AXI_StreamCapture_v1_0_S_AXI.vhd:109]
+WARNING: [Synth 8-6014] Unused sequential element pretrigger_count_reg was removed.  [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/2d05/hdl/AXI_StreamCapture_v1_0.vhd:213]
+INFO: [Synth 8-256] done synthesizing module 'AXI_StreamCapture_v1_0' (2#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/2d05/hdl/AXI_StreamCapture_v1_0.vhd:94]
+INFO: [Synth 8-256] done synthesizing module 'design_1_AXI_StreamCapture_0_0' (3#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_AXI_StreamCapture_0_0/synth/design_1_AXI_StreamCapture_0_0.vhd:98]
 WARNING: [Synth 8-7129] Port S_AXI_AWPROT[2] in module AXI_StreamCapture_v1_0_S_AXI is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S_AXI_AWPROT[1] in module AXI_StreamCapture_v1_0_S_AXI is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S_AXI_AWPROT[0] in module AXI_StreamCapture_v1_0_S_AXI is either unconnected or has no load
@@ -90,45 +89,45 @@ WARNING: [Synth 8-7129] Port s_axis_s2mm_sts_tkeep[1] in module AXI_StreamCaptur
 WARNING: [Synth 8-7129] Port s_axis_s2mm_sts_tkeep[0] in module AXI_StreamCapture_v1_0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port s_axis_s2mm_sts_tlast in module AXI_StreamCapture_v1_0 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:01:06 . Memory (MB): peak = 3270.047 ; gain = 209.703 ; free physical = 827 ; free virtual = 41049
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 3137.730 ; gain = 205.734 ; free physical = 3855 ; free virtual = 59614
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:01:08 . Memory (MB): peak = 3287.859 ; gain = 227.516 ; free physical = 726 ; free virtual = 40988
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3152.574 ; gain = 220.578 ; free physical = 4715 ; free virtual = 60474
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:01:08 . Memory (MB): peak = 3287.859 ; gain = 227.516 ; free physical = 726 ; free virtual = 40988
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3152.574 ; gain = 220.578 ; free physical = 4715 ; free virtual = 60474
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3287.859 ; gain = 0.000 ; free physical = 694 ; free virtual = 40969
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3152.574 ; gain = 0.000 ; free physical = 4753 ; free virtual = 60512
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3428.734 ; gain = 0.000 ; free physical = 143 ; free virtual = 37370
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3296.418 ; gain = 0.000 ; free physical = 4706 ; free virtual = 60465
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.10 ; elapsed = 00:00:01 . Memory (MB): peak = 3451.547 ; gain = 22.812 ; free physical = 157 ; free virtual = 37262
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3320.230 ; gain = 23.812 ; free physical = 4706 ; free virtual = 60465
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:03:01 . Memory (MB): peak = 3451.547 ; gain = 391.203 ; free physical = 6725 ; free virtual = 39704
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 3320.230 ; gain = 388.234 ; free physical = 4757 ; free virtual = 60516
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
-Loading part: xczu7ev-ffvc1156-2-e
+Loading part: xck26-sfvc784-2LV-c
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:03:01 . Memory (MB): peak = 3451.547 ; gain = 391.203 ; free physical = 6729 ; free virtual = 39708
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 3320.230 ; gain = 388.234 ; free physical = 4757 ; free virtual = 60516
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:03:01 . Memory (MB): peak = 3451.547 ; gain = 391.203 ; free physical = 6726 ; free virtual = 39705
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 3320.230 ; gain = 388.234 ; free physical = 4760 ; free virtual = 60520
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'sm_state_reg' in module 'AXI_StreamCapture_v1_0'
 ---------------------------------------------------------------------------------------------------
@@ -141,7 +140,7 @@ INFO: [Synth 8-802] inferred FSM for state register 'sm_state_reg' in module 'AX
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'sm_state_reg' using encoding 'sequential' in module 'AXI_StreamCapture_v1_0'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:03:02 . Memory (MB): peak = 3451.547 ; gain = 391.203 ; free physical = 6853 ; free virtual = 39871
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 3320.230 ; gain = 388.234 ; free physical = 4753 ; free virtual = 60513
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -176,8 +175,8 @@ Finished RTL Component Statistics
 Start Part Resource Summary
 ---------------------------------------------------------------------------------
 Part Resources:
-DSPs: 1728 (col length:144)
-BRAMs: 624 (col length: RAMB18 144 RAMB36 72)
+DSPs: 1248 (col length:96)
+BRAMs: 288 (col length: RAMB18 96 RAMB36 48)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
@@ -219,25 +218,25 @@ WARNING: [Synth 8-7129] Port s_axi_arprot[2] in module design_1_AXI_StreamCaptur
 WARNING: [Synth 8-7129] Port s_axi_arprot[1] in module design_1_AXI_StreamCapture_0_0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port s_axi_arprot[0] in module design_1_AXI_StreamCapture_0_0 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:03:07 . Memory (MB): peak = 3451.547 ; gain = 391.203 ; free physical = 6176 ; free virtual = 39238
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 3320.230 ; gain = 388.234 ; free physical = 4733 ; free virtual = 60497
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:03:28 . Memory (MB): peak = 3830.320 ; gain = 769.977 ; free physical = 172 ; free virtual = 33295
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 3686.246 ; gain = 754.250 ; free physical = 4172 ; free virtual = 59936
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:03:28 . Memory (MB): peak = 3831.320 ; gain = 770.977 ; free physical = 182 ; free virtual = 33305
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 3686.246 ; gain = 754.250 ; free physical = 4172 ; free virtual = 59936
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:31 ; elapsed = 00:03:28 . Memory (MB): peak = 3859.367 ; gain = 799.023 ; free physical = 160 ; free virtual = 33260
+Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 3714.293 ; gain = 782.297 ; free physical = 4165 ; free virtual = 59929
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -255,37 +254,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:38 ; elapsed = 00:03:34 . Memory (MB): peak = 3859.367 ; gain = 799.023 ; free physical = 160 ; free virtual = 33186
+Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 3714.293 ; gain = 782.297 ; free physical = 4164 ; free virtual = 59929
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:38 ; elapsed = 00:03:34 . Memory (MB): peak = 3859.367 ; gain = 799.023 ; free physical = 160 ; free virtual = 33186
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 3714.293 ; gain = 782.297 ; free physical = 4164 ; free virtual = 59929
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:38 ; elapsed = 00:03:35 . Memory (MB): peak = 3859.367 ; gain = 799.023 ; free physical = 175 ; free virtual = 33114
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 3714.293 ; gain = 782.297 ; free physical = 4164 ; free virtual = 59929
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:38 ; elapsed = 00:03:35 . Memory (MB): peak = 3859.367 ; gain = 799.023 ; free physical = 175 ; free virtual = 33114
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 3714.293 ; gain = 782.297 ; free physical = 4164 ; free virtual = 59929
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:38 ; elapsed = 00:03:35 . Memory (MB): peak = 3859.367 ; gain = 799.023 ; free physical = 175 ; free virtual = 33114
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 3714.293 ; gain = 782.297 ; free physical = 4164 ; free virtual = 59929
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:38 ; elapsed = 00:03:35 . Memory (MB): peak = 3859.367 ; gain = 799.023 ; free physical = 175 ; free virtual = 33114
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 3714.293 ; gain = 782.297 ; free physical = 4164 ; free virtual = 59929
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -313,18 +312,18 @@ Report Cell Usage:
 |10    |FDSE   |     3|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:38 ; elapsed = 00:03:35 . Memory (MB): peak = 3859.367 ; gain = 799.023 ; free physical = 174 ; free virtual = 33115
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 3714.293 ; gain = 782.297 ; free physical = 4164 ; free virtual = 59929
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 12 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:36 ; elapsed = 00:02:38 . Memory (MB): peak = 3859.367 ; gain = 635.336 ; free physical = 287 ; free virtual = 33142
-Synthesis Optimization Complete : Time (s): cpu = 00:00:38 ; elapsed = 00:03:37 . Memory (MB): peak = 3859.375 ; gain = 799.023 ; free physical = 290 ; free virtual = 33145
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 3714.293 ; gain = 614.641 ; free physical = 4208 ; free virtual = 59972
+Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 3714.301 ; gain = 782.297 ; free physical = 4208 ; free virtual = 59972
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3870.336 ; gain = 0.000 ; free physical = 514 ; free virtual = 33496
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3725.262 ; gain = 0.000 ; free physical = 4292 ; free virtual = 60056
 INFO: [Netlist 29-17] Analyzing 47 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3925.133 ; gain = 0.000 ; free physical = 376 ; free virtual = 33501
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3777.090 ; gain = 0.000 ; free physical = 4231 ; free virtual = 59995
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
@@ -332,10 +331,10 @@ Synth Design complete, checksum: b68a1042
 INFO: [Common 17-83] Releasing license: Synthesis
 51 Infos, 57 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:54 ; elapsed = 00:05:03 . Memory (MB): peak = 3925.133 ; gain = 1113.551 ; free physical = 912 ; free virtual = 34087
-INFO: [Common 17-1381] The checkpoint '/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/design_1_AXI_StreamCapture_0_0_synth_1/design_1_AXI_StreamCapture_0_0.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_AXI_StreamCapture_0_0, cache-ID = f5b65d875ff570d0
+synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:26 . Memory (MB): peak = 3777.090 ; gain = 931.094 ; free physical = 4430 ; free virtual = 60194
+INFO: [Common 17-1381] The checkpoint '/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.runs/design_1_AXI_StreamCapture_0_0_synth_1/design_1_AXI_StreamCapture_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_AXI_StreamCapture_0_0, cache-ID = f52c28f36bb53303
 INFO: [Coretcl 2-1174] Renamed 2 cell refs.
-INFO: [Common 17-1381] The checkpoint '/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/design_1_AXI_StreamCapture_0_0_synth_1/design_1_AXI_StreamCapture_0_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint '/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.runs/design_1_AXI_StreamCapture_0_0_synth_1/design_1_AXI_StreamCapture_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_AXI_StreamCapture_0_0_utilization_synth.rpt -pb design_1_AXI_StreamCapture_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Oct 31 12:54:02 2022...
+INFO: [Common 17-206] Exiting Vivado at Mon Oct 31 14:37:33 2022...

@@ -10,23 +10,22 @@
 
 Sourcing tcl script '/home/mklab/.Xilinx/Vivado/Vivado_init.tcl'
 58 Beta devices matching pattern found, 0 enabled.
-enable_beta_device: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2772.957 ; gain = 0.426 ; free physical = 6512 ; free virtual = 56108
 source design_1_proc_sys_reset_1_0.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/src/ipRepo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/mklab/workspace/KRIA-Motor-Control/vivado/src/ipRepo'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/mklab/Xilinx/Vivado/2021.2/data/ip'.
-Command: synth_design -top design_1_proc_sys_reset_1_0 -part xczu7ev-ffvc1156-2-e -mode out_of_context
+Command: synth_design -top design_1_proc_sys_reset_1_0 -part xck26-sfvc784-2LV-c -mode out_of_context
 Starting synth_design
-Attempting to get a license for feature 'Synthesis' and/or device 'xczu7ev'
-INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu7ev'
-INFO: [Device 21-403] Loading part xczu7ev-ffvc1156-2-e
+Attempting to get a license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Device 21-403] Loading part xck26-sfvc784-2LV-c
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 22359
+INFO: [Synth 8-7075] Helper process launched with PID 10294
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:42 . Memory (MB): peak = 3216.516 ; gain = 156.797 ; free physical = 160 ; free virtual = 41272
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 3077.766 ; gain = 145.766 ; free physical = 4092 ; free virtual = 59837
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'design_1_proc_sys_reset_1_0' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_1_0/synth/design_1_proc_sys_reset_1_0.vhd:74]
+INFO: [Synth 8-638] synthesizing module 'design_1_proc_sys_reset_1_0' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_1_0/synth/design_1_proc_sys_reset_1_0.vhd:74]
 	Parameter C_FAMILY bound to: zynquplus - type: string 
 	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
 	Parameter C_AUX_RST_WIDTH bound to: 4 - type: integer 
@@ -36,106 +35,104 @@ INFO: [Synth 8-638] synthesizing module 'design_1_proc_sys_reset_1_0' [/home/mkl
 	Parameter C_NUM_PERP_RST bound to: 1 - type: integer 
 	Parameter C_NUM_INTERCONNECT_ARESETN bound to: 1 - type: integer 
 	Parameter C_NUM_PERP_ARESETN bound to: 1 - type: integer 
-INFO: [Synth 8-3491] module 'proc_sys_reset' declared at '/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1264' bound to instance 'U0' of component 'proc_sys_reset' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_1_0/synth/design_1_proc_sys_reset_1_0.vhd:129]
-INFO: [Synth 8-638] synthesizing module 'proc_sys_reset' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
+INFO: [Synth 8-3491] module 'proc_sys_reset' declared at '/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1264' bound to instance 'U0' of component 'proc_sys_reset' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_1_0/synth/design_1_proc_sys_reset_1_0.vhd:129]
+INFO: [Synth 8-638] synthesizing module 'proc_sys_reset' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
 	Parameter INIT bound to: 1'b1 
-INFO: [Synth 8-113] binding component instance 'FDRE_inst' to cell 'FDRE' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1392]
+INFO: [Synth 8-113] binding component instance 'FDRE_inst' to cell 'FDRE' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1392]
 	Parameter INIT bound to: 1'b1 
-INFO: [Synth 8-113] binding component instance 'FDRE_BSR' to cell 'FDRE' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1408]
+INFO: [Synth 8-113] binding component instance 'FDRE_BSR' to cell 'FDRE' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1408]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'FDRE_BSR_N' to cell 'FDRE' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1434]
+INFO: [Synth 8-113] binding component instance 'FDRE_BSR_N' to cell 'FDRE' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1434]
 	Parameter INIT bound to: 1'b1 
-INFO: [Synth 8-113] binding component instance 'FDRE_PER' to cell 'FDRE' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1457]
+INFO: [Synth 8-113] binding component instance 'FDRE_PER' to cell 'FDRE' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1457]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'FDRE_PER_N' to cell 'FDRE' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1481]
-INFO: [Synth 8-638] synthesizing module 'lpf' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
-INFO: [Synth 8-3491] module 'SRL16' declared at '/home/mklab/Xilinx/Vivado/2021.2/scripts/rt/data/unisim_comp.v:105983' bound to instance 'POR_SRL_I' of component 'SRL16' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:868]
+INFO: [Synth 8-113] binding component instance 'FDRE_PER_N' to cell 'FDRE' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1481]
+INFO: [Synth 8-638] synthesizing module 'lpf' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
+INFO: [Synth 8-3491] module 'SRL16' declared at '/home/mklab/Xilinx/Vivado/2021.2/scripts/rt/data/unisim_comp.v:105983' bound to instance 'POR_SRL_I' of component 'SRL16' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:868]
 INFO: [Synth 8-6157] synthesizing module 'SRL16' [/home/mklab/Xilinx/Vivado/2021.2/scripts/rt/data/unisim_comp.v:105983]
 INFO: [Synth 8-6155] done synthesizing module 'SRL16' (1#1) [/home/mklab/Xilinx/Vivado/2021.2/scripts/rt/data/unisim_comp.v:105983]
-INFO: [Synth 8-638] synthesizing module 'cdc_sync' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-638] synthesizing module 'cdc_sync' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:514]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:514]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2' to cell 'FDR' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:545]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2' to cell 'FDR' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:545]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3' to cell 'FDR' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:554]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3' to cell 'FDR' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:554]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4' to cell 'FDR' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:564]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4' to cell 'FDR' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:564]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5' to cell 'FDR' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:574]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5' to cell 'FDR' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:574]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6' to cell 'FDR' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:584]
-INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (2#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
-INFO: [Synth 8-256] done synthesizing module 'lpf' (3#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
-INFO: [Synth 8-638] synthesizing module 'sequence_psr' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
-INFO: [Synth 8-638] synthesizing module 'upcnt_n' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
-INFO: [Synth 8-256] done synthesizing module 'upcnt_n' (4#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
-INFO: [Synth 8-256] done synthesizing module 'sequence_psr' (5#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
-INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset' (6#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
-INFO: [Synth 8-256] done synthesizing module 'design_1_proc_sys_reset_1_0' (7#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_1_0/synth/design_1_proc_sys_reset_1_0.vhd:74]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6' to cell 'FDR' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (2#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'lpf' (3#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
+INFO: [Synth 8-638] synthesizing module 'sequence_psr' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
+INFO: [Synth 8-638] synthesizing module 'upcnt_n' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
+INFO: [Synth 8-256] done synthesizing module 'upcnt_n' (4#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
+INFO: [Synth 8-256] done synthesizing module 'sequence_psr' (5#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
+INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset' (6#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
+INFO: [Synth 8-256] done synthesizing module 'design_1_proc_sys_reset_1_0' (7#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_1_0/synth/design_1_proc_sys_reset_1_0.vhd:74]
 WARNING: [Synth 8-7129] Port prmry_aclk in module cdc_sync is either unconnected or has no load
 WARNING: [Synth 8-7129] Port prmry_resetn in module cdc_sync is either unconnected or has no load
 WARNING: [Synth 8-7129] Port prmry_vect_in[1] in module cdc_sync is either unconnected or has no load
 WARNING: [Synth 8-7129] Port prmry_vect_in[0] in module cdc_sync is either unconnected or has no load
 WARNING: [Synth 8-7129] Port scndry_resetn in module cdc_sync is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:50 . Memory (MB): peak = 3267.453 ; gain = 207.734 ; free physical = 281 ; free virtual = 40810
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 3135.703 ; gain = 203.703 ; free physical = 3869 ; free virtual = 59615
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:52 . Memory (MB): peak = 3285.266 ; gain = 225.547 ; free physical = 319 ; free virtual = 40833
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3153.516 ; gain = 221.516 ; free physical = 4758 ; free virtual = 60504
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:52 . Memory (MB): peak = 3285.266 ; gain = 225.547 ; free physical = 319 ; free virtual = 40833
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3153.516 ; gain = 221.516 ; free physical = 4758 ; free virtual = 60504
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3294.172 ; gain = 0.000 ; free physical = 742 ; free virtual = 41290
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3162.422 ; gain = 0.000 ; free physical = 4758 ; free virtual = 60504
 INFO: [Netlist 29-17] Analyzing 13 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_1_0/design_1_proc_sys_reset_1_0_ooc.xdc] for cell 'U0'
-create_clock: Time (s): cpu = 00:00:04 ; elapsed = 00:00:47 . Memory (MB): peak = 3465.922 ; gain = 0.000 ; free physical = 176 ; free virtual = 34584
-Finished Parsing XDC File [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_1_0/design_1_proc_sys_reset_1_0_ooc.xdc] for cell 'U0'
-Parsing XDC File [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_1_0/design_1_proc_sys_reset_1_0_board.xdc] for cell 'U0'
-Finished Parsing XDC File [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_1_0/design_1_proc_sys_reset_1_0_board.xdc] for cell 'U0'
-Parsing XDC File [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_1_0/design_1_proc_sys_reset_1_0.xdc] for cell 'U0'
-set_false_path: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 3465.922 ; gain = 0.000 ; free physical = 161 ; free virtual = 33173
-Finished Parsing XDC File [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_1_0/design_1_proc_sys_reset_1_0.xdc] for cell 'U0'
-Parsing XDC File [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/design_1_proc_sys_reset_1_0_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/design_1_proc_sys_reset_1_0_synth_1/dont_touch.xdc]
+Parsing XDC File [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_1_0/design_1_proc_sys_reset_1_0_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_1_0/design_1_proc_sys_reset_1_0_ooc.xdc] for cell 'U0'
+Parsing XDC File [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_1_0/design_1_proc_sys_reset_1_0_board.xdc] for cell 'U0'
+Finished Parsing XDC File [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_1_0/design_1_proc_sys_reset_1_0_board.xdc] for cell 'U0'
+Parsing XDC File [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_1_0/design_1_proc_sys_reset_1_0.xdc] for cell 'U0'
+Finished Parsing XDC File [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_1_0/design_1_proc_sys_reset_1_0.xdc] for cell 'U0'
+Parsing XDC File [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.runs/design_1_proc_sys_reset_1_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.runs/design_1_proc_sys_reset_1_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3465.922 ; gain = 0.000 ; free physical = 657 ; free virtual = 33424
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3332.172 ; gain = 0.000 ; free physical = 4712 ; free virtual = 60458
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 13 instances were transformed.
   FDR => FDRE: 12 instances
   SRL16 => SRL16E: 1 instance 
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.22 . Memory (MB): peak = 3465.922 ; gain = 0.000 ; free physical = 466 ; free virtual = 33262
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3332.172 ; gain = 0.000 ; free physical = 4712 ; free virtual = 60457
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:02:48 . Memory (MB): peak = 3465.922 ; gain = 406.203 ; free physical = 6856 ; free virtual = 39746
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 3332.172 ; gain = 400.172 ; free physical = 4775 ; free virtual = 60521
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
-Loading part: xczu7ev-ffvc1156-2-e
+Loading part: xck26-sfvc784-2LV-c
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:02:48 . Memory (MB): peak = 3465.922 ; gain = 406.203 ; free physical = 6854 ; free virtual = 39745
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 3332.172 ; gain = 400.172 ; free physical = 4775 ; free virtual = 60521
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property KEEP_HIERARCHY = SOFT for U0. (constraint file  /home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/design_1_proc_sys_reset_1_0_synth_1/dont_touch.xdc, line 9).
+Applied set_property KEEP_HIERARCHY = SOFT for U0. (constraint file  /home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.runs/design_1_proc_sys_reset_1_0_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:02:48 . Memory (MB): peak = 3465.922 ; gain = 406.203 ; free physical = 6848 ; free virtual = 39737
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 3332.172 ; gain = 400.172 ; free physical = 4779 ; free virtual = 60524
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:02:49 . Memory (MB): peak = 3465.922 ; gain = 406.203 ; free physical = 6866 ; free virtual = 39778
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 3332.172 ; gain = 400.172 ; free physical = 4776 ; free virtual = 60522
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -157,8 +154,8 @@ Finished RTL Component Statistics
 Start Part Resource Summary
 ---------------------------------------------------------------------------------
 Part Resources:
-DSPs: 1728 (col length:144)
-BRAMs: 624 (col length: RAMB18 144 RAMB36 72)
+DSPs: 1248 (col length:96)
+BRAMs: 288 (col length: RAMB18 96 RAMB36 48)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
@@ -171,25 +168,25 @@ WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GE
 WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module proc_sys_reset.
 WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module proc_sys_reset.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:02:52 . Memory (MB): peak = 3465.922 ; gain = 406.203 ; free physical = 6696 ; free virtual = 39666
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 3332.172 ; gain = 400.172 ; free physical = 4758 ; free virtual = 60508
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:03:13 . Memory (MB): peak = 3822.227 ; gain = 762.508 ; free physical = 336 ; free virtual = 33478
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 3678.750 ; gain = 746.750 ; free physical = 4189 ; free virtual = 59939
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:03:13 . Memory (MB): peak = 3822.227 ; gain = 762.508 ; free physical = 317 ; free virtual = 33458
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 3678.750 ; gain = 746.750 ; free physical = 4189 ; free virtual = 59939
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:33 ; elapsed = 00:03:13 . Memory (MB): peak = 3850.273 ; gain = 790.555 ; free physical = 223 ; free virtual = 33365
+Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 3706.797 ; gain = 774.797 ; free physical = 4182 ; free virtual = 59932
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -207,37 +204,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:38 ; elapsed = 00:03:19 . Memory (MB): peak = 3850.273 ; gain = 790.555 ; free physical = 156 ; free virtual = 32806
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 3706.797 ; gain = 774.797 ; free physical = 4182 ; free virtual = 59933
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:38 ; elapsed = 00:03:19 . Memory (MB): peak = 3850.273 ; gain = 790.555 ; free physical = 157 ; free virtual = 32799
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 3706.797 ; gain = 774.797 ; free physical = 4182 ; free virtual = 59933
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:38 ; elapsed = 00:03:19 . Memory (MB): peak = 3850.273 ; gain = 790.555 ; free physical = 177 ; free virtual = 32807
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 3706.797 ; gain = 774.797 ; free physical = 4182 ; free virtual = 59933
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:38 ; elapsed = 00:03:19 . Memory (MB): peak = 3850.273 ; gain = 790.555 ; free physical = 177 ; free virtual = 32807
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 3706.797 ; gain = 774.797 ; free physical = 4182 ; free virtual = 59933
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:38 ; elapsed = 00:03:19 . Memory (MB): peak = 3850.273 ; gain = 790.555 ; free physical = 177 ; free virtual = 32807
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 3706.797 ; gain = 774.797 ; free physical = 4182 ; free virtual = 59933
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:38 ; elapsed = 00:03:19 . Memory (MB): peak = 3850.273 ; gain = 790.555 ; free physical = 177 ; free virtual = 32807
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 3706.797 ; gain = 774.797 ; free physical = 4182 ; free virtual = 59933
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -265,18 +262,18 @@ Report Cell Usage:
 |10    |FDSE  |     4|
 +------+------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:38 ; elapsed = 00:03:19 . Memory (MB): peak = 3850.273 ; gain = 790.555 ; free physical = 174 ; free virtual = 32805
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 3706.797 ; gain = 774.797 ; free physical = 4182 ; free virtual = 59933
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 5 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:32 ; elapsed = 00:01:32 . Memory (MB): peak = 3850.273 ; gain = 609.898 ; free physical = 243 ; free virtual = 32816
-Synthesis Optimization Complete : Time (s): cpu = 00:00:38 ; elapsed = 00:03:21 . Memory (MB): peak = 3850.281 ; gain = 790.555 ; free physical = 246 ; free virtual = 32827
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 3706.797 ; gain = 596.141 ; free physical = 4224 ; free virtual = 59974
+Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 3706.805 ; gain = 774.797 ; free physical = 4224 ; free virtual = 59974
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3850.281 ; gain = 0.000 ; free physical = 256 ; free virtual = 32853
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3706.805 ; gain = 0.000 ; free physical = 4222 ; free virtual = 59972
 INFO: [Netlist 29-17] Analyzing 9 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3918.914 ; gain = 0.000 ; free physical = 193 ; free virtual = 32656
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3770.500 ; gain = 0.000 ; free physical = 4247 ; free virtual = 59997
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 9 instances were transformed.
   FDR => FDRE: 8 instances
@@ -286,10 +283,10 @@ Synth Design complete, checksum: 5e8d9706
 INFO: [Common 17-83] Releasing license: Synthesis
 47 Infos, 10 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:54 ; elapsed = 00:04:01 . Memory (MB): peak = 3918.914 ; gain = 1145.957 ; free physical = 1016 ; free virtual = 33515
-INFO: [Common 17-1381] The checkpoint '/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/design_1_proc_sys_reset_1_0_synth_1/design_1_proc_sys_reset_1_0.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_proc_sys_reset_1_0, cache-ID = 8f295db249d58590
+synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:28 . Memory (MB): peak = 3770.500 ; gain = 924.500 ; free physical = 4443 ; free virtual = 60193
+INFO: [Common 17-1381] The checkpoint '/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.runs/design_1_proc_sys_reset_1_0_synth_1/design_1_proc_sys_reset_1_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_proc_sys_reset_1_0, cache-ID = 401b6a80a074a6bf
 INFO: [Coretcl 2-1174] Renamed 6 cell refs.
-INFO: [Common 17-1381] The checkpoint '/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/design_1_proc_sys_reset_1_0_synth_1/design_1_proc_sys_reset_1_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint '/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.runs/design_1_proc_sys_reset_1_0_synth_1/design_1_proc_sys_reset_1_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_proc_sys_reset_1_0_utilization_synth.rpt -pb design_1_proc_sys_reset_1_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Oct 31 12:47:16 2022...
+INFO: [Common 17-206] Exiting Vivado at Mon Oct 31 14:32:35 2022...

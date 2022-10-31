@@ -1,14 +1,14 @@
 -- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
--- Date        : Mon Oct 31 12:53:51 2022
+-- Date        : Mon Oct 31 14:30:52 2022
 -- Host        : mklab-ssd-2 running 64-bit Ubuntu 20.04.2 LTS
 -- Command     : write_vhdl -force -mode funcsim
---               /home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_clk_mux_0_0/design_1_clk_mux_0_0_sim_netlist.vhdl
+--               /home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_clk_mux_0_0/design_1_clk_mux_0_0_sim_netlist.vhdl
 -- Design      : design_1_clk_mux_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
--- Device      : xczu7ev-ffvc1156-2-e
+-- Device      : xck26-sfvc784-2LV-c
 -- --------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;

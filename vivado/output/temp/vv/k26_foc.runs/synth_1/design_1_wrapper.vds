@@ -2,181 +2,180 @@
 # Vivado v2021.2 (64-bit)
 # SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
 # IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
-# Start of session at: Mon Oct 31 12:55:11 2022
-# Process ID: 25106
-# Current directory: /home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/synth_1
+# Start of session at: Mon Oct 31 14:39:02 2022
+# Process ID: 11708
+# Current directory: /home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.runs/synth_1
 # Command line: vivado -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
-# Log file: /home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/synth_1/design_1_wrapper.vds
-# Journal file: /home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/synth_1/vivado.jou
+# Log file: /home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.runs/synth_1/design_1_wrapper.vds
+# Journal file: /home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.runs/synth_1/vivado.jou
 # Running On: mklab-ssd-2, OS: Linux, CPU Frequency: 2600.000 MHz, CPU Physical cores: 6, Host memory: 15694 MB
 #-----------------------------------------------------------
 Sourcing tcl script '/home/mklab/.Xilinx/Vivado/Vivado_init.tcl'
 58 Beta devices matching pattern found, 0 enabled.
 source design_1_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/src/ipRepo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/mklab/workspace/KRIA-Motor-Control/vivado/src/ipRepo'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/mklab/Xilinx/Vivado/2021.2/data/ip'.
-Command: synth_design -top design_1_wrapper -part xczu7ev-ffvc1156-2-e
+Command: synth_design -top design_1_wrapper -part xck26-sfvc784-2LV-c
 Starting synth_design
-Attempting to get a license for feature 'Synthesis' and/or device 'xczu7ev'
-INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu7ev'
-INFO: [Device 21-403] Loading part xczu7ev-ffvc1156-2-e
+Attempting to get a license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Device 21-403] Loading part xck26-sfvc784-2LV-c
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 25114
+INFO: [Synth 8-7075] Helper process launched with PID 11716
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 3241.047 ; gain = 156.797 ; free physical = 10104 ; free virtual = 59712
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 3102.762 ; gain = 147.766 ; free physical = 4012 ; free virtual = 59783
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'IOBUF' [/home/mklab/Xilinx/Vivado/2021.2/scripts/rt/data/unisim_comp.v:59735]
 INFO: [Synth 8-6155] done synthesizing module 'IOBUF' (1#1) [/home/mklab/Xilinx/Vivado/2021.2/scripts/rt/data/unisim_comp.v:59735]
-INFO: [Synth 8-6157] synthesizing module 'design_1' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:13]
-INFO: [Synth 8-6157] synthesizing module 'design_1_ADC_Interface_0' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-25106-mklab-ssd-2/realtime/design_1_ADC_Interface_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_ADC_Interface_0' (2#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-25106-mklab-ssd-2/realtime/design_1_ADC_Interface_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'update' of module 'design_1_ADC_Interface_0' is unconnected for instance 'ADC_Interface' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:210]
-WARNING: [Synth 8-7023] instance 'ADC_Interface' of module 'design_1_ADC_Interface_0' has 8 connections declared, but only 7 given [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:210]
-INFO: [Synth 8-6157] synthesizing module 'design_1_AXI_StreamCapture_0_0' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-25106-mklab-ssd-2/realtime/design_1_AXI_StreamCapture_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_AXI_StreamCapture_0_0' (3#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-25106-mklab-ssd-2/realtime/design_1_AXI_StreamCapture_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_Angle_Encoder_0' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-25106-mklab-ssd-2/realtime/design_1_Angle_Encoder_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_Angle_Encoder_0' (4#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-25106-mklab-ssd-2/realtime/design_1_Angle_Encoder_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'angle_data' of module 'design_1_Angle_Encoder_0' is unconnected for instance 'Angle_Encoder' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:256]
-WARNING: [Synth 8-7071] port 'period_data' of module 'design_1_Angle_Encoder_0' is unconnected for instance 'Angle_Encoder' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:256]
-WARNING: [Synth 8-7071] port 'rpm_data' of module 'design_1_Angle_Encoder_0' is unconnected for instance 'Angle_Encoder' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:256]
-WARNING: [Synth 8-7023] instance 'Angle_Encoder' of module 'design_1_Angle_Encoder_0' has 14 connections declared, but only 11 given [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:256]
-INFO: [Synth 8-6157] synthesizing module 'design_1_Ib_Ia_0' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-25106-mklab-ssd-2/realtime/design_1_Ib_Ia_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_Ib_Ia_0' (5#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-25106-mklab-ssd-2/realtime/design_1_Ib_Ia_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_PWM_0' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-25106-mklab-ssd-2/realtime/design_1_PWM_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_PWM_0' (6#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-25106-mklab-ssd-2/realtime/design_1_PWM_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_datamover_0_0' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-25106-mklab-ssd-2/realtime/design_1_axi_datamover_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_datamover_0_0' (7#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-25106-mklab-ssd-2/realtime/design_1_axi_datamover_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 's2mm_err' of module 'design_1_axi_datamover_0_0' is unconnected for instance 'axi_datamover_0' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:286]
-WARNING: [Synth 8-7023] instance 'axi_datamover_0' of module 'design_1_axi_datamover_0_0' has 35 connections declared, but only 34 given [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:286]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_interconnect_0_0' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:630]
-INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_O7FAN0' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:1140]
-INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_O7FAN0' (8#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:1140]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_interconnect_0_0' (9#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:630]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axis_concat_0_0' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-25106-mklab-ssd-2/realtime/design_1_axis_concat_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axis_concat_0_0' (10#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-25106-mklab-ssd-2/realtime/design_1_axis_concat_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axis_data_fifo_0_0' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-25106-mklab-ssd-2/realtime/design_1_axis_data_fifo_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axis_data_fifo_0_0' (11#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-25106-mklab-ssd-2/realtime/design_1_axis_data_fifo_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'axis_wr_data_count' of module 'design_1_axis_data_fifo_0_0' is unconnected for instance 'axis_data_fifo_0' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:377]
-WARNING: [Synth 8-7071] port 'axis_rd_data_count' of module 'design_1_axis_data_fifo_0_0' is unconnected for instance 'axis_data_fifo_0' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:377]
-WARNING: [Synth 8-7023] instance 'axis_data_fifo_0' of module 'design_1_axis_data_fifo_0_0' has 11 connections declared, but only 9 given [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:377]
-INFO: [Synth 8-6157] synthesizing module 'design_1_clk_mux_0_0' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-25106-mklab-ssd-2/realtime/design_1_clk_mux_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_clk_mux_0_0' (12#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-25106-mklab-ssd-2/realtime/design_1_clk_mux_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_clk_wiz_0_0' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-25106-mklab-ssd-2/realtime/design_1_clk_wiz_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_clk_wiz_0_0' (13#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-25106-mklab-ssd-2/realtime/design_1_clk_wiz_0_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'design_1_clk_wiz_1_0' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-25106-mklab-ssd-2/realtime/design_1_clk_wiz_1_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_clk_wiz_1_0' (14#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-25106-mklab-ssd-2/realtime/design_1_clk_wiz_1_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'locked' of module 'design_1_clk_wiz_1_0' is unconnected for instance 'clk_wiz_1' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:395]
-WARNING: [Synth 8-7023] instance 'clk_wiz_1' of module 'design_1_clk_wiz_1_0' has 6 connections declared, but only 5 given [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:395]
-INFO: [Synth 8-6157] synthesizing module 'design_1_dbg_fifo_0' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-25106-mklab-ssd-2/realtime/design_1_dbg_fifo_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_dbg_fifo_0' (15#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-25106-mklab-ssd-2/realtime/design_1_dbg_fifo_0_stub.v:6]
-WARNING: [Synth 8-7071] port 's_axis_tready' of module 'design_1_dbg_fifo_0' is unconnected for instance 'dbg_fifo' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:401]
-WARNING: [Synth 8-7071] port 'axis_wr_data_count' of module 'design_1_dbg_fifo_0' is unconnected for instance 'dbg_fifo' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:401]
-WARNING: [Synth 8-7071] port 'axis_rd_data_count' of module 'design_1_dbg_fifo_0' is unconnected for instance 'dbg_fifo' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:401]
-WARNING: [Synth 8-7023] instance 'dbg_fifo' of module 'design_1_dbg_fifo_0' has 10 connections declared, but only 7 given [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:401]
-INFO: [Synth 8-6157] synthesizing module 'design_1_irq_concat_0' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_irq_concat_0/synth/design_1_irq_concat_0.v:60]
-INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_4_xlconcat' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
-INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_4_xlconcat' (16#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_irq_concat_0' (17#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_irq_concat_0/synth/design_1_irq_concat_0.v:60]
-INFO: [Synth 8-6157] synthesizing module 'design_1_proc_sys_reset_0_0' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-25106-mklab-ssd-2/realtime/design_1_proc_sys_reset_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_proc_sys_reset_0_0' (18#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-25106-mklab-ssd-2/realtime/design_1_proc_sys_reset_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_1_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:412]
-WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_1_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:412]
-WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_1_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:412]
-WARNING: [Synth 8-7023] instance 'proc_sys_reset_0' of module 'design_1_proc_sys_reset_0_0' has 10 connections declared, but only 7 given [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:412]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:420]
-INFO: [Synth 8-6157] synthesizing module 'design_1_proc_sys_reset_1_0' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-25106-mklab-ssd-2/realtime/design_1_proc_sys_reset_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_proc_sys_reset_1_0' (19#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-25106-mklab-ssd-2/realtime/design_1_proc_sys_reset_1_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_1_proc_sys_reset_1_0' is unconnected for instance 'proc_sys_reset_1' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:420]
-WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_1_proc_sys_reset_1_0' is unconnected for instance 'proc_sys_reset_1' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:420]
-WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_1_proc_sys_reset_1_0' is unconnected for instance 'proc_sys_reset_1' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:420]
-WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'design_1_proc_sys_reset_1_0' is unconnected for instance 'proc_sys_reset_1' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:420]
-WARNING: [Synth 8-7071] port 'peripheral_aresetn' of module 'design_1_proc_sys_reset_1_0' is unconnected for instance 'proc_sys_reset_1' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:420]
-WARNING: [Synth 8-7023] instance 'proc_sys_reset_1' of module 'design_1_proc_sys_reset_1_0' has 10 connections declared, but only 5 given [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:420]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:426]
-INFO: [Synth 8-6157] synthesizing module 'design_1_proc_sys_reset_2_0' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-25106-mklab-ssd-2/realtime/design_1_proc_sys_reset_2_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_proc_sys_reset_2_0' (20#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-25106-mklab-ssd-2/realtime/design_1_proc_sys_reset_2_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_1_proc_sys_reset_2_0' is unconnected for instance 'proc_sys_reset_2' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:426]
-WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_1_proc_sys_reset_2_0' is unconnected for instance 'proc_sys_reset_2' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:426]
-WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_1_proc_sys_reset_2_0' is unconnected for instance 'proc_sys_reset_2' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:426]
-WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'design_1_proc_sys_reset_2_0' is unconnected for instance 'proc_sys_reset_2' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:426]
-WARNING: [Synth 8-7071] port 'peripheral_aresetn' of module 'design_1_proc_sys_reset_2_0' is unconnected for instance 'proc_sys_reset_2' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:426]
-WARNING: [Synth 8-7023] instance 'proc_sys_reset_2' of module 'design_1_proc_sys_reset_2_0' has 10 connections declared, but only 5 given [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:426]
-INFO: [Synth 8-6157] synthesizing module 'design_1_proc_sys_reset_3_0' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-25106-mklab-ssd-2/realtime/design_1_proc_sys_reset_3_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_proc_sys_reset_3_0' (21#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-25106-mklab-ssd-2/realtime/design_1_proc_sys_reset_3_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_1_proc_sys_reset_3_0' is unconnected for instance 'proc_sys_reset_3' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:432]
-WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_1_proc_sys_reset_3_0' is unconnected for instance 'proc_sys_reset_3' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:432]
-WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_1_proc_sys_reset_3_0' is unconnected for instance 'proc_sys_reset_3' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:432]
-WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'design_1_proc_sys_reset_3_0' is unconnected for instance 'proc_sys_reset_3' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:432]
-WARNING: [Synth 8-7023] instance 'proc_sys_reset_3' of module 'design_1_proc_sys_reset_3_0' has 10 connections declared, but only 6 given [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:432]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:439]
-INFO: [Synth 8-6157] synthesizing module 'design_1_proc_sys_reset_4_0' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-25106-mklab-ssd-2/realtime/design_1_proc_sys_reset_4_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_proc_sys_reset_4_0' (22#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-25106-mklab-ssd-2/realtime/design_1_proc_sys_reset_4_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_1_proc_sys_reset_4_0' is unconnected for instance 'proc_sys_reset_4' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:439]
-WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_1_proc_sys_reset_4_0' is unconnected for instance 'proc_sys_reset_4' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:439]
-WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_1_proc_sys_reset_4_0' is unconnected for instance 'proc_sys_reset_4' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:439]
-WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'design_1_proc_sys_reset_4_0' is unconnected for instance 'proc_sys_reset_4' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:439]
-WARNING: [Synth 8-7071] port 'peripheral_aresetn' of module 'design_1_proc_sys_reset_4_0' is unconnected for instance 'proc_sys_reset_4' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:439]
-WARNING: [Synth 8-7023] instance 'proc_sys_reset_4' of module 'design_1_proc_sys_reset_4_0' has 10 connections declared, but only 5 given [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:439]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:445]
-INFO: [Synth 8-6157] synthesizing module 'design_1_proc_sys_reset_5_0' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-25106-mklab-ssd-2/realtime/design_1_proc_sys_reset_5_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_proc_sys_reset_5_0' (23#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-25106-mklab-ssd-2/realtime/design_1_proc_sys_reset_5_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_1_proc_sys_reset_5_0' is unconnected for instance 'proc_sys_reset_5' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:445]
-WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_1_proc_sys_reset_5_0' is unconnected for instance 'proc_sys_reset_5' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:445]
-WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_1_proc_sys_reset_5_0' is unconnected for instance 'proc_sys_reset_5' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:445]
-WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'design_1_proc_sys_reset_5_0' is unconnected for instance 'proc_sys_reset_5' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:445]
-WARNING: [Synth 8-7071] port 'peripheral_aresetn' of module 'design_1_proc_sys_reset_5_0' is unconnected for instance 'proc_sys_reset_5' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:445]
-WARNING: [Synth 8-7023] instance 'proc_sys_reset_5' of module 'design_1_proc_sys_reset_5_0' has 10 connections declared, but only 5 given [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:445]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:451]
-INFO: [Synth 8-6157] synthesizing module 'design_1_proc_sys_reset_6_0' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-25106-mklab-ssd-2/realtime/design_1_proc_sys_reset_6_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_proc_sys_reset_6_0' (24#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-25106-mklab-ssd-2/realtime/design_1_proc_sys_reset_6_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_1_proc_sys_reset_6_0' is unconnected for instance 'proc_sys_reset_6' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:451]
-WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_1_proc_sys_reset_6_0' is unconnected for instance 'proc_sys_reset_6' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:451]
-WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_1_proc_sys_reset_6_0' is unconnected for instance 'proc_sys_reset_6' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:451]
-WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'design_1_proc_sys_reset_6_0' is unconnected for instance 'proc_sys_reset_6' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:451]
-WARNING: [Synth 8-7071] port 'peripheral_aresetn' of module 'design_1_proc_sys_reset_6_0' is unconnected for instance 'proc_sys_reset_6' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:451]
-WARNING: [Synth 8-7023] instance 'proc_sys_reset_6' of module 'design_1_proc_sys_reset_6_0' has 10 connections declared, but only 5 given [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:451]
-INFO: [Synth 8-6157] synthesizing module 'design_1_ps7_0_axi_periph_0' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:830]
-INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_UYSKKA' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:1272]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_0' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-25106-mklab-ssd-2/realtime/design_1_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_0' (25#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-25106-mklab-ssd-2/realtime/design_1_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_UYSKKA' (26#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:1272]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_ps7_0_axi_periph_0' (27#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:830]
-INFO: [Synth 8-6157] synthesizing module 'design_1_psu_0' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-25106-mklab-ssd-2/realtime/design_1_psu_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_psu_0' (28#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-25106-mklab-ssd-2/realtime/design_1_psu_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'maxigp1_awuser' of module 'design_1_psu_0' is unconnected for instance 'psu' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:520]
-WARNING: [Synth 8-7071] port 'maxigp1_aruser' of module 'design_1_psu_0' is unconnected for instance 'psu' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:520]
-WARNING: [Synth 8-7071] port 'saxigp5_bid' of module 'design_1_psu_0' is unconnected for instance 'psu' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:520]
-WARNING: [Synth 8-7071] port 'saxigp5_arready' of module 'design_1_psu_0' is unconnected for instance 'psu' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:520]
-WARNING: [Synth 8-7071] port 'saxigp5_rid' of module 'design_1_psu_0' is unconnected for instance 'psu' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:520]
-WARNING: [Synth 8-7071] port 'saxigp5_rdata' of module 'design_1_psu_0' is unconnected for instance 'psu' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:520]
-WARNING: [Synth 8-7071] port 'saxigp5_rresp' of module 'design_1_psu_0' is unconnected for instance 'psu' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:520]
-WARNING: [Synth 8-7071] port 'saxigp5_rlast' of module 'design_1_psu_0' is unconnected for instance 'psu' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:520]
-WARNING: [Synth 8-7071] port 'saxigp5_rvalid' of module 'design_1_psu_0' is unconnected for instance 'psu' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:520]
-WARNING: [Synth 8-7071] port 'emio_uart0_rtsn' of module 'design_1_psu_0' is unconnected for instance 'psu' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:520]
-WARNING: [Synth 8-7071] port 'emio_uart0_dtrn' of module 'design_1_psu_0' is unconnected for instance 'psu' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:520]
-WARNING: [Synth 8-7023] instance 'psu' of module 'design_1_psu_0' has 94 connections declared, but only 83 given [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:520]
-INFO: [Synth 8-6157] synthesizing module 'design_1_rx_fifo_0' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-25106-mklab-ssd-2/realtime/design_1_rx_fifo_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_rx_fifo_0' (29#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-25106-mklab-ssd-2/realtime/design_1_rx_fifo_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'm_axis_tvalid' of module 'design_1_rx_fifo_0' is unconnected for instance 'rx_fifo' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:604]
-WARNING: [Synth 8-7071] port 'm_axis_tdata' of module 'design_1_rx_fifo_0' is unconnected for instance 'rx_fifo' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:604]
-WARNING: [Synth 8-7023] instance 'rx_fifo' of module 'design_1_rx_fifo_0' has 8 connections declared, but only 6 given [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:604]
-INFO: [Synth 8-6157] synthesizing module 'design_1_tx_fifo_0' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-25106-mklab-ssd-2/realtime/design_1_tx_fifo_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_tx_fifo_0' (30#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-25106-mklab-ssd-2/realtime/design_1_tx_fifo_0_stub.v:6]
-WARNING: [Synth 8-7071] port 's_axis_tready' of module 'design_1_tx_fifo_0' is unconnected for instance 'tx_fifo' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:611]
-WARNING: [Synth 8-7023] instance 'tx_fifo' of module 'design_1_tx_fifo_0' has 8 connections declared, but only 7 given [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:611]
-INFO: [Synth 8-6157] synthesizing module 'design_1_vio_0_0' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-25106-mklab-ssd-2/realtime/design_1_vio_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_vio_0_0' (31#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-25106-mklab-ssd-2/realtime/design_1_vio_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_xlconcat_0_0' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_xlconcat_0_0/synth/design_1_xlconcat_0_0.v:60]
-INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_4_xlconcat__parameterized0' [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
-INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_4_xlconcat__parameterized0' (31#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_xlconcat_0_0' (32#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_xlconcat_0_0/synth/design_1_xlconcat_0_0.v:60]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'vio_0'. This will prevent further optimization [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:619]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'clk_mux_0'. This will prevent further optimization [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:387]
-INFO: [Synth 8-6155] done synthesizing module 'design_1' (33#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (34#1) [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'design_1' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:13]
+INFO: [Synth 8-6157] synthesizing module 'design_1_ADC_Interface_0' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-11708-mklab-ssd-2/realtime/design_1_ADC_Interface_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_ADC_Interface_0' (2#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-11708-mklab-ssd-2/realtime/design_1_ADC_Interface_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'update' of module 'design_1_ADC_Interface_0' is unconnected for instance 'ADC_Interface' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:208]
+WARNING: [Synth 8-7023] instance 'ADC_Interface' of module 'design_1_ADC_Interface_0' has 8 connections declared, but only 7 given [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:208]
+INFO: [Synth 8-6157] synthesizing module 'design_1_AXI_StreamCapture_0_0' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-11708-mklab-ssd-2/realtime/design_1_AXI_StreamCapture_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_AXI_StreamCapture_0_0' (3#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-11708-mklab-ssd-2/realtime/design_1_AXI_StreamCapture_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_Angle_Encoder_0' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-11708-mklab-ssd-2/realtime/design_1_Angle_Encoder_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_Angle_Encoder_0' (4#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-11708-mklab-ssd-2/realtime/design_1_Angle_Encoder_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'angle_data' of module 'design_1_Angle_Encoder_0' is unconnected for instance 'Angle_Encoder' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:254]
+WARNING: [Synth 8-7071] port 'period_data' of module 'design_1_Angle_Encoder_0' is unconnected for instance 'Angle_Encoder' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:254]
+WARNING: [Synth 8-7071] port 'rpm_data' of module 'design_1_Angle_Encoder_0' is unconnected for instance 'Angle_Encoder' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:254]
+WARNING: [Synth 8-7023] instance 'Angle_Encoder' of module 'design_1_Angle_Encoder_0' has 14 connections declared, but only 11 given [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:254]
+INFO: [Synth 8-6157] synthesizing module 'design_1_Ib_Ia_0' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-11708-mklab-ssd-2/realtime/design_1_Ib_Ia_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_Ib_Ia_0' (5#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-11708-mklab-ssd-2/realtime/design_1_Ib_Ia_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_PWM_0' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-11708-mklab-ssd-2/realtime/design_1_PWM_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_PWM_0' (6#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-11708-mklab-ssd-2/realtime/design_1_PWM_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_datamover_0_0' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-11708-mklab-ssd-2/realtime/design_1_axi_datamover_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_datamover_0_0' (7#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-11708-mklab-ssd-2/realtime/design_1_axi_datamover_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 's2mm_err' of module 'design_1_axi_datamover_0_0' is unconnected for instance 'axi_datamover_0' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:284]
+WARNING: [Synth 8-7023] instance 'axi_datamover_0' of module 'design_1_axi_datamover_0_0' has 35 connections declared, but only 34 given [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:284]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_interconnect_0_0' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:624]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_O7FAN0' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:1134]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_O7FAN0' (8#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:1134]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_interconnect_0_0' (9#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:624]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axis_concat_0_0' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-11708-mklab-ssd-2/realtime/design_1_axis_concat_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axis_concat_0_0' (10#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-11708-mklab-ssd-2/realtime/design_1_axis_concat_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axis_data_fifo_0_0' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-11708-mklab-ssd-2/realtime/design_1_axis_data_fifo_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axis_data_fifo_0_0' (11#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-11708-mklab-ssd-2/realtime/design_1_axis_data_fifo_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'axis_wr_data_count' of module 'design_1_axis_data_fifo_0_0' is unconnected for instance 'axis_data_fifo_0' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:375]
+WARNING: [Synth 8-7071] port 'axis_rd_data_count' of module 'design_1_axis_data_fifo_0_0' is unconnected for instance 'axis_data_fifo_0' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:375]
+WARNING: [Synth 8-7023] instance 'axis_data_fifo_0' of module 'design_1_axis_data_fifo_0_0' has 11 connections declared, but only 9 given [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:375]
+INFO: [Synth 8-6157] synthesizing module 'design_1_clk_mux_0_0' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-11708-mklab-ssd-2/realtime/design_1_clk_mux_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_clk_mux_0_0' (12#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-11708-mklab-ssd-2/realtime/design_1_clk_mux_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_clk_wiz_1_0' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-11708-mklab-ssd-2/realtime/design_1_clk_wiz_1_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_clk_wiz_1_0' (13#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-11708-mklab-ssd-2/realtime/design_1_clk_wiz_1_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'locked' of module 'design_1_clk_wiz_1_0' is unconnected for instance 'clk_wiz_1' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:390]
+WARNING: [Synth 8-7023] instance 'clk_wiz_1' of module 'design_1_clk_wiz_1_0' has 6 connections declared, but only 5 given [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:390]
+INFO: [Synth 8-6157] synthesizing module 'design_1_dbg_fifo_0' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-11708-mklab-ssd-2/realtime/design_1_dbg_fifo_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_dbg_fifo_0' (14#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-11708-mklab-ssd-2/realtime/design_1_dbg_fifo_0_stub.v:6]
+WARNING: [Synth 8-7071] port 's_axis_tready' of module 'design_1_dbg_fifo_0' is unconnected for instance 'dbg_fifo' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:396]
+WARNING: [Synth 8-7071] port 'axis_wr_data_count' of module 'design_1_dbg_fifo_0' is unconnected for instance 'dbg_fifo' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:396]
+WARNING: [Synth 8-7071] port 'axis_rd_data_count' of module 'design_1_dbg_fifo_0' is unconnected for instance 'dbg_fifo' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:396]
+WARNING: [Synth 8-7023] instance 'dbg_fifo' of module 'design_1_dbg_fifo_0' has 10 connections declared, but only 7 given [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:396]
+INFO: [Synth 8-6157] synthesizing module 'design_1_irq_concat_0' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_irq_concat_0/synth/design_1_irq_concat_0.v:60]
+INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_4_xlconcat' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_4_xlconcat' (15#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_irq_concat_0' (16#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_irq_concat_0/synth/design_1_irq_concat_0.v:60]
+INFO: [Synth 8-6157] synthesizing module 'design_1_proc_sys_reset_0_0' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-11708-mklab-ssd-2/realtime/design_1_proc_sys_reset_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_proc_sys_reset_0_0' (17#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-11708-mklab-ssd-2/realtime/design_1_proc_sys_reset_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_1_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:407]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_1_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:407]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_1_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:407]
+WARNING: [Synth 8-7023] instance 'proc_sys_reset_0' of module 'design_1_proc_sys_reset_0_0' has 10 connections declared, but only 7 given [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:407]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:415]
+INFO: [Synth 8-6157] synthesizing module 'design_1_proc_sys_reset_1_0' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-11708-mklab-ssd-2/realtime/design_1_proc_sys_reset_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_proc_sys_reset_1_0' (18#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-11708-mklab-ssd-2/realtime/design_1_proc_sys_reset_1_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_1_proc_sys_reset_1_0' is unconnected for instance 'proc_sys_reset_1' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:415]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_1_proc_sys_reset_1_0' is unconnected for instance 'proc_sys_reset_1' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:415]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_1_proc_sys_reset_1_0' is unconnected for instance 'proc_sys_reset_1' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:415]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'design_1_proc_sys_reset_1_0' is unconnected for instance 'proc_sys_reset_1' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:415]
+WARNING: [Synth 8-7071] port 'peripheral_aresetn' of module 'design_1_proc_sys_reset_1_0' is unconnected for instance 'proc_sys_reset_1' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:415]
+WARNING: [Synth 8-7023] instance 'proc_sys_reset_1' of module 'design_1_proc_sys_reset_1_0' has 10 connections declared, but only 5 given [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:415]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:421]
+INFO: [Synth 8-6157] synthesizing module 'design_1_proc_sys_reset_2_0' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-11708-mklab-ssd-2/realtime/design_1_proc_sys_reset_2_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_proc_sys_reset_2_0' (19#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-11708-mklab-ssd-2/realtime/design_1_proc_sys_reset_2_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_1_proc_sys_reset_2_0' is unconnected for instance 'proc_sys_reset_2' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:421]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_1_proc_sys_reset_2_0' is unconnected for instance 'proc_sys_reset_2' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:421]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_1_proc_sys_reset_2_0' is unconnected for instance 'proc_sys_reset_2' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:421]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'design_1_proc_sys_reset_2_0' is unconnected for instance 'proc_sys_reset_2' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:421]
+WARNING: [Synth 8-7071] port 'peripheral_aresetn' of module 'design_1_proc_sys_reset_2_0' is unconnected for instance 'proc_sys_reset_2' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:421]
+WARNING: [Synth 8-7023] instance 'proc_sys_reset_2' of module 'design_1_proc_sys_reset_2_0' has 10 connections declared, but only 5 given [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:421]
+INFO: [Synth 8-6157] synthesizing module 'design_1_proc_sys_reset_3_0' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-11708-mklab-ssd-2/realtime/design_1_proc_sys_reset_3_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_proc_sys_reset_3_0' (20#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-11708-mklab-ssd-2/realtime/design_1_proc_sys_reset_3_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_1_proc_sys_reset_3_0' is unconnected for instance 'proc_sys_reset_3' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:427]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_1_proc_sys_reset_3_0' is unconnected for instance 'proc_sys_reset_3' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:427]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_1_proc_sys_reset_3_0' is unconnected for instance 'proc_sys_reset_3' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:427]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'design_1_proc_sys_reset_3_0' is unconnected for instance 'proc_sys_reset_3' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:427]
+WARNING: [Synth 8-7023] instance 'proc_sys_reset_3' of module 'design_1_proc_sys_reset_3_0' has 10 connections declared, but only 6 given [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:427]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:434]
+INFO: [Synth 8-6157] synthesizing module 'design_1_proc_sys_reset_4_0' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-11708-mklab-ssd-2/realtime/design_1_proc_sys_reset_4_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_proc_sys_reset_4_0' (21#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-11708-mklab-ssd-2/realtime/design_1_proc_sys_reset_4_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_1_proc_sys_reset_4_0' is unconnected for instance 'proc_sys_reset_4' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:434]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_1_proc_sys_reset_4_0' is unconnected for instance 'proc_sys_reset_4' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:434]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_1_proc_sys_reset_4_0' is unconnected for instance 'proc_sys_reset_4' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:434]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'design_1_proc_sys_reset_4_0' is unconnected for instance 'proc_sys_reset_4' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:434]
+WARNING: [Synth 8-7071] port 'peripheral_aresetn' of module 'design_1_proc_sys_reset_4_0' is unconnected for instance 'proc_sys_reset_4' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:434]
+WARNING: [Synth 8-7023] instance 'proc_sys_reset_4' of module 'design_1_proc_sys_reset_4_0' has 10 connections declared, but only 5 given [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:434]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:440]
+INFO: [Synth 8-6157] synthesizing module 'design_1_proc_sys_reset_5_0' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-11708-mklab-ssd-2/realtime/design_1_proc_sys_reset_5_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_proc_sys_reset_5_0' (22#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-11708-mklab-ssd-2/realtime/design_1_proc_sys_reset_5_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_1_proc_sys_reset_5_0' is unconnected for instance 'proc_sys_reset_5' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:440]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_1_proc_sys_reset_5_0' is unconnected for instance 'proc_sys_reset_5' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:440]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_1_proc_sys_reset_5_0' is unconnected for instance 'proc_sys_reset_5' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:440]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'design_1_proc_sys_reset_5_0' is unconnected for instance 'proc_sys_reset_5' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:440]
+WARNING: [Synth 8-7071] port 'peripheral_aresetn' of module 'design_1_proc_sys_reset_5_0' is unconnected for instance 'proc_sys_reset_5' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:440]
+WARNING: [Synth 8-7023] instance 'proc_sys_reset_5' of module 'design_1_proc_sys_reset_5_0' has 10 connections declared, but only 5 given [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:440]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:446]
+INFO: [Synth 8-6157] synthesizing module 'design_1_proc_sys_reset_6_0' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-11708-mklab-ssd-2/realtime/design_1_proc_sys_reset_6_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_proc_sys_reset_6_0' (23#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-11708-mklab-ssd-2/realtime/design_1_proc_sys_reset_6_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_1_proc_sys_reset_6_0' is unconnected for instance 'proc_sys_reset_6' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:446]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_1_proc_sys_reset_6_0' is unconnected for instance 'proc_sys_reset_6' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:446]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_1_proc_sys_reset_6_0' is unconnected for instance 'proc_sys_reset_6' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:446]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'design_1_proc_sys_reset_6_0' is unconnected for instance 'proc_sys_reset_6' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:446]
+WARNING: [Synth 8-7071] port 'peripheral_aresetn' of module 'design_1_proc_sys_reset_6_0' is unconnected for instance 'proc_sys_reset_6' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:446]
+WARNING: [Synth 8-7023] instance 'proc_sys_reset_6' of module 'design_1_proc_sys_reset_6_0' has 10 connections declared, but only 5 given [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:446]
+INFO: [Synth 8-6157] synthesizing module 'design_1_ps7_0_axi_periph_0' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:824]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_UYSKKA' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:1266]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_0' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-11708-mklab-ssd-2/realtime/design_1_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_0' (24#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-11708-mklab-ssd-2/realtime/design_1_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_UYSKKA' (25#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:1266]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_ps7_0_axi_periph_0' (26#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:824]
+INFO: [Synth 8-6157] synthesizing module 'design_1_psu_0' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-11708-mklab-ssd-2/realtime/design_1_psu_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_psu_0' (27#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-11708-mklab-ssd-2/realtime/design_1_psu_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'maxigp1_awuser' of module 'design_1_psu_0' is unconnected for instance 'psu' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:515]
+WARNING: [Synth 8-7071] port 'maxigp1_aruser' of module 'design_1_psu_0' is unconnected for instance 'psu' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:515]
+WARNING: [Synth 8-7071] port 'saxigp5_bid' of module 'design_1_psu_0' is unconnected for instance 'psu' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:515]
+WARNING: [Synth 8-7071] port 'saxigp5_arready' of module 'design_1_psu_0' is unconnected for instance 'psu' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:515]
+WARNING: [Synth 8-7071] port 'saxigp5_rid' of module 'design_1_psu_0' is unconnected for instance 'psu' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:515]
+WARNING: [Synth 8-7071] port 'saxigp5_rdata' of module 'design_1_psu_0' is unconnected for instance 'psu' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:515]
+WARNING: [Synth 8-7071] port 'saxigp5_rresp' of module 'design_1_psu_0' is unconnected for instance 'psu' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:515]
+WARNING: [Synth 8-7071] port 'saxigp5_rlast' of module 'design_1_psu_0' is unconnected for instance 'psu' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:515]
+WARNING: [Synth 8-7071] port 'saxigp5_rvalid' of module 'design_1_psu_0' is unconnected for instance 'psu' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:515]
+WARNING: [Synth 8-7071] port 'emio_uart0_rtsn' of module 'design_1_psu_0' is unconnected for instance 'psu' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:515]
+WARNING: [Synth 8-7071] port 'emio_uart0_dtrn' of module 'design_1_psu_0' is unconnected for instance 'psu' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:515]
+WARNING: [Synth 8-7071] port 'pl_clk2' of module 'design_1_psu_0' is unconnected for instance 'psu' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:515]
+WARNING: [Synth 8-7023] instance 'psu' of module 'design_1_psu_0' has 94 connections declared, but only 82 given [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:515]
+INFO: [Synth 8-6157] synthesizing module 'design_1_rx_fifo_0' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-11708-mklab-ssd-2/realtime/design_1_rx_fifo_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_rx_fifo_0' (28#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-11708-mklab-ssd-2/realtime/design_1_rx_fifo_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axis_tvalid' of module 'design_1_rx_fifo_0' is unconnected for instance 'rx_fifo' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:598]
+WARNING: [Synth 8-7071] port 'm_axis_tdata' of module 'design_1_rx_fifo_0' is unconnected for instance 'rx_fifo' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:598]
+WARNING: [Synth 8-7023] instance 'rx_fifo' of module 'design_1_rx_fifo_0' has 8 connections declared, but only 6 given [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:598]
+INFO: [Synth 8-6157] synthesizing module 'design_1_tx_fifo_0' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-11708-mklab-ssd-2/realtime/design_1_tx_fifo_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_tx_fifo_0' (29#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-11708-mklab-ssd-2/realtime/design_1_tx_fifo_0_stub.v:6]
+WARNING: [Synth 8-7071] port 's_axis_tready' of module 'design_1_tx_fifo_0' is unconnected for instance 'tx_fifo' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:605]
+WARNING: [Synth 8-7023] instance 'tx_fifo' of module 'design_1_tx_fifo_0' has 8 connections declared, but only 7 given [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:605]
+INFO: [Synth 8-6157] synthesizing module 'design_1_vio_0_0' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-11708-mklab-ssd-2/realtime/design_1_vio_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_vio_0_0' (30#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.runs/synth_1/.Xil/Vivado-11708-mklab-ssd-2/realtime/design_1_vio_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xlconcat_0_0' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_xlconcat_0_0/synth/design_1_xlconcat_0_0.v:60]
+INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_4_xlconcat__parameterized0' [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_4_xlconcat__parameterized0' (30#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xlconcat_0_0' (31#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_xlconcat_0_0/synth/design_1_xlconcat_0_0.v:60]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'vio_0'. This will prevent further optimization [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:613]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'clk_mux_0'. This will prevent further optimization [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:385]
+INFO: [Synth 8-6155] done synthesizing module 'design_1' (32#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/synth/design_1.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (33#1) [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
 WARNING: [Synth 8-7129] Port In4[0] in module xlconcat_v2_1_4_xlconcat__parameterized0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port In5[0] in module xlconcat_v2_1_4_xlconcat__parameterized0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port In6[0] in module xlconcat_v2_1_4_xlconcat__parameterized0 is either unconnected or has no load
@@ -279,96 +278,90 @@ WARNING: [Synth 8-7129] Port In102[0] in module xlconcat_v2_1_4_xlconcat__parame
 WARNING: [Synth 8-7129] Port In103[0] in module xlconcat_v2_1_4_xlconcat__parameterized0 is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 3293.984 ; gain = 209.734 ; free physical = 9914 ; free virtual = 59526
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 3161.699 ; gain = 206.703 ; free physical = 3819 ; free virtual = 59590
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3311.797 ; gain = 227.547 ; free physical = 10833 ; free virtual = 60445
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3179.512 ; gain = 224.516 ; free physical = 4685 ; free virtual = 60457
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3311.797 ; gain = 227.547 ; free physical = 10831 ; free virtual = 60444
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3179.512 ; gain = 224.516 ; free physical = 4685 ; free virtual = 60457
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3317.734 ; gain = 0.000 ; free physical = 10808 ; free virtual = 60421
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3187.449 ; gain = 0.000 ; free physical = 4715 ; free virtual = 60487
 INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_ADC_Interface_0/design_1_ADC_Interface_0/design_1_ADC_Interface_0_in_context.xdc] for cell 'design_1_i/ADC_Interface'
-Finished Parsing XDC File [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_ADC_Interface_0/design_1_ADC_Interface_0/design_1_ADC_Interface_0_in_context.xdc] for cell 'design_1_i/ADC_Interface'
-Parsing XDC File [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_AXI_StreamCapture_0_0/design_1_AXI_StreamCapture_0_0/design_1_AXI_StreamCapture_0_0_in_context.xdc] for cell 'design_1_i/AXI_StreamCapture_0'
-Finished Parsing XDC File [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_AXI_StreamCapture_0_0/design_1_AXI_StreamCapture_0_0/design_1_AXI_StreamCapture_0_0_in_context.xdc] for cell 'design_1_i/AXI_StreamCapture_0'
-Parsing XDC File [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_Angle_Encoder_0/design_1_Angle_Encoder_0/design_1_Angle_Encoder_0_in_context.xdc] for cell 'design_1_i/Angle_Encoder'
-Finished Parsing XDC File [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_Angle_Encoder_0/design_1_Angle_Encoder_0/design_1_Angle_Encoder_0_in_context.xdc] for cell 'design_1_i/Angle_Encoder'
-Parsing XDC File [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_Ib_Ia_0/design_1_Ib_Ia_0/design_1_Ib_Ia_0_in_context.xdc] for cell 'design_1_i/Ib_Ia'
-Finished Parsing XDC File [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_Ib_Ia_0/design_1_Ib_Ia_0/design_1_Ib_Ia_0_in_context.xdc] for cell 'design_1_i/Ib_Ia'
-Parsing XDC File [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_PWM_0/design_1_PWM_0/design_1_PWM_0_in_context.xdc] for cell 'design_1_i/PWM'
-Finished Parsing XDC File [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_PWM_0/design_1_PWM_0/design_1_PWM_0_in_context.xdc] for cell 'design_1_i/PWM'
-Parsing XDC File [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_axi_datamover_0_0/design_1_axi_datamover_0_0/design_1_axi_datamover_0_0_in_context.xdc] for cell 'design_1_i/axi_datamover_0'
-Finished Parsing XDC File [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_axi_datamover_0_0/design_1_axi_datamover_0_0/design_1_axi_datamover_0_0_in_context.xdc] for cell 'design_1_i/axi_datamover_0'
-Parsing XDC File [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_axis_concat_0_0/design_1_axis_concat_0_0/design_1_axis_concat_0_0_in_context.xdc] for cell 'design_1_i/axis_concat_0'
-Finished Parsing XDC File [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_axis_concat_0_0/design_1_axis_concat_0_0/design_1_axis_concat_0_0_in_context.xdc] for cell 'design_1_i/axis_concat_0'
-Parsing XDC File [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_axis_data_fifo_0_0/design_1_axis_data_fifo_0_0/design_1_axis_data_fifo_0_0_in_context.xdc] for cell 'design_1_i/axis_data_fifo_0'
-Finished Parsing XDC File [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_axis_data_fifo_0_0/design_1_axis_data_fifo_0_0/design_1_axis_data_fifo_0_0_in_context.xdc] for cell 'design_1_i/axis_data_fifo_0'
-Parsing XDC File [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_clk_mux_0_0/design_1_clk_mux_0_0/design_1_clk_mux_0_0_in_context.xdc] for cell 'design_1_i/clk_mux_0'
-Finished Parsing XDC File [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_clk_mux_0_0/design_1_clk_mux_0_0/design_1_clk_mux_0_0_in_context.xdc] for cell 'design_1_i/clk_mux_0'
-Parsing XDC File [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_in_context.xdc] for cell 'design_1_i/clk_wiz_0'
-Finished Parsing XDC File [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_in_context.xdc] for cell 'design_1_i/clk_wiz_0'
-Parsing XDC File [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_dbg_fifo_0/design_1_dbg_fifo_0/design_1_dbg_fifo_0_in_context.xdc] for cell 'design_1_i/dbg_fifo'
-Finished Parsing XDC File [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_dbg_fifo_0/design_1_dbg_fifo_0/design_1_dbg_fifo_0_in_context.xdc] for cell 'design_1_i/dbg_fifo'
-Parsing XDC File [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0_in_context.xdc] for cell 'design_1_i/proc_sys_reset_0'
-Finished Parsing XDC File [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0_in_context.xdc] for cell 'design_1_i/proc_sys_reset_0'
-Parsing XDC File [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_1_0/design_1_proc_sys_reset_1_0/design_1_proc_sys_reset_1_0_in_context.xdc] for cell 'design_1_i/proc_sys_reset_1'
-Finished Parsing XDC File [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_1_0/design_1_proc_sys_reset_1_0/design_1_proc_sys_reset_1_0_in_context.xdc] for cell 'design_1_i/proc_sys_reset_1'
-Parsing XDC File [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_2_0/design_1_proc_sys_reset_2_0/design_1_proc_sys_reset_2_0_in_context.xdc] for cell 'design_1_i/proc_sys_reset_2'
-Finished Parsing XDC File [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_2_0/design_1_proc_sys_reset_2_0/design_1_proc_sys_reset_2_0_in_context.xdc] for cell 'design_1_i/proc_sys_reset_2'
-Parsing XDC File [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_3_0/design_1_proc_sys_reset_3_0/design_1_proc_sys_reset_3_0_in_context.xdc] for cell 'design_1_i/proc_sys_reset_3'
-Finished Parsing XDC File [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_3_0/design_1_proc_sys_reset_3_0/design_1_proc_sys_reset_3_0_in_context.xdc] for cell 'design_1_i/proc_sys_reset_3'
-Parsing XDC File [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0/design_1_auto_pc_0_in_context.xdc] for cell 'design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc'
-Finished Parsing XDC File [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0/design_1_auto_pc_0_in_context.xdc] for cell 'design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc'
-Parsing XDC File [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_psu_0/design_1_psu_0/design_1_psu_0_in_context.xdc] for cell 'design_1_i/psu'
-Finished Parsing XDC File [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_psu_0/design_1_psu_0/design_1_psu_0_in_context.xdc] for cell 'design_1_i/psu'
-Parsing XDC File [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_rx_fifo_0/design_1_rx_fifo_0/design_1_rx_fifo_0_in_context.xdc] for cell 'design_1_i/rx_fifo'
-Finished Parsing XDC File [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_rx_fifo_0/design_1_rx_fifo_0/design_1_rx_fifo_0_in_context.xdc] for cell 'design_1_i/rx_fifo'
-Parsing XDC File [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_tx_fifo_0/design_1_tx_fifo_0/design_1_tx_fifo_0_in_context.xdc] for cell 'design_1_i/tx_fifo'
-Finished Parsing XDC File [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_tx_fifo_0/design_1_tx_fifo_0/design_1_tx_fifo_0_in_context.xdc] for cell 'design_1_i/tx_fifo'
-Parsing XDC File [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_vio_0_0/design_1_vio_0_0/design_1_vio_0_0_in_context.xdc] for cell 'design_1_i/vio_0'
-Finished Parsing XDC File [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_vio_0_0/design_1_vio_0_0/design_1_vio_0_0_in_context.xdc] for cell 'design_1_i/vio_0'
-Parsing XDC File [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0_in_context.xdc] for cell 'design_1_i/clk_wiz_1'
-Finished Parsing XDC File [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0_in_context.xdc] for cell 'design_1_i/clk_wiz_1'
-Parsing XDC File [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_4_0/design_1_proc_sys_reset_4_0/design_1_proc_sys_reset_4_0_in_context.xdc] for cell 'design_1_i/proc_sys_reset_4'
-Finished Parsing XDC File [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_4_0/design_1_proc_sys_reset_4_0/design_1_proc_sys_reset_4_0_in_context.xdc] for cell 'design_1_i/proc_sys_reset_4'
-Parsing XDC File [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_5_0/design_1_proc_sys_reset_5_0/design_1_proc_sys_reset_5_0_in_context.xdc] for cell 'design_1_i/proc_sys_reset_5'
-Finished Parsing XDC File [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_5_0/design_1_proc_sys_reset_5_0/design_1_proc_sys_reset_5_0_in_context.xdc] for cell 'design_1_i/proc_sys_reset_5'
-Parsing XDC File [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_6_0/design_1_proc_sys_reset_6_0/design_1_proc_sys_reset_6_0_in_context.xdc] for cell 'design_1_i/proc_sys_reset_6'
-Finished Parsing XDC File [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_6_0/design_1_proc_sys_reset_6_0/design_1_proc_sys_reset_6_0_in_context.xdc] for cell 'design_1_i/proc_sys_reset_6'
-Parsing XDC File [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.srcs/constrs_1/imports/constraints/zcu104_IIoT-EDDP.xdc]
-Finished Parsing XDC File [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.srcs/constrs_1/imports/constraints/zcu104_IIoT-EDDP.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.srcs/constrs_1/imports/constraints/zcu104_IIoT-EDDP.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
-Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/synth_1/dont_touch.xdc]
-Finished Parsing XDC File [/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/synth_1/dont_touch.xdc]
+Parsing XDC File [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_ADC_Interface_0/design_1_ADC_Interface_0/design_1_ADC_Interface_0_in_context.xdc] for cell 'design_1_i/ADC_Interface'
+Finished Parsing XDC File [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_ADC_Interface_0/design_1_ADC_Interface_0/design_1_ADC_Interface_0_in_context.xdc] for cell 'design_1_i/ADC_Interface'
+Parsing XDC File [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_AXI_StreamCapture_0_0/design_1_AXI_StreamCapture_0_0/design_1_AXI_StreamCapture_0_0_in_context.xdc] for cell 'design_1_i/AXI_StreamCapture_0'
+Finished Parsing XDC File [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_AXI_StreamCapture_0_0/design_1_AXI_StreamCapture_0_0/design_1_AXI_StreamCapture_0_0_in_context.xdc] for cell 'design_1_i/AXI_StreamCapture_0'
+Parsing XDC File [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_Angle_Encoder_0/design_1_Angle_Encoder_0/design_1_Angle_Encoder_0_in_context.xdc] for cell 'design_1_i/Angle_Encoder'
+Finished Parsing XDC File [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_Angle_Encoder_0/design_1_Angle_Encoder_0/design_1_Angle_Encoder_0_in_context.xdc] for cell 'design_1_i/Angle_Encoder'
+Parsing XDC File [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_Ib_Ia_0/design_1_Ib_Ia_0/design_1_Ib_Ia_0_in_context.xdc] for cell 'design_1_i/Ib_Ia'
+Finished Parsing XDC File [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_Ib_Ia_0/design_1_Ib_Ia_0/design_1_Ib_Ia_0_in_context.xdc] for cell 'design_1_i/Ib_Ia'
+Parsing XDC File [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_PWM_0/design_1_PWM_0/design_1_PWM_0_in_context.xdc] for cell 'design_1_i/PWM'
+Finished Parsing XDC File [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_PWM_0/design_1_PWM_0/design_1_PWM_0_in_context.xdc] for cell 'design_1_i/PWM'
+Parsing XDC File [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_axi_datamover_0_0/design_1_axi_datamover_0_0/design_1_axi_datamover_0_0_in_context.xdc] for cell 'design_1_i/axi_datamover_0'
+Finished Parsing XDC File [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_axi_datamover_0_0/design_1_axi_datamover_0_0/design_1_axi_datamover_0_0_in_context.xdc] for cell 'design_1_i/axi_datamover_0'
+Parsing XDC File [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_axis_concat_0_0/design_1_axis_concat_0_0/design_1_axis_concat_0_0_in_context.xdc] for cell 'design_1_i/axis_concat_0'
+Finished Parsing XDC File [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_axis_concat_0_0/design_1_axis_concat_0_0/design_1_axis_concat_0_0_in_context.xdc] for cell 'design_1_i/axis_concat_0'
+Parsing XDC File [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_axis_data_fifo_0_0/design_1_axis_data_fifo_0_0/design_1_axis_data_fifo_0_0_in_context.xdc] for cell 'design_1_i/axis_data_fifo_0'
+Finished Parsing XDC File [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_axis_data_fifo_0_0/design_1_axis_data_fifo_0_0/design_1_axis_data_fifo_0_0_in_context.xdc] for cell 'design_1_i/axis_data_fifo_0'
+Parsing XDC File [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_clk_mux_0_0/design_1_clk_mux_0_0/design_1_clk_mux_0_0_in_context.xdc] for cell 'design_1_i/clk_mux_0'
+Finished Parsing XDC File [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_clk_mux_0_0/design_1_clk_mux_0_0/design_1_clk_mux_0_0_in_context.xdc] for cell 'design_1_i/clk_mux_0'
+Parsing XDC File [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_dbg_fifo_0/design_1_dbg_fifo_0/design_1_dbg_fifo_0_in_context.xdc] for cell 'design_1_i/dbg_fifo'
+Finished Parsing XDC File [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_dbg_fifo_0/design_1_dbg_fifo_0/design_1_dbg_fifo_0_in_context.xdc] for cell 'design_1_i/dbg_fifo'
+Parsing XDC File [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_5_0_in_context.xdc] for cell 'design_1_i/proc_sys_reset_0'
+Finished Parsing XDC File [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_5_0_in_context.xdc] for cell 'design_1_i/proc_sys_reset_0'
+Parsing XDC File [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_1_0/design_1_proc_sys_reset_1_0/design_1_proc_sys_reset_1_0_in_context.xdc] for cell 'design_1_i/proc_sys_reset_1'
+Finished Parsing XDC File [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_1_0/design_1_proc_sys_reset_1_0/design_1_proc_sys_reset_1_0_in_context.xdc] for cell 'design_1_i/proc_sys_reset_1'
+Parsing XDC File [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_2_0/design_1_proc_sys_reset_2_0/design_1_proc_sys_reset_5_0_in_context.xdc] for cell 'design_1_i/proc_sys_reset_2'
+Finished Parsing XDC File [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_2_0/design_1_proc_sys_reset_2_0/design_1_proc_sys_reset_5_0_in_context.xdc] for cell 'design_1_i/proc_sys_reset_2'
+Parsing XDC File [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_3_0/design_1_proc_sys_reset_3_0/design_1_proc_sys_reset_4_0_in_context.xdc] for cell 'design_1_i/proc_sys_reset_3'
+Finished Parsing XDC File [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_3_0/design_1_proc_sys_reset_3_0/design_1_proc_sys_reset_4_0_in_context.xdc] for cell 'design_1_i/proc_sys_reset_3'
+Parsing XDC File [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0/design_1_auto_pc_0_in_context.xdc] for cell 'design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc'
+Finished Parsing XDC File [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0/design_1_auto_pc_0_in_context.xdc] for cell 'design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc'
+Parsing XDC File [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_psu_0/design_1_psu_0/design_1_psu_0_in_context.xdc] for cell 'design_1_i/psu'
+Finished Parsing XDC File [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_psu_0/design_1_psu_0/design_1_psu_0_in_context.xdc] for cell 'design_1_i/psu'
+Parsing XDC File [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_rx_fifo_0/design_1_rx_fifo_0/design_1_rx_fifo_0_in_context.xdc] for cell 'design_1_i/rx_fifo'
+Finished Parsing XDC File [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_rx_fifo_0/design_1_rx_fifo_0/design_1_rx_fifo_0_in_context.xdc] for cell 'design_1_i/rx_fifo'
+Parsing XDC File [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_tx_fifo_0/design_1_tx_fifo_0/design_1_tx_fifo_0_in_context.xdc] for cell 'design_1_i/tx_fifo'
+Finished Parsing XDC File [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_tx_fifo_0/design_1_tx_fifo_0/design_1_tx_fifo_0_in_context.xdc] for cell 'design_1_i/tx_fifo'
+Parsing XDC File [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_vio_0_0/design_1_vio_0_0/design_1_vio_0_0_in_context.xdc] for cell 'design_1_i/vio_0'
+Finished Parsing XDC File [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_vio_0_0/design_1_vio_0_0/design_1_vio_0_0_in_context.xdc] for cell 'design_1_i/vio_0'
+Parsing XDC File [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0_in_context.xdc] for cell 'design_1_i/clk_wiz_1'
+Finished Parsing XDC File [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0_in_context.xdc] for cell 'design_1_i/clk_wiz_1'
+Parsing XDC File [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_4_0/design_1_proc_sys_reset_4_0/design_1_proc_sys_reset_4_0_in_context.xdc] for cell 'design_1_i/proc_sys_reset_4'
+Finished Parsing XDC File [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_4_0/design_1_proc_sys_reset_4_0/design_1_proc_sys_reset_4_0_in_context.xdc] for cell 'design_1_i/proc_sys_reset_4'
+Parsing XDC File [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_5_0/design_1_proc_sys_reset_5_0/design_1_proc_sys_reset_5_0_in_context.xdc] for cell 'design_1_i/proc_sys_reset_5'
+Finished Parsing XDC File [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_5_0/design_1_proc_sys_reset_5_0/design_1_proc_sys_reset_5_0_in_context.xdc] for cell 'design_1_i/proc_sys_reset_5'
+Parsing XDC File [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_6_0/design_1_proc_sys_reset_6_0/design_1_proc_sys_reset_6_0_in_context.xdc] for cell 'design_1_i/proc_sys_reset_6'
+Finished Parsing XDC File [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_6_0/design_1_proc_sys_reset_6_0/design_1_proc_sys_reset_6_0_in_context.xdc] for cell 'design_1_i/proc_sys_reset_6'
+Parsing XDC File [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3440.484 ; gain = 0.000 ; free physical = 10742 ; free virtual = 60357
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3308.199 ; gain = 0.000 ; free physical = 4658 ; free virtual = 60429
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 2 instances were transformed.
   IOBUF => IOBUF (IBUFCTRL, INBUF, OBUFT): 2 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3440.484 ; gain = 0.000 ; free physical = 10742 ; free virtual = 60357
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3308.199 ; gain = 0.000 ; free physical = 4658 ; free virtual = 60429
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 3440.484 ; gain = 356.234 ; free physical = 10813 ; free virtual = 60428
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 3308.199 ; gain = 353.203 ; free physical = 4729 ; free virtual = 60493
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
-Loading part: xczu7ev-ffvc1156-2-e
+Loading part: xck26-sfvc784-2LV-c
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 3440.484 ; gain = 356.234 ; free physical = 10813 ; free virtual = 60428
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 3308.199 ; gain = 353.203 ; free physical = 4729 ; free virtual = 60493
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -384,7 +377,6 @@ Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_interconnect_0. (c
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axis_concat_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axis_data_fifo_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/clk_mux_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/clk_wiz_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/dbg_fifo. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/irq_concat. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/proc_sys_reset_0. (constraint file  auto generated constraint).
@@ -403,10 +395,10 @@ Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/proc_sys_reset_4. (con
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/proc_sys_reset_5. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/proc_sys_reset_6. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 3440.484 ; gain = 356.234 ; free physical = 10813 ; free virtual = 60428
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 3308.199 ; gain = 353.203 ; free physical = 4733 ; free virtual = 60496
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 3440.484 ; gain = 356.234 ; free physical = 10814 ; free virtual = 60430
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 3308.199 ; gain = 353.203 ; free physical = 4733 ; free virtual = 60497
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -419,8 +411,8 @@ Finished RTL Component Statistics
 Start Part Resource Summary
 ---------------------------------------------------------------------------------
 Part Resources:
-DSPs: 1728 (col length:144)
-BRAMs: 624 (col length: RAMB18 144 RAMB36 72)
+DSPs: 1248 (col length:96)
+BRAMs: 288 (col length: RAMB18 96 RAMB36 48)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
@@ -429,25 +421,25 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 3440.484 ; gain = 356.234 ; free physical = 10804 ; free virtual = 60424
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 3308.199 ; gain = 353.203 ; free physical = 4724 ; free virtual = 60492
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 3839.227 ; gain = 754.977 ; free physical = 10222 ; free virtual = 59834
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 3694.215 ; gain = 739.219 ; free physical = 4150 ; free virtual = 59927
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 3839.227 ; gain = 754.977 ; free physical = 10221 ; free virtual = 59834
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 3694.215 ; gain = 739.219 ; free physical = 4150 ; free virtual = 59927
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 3859.266 ; gain = 775.016 ; free physical = 10215 ; free virtual = 59828
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 3714.254 ; gain = 759.258 ; free physical = 4144 ; free virtual = 59921
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -465,37 +457,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 3865.203 ; gain = 780.953 ; free physical = 10207 ; free virtual = 59828
+Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 3720.191 ; gain = 765.195 ; free physical = 4145 ; free virtual = 59921
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 3865.203 ; gain = 780.953 ; free physical = 10207 ; free virtual = 59828
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 3720.191 ; gain = 765.195 ; free physical = 4145 ; free virtual = 59921
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 3865.203 ; gain = 780.953 ; free physical = 10207 ; free virtual = 59828
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 3720.191 ; gain = 765.195 ; free physical = 4145 ; free virtual = 59921
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 3865.203 ; gain = 780.953 ; free physical = 10207 ; free virtual = 59828
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 3720.191 ; gain = 765.195 ; free physical = 4145 ; free virtual = 59921
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 3865.203 ; gain = 780.953 ; free physical = 10207 ; free virtual = 59828
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 3720.191 ; gain = 765.195 ; free physical = 4145 ; free virtual = 59921
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 3865.203 ; gain = 780.953 ; free physical = 10207 ; free virtual = 59828
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 3720.191 ; gain = 765.195 ; free physical = 4145 ; free virtual = 59921
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -515,20 +507,19 @@ Report BlackBoxes:
 |8     |design_1_axis_concat_0_0       |         1|
 |9     |design_1_axis_data_fifo_0_0    |         1|
 |10    |design_1_clk_mux_0_0           |         1|
-|11    |design_1_clk_wiz_0_0           |         1|
-|12    |design_1_clk_wiz_1_0           |         1|
-|13    |design_1_dbg_fifo_0            |         1|
-|14    |design_1_proc_sys_reset_0_0    |         1|
-|15    |design_1_proc_sys_reset_1_0    |         1|
-|16    |design_1_proc_sys_reset_2_0    |         1|
-|17    |design_1_proc_sys_reset_3_0    |         1|
-|18    |design_1_proc_sys_reset_4_0    |         1|
-|19    |design_1_proc_sys_reset_5_0    |         1|
-|20    |design_1_proc_sys_reset_6_0    |         1|
-|21    |design_1_psu_0                 |         1|
-|22    |design_1_rx_fifo_0             |         1|
-|23    |design_1_tx_fifo_0             |         1|
-|24    |design_1_vio_0_0               |         1|
+|11    |design_1_clk_wiz_1_0           |         1|
+|12    |design_1_dbg_fifo_0            |         1|
+|13    |design_1_proc_sys_reset_0_0    |         1|
+|14    |design_1_proc_sys_reset_1_0    |         1|
+|15    |design_1_proc_sys_reset_2_0    |         1|
+|16    |design_1_proc_sys_reset_3_0    |         1|
+|17    |design_1_proc_sys_reset_4_0    |         1|
+|18    |design_1_proc_sys_reset_5_0    |         1|
+|19    |design_1_proc_sys_reset_6_0    |         1|
+|20    |design_1_psu_0                 |         1|
+|21    |design_1_rx_fifo_0             |         1|
+|22    |design_1_tx_fifo_0             |         1|
+|23    |design_1_vio_0_0               |         1|
 +------+-------------------------------+----------+
 
 Report Cell Usage: 
@@ -545,47 +536,46 @@ Report Cell Usage:
 |8     |design_1_axis_concat_0       |     1|
 |9     |design_1_axis_data_fifo_0    |     1|
 |10    |design_1_clk_mux_0           |     1|
-|11    |design_1_clk_wiz_0           |     1|
-|12    |design_1_clk_wiz_1           |     1|
-|13    |design_1_dbg_fifo            |     1|
-|14    |design_1_proc_sys_reset_0    |     1|
-|15    |design_1_proc_sys_reset_1    |     1|
-|16    |design_1_proc_sys_reset_2    |     1|
-|17    |design_1_proc_sys_reset_3    |     1|
-|18    |design_1_proc_sys_reset_4    |     1|
-|19    |design_1_proc_sys_reset_5    |     1|
-|20    |design_1_proc_sys_reset_6    |     1|
-|21    |design_1_psu                 |     1|
-|22    |design_1_rx_fifo             |     1|
-|23    |design_1_tx_fifo             |     1|
-|24    |design_1_vio_0               |     1|
-|25    |IBUF                         |     7|
-|26    |IOBUF                        |     2|
-|27    |OBUF                         |     7|
+|11    |design_1_clk_wiz_1           |     1|
+|12    |design_1_dbg_fifo            |     1|
+|13    |design_1_proc_sys_reset_0    |     1|
+|14    |design_1_proc_sys_reset_1    |     1|
+|15    |design_1_proc_sys_reset_2    |     1|
+|16    |design_1_proc_sys_reset_3    |     1|
+|17    |design_1_proc_sys_reset_4    |     1|
+|18    |design_1_proc_sys_reset_5    |     1|
+|19    |design_1_proc_sys_reset_6    |     1|
+|20    |design_1_psu                 |     1|
+|21    |design_1_rx_fifo             |     1|
+|22    |design_1_tx_fifo             |     1|
+|23    |design_1_vio_0               |     1|
+|24    |IBUF                         |     7|
+|25    |IOBUF                        |     2|
+|26    |OBUF                         |     7|
 +------+-----------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 3865.203 ; gain = 780.953 ; free physical = 10207 ; free virtual = 59828
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 3720.191 ; gain = 765.195 ; free physical = 4145 ; free virtual = 59921
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 11 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 3865.203 ; gain = 652.266 ; free physical = 10249 ; free virtual = 59870
-Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 3865.211 ; gain = 780.953 ; free physical = 10249 ; free virtual = 59870
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 3720.191 ; gain = 636.508 ; free physical = 4189 ; free virtual = 59965
+Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 3720.199 ; gain = 765.195 ; free physical = 4189 ; free virtual = 59965
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3868.172 ; gain = 0.000 ; free physical = 10316 ; free virtual = 59937
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3723.160 ; gain = 0.000 ; free physical = 4248 ; free virtual = 60024
 INFO: [Netlist 29-17] Analyzing 9 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3903.828 ; gain = 0.000 ; free physical = 10266 ; free virtual = 59887
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3755.879 ; gain = 0.000 ; free physical = 4207 ; free virtual = 59983
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 9 instances were transformed.
   IBUF => IBUF (IBUFCTRL, INBUF): 7 instances
   IOBUF => IOBUF (IBUFCTRL, INBUF, OBUFT): 2 instances
 
-Synth Design complete, checksum: 9cd3451f
+Synth Design complete, checksum: 597aa80c
 INFO: [Common 17-83] Releasing license: Synthesis
-94 Infos, 179 Warnings, 0 Critical Warnings and 0 Errors encountered.
+91 Infos, 180 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 3903.828 ; gain = 1082.340 ; free physical = 10455 ; free virtual = 60076
-INFO: [Common 17-1381] The checkpoint '/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/synth_1/design_1_wrapper.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:28 . Memory (MB): peak = 3755.879 ; gain = 909.883 ; free physical = 4395 ; free virtual = 60171
+INFO: [Common 17-1381] The checkpoint '/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.runs/synth_1/design_1_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Oct 31 12:55:56 2022...
+INFO: [Common 17-206] Exiting Vivado at Mon Oct 31 14:39:42 2022...

@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/synth_1/design_1_wrapper.tcl"
+  variable script "/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.runs/synth_1/design_1_wrapper.tcl"
   variable category "vivado_synth"
 }
 
@@ -71,66 +71,63 @@ proc create_report { reportName command } {
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 OPTRACE "Creating in-memory project" START { }
-create_project -in_memory -part xczu7ev-ffvc1156-2-e
+create_project -in_memory -part xck26-sfvc784-2LV-c
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir /home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.cache/wt [current_project]
-set_property parent.project_path /home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.xpr [current_project]
+set_property webtalk.parent_dir /home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.cache/wt [current_project]
+set_property parent.project_path /home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_repo_paths /home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/src/ipRepo [current_project]
+set_property ip_repo_paths /home/mklab/workspace/KRIA-Motor-Control/vivado/src/ipRepo [current_project]
 update_ip_catalog
-set_property ip_output_repo /home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.cache/ip [current_project]
+set_property ip_output_repo /home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_verilog -library xil_defaultlib /home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
-add_files /home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.srcs/sources_1/bd/design_1/design_1.bd
-set_property used_in_implementation false [get_files -all /home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_Ib_Ia_0/design_1_Ib_Ia_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_axi_datamover_0_0/design_1_axi_datamover_0_0.xdc]
-set_property used_in_implementation false [get_files -all /home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_axi_datamover_0_0/design_1_axi_datamover_0_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all /home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_axi_datamover_0_0/design_1_axi_datamover_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_axis_data_fifo_0_0/design_1_axis_data_fifo_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xdc]
-set_property used_in_implementation false [get_files -all /home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_dbg_fifo_0/design_1_dbg_fifo_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0.xdc]
-set_property used_in_implementation false [get_files -all /home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_1_0/design_1_proc_sys_reset_1_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_1_0/design_1_proc_sys_reset_1_0.xdc]
-set_property used_in_implementation false [get_files -all /home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_1_0/design_1_proc_sys_reset_1_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_2_0/design_1_proc_sys_reset_2_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_2_0/design_1_proc_sys_reset_2_0.xdc]
-set_property used_in_implementation false [get_files -all /home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_2_0/design_1_proc_sys_reset_2_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_3_0/design_1_proc_sys_reset_3_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_3_0/design_1_proc_sys_reset_3_0.xdc]
-set_property used_in_implementation false [get_files -all /home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_3_0/design_1_proc_sys_reset_3_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_psu_0/design_1_psu_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_psu_0/design_1_psu_0.xdc]
-set_property used_in_implementation false [get_files -all /home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_rx_fifo_0/design_1_rx_fifo_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_tx_fifo_0/design_1_tx_fifo_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_vio_0_0/design_1_vio_0_0.xdc]
-set_property used_in_implementation false [get_files -all /home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_vio_0_0/design_1_vio_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0.xdc]
-set_property used_in_implementation false [get_files -all /home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_4_0/design_1_proc_sys_reset_4_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_4_0/design_1_proc_sys_reset_4_0.xdc]
-set_property used_in_implementation false [get_files -all /home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_4_0/design_1_proc_sys_reset_4_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_5_0/design_1_proc_sys_reset_5_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_5_0/design_1_proc_sys_reset_5_0.xdc]
-set_property used_in_implementation false [get_files -all /home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_5_0/design_1_proc_sys_reset_5_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_6_0/design_1_proc_sys_reset_6_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_6_0/design_1_proc_sys_reset_6_0.xdc]
-set_property used_in_implementation false [get_files -all /home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_6_0/design_1_proc_sys_reset_6_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/design_1_ooc.xdc]
+read_verilog -library xil_defaultlib /home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
+add_files /home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.srcs/sources_1/bd/design_1/design_1.bd
+set_property used_in_implementation false [get_files -all /home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_Ib_Ia_0/design_1_Ib_Ia_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_axi_datamover_0_0/design_1_axi_datamover_0_0.xdc]
+set_property used_in_implementation false [get_files -all /home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_axi_datamover_0_0/design_1_axi_datamover_0_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_axi_datamover_0_0/design_1_axi_datamover_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_axis_data_fifo_0_0/design_1_axis_data_fifo_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_dbg_fifo_0/design_1_dbg_fifo_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0.xdc]
+set_property used_in_implementation false [get_files -all /home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_1_0/design_1_proc_sys_reset_1_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_1_0/design_1_proc_sys_reset_1_0.xdc]
+set_property used_in_implementation false [get_files -all /home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_1_0/design_1_proc_sys_reset_1_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_2_0/design_1_proc_sys_reset_2_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_2_0/design_1_proc_sys_reset_2_0.xdc]
+set_property used_in_implementation false [get_files -all /home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_2_0/design_1_proc_sys_reset_2_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_3_0/design_1_proc_sys_reset_3_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_3_0/design_1_proc_sys_reset_3_0.xdc]
+set_property used_in_implementation false [get_files -all /home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_3_0/design_1_proc_sys_reset_3_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_psu_0/design_1_psu_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_psu_0/design_1_psu_0.xdc]
+set_property used_in_implementation false [get_files -all /home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_rx_fifo_0/design_1_rx_fifo_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_tx_fifo_0/design_1_tx_fifo_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_vio_0_0/design_1_vio_0_0.xdc]
+set_property used_in_implementation false [get_files -all /home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_vio_0_0/design_1_vio_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0.xdc]
+set_property used_in_implementation false [get_files -all /home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_4_0/design_1_proc_sys_reset_4_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_4_0/design_1_proc_sys_reset_4_0.xdc]
+set_property used_in_implementation false [get_files -all /home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_4_0/design_1_proc_sys_reset_4_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_5_0/design_1_proc_sys_reset_5_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_5_0/design_1_proc_sys_reset_5_0.xdc]
+set_property used_in_implementation false [get_files -all /home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_5_0/design_1_proc_sys_reset_5_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_6_0/design_1_proc_sys_reset_6_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_6_0/design_1_proc_sys_reset_6_0.xdc]
+set_property used_in_implementation false [get_files -all /home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_6_0/design_1_proc_sys_reset_6_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.gen/sources_1/bd/design_1/design_1_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -141,16 +138,13 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc /home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.srcs/constrs_1/imports/constraints/zcu104_IIoT-EDDP.xdc
-set_property used_in_implementation false [get_files /home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.srcs/constrs_1/imports/constraints/zcu104_IIoT-EDDP.xdc]
-
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
-synth_design -top design_1_wrapper -part xczu7ev-ffvc1156-2-e
+synth_design -top design_1_wrapper -part xck26-sfvc784-2LV-c
 OPTRACE "synth_design" END { }
 if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
  send_msg_id runtcl-6 info "Synthesis results are not added to the cache due to CRITICAL_WARNING"

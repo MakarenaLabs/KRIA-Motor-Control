@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/mklab/workspace/iiot-eddp/Vitis/zcu104_foc_pkg/vivado/output/temp/vv/k26_foc.runs/design_1_Ib_Ia_0_synth_1'
+HD_PWD='/home/mklab/workspace/KRIA-Motor-Control/vivado/output/temp/vv/k26_foc.runs/design_1_Ib_Ia_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
