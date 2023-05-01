@@ -1,4 +1,4 @@
-
+#PMOD1
 set_property PACKAGE_PIN H12 [get_ports SCLK];
 set_property PACKAGE_PIN E10 [get_ports SDI1];
 set_property PACKAGE_PIN D10 [get_ports SDI2];
@@ -13,11 +13,14 @@ set_property IOSTANDARD LVCMOS33 [get_ports SDI*]
 set_property IOSTANDARD LVCMOS33 [get_ports SDV]
 set_property IOSTANDARD LVCMOS33 [get_ports ENC_*]
 
+#PMOD2
 set_property PACKAGE_PIN J11 [get_ports {GH[0]}];
 set_property PACKAGE_PIN J10 [get_ports {GH[1]}];
 set_property PACKAGE_PIN K13 [get_ports {GH[2]}];
-set_property PACKAGE_PIN K11 [get_ports {GPIO_0_tri_io[1]}];
-set_property PACKAGE_PIN H12 [get_ports {GL[0]}];
+# set_property PACKAGE_PIN K11 [get_ports {GPIO_0_tri_io[1]}];
+set_property PACKAGE_PIN K12 [get_ports {GPIO_0_tri_io[1]}];
+# set_property PACKAGE_PIN H12 [get_ports {GL[0]}];
+set_property PACKAGE_PIN H11 [get_ports {GL[0]}];
 set_property PACKAGE_PIN G10 [get_ports {GL[1]}];
 set_property PACKAGE_PIN F12 [get_ports {GL[2]}];
 set_property PACKAGE_PIN F11 [get_ports {GPIO_0_tri_io[0]}];
