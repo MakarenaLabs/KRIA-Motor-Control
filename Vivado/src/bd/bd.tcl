@@ -7,7 +7,8 @@
 # IP Integrator Tcl commands easier.
 ################################################################
 
-set part_n xczu7ev-ffvc1156-2-e
+# set part_n xczu7ev-ffvc1156-2-e
+set part_n xck26-sfvc784-2LV-c
 
 namespace eval _tcl {
 proc get_script_folder {} {

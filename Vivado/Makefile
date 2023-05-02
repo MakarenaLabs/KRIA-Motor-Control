@@ -5,12 +5,13 @@
 #
 
 # set variables if not exported from parent makefile
-PLATFORM ?= zcu104_foc
+# PLATFORM ?= zcu104_foc
+PLATFORM ?= k26_foc
 OUT_DIR  ?= ./output
-# PART_N ?= xck26-sfvc784-2LV-c
-PART_N ?= xczu7ev-ffvc1156-2-e
-# PATH_CONSTR ?= ./src/constraints/kr260.xdc
-PATH_CONSTR ?= ./src/constraints/zcu104_IIoT-EDDP.xdc
+PART_N ?= xck26-sfvc784-2LV-c
+# PART_N ?= xczu7ev-ffvc1156-2-e
+PATH_CONSTR ?= ./src/constraints/kr260.xdc
+# PATH_CONSTR ?= ./src/constraints/zcu104_IIoT-EDDP.xdc
 
 
 .PHONY: all

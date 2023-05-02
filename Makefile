@@ -1,4 +1,4 @@
-PART_N ?= xczu7ev-ffvc1156-2-e
+PART_N ?= xck26-sfvc784-2LV-c
 
 .PHONY: foc_hls_ip clean vivado all integration
 

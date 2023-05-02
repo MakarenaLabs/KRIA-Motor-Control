@@ -1,4 +1,5 @@
-PLATFORM ?= zcu104_foc
+# PLATFORM ?= zcu104_foc
+PLATFORM ?= k26_foc
 
 .PHONY: all
 
