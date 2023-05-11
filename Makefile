@@ -14,8 +14,7 @@ foc_hls_ip:
 	vitis_hls HLS/script.tcl -tclargs ${PART_N} -messageDb vitis_hls.pb -f
 
 clean:
-	rm -r foc/ *.log *.zip
+	rm -r foc/ *.log *.zip *.jou
 	make -C Vivado clean
-	make -C FOC_integration clean
 
 

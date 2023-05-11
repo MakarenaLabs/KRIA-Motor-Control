@@ -10,12 +10,13 @@ class motor_control():
         self.foc_ = None # FOC control
         self.ref_ = 0 # reference of the controller
         self.mode_ = "off" # mode of the controller
-        self.modes_ = ["velocity"] #possible modes
+        self.modes_ = ["velocity", "torque"] #possible modes
         self.log_keys_ = ["velocity", "Ia", "Ib", "Ialpha", "Ibeta", "Id", "Iq", "Vd", "Vq", "Valpha", "Vbeta", "Va", "Vb", "Vc", "encoder_position", "Vd_dec", "Vq_dec"] # logger keys
         self.status_ = dict() # status of the motor with log informations
         self.const_val_dict = {
             "mode": { # from HLS project
-                "velocity": 1
+                "velocity": 1,
+                "torque": 2
             },
             "control_args": { # from HLS project
                 "mode" : CONTROL_FOC_MODE,
@@ -94,7 +95,10 @@ class motor_control():
     def set_reference(self, value: float):
         self.ref_ = value
         self.status_["ref"] = self.ref_
-        self.foc_.mmio.write(self.const_val_dict["control_args"]["rpm_sp"], int(self.ref_))
+        if(self.mode_ == "velocity"):
+            self.foc_.mmio.write(self.const_val_dict["control_args"]["rpm_sp"], int(self.ref_))
+        elif(self.mode_ == "torque"):
+            self.foc_.mmio.write(self.const_val_dict["control_args"]["torque_sp"], int(self.ref_))
         return
     
     
