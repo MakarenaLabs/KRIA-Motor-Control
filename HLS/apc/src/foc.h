@@ -20,6 +20,8 @@
 #include <stdint.h>
 
 #define CPR 1000
+#define IERR_SAT 5000
+#define LOG_LEN 128 
 
 #define	MAKE_DATA4(s0, s1, s2, s3)								\
 	(((int64_t)(s3)      << 48) & 0xFFFF000000000000LL) |	\
@@ -28,7 +30,7 @@
 	( (int64_t)(s0)             & 0x000000000000FFFFLL)
 
 //control arguments
-#define ARGS_SIZE 14 //size
+#define ARGS_SIZE 15 //size
 #define CONTROL_MODE 0 //index 0
 #define ANGLE_SHIFT 1
 #define FILT_A 2
@@ -42,15 +44,16 @@
 #define FLUX_SP 10
 #define FLUX_KP 11
 #define FLUX_KI 12
-#define LOG_MODE 13
+#define ANGLE 13
+#define LOG_MODE 14
 
 //LOG MODEs
-#define IALPHA_IBETA_RPM_ANGLE 0
-#define ID_IQ_RPM 1
-#define VD_VQ_RPM 2
-#define VALPHA_VBETA_RPM 3
-#define VA_VB_VC_RPM 4
-#define PWMA_PWMB_PWMC_RPM 5
+#define IALPHA_IBETA_RPM_ANGLE 1
+#define ID_IQ_RPM 2
+#define VD_VQ_RPM 3
+#define VALPHA_VBETA_RPM 4
+#define VA_VB_VC_RPM 5
+#define PWMA_PWMB_PWMC_RPM 6
 
 void foc(hls::stream<ap_axis<80,0,0,0> > &A, hls::stream<ap_axis<64,0,0,0> > &B, hls::stream<ap_axis<64,0,0,0> > &C, int control[ARGS_SIZE]);
 

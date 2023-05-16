@@ -82,5 +82,8 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
  * \return void - functions implementing an IP core do not return a value.
  */
 //void Filters(hls::stream<int64_t> &s_axis, hls::stream<int64_t> &m_axis, /*int16_t *RPM_out,*/ const int32_t control);
-void Filters(hls::stream< ap_axis<80,0,0,0> > &s_axis, hls::stream<int64_t> &m_axis, int32_t control, int32_t Angle_shift, int32_t filt_a, int32_t filt_b, logger log);
+//void Filters(hls::stream< ap_axis<80,0,0,0> > &s_axis, hls::stream<int64_t> &m_axis, int32_t control, int32_t Angle_shift, int32_t filt_a, int32_t filt_b, logger log);
+
+void Filters(hls::stream< ap_axis<80,0,0,0> > &s_axis, hls::stream<int64_t> &m_axis, int32_t control, int32_t Angle_shift, int32_t filt_a, int32_t filt_b, int32_t* angle, logger log);
+
 #endif

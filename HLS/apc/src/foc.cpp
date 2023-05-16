@@ -1,6 +1,6 @@
 #include "foc.h"
 
-void placeholder_out_dataflow(hls::stream<int64_t> &in, hls::stream<ap_axis<64,0,0,0>> &out1, hls::stream<ap_axis<64,0,0,0>> &out2, int log_mode, logger log){
+void placeholder_out_dataflow(hls::stream<int64_t> &in, hls::stream<ap_axis<64,0,0,0>> &out1, hls::stream<ap_axis<64,0,0,0>> &out2, int* log_mode, logger log){
 
 	//-----------TO MOTOR-------------
 	int64_t packet = in.read();
@@ -11,7 +11,10 @@ void placeholder_out_dataflow(hls::stream<int64_t> &in, hls::stream<ap_axis<64,0
 
 	//-----------TO LOGGER------------
 	ap_axis<64,0,0,0> packet_logger;
-	switch(log_mode){
+	volatile static unsigned int index_logger = 0;
+	//if(log_mode != 0){
+	
+	switch(*log_mode){
 		case IALPHA_IBETA_RPM_ANGLE:
 			packet_logger.data = MAKE_DATA4(log.Ialpha, log.Ibeta, log.RPM, log.Angle);
 			break;
@@ -31,7 +34,15 @@ void placeholder_out_dataflow(hls::stream<int64_t> &in, hls::stream<ap_axis<64,0
 			packet_logger.data = MAKE_DATA4(log.Van, log.Vbn, log.Vcn, log.RPM);
 			break;
 	}
+	
 	out2.write(packet_logger);
+		/*index_logger = index_logger + 1;
+		if(index_logger == (LOG_LEN - 1)){
+			*log_mode = 0;
+			index_logger = 0;
+		}*/
+	//}
+	//-----------TO LOGGER------------
 
 }
 
@@ -40,6 +51,7 @@ void foc(hls::stream<ap_axis<80,0,0,0> > &A, hls::stream<ap_axis<64,0,0,0> > &B,
 #pragma HLS INTERFACE mode=axis port=A
 #pragma HLS INTERFACE mode=axis port=B
 #pragma HLS INTERFACE mode=axis port=C
+
 #pragma HLS INTERFACE mode=s_axilite port=control
 
 #pragma HLS INTERFACE mode=ap_ctrl_none port=return
@@ -77,7 +89,7 @@ void foc(hls::stream<ap_axis<80,0,0,0> > &A, hls::stream<ap_axis<64,0,0,0> > &B,
 //#pragma HLS DATAFLOW
 
 	//-------------------FILTERS-------------------------------------
-	Filters(A, stream_from_Filters_to_ClakeD, control[CONTROL_MODE], control[ANGLE_SHIFT], control[FILT_A], control[FILT_B], log);
+	Filters(A, stream_from_Filters_to_ClakeD, control[CONTROL_MODE], control[ANGLE_SHIFT], control[FILT_A], control[FILT_B], &control[ANGLE], log);
 	//-------------------FILTERS-------------------------------------
 
 
@@ -97,15 +109,15 @@ void foc(hls::stream<ap_axis<80,0,0,0> > &A, hls::stream<ap_axis<64,0,0,0> > &B,
 	//-------------------DEMUXER-------------------------------
 
 	//----------------PI RPM CONTROL---------------------------
-	PI_Control(stream_from_demux_to_PI_RPM, stream_from_PI_RPM_to_PI_Iq, -control[RPM_SP], control[RPM_KP], control[RPM_KI], control[CONTROL_MODE], 1000/*3 % MAX_LIM*/, ierr_pi_rpm, mode_change_pi_rpm);
+	PI_Control(stream_from_demux_to_PI_RPM, stream_from_PI_RPM_to_PI_Iq, -control[RPM_SP], control[RPM_KP], control[RPM_KI], control[CONTROL_MODE], IERR_SAT, ierr_pi_rpm, mode_change_pi_rpm);
 	//----------------PI RPM CONTROL---------------------------
 
 	//----------------PI TORQUE CONTROL---------------------------
-	PI_Control_stream(stream_from_PI_RPM_to_PI_Iq, stream_from_demux_to_PI_Iq, stream_from_PI_Iq_to_mux, control[TORQUE_SP], control[TORQUE_KP], control[TORQUE_KI], control[CONTROL_MODE], 1000/*3 % MAX_LIM*/, ierr_pi_Iq, mode_change_pi_Iq);
+	PI_Control_stream(stream_from_PI_RPM_to_PI_Iq, stream_from_demux_to_PI_Iq, stream_from_PI_Iq_to_mux, control[TORQUE_SP], control[TORQUE_KP], control[TORQUE_KI], control[CONTROL_MODE], IERR_SAT, ierr_pi_Iq, mode_change_pi_Iq);
 	//----------------PI TORQUE CONTROL---------------------------
 
 	//----------------PI FLUX CONTROL---------------------------
-	PI_Control(stream_from_demux_to_PI_Id, stream_from_PI_Id_to_mux, -control[FLUX_SP], control[FLUX_KP], control[FLUX_KI], control[CONTROL_MODE], 1000/*3 % MAX_LIM*/, ierr_pi_Id, mode_change_pi_Id);
+	PI_Control(stream_from_demux_to_PI_Id, stream_from_PI_Id_to_mux, -control[FLUX_SP], control[FLUX_KP], control[FLUX_KI], control[CONTROL_MODE], IERR_SAT, ierr_pi_Id, mode_change_pi_Id);
 	//----------------PI FLUX CONTROL---------------------------
 
 	//-------------------MUXER-------------------------------
@@ -124,10 +136,10 @@ void foc(hls::stream<ap_axis<80,0,0,0> > &A, hls::stream<ap_axis<64,0,0,0> > &B,
 	//------------------CLARKE INVERSE--------------------------
 
     //------------------SVPWM--------------------------
-	SVPWM(stream_from_ClarkeI_to_SVPWM, stream_from_SVPWM_to_Motor, log);
+	SVPWM(stream_from_ClarkeI_to_SVPWM, stream_from_SVPWM_to_Motor, control[CONTROL_MODE], log);
 	//------------------SVPWM--------------------------
 
-	placeholder_out_dataflow(stream_from_SVPWM_to_Motor, B, C, control[LOG_MODE], log);
+	placeholder_out_dataflow(stream_from_SVPWM_to_Motor, B, C, &control[LOG_MODE], log);
 
 }
 

@@ -8,15 +8,17 @@ class motor_control():
         self.ol_ = Overlay(overlay_path) # Creating overlay obj
         self.ol_.download() # program PL
         self.foc_ = None # FOC control
+        self.logger_ = None
         self.ref_ = 0 # reference of the controller
         self.mode_ = "off" # mode of the controller
-        self.modes_ = ["velocity", "torque"] #possible modes
+        self.modes_ = ["velocity", "torque", "alignment"] #possible modes
         self.log_keys_ = ["velocity", "Ia", "Ib", "Ialpha", "Ibeta", "Id", "Iq", "Vd", "Vq", "Valpha", "Vbeta", "Va", "Vb", "Vc", "encoder_position", "Vd_dec", "Vq_dec"] # logger keys
         self.status_ = dict() # status of the motor with log informations
         self.const_val_dict = {
             "mode": { # from HLS project
                 "velocity": 1,
-                "torque": 2
+                "torque": 2,
+                "alignment": 3
             },
             "control_args": { # from HLS project
                 "mode" : CONTROL_FOC_MODE,
@@ -32,6 +34,7 @@ class motor_control():
                 "flux_sp": FLUX_SP,
                 "flux_kp": FLUX_KP,
                 "flux_ki": FLUX_KI,
+                "angle": ANGLE,
                 "log_mode": LOG_MODE
             },
             "logger_mode": { # from HLS project
@@ -55,13 +58,15 @@ class motor_control():
                 "torque_kp": 2000, #5000
                 "torque_ki": 0,
                 "flux_sp": 0,
-                "flux_kp": -128, #-4096
+                "flux_kp": -2048, #-4096
                 "flux_ki": 0,
+                "angle": 0,
                 "log_mode": 0
         }
        
     def init_motor(self):
         self.foc_ = self.ol_.foc_0 # get IP from vivado prj
+        self.logger_ = self.ol_.AXI_StreamCapture_0
         for elem in self.ps_control_values.keys():
             self.foc_.mmio.write(self.const_val_dict["control_args"][elem], self.ps_control_values[elem])
         return
@@ -100,6 +105,7 @@ class motor_control():
         elif(self.mode_ == "torque"):
             self.foc_.mmio.write(self.const_val_dict["control_args"]["torque_sp"], int(self.ref_))
         return
+
     
     
 

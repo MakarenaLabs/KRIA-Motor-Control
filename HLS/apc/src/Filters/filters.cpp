@@ -32,7 +32,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 using namespace hls;
 
 // See the header file for the description.
-void Filters(hls::stream< ap_axis<80,0,0,0> > &s_axis, hls::stream<int64_t> &m_axis, int32_t control, int32_t Angle_shift, int32_t filt_a, int32_t filt_b, logger log){
+void Filters(hls::stream< ap_axis<80,0,0,0> > &s_axis, hls::stream<int64_t> &m_axis, int32_t control, int32_t Angle_shift, int32_t filt_a, int32_t filt_b, int32_t* angle, logger log){
 #pragma HLS interface axis port=m_axis
 #pragma HLS interface axis port=s_axis
 	int64_t in_data, res;
@@ -50,6 +50,8 @@ void Filters(hls::stream< ap_axis<80,0,0,0> > &s_axis, hls::stream<int64_t> &m_a
 	V   = (int16_t)((A_copy.data & 0x00000000FFFF00000000) >> 32);		// Extract Voltage input stream
 	RPM = (int16_t)((A_copy.data & 0x0000FFFF000000000000) >> 48);		// Read angle counter
 	Angle = (int16_t)((A_copy.data) >> 64);		// Read angle shift parameter
+	
+	*angle = Angle;
 
 	Theta = Angle - Angle_shift;				// Apply angle correction
 	Theta = (Theta < 0) ? (Theta + encoder_count) : Theta;	// Correct negative angle

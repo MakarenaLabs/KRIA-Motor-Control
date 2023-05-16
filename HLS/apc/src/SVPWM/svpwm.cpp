@@ -31,14 +31,9 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 // hls namespace has to be included in all HLS C source files.
 using namespace hls;
 
-// SVPWM
-// Voff= [min(Va, Vb, Vc)+max(Va, Vb, Vc)]/2
-// Vanew = Va - Voff
-// Vbnew = Vb - Voff
-// Vcnew = Vc - Voff
 
 // See the header file for the documentation comment.
-void SVPWM(hls::stream<int64_t> &s_axis, hls::stream<int64_t> &m_axis, logger log){
+void SVPWM(hls::stream<int64_t> &s_axis, hls::stream<int64_t> &m_axis, int mode, logger log){
 
 #pragma HLS interface axis port=m_axis
 #pragma HLS interface axis port=s_axis
@@ -60,7 +55,6 @@ void SVPWM(hls::stream<int64_t> &s_axis, hls::stream<int64_t> &m_axis, logger lo
 	Vmax = (Va > Vb) ? Va : Vb;
 	Vmax = (Vc > Vmax) ? Vc : Vmax;
 
-//	Voff = (Vmin + Vmax) >> 1;
 	Voff = Vmin;
 
 	Van = Va - Voff;
@@ -72,6 +66,12 @@ void SVPWM(hls::stream<int64_t> &s_axis, hls::stream<int64_t> &m_axis, logger lo
 	Vbn = (Vbn < MIN_LIM) ? MIN_LIM : Vbn;		// Clip min
 	Vcn = (Vcn > MAX_LIM) ? MAX_LIM : Vcn;		// Clip max
 	Vcn = (Vcn < MIN_LIM) ? MIN_LIM : Vcn;		// Clip min
+	
+	if(mode == PHASE_A_POWER_ON){
+		Van = 25000;
+		Vbn = 0;
+		Vcn = 0;
+	}
 
 	log.Van = Van;
 	log.Vbn = Vbn;

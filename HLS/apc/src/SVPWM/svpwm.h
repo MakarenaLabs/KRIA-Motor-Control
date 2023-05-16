@@ -41,6 +41,11 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 /// \brief Minimum negative value for saturated arithmetic.
 #define MIN_LIM				-32767
 
+//CONTROL MODEs
+#define VELOCITY 1
+#define TORQUE 2
+#define PHASE_A_POWER_ON 3
+
 /**
  * \brief SVPWM transformation as AXI4-Stream IP Core
  * \param s_axis Input AXI4-Stream with the following layout:
@@ -63,6 +68,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
  * All values are 16-bit signed integers.
  * \return void - functions implementinga an IP cores do not return a value.
  */
-void SVPWM(hls::stream<int64_t> &s_axis, hls::stream<int64_t> &m_axis, logger log);
+void SVPWM(hls::stream<int64_t> &s_axis, hls::stream<int64_t> &m_axis, int mode, logger log);
 
 #endif	// SVPWM_H
