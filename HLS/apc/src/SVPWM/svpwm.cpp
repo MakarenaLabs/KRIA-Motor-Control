@@ -68,7 +68,7 @@ void SVPWM(hls::stream<int64_t> &s_axis, hls::stream<int64_t> &m_axis, int mode,
 	Vcn = (Vcn < MIN_LIM) ? MIN_LIM : Vcn;		// Clip min
 	
 	if(mode == PHASE_A_POWER_ON){
-		Van = 25000;
+		Van = 5000;
 		Vbn = 0;
 		Vcn = 0;
 	}

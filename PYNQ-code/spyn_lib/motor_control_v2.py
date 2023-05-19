@@ -53,12 +53,12 @@ class motor_control():
                 "filt_b": 14647,
                 "rpm_sp": 0,
                 "rpm_kp": -200,
-                "rpm_ki": -5,
+                "rpm_ki": -15,
                 "torque_sp": 0,
                 "torque_kp": 2000, #5000
-                "torque_ki": 0,
+                "torque_ki": 15,
                 "flux_sp": 0,
-                "flux_kp": -2048, #-4096
+                "flux_kp": -784, #-4096
                 "flux_ki": 0,
                 "angle": 0,
                 "log_mode": 0
